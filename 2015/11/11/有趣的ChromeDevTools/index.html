@@ -6,19 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>相册 | 敬花童鞋</title>
+  <title>有趣的Chrome DevTools | 敬花童鞋</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Photos 	待续   	图片正在加载中…     (function() {     var loadScript = function(path) {       var $script = document.createElement(&apos;script&apos;)       document.getElementsByTagName(&apos;body&apos;)[0].appendChild($scrip">
-<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
-<meta property="og:type" content="website">
-<meta property="og:title" content="相册">
-<meta property="og:url" content="http://yoursite.com/photos/index.html">
+  <meta name="description" content="Chrome 自带开发者工具很有趣，怎么个有趣法呢？Chrome的JS控制台有很多很多神奇而且有趣的功能。此文仅例举其中几个，一起来看看吧。       0.清空控制台输出请试着输入 clear() 然后回车，然后是不是感觉一片凉爽，2333~~">
+<meta name="keywords" content="Chrome DevTools,javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="有趣的Chrome DevTools">
+<meta property="og:url" content="http://yoursite.com/2015/11/11/有趣的ChromeDevTools/index.html">
 <meta property="og:site_name" content="敬花童鞋">
-<meta property="og:description" content="Photos 	待续   	图片正在加载中…     (function() {     var loadScript = function(path) {       var $script = document.createElement(&apos;script&apos;)       document.getElementsByTagName(&apos;body&apos;)[0].appendChild($scrip">
-<meta property="og:updated_time" content="2017-05-04T14:53:06.000Z">
+<meta property="og:description" content="Chrome 自带开发者工具很有趣，怎么个有趣法呢？Chrome的JS控制台有很多很多神奇而且有趣的功能。此文仅例举其中几个，一起来看看吧。       0.清空控制台输出请试着输入 clear() 然后回车，然后是不是感觉一片凉爽，2333~~">
+<meta property="og:image" content="http://yoursite.com/2015/11/11/有趣的ChromeDevTools/assets/img/jquery选择器.jpeg">
+<meta property="og:image" content="http://yoursite.com/2015/11/11/有趣的ChromeDevTools/assets/img/调试.jpeg">
+<meta property="og:image" content="http://yoursite.com/2015/11/11/有趣的ChromeDevTools/assets/img/Chrome编辑器.png">
+<meta property="og:image" content="http://yoursite.com/2015/11/11/有趣的ChromeDevTools/assets/img/监听.png">
+<meta property="og:image" content="http://yoursite.com/2015/11/11/有趣的ChromeDevTools/assets/img/table.png">
+<meta property="og:image" content="http://yoursite.com/2015/11/11/有趣的ChromeDevTools/assets／img/检测.png">
+<meta property="og:updated_time" content="2017-05-06T05:10:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="相册">
-<meta name="twitter:description" content="Photos 	待续   	图片正在加载中…     (function() {     var loadScript = function(path) {       var $script = document.createElement(&apos;script&apos;)       document.getElementsByTagName(&apos;body&apos;)[0].appendChild($scrip">
+<meta name="twitter:title" content="有趣的Chrome DevTools">
+<meta name="twitter:description" content="Chrome 自带开发者工具很有趣，怎么个有趣法呢？Chrome的JS控制台有很多很多神奇而且有趣的功能。此文仅例举其中几个，一起来看看吧。       0.清空控制台输出请试着输入 clear() 然后回车，然后是不是感觉一片凉爽，2333~~">
+<meta name="twitter:image" content="http://yoursite.com/2015/11/11/有趣的ChromeDevTools/assets/img/jquery选择器.jpeg">
   
     <link rel="alternative" href="/atom.xml" title="敬花童鞋" type="application/atom+xml">
   
@@ -156,44 +163,37 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-photos" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-有趣的ChromeDevTools" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      相册
+      有趣的Chrome DevTools
     </h1>
   
 
         <!-- 显示阅读和评论数 -->
 
         
+        <a href="/2015/11/11/有趣的ChromeDevTools/" class="archive-article-date">
+  	<time datetime="2015-11-11T13:46:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-11</time>
+</a>
+        
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <link rel="stylesheet" href="./ins.css">
-<div class="photos-btn-wrap">
-	<a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="external">Photos</a>
-	<a class="photos-btn" href="#">待续</a>
-</div>
-<div class="instagram itemscope">
-	<a href="https://www.instagram.com/lawlitewang20/" target="_blank" class="open-ins">图片正在加载中…</a>
-</div>
-<script>
-  (function() {
-    var loadScript = function(path) {
-      var $script = document.createElement('script')
-      document.getElementsByTagName('body')[0].appendChild($script)
-      $script.setAttribute('src', path)
-    }
-    setTimeout(function() {
-      loadScript('./ins.js')
-    }, 0)
-  })()
-</script>
+        <p>Chrome 自带开发者工具很有趣，怎么个有趣法呢？Chrome的JS控制台有很多很多神奇而且有趣的功能。此文仅例举其中几个，一起来看看吧。      </p>
+<h4 id="0-清空控制台输出"><a href="#0-清空控制台输出" class="headerlink" title="0.清空控制台输出"></a>0.清空控制台输出</h4><p>请试着输入 clear() 然后回车，然后是不是感觉一片凉爽，2333~~<br><a id="more"></a>      </p>
+<h4 id="1-jQuery选择器"><a href="#1-jQuery选择器" class="headerlink" title="1.jQuery选择器"></a>1.jQuery选择器</h4><pre><code>第一个有趣的事情就是获取页面上的DOM元素啦！  
+</code></pre><p>在控制台里通过jQuery选择器选取DOM元素.如 <code>$(&#39;tagName&#39;) $(&#39;.class&#39;) $(&#39;#id&#39;)</code>等选择器。<br>其实是通过document.querySelector(‘’)返回第一个匹配的DOM元素。<br>通过 <code>$$(&#39;tagName&#39;) $$(&#39;.className&#39;)</code>两个<code>$$</code>符号来选择返回的一个相应的DOM数组。瞧：<br><img src="assets/img/jquery选择器.jpeg" alt="jquery选择器"></p>
+<h4 id="2-获取DOM元素绑定事件"><a href="#2-获取DOM元素绑定事件" class="headerlink" title="2.获取DOM元素绑定事件"></a>2.获取DOM元素绑定事件</h4><p>其实也是一句代码搞定的事情，但是在调试的时候却非常有用。通过在控制台输入<code>getEventListeners($(&#39;selector&#39;))</code>返回数组对象的格式并且返回元素绑定的所有事件。然后通过<code>getEventListeners($(&#39;selector&#39;)).click[0].listener</code>获取元素绑定的click事件。<br><img src="assets/img/调试.jpeg" alt="调试"></p>
+<h4 id="3-Chrome编辑器"><a href="#3-Chrome编辑器" class="headerlink" title="3.Chrome编辑器"></a>3.Chrome编辑器</h4><p>如果浏览器可以编辑，要记得导出喔😯。在控制台轻轻输入一句代码，然后试着编辑页面，接下来就是奇迹发生的时候！赶快试一下吧！<br><img src="assets/img/Chrome编辑器.png" alt="Chrome编辑器"></p>
+<h4 id="4-监测事件"><a href="#4-监测事件" class="headerlink" title="4.监测事件"></a>4.监测事件</h4><p>通过输入<code>monitorEvents($(&#39;selector&#39;))</code> 监测元素上绑定的所有事件，该元素某个事件被触发就会在控制台里显示出来。<code>monitorEvents($(&#39;selector&#39;),&#39;eventName&#39;)</code>监听元素上绑定的具体事件。第二个参数代表事件类型的名称。<code>monitorEvents($(&#39;selector&#39;),[&#39;eventName1&#39;,&#39;eventName3&#39;,….])</code>同时检测具体指定的多个事件类型。<br><code>unmonitorEvents($(&#39;selector&#39;))</code> 用来停止对某个元素的事件监测。<br><img src="assets/img/监听.png" alt="监听"></p>
+<h4 id="5-表格形式输出数组"><a href="#5-表格形式输出数组" class="headerlink" title="5.表格形式输出数组"></a>5.表格形式输出数组</h4><p>先输入数组arr,然后通过输入<code>console.table(variableName)</code>以表格形式查看，<br>如下图：<br><img src="assets/img/table.png" alt="table"></p>
+<h4 id="6-检查元素"><a href="#6-检查元素" class="headerlink" title="6.检查元素"></a>6.检查元素</h4><p>你可以直接在控制台里输入下面的方法来检查元素<code>inspect($(&#39;selector&#39;))</code> 会检查所有匹配选择器的DOM元素，并返回所有选择器选择的DOM对象。<code>inspect($(&#39;img&#39;)[1])</code> 检查并返回页面上第2个img元素。<br><img src="assets／img/检测.png" alt="jianche"><br>最后，Chrome DevTools是十分强大的调试工具，这只是冰上一角，深入了解请戳<a href="https://developers.google.com/web/tools/chrome-devtools/" target="_blank" rel="external">chrome-devtools</a></p>
 
       
 
@@ -233,6 +233,21 @@ var _hmt = _hmt || [];
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Chrome DevTools</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -283,7 +298,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/photos/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2015/11/11/有趣的ChromeDevTools/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -295,9 +310,38 @@ var _hmt = _hmt || [];
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/2015/09/23/五分钟学会简单使用git/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">五分钟学会简单使用git</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 
+
+
+  
+  
+  
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: "http://yoursite.com/2015/11/11/有趣的ChromeDevTools/", 
+    sourceId: "有趣的ChromeDevTools",
+    productKey: "eb21cc96a8994af8a3d5a31f269371bf",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+  
+
+  
+
+  
 
 
           </div>
@@ -328,7 +372,7 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

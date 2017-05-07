@@ -17,11 +17,11 @@
 <meta property="og:description" content="Chrome 自带开发者工具很有趣，怎么个有趣法呢？Chrome的JS控制台有很多很多神奇而且有趣的功能。此文仅例举其中几个，一起来看看吧。       0.清空控制台输出请试着输入 clear() 然后回车，然后是不是感觉一片凉爽，2333~~">
 <meta property="og:image" content="http://yoursite.com/assets/img/jquery选择器.jpeg">
 <meta property="og:image" content="http://yoursite.com/assets/img/调试.jpeg">
-<meta property="og:image" content="http://yoursite.com/assets/img/Chrome编辑器.png">
-<meta property="og:image" content="http://yoursite.com/2015/11/11/有趣的ChromeDevTools/assets/img/监听.png">
+<meta property="og:image" content="http://yoursite.com/assets/img/chrome编辑器.png">
+<meta property="og:image" content="http://yoursite.com/2015/11/11/有趣的ChromeDevTools/assets/img/jianting.png">
 <meta property="og:image" content="http://yoursite.com/assets/img/table.png">
-<meta property="og:image" content="http://yoursite.com/assets／img/检测.png">
-<meta property="og:updated_time" content="2017-05-07T08:48:15.000Z">
+<meta property="og:image" content="http://yoursite.com/assets/img/检测.png">
+<meta property="og:updated_time" content="2017-05-07T09:02:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="有趣的Chrome DevTools">
 <meta name="twitter:description" content="Chrome 自带开发者工具很有趣，怎么个有趣法呢？Chrome的JS控制台有很多很多神奇而且有趣的功能。此文仅例举其中几个，一起来看看吧。       0.清空控制台输出请试着输入 clear() 然后回车，然后是不是感觉一片凉爽，2333~~">
@@ -193,12 +193,12 @@ var _hmt = _hmt || [];
       
         <p>Chrome 自带开发者工具很有趣，怎么个有趣法呢？Chrome的JS控制台有很多很多神奇而且有趣的功能。此文仅例举其中几个，一起来看看吧。      </p>
 <h4 id="0-清空控制台输出"><a href="#0-清空控制台输出" class="headerlink" title="0.清空控制台输出"></a>0.清空控制台输出</h4><p>请试着输入 clear() 然后回车，然后是不是感觉一片凉爽，2333~~<br><a id="more"></a>      </p>
-<h4 id="1-jQuery选择器"><a href="#1-jQuery选择器" class="headerlink" title="1.jQuery选择器"></a>1.jQuery选择器</h4><p>第一个有趣的事情就是获取页面上的DOM元素啦！<br>在控制台里通过jQuery选择器选取DOM元素.如 <code>$(&#39;tagName&#39;) $(&#39;.class&#39;) $(&#39;#id&#39;)</code>等选择器。<br>其实是通过document.querySelector(‘’)返回第一个匹配的DOM元素。<br>通过 <code>$$(&#39;tagName&#39;) $$(&#39;.className&#39;)</code>两个<code>$$</code>符号来选择返回的一个相应的DOM数组。瞧：<br><img src="/assets/img/jquery选择器.jpeg" alt="jquery选择器"></p>
+<h4 id="1-jq选择器"><a href="#1-jq选择器" class="headerlink" title="1.jq选择器"></a>1.jq选择器</h4><p>第一个有趣的事情就是获取页面上的DOM元素啦！<br>在控制台里通过jQuery选择器选取DOM元素.如 <code>$(&#39;tagName&#39;) $(&#39;.class&#39;) $(&#39;#id&#39;)</code>等选择器。<br>其实是通过document.querySelector(‘’)返回第一个匹配的DOM元素。<br>通过 <code>$$(&#39;tagName&#39;) $$(&#39;.className&#39;)</code>两个<code>$$</code>符号来选择返回的一个相应的DOM数组。瞧：<br><img src="/assets/img/jquery选择器.jpeg" alt="jquery选择器"></p>
 <h4 id="2-获取DOM元素绑定事件"><a href="#2-获取DOM元素绑定事件" class="headerlink" title="2.获取DOM元素绑定事件"></a>2.获取DOM元素绑定事件</h4><p>其实也是一句代码搞定的事情，但是在调试的时候却非常有用。通过在控制台输入<code>getEventListeners($(&#39;selector&#39;))</code>返回数组对象的格式并且返回元素绑定的所有事件。然后通过<code>getEventListeners($(&#39;selector&#39;)).click[0].listener</code>获取元素绑定的click事件。<br><img src="/assets/img/调试.jpeg" alt="调试"></p>
-<h4 id="3-Chrome编辑器"><a href="#3-Chrome编辑器" class="headerlink" title="3.Chrome编辑器"></a>3.Chrome编辑器</h4><p>如果浏览器可以编辑，要记得导出喔😯。在控制台轻轻输入一句代码，然后试着编辑页面，接下来就是奇迹发生的时候！赶快试一下吧！<br><img src="/assets/img/Chrome编辑器.png" alt="Chrome编辑器"></p>
-<h4 id="4-监测事件"><a href="#4-监测事件" class="headerlink" title="4.监测事件"></a>4.监测事件</h4><p>通过输入<code>monitorEvents($(&#39;selector&#39;))</code> 监测元素上绑定的所有事件，该元素某个事件被触发就会在控制台里显示出来。<code>monitorEvents($(&#39;selector&#39;),&#39;eventName&#39;)</code>监听元素上绑定的具体事件。第二个参数代表事件类型的名称。<code>monitorEvents($(&#39;selector&#39;),[&#39;eventName1&#39;,&#39;eventName3&#39;,….])</code>同时检测具体指定的多个事件类型。<br><code>unmonitorEvents($(&#39;selector&#39;))</code> 用来停止对某个元素的事件监测。<br><img src="assets/img/监听.png" alt="监听"></p>
+<h4 id="3-Chrome编辑器"><a href="#3-Chrome编辑器" class="headerlink" title="3.Chrome编辑器"></a>3.Chrome编辑器</h4><p>如果浏览器可以编辑，要记得导出喔。在控制台轻轻输入一句代码，然后试着编辑页面，接下来就是奇迹发生的时候！赶快试一下吧！<br><img src="/assets/img/chrome编辑器.png" alt="Chrome编辑器"></p>
+<h4 id="4-监测事件"><a href="#4-监测事件" class="headerlink" title="4.监测事件"></a>4.监测事件</h4><p>通过输入<code>monitorEvents($(&#39;selector&#39;))</code> 监测元素上绑定的所有事件，该元素某个事件被触发就会在控制台里显示出来。<code>monitorEvents($(&#39;selector&#39;),&#39;eventName&#39;)</code>监听元素上绑定的具体事件。第二个参数代表事件类型的名称。<code>monitorEvents($(&#39;selector&#39;),[&#39;eventName1&#39;,&#39;eventName3&#39;,….])</code>同时检测具体指定的多个事件类型。<br><code>unmonitorEvents($(&#39;selector&#39;))</code> 用来停止对某个元素的事件监测。<br><img src="assets/img/jianting.png" alt="监听"></p>
 <h4 id="5-表格形式输出数组"><a href="#5-表格形式输出数组" class="headerlink" title="5.表格形式输出数组"></a>5.表格形式输出数组</h4><p>先输入数组arr,然后通过输入<code>console.table(variableName)</code>以表格形式查看，<br>如下图：<br><img src="/assets/img/table.png" alt="table"></p>
-<h4 id="6-检查元素"><a href="#6-检查元素" class="headerlink" title="6.检查元素"></a>6.检查元素</h4><p>你可以直接在控制台里输入下面的方法来检查元素<code>inspect($(&#39;selector&#39;))</code> 会检查所有匹配选择器的DOM元素，并返回所有选择器选择的DOM对象。<code>inspect($(&#39;img&#39;)[1])</code> 检查并返回页面上第2个img元素。<br><img src="/assets／img/检测.png" alt="jianche"><br>最后，Chrome DevTools是十分强大的调试工具，这只是冰上一角，深入了解请戳<a href="https://developers.google.com/web/tools/chrome-devtools/" target="_blank" rel="external">chrome-devtools</a></p>
+<h4 id="6-检查元素"><a href="#6-检查元素" class="headerlink" title="6.检查元素"></a>6.检查元素</h4><p>你可以直接在控制台里输入下面的方法来检查元素<code>inspect($(&#39;selector&#39;))</code> 会检查所有匹配选择器的DOM元素，并返回所有选择器选择的DOM对象。<code>inspect($(&#39;img&#39;)[1])</code> 检查并返回页面上第2个img元素。<br><img src="/assets/img/检测.png" alt="jianche"><br>最后，Chrome DevTools是十分强大的调试工具，这只是冰上一角，深入了解请戳<a href="https://developers.google.com/web/tools/chrome-devtools/" target="_blank" rel="external">chrome-devtools</a></p>
 
       
 

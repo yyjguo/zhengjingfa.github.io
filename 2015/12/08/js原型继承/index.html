@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>可能是最简单的js原型继承 | Afanail</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JavaScript是一门奇妙的弱类型语言，原型继承与其它语言的类继承有所区别，下面通过一个简单的例子展示js的原型继承。 1.你有对象吗？你有对象吗？没有，赶紧就new一个吧！首先，创建构造函数Parent12345678910function Parent() &amp;#123;    this.aString = &apos;string&apos;;    this.aNumber = &apos;number&apos;;    t">
+  <meta name="description" content="JavaScript是一门奇妙的弱类型语言，原型继承与其它语言的类继承有所区别，下面通过一个简单的例子展示js的原型继承。 1.你有对象吗？你有对象吗？没有，赶紧就new一个吧！首先，创建构造函数Parent然后，new出一个Parent的实例对象child此时，构造函数Parent拥有以下属性aString、aNumber、anObject,构造函数Parent的原型对象有aFunction方法">
 <meta name="keywords" content="javascript,原型继承机制">
 <meta property="og:type" content="article">
 <meta property="og:title" content="可能是最简单的js原型继承">
 <meta property="og:url" content="http://yoursite.com/2015/12/08/js原型继承/index.html">
 <meta property="og:site_name" content="Afanail">
-<meta property="og:description" content="JavaScript是一门奇妙的弱类型语言，原型继承与其它语言的类继承有所区别，下面通过一个简单的例子展示js的原型继承。 1.你有对象吗？你有对象吗？没有，赶紧就new一个吧！首先，创建构造函数Parent12345678910function Parent() &amp;#123;    this.aString = &apos;string&apos;;    this.aNumber = &apos;number&apos;;    t">
+<meta property="og:description" content="JavaScript是一门奇妙的弱类型语言，原型继承与其它语言的类继承有所区别，下面通过一个简单的例子展示js的原型继承。 1.你有对象吗？你有对象吗？没有，赶紧就new一个吧！首先，创建构造函数Parent然后，new出一个Parent的实例对象child此时，构造函数Parent拥有以下属性aString、aNumber、anObject,构造函数Parent的原型对象有aFunction方法">
 <meta property="og:image" content="http://yoursite.com/assets/img/js原型.png">
-<meta property="og:updated_time" content="2017-05-07T08:48:33.000Z">
+<meta property="og:updated_time" content="2017-05-07T10:32:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="可能是最简单的js原型继承">
-<meta name="twitter:description" content="JavaScript是一门奇妙的弱类型语言，原型继承与其它语言的类继承有所区别，下面通过一个简单的例子展示js的原型继承。 1.你有对象吗？你有对象吗？没有，赶紧就new一个吧！首先，创建构造函数Parent12345678910function Parent() &amp;#123;    this.aString = &apos;string&apos;;    this.aNumber = &apos;number&apos;;    t">
+<meta name="twitter:description" content="JavaScript是一门奇妙的弱类型语言，原型继承与其它语言的类继承有所区别，下面通过一个简单的例子展示js的原型继承。 1.你有对象吗？你有对象吗？没有，赶紧就new一个吧！首先，创建构造函数Parent然后，new出一个Parent的实例对象child此时，构造函数Parent拥有以下属性aString、aNumber、anObject,构造函数Parent的原型对象有aFunction方法">
 <meta name="twitter:image" content="http://yoursite.com/assets/img/js原型.png">
   
     <link rel="alternative" href="/atom.xml" title="Afanail" type="application/atom+xml">
@@ -181,10 +181,9 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p>JavaScript是一门奇妙的弱类型语言，原型继承与其它语言的类继承有所区别，下面通过一个简单的例子展示js的原型继承。</p>
-<h3 id="1-你有对象吗？"><a href="#1-你有对象吗？" class="headerlink" title="1.你有对象吗？"></a>1.你有对象吗？</h3><p>你有对象吗？没有，赶紧就new一个吧！<br>首先，创建构造函数Parent<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Parent</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.aString = <span class="string">'string'</span>;</div><div class="line">    <span class="keyword">this</span>.aNumber = <span class="string">'number'</span>;</div><div class="line">    <span class="keyword">this</span>.anObject = <span class="string">'object'</span></div><div class="line">&#125;</div><div class="line">Parent.prototype = &#123;</div><div class="line">    <span class="attr">constructor</span>: Parent,</div><div class="line">    <span class="attr">aFunction</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        alert(<span class="string">'i am function'</span>);</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<h3 id="1-你有对象吗？"><a href="#1-你有对象吗？" class="headerlink" title="1.你有对象吗？"></a>1.你有对象吗？</h3><p>你有对象吗？没有，赶紧就new一个吧！<br>首先，创建构造函数Parent<br>然后，new出一个Parent的实例对象child<br>此时，构造函数Parent拥有以下属性aString、aNumber、anObject,构造函数Parent的原型对象有aFunction方法。<br><a id="more"></a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Parent</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.aString = <span class="string">'string'</span>;</div><div class="line">    <span class="keyword">this</span>.aNumber = <span class="string">'number'</span>;</div><div class="line">    <span class="keyword">this</span>.anObject = <span class="string">'object'</span></div><div class="line">&#125;</div><div class="line">Parent.prototype = &#123;</div><div class="line">    <span class="attr">constructor</span>: Parent,</div><div class="line">    <span class="attr">aFunction</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        alert(<span class="string">'i am function'</span>);</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
 <p>然后，new出一个Parent的实例对象child<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> child = <span class="keyword">new</span> Parent();</div></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<p>此时，构造函数Parent拥有以下属性aString、aNumber、anObject,构造函数Parent的原型对象有aFunction方法。<br>简单的原型继承图如下：<br><img src="/assets/img/js原型.png" alt="js原型"></p>
+<p>简单的原型继承图如下：<br><img src="/assets/img/js原型.png" alt="js原型"></p>
 <h3 id="2-实现继承"><a href="#2-实现继承" class="headerlink" title="2.实现继承"></a>2.实现继承</h3><p>实例对象默认拥有构造函数本身的属性和方法。但是，要知道构造函数荷构造函数的原型对象是俩个不同的函数（对象），原型对象拥有的属性和方法可以被实例化对象所共享。<br>也就是说实例对象child此时拥有属性aString、aNumber、anObject，this指向实例对象。child本身并没有aFunction方法。但是你调用此方法时，却发现能调用，这是怎么回事呢？<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">child.aFunction();</div></pre></td></tr></table></figure></p>
 <p>这就是我们所说的原型对象原拥有的属性和方法可以被实例化对象所共享的原因。<br>通过简单的例子，希望能帮到你，如果想深入学习javascript，请深戳<a href="https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript" target="_blank" rel="external">MDZ开发者</a></p>
 

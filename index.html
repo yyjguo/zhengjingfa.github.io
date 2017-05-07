@@ -180,8 +180,7 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p>JavaScript是一门奇妙的弱类型语言，原型继承与其它语言的类继承有所区别，下面通过一个简单的例子展示js的原型继承。</p>
-<h3 id="1-你有对象吗？"><a href="#1-你有对象吗？" class="headerlink" title="1.你有对象吗？"></a>1.你有对象吗？</h3><p>你有对象吗？没有，赶紧就new一个吧！<br>首先，创建构造函数Parent<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Parent</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.aString = <span class="string">'string'</span>;</div><div class="line">    <span class="keyword">this</span>.aNumber = <span class="string">'number'</span>;</div><div class="line">    <span class="keyword">this</span>.anObject = <span class="string">'object'</span></div><div class="line">&#125;</div><div class="line">Parent.prototype = &#123;</div><div class="line">    <span class="attr">constructor</span>: Parent,</div><div class="line">    <span class="attr">aFunction</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        alert(<span class="string">'i am function'</span>);</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
-<p>然后，new出一个Parent的实例对象child<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> child = <span class="keyword">new</span> Parent();</div></pre></td></tr></table></figure></p>
+<h3 id="1-你有对象吗？"><a href="#1-你有对象吗？" class="headerlink" title="1.你有对象吗？"></a>1.你有对象吗？</h3><p>你有对象吗？没有，赶紧就new一个吧！<br>首先，创建构造函数Parent<br>然后，new出一个Parent的实例对象child<br>此时，构造函数Parent拥有以下属性aString、aNumber、anObject,构造函数Parent的原型对象有aFunction方法。<br>
         
           <a class="article-more-a" href="/2015/12/08/js原型继承/#more">more >></a>
         
@@ -249,7 +248,8 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p>Chrome 自带开发者工具很有趣，怎么个有趣法呢？Chrome的JS控制台有很多很多神奇而且有趣的功能。此文仅例举其中几个，一起来看看吧。      </p>
-<h4 id="0-清空控制台输出"><a href="#0-清空控制台输出" class="headerlink" title="0.清空控制台输出"></a>0.清空控制台输出</h4><p>请试着输入 clear() 然后回车，然后是不是感觉一片凉爽，2333~~<br>
+<h4 id="0-清空控制台输出"><a href="#0-清空控制台输出" class="headerlink" title="0.清空控制台输出"></a>0.清空控制台输出</h4><p>请试着输入 clear() 然后回车，然后是不是感觉一片凉爽，2333~~      </p>
+<h4 id="1-jq选择器"><a href="#1-jq选择器" class="headerlink" title="1.jq选择器"></a>1.jq选择器</h4><p>第一个有趣的事情就是获取页面上的DOM元素啦！<br>在控制台里通过jQuery选择器选取DOM元素.<br>
         
           <a class="article-more-a" href="/2015/11/11/有趣的ChromeDevTools/#more">more >></a>
         

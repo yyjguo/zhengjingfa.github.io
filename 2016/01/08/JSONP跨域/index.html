@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/01/08/JSONP跨域/index.html">
 <meta property="og:site_name" content="Afanail">
 <meta property="og:description" content="Asynchronous JavaScript and XML (Ajax) 是Web2.0的关键技术。AJAX与服务器交换数据刷新局部网页,不需重载。  因为浏览器及同源策略的限制，ajax不允许跨域通信。同源是指协议、域名和端口都一致的情况。同源策略保证一个源的动态脚本不能读取或操作其他源的http响应和cookie，使浏览器隔离不同源的内容之间互相操作。">
-<meta property="og:updated_time" content="2017-05-08T02:41:09.000Z">
+<meta property="og:updated_time" content="2017-05-08T08:17:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JSONP跨域">
 <meta name="twitter:description" content="Asynchronous JavaScript and XML (Ajax) 是Web2.0的关键技术。AJAX与服务器交换数据刷新局部网页,不需重载。  因为浏览器及同源策略的限制，ajax不允许跨域通信。同源是指协议、域名和端口都一致的情况。同源策略保证一个源的动态脚本不能读取或操作其他源的http响应和cookie，使浏览器隔离不同源的内容之间互相操作。">
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 <p>Asynchronous JavaScript and XML (Ajax) 是Web2.0的关键技术。AJAX与服务器交换数据刷新局部网页,不需重载。</p>
 </blockquote>
 <p>因为浏览器及同源策略的限制，ajax不允许跨域通信。同源是指协议、域名和端口都一致的情况。同源策略保证一个源的动态脚本不能读取或操作其他源的http响应和cookie，使浏览器隔离不同源的内容之间互相操作。<br><a id="more"></a></p>
-<h3 id="Access-Control-Allow-Origin"><a href="#Access-Control-Allow-Origin" class="headerlink" title="Access-Control-Allow-Origin"></a>Access-Control-Allow-Origin</h3><p>解决跨域问题可以在第三方网站开启HTTP的Access-Control-Allow-Origin参数，当目标页面的response包含Access-Control-Allow-Origin 这个header，而且还包含我们的域名时，浏览器就允许拿到它页面的数据：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Access-Control-Allow-Origin: http://run.jsbin.io</div></pre></td></tr></table></figure></p>
+<h3 id="Access-Control-Allow-Origin"><a href="#Access-Control-Allow-Origin" class="headerlink" title="Access-Control-Allow-Origin"></a>Access-Control-Allow-Origin</h3><p>解决跨域问题可以在第三方网站开启HTTP的Access-Control-Allow-Origin参数，当目标页面的response包含Access-Control-Allow-Origin 这个header，而且还包含我们的域名时，浏览器就允许拿到它页面的数据：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Access-Control-Allow-Origin: http://www.1oveit.club</div></pre></td></tr></table></figure></p>
 <p>当值为 * 表示匹配所有，都能用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Access-Control-Allow-Origin: *</div></pre></td></tr></table></figure></p>
 <p>但是此时的主动权不在我们手里。</p>
 <h3 id="JSONP解决跨域"><a href="#JSONP解决跨域" class="headerlink" title="JSONP解决跨域"></a>JSONP解决跨域</h3><p>还可以使用更为主动的方法，使用JSONP解决跨域问题。分为以下几步：<br>我们知道多个不同的script标签中的数据是可以相互访问的，而script的src的本质就是将导入文件中的内容拷贝到当前script标签中，我们拿到百度搜索URL地址：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=ab&amp;cb=jQuery11020672211218553074_1491468814655</div></pre></td></tr></table></figure></p>

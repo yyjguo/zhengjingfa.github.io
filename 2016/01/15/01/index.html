@@ -6,18 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2015/12 | Afanail</title>
+  <title>JavaScript简明教程（1） | Afanail</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端,js,jquery,javascript,html5,开发者,程序猿">
-<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Afanail">
-<meta property="og:url" content="http://yoursite.com/archives/2015/12/index.html">
+  <meta name="description" content="JavaScript与Java没有半毛钱关系，网景公司员工Brendan Eich用了10天时间设计了JavaScript语言。  JavaScript的范围JavaScript的范围：BOM + DOM + ECMAScript 一.BOM简单说明123456BOM即Browser Object Mode,浏览器对象模型。BOM提供了独立于内容而与浏览器窗口进行交互的对象。BOM由一系列相关的">
+<meta name="keywords" content="JavaScript,简明教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript简明教程（1）">
+<meta property="og:url" content="http://yoursite.com/2016/01/15/01/index.html">
 <meta property="og:site_name" content="Afanail">
-<meta property="og:description" content="前端,js,jquery,javascript,html5,开发者,程序猿">
+<meta property="og:description" content="JavaScript与Java没有半毛钱关系，网景公司员工Brendan Eich用了10天时间设计了JavaScript语言。  JavaScript的范围JavaScript的范围：BOM + DOM + ECMAScript 一.BOM简单说明123456BOM即Browser Object Mode,浏览器对象模型。BOM提供了独立于内容而与浏览器窗口进行交互的对象。BOM由一系列相关的">
+<meta property="og:image" content="http://yoursite.com/assets/img/03.png">
+<meta property="og:image" content="http://yoursite.com/assets/img/01.png">
+<meta property="og:image" content="http://yoursite.com/assets/img/02.png">
+<meta property="og:updated_time" content="2017-05-08T09:21:45.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Afanail">
-<meta name="twitter:description" content="前端,js,jquery,javascript,html5,开发者,程序猿">
+<meta name="twitter:title" content="JavaScript简明教程（1）">
+<meta name="twitter:description" content="JavaScript与Java没有半毛钱关系，网景公司员工Brendan Eich用了10天时间设计了JavaScript语言。  JavaScript的范围JavaScript的范围：BOM + DOM + ECMAScript 一.BOM简单说明123456BOM即Browser Object Mode,浏览器对象模型。BOM提供了独立于内容而与浏览器窗口进行交互的对象。BOM由一系列相关的">
+<meta name="twitter:image" content="http://yoursite.com/assets/img/03.png">
   
     <link rel="alternative" href="/atom.xml" title="Afanail" type="application/atom+xml">
   
@@ -155,64 +160,314 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-01" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/12/08/js原型继承/" class="archive-article-date">
-  	<time datetime="2015-12-08T07:35:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-12-08</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/12/08/js原型继承/">可能是最简单的js原型继承</a>
+    <h1 class="article-title" itemprop="name">
+      JavaScript简明教程（1）
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        <!-- 显示阅读和评论数 -->
+
+        
+        <a href="/2016/01/15/01/" class="archive-article-date">
+  	<time datetime="2016-01-15T08:36:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-01-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>JavaScript与Java没有半毛钱关系，网景公司员工Brendan Eich用了10天时间设计了JavaScript语言。</p>
+</blockquote>
+<h1 id="JavaScript的范围"><a href="#JavaScript的范围" class="headerlink" title="JavaScript的范围"></a>JavaScript的范围</h1><p><strong>JavaScript的范围：BOM + DOM + ECMAScript</strong></p>
+<h3 id="一-BOM简单说明"><a href="#一-BOM简单说明" class="headerlink" title="一.BOM简单说明"></a>一.BOM简单说明</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">BOM即Browser Object Mode,浏览器对象模型。</div><div class="line">BOM提供了独立于内容而与浏览器窗口进行交互的对象。</div><div class="line">BOM由一系列相关的对象构成，并且每个对象都提供了很多方法与属性。</div><div class="line">因为BOM主要用于管理窗口与窗口之间的通信，因此其核心对象是window。</div><div class="line">BOM缺乏标准，JavaScript语法的标准化组织是ECMA，DOM的标准化组织是W3C。</div><div class="line">BOM结构体系</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="二-DOM简单说明"><a href="#二-DOM简单说明" class="headerlink" title="二.DOM简单说明"></a>二.DOM简单说明</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">DOM即Document Object Model，文档对象模型。</div><div class="line">当网页被加载时，浏览器会创建页面的文档对象模型，即DOM。</div><div class="line">DOM(文档对象模型)被构造为对象的树。</div><div class="line">DOM由一系列相关的对象构成，引申为Document对象。</div><div class="line">DOM的标准化组织是W3C。</div></pre></td></tr></table></figure>
+<h3 id="三-ECMAScript简单说明"><a href="#三-ECMAScript简单说明" class="headerlink" title="三.ECMAScript简单说明"></a>三.ECMAScript简单说明</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">ECMAScript指代JavaScript的核心语法。</div><div class="line">JavaScript 由 Brendan Eich 发明。</div><div class="line">JavaScript于1995 年出现在 Netscape 中于 1997 年被 ECMA（一个标准协会）采纳。</div><div class="line">语法核心：</div><div class="line">变量</div><div class="line">基本数据类型</div><div class="line">对象类型</div><div class="line">结构(循环|条件|判断)</div><div class="line">面向对象</div></pre></td></tr></table></figure>
+<h1 id="javascript语法"><a href="#javascript语法" class="headerlink" title="javascript语法"></a>javascript语法</h1><h3 id="一-javascript数据类型"><a href="#一-javascript数据类型" class="headerlink" title="一.javascript数据类型"></a>一.javascript数据类型</h3><p>1.基本类型（简单数据类型）</p>
+<pre><code>* string
+* number
+* boolean
+* undefined
+* null
+</code></pre><p>2.复杂类型（复杂数据类型）</p>
+<pre><code>* Object
+* Array
+* Date
+* RegExp
+* Function
+* String
+* Number
+* Boolean
+* null
+* Math
+</code></pre><h3 id="二-javascript部分操作符的说明"><a href="#二-javascript部分操作符的说明" class="headerlink" title="二.javascript部分操作符的说明"></a>二.javascript部分操作符的说明</h3><p>1.一元操作符</p>
+<blockquote>
+<p>只能够操作一个值的操作符叫做一元操作符。</p>
+</blockquote>
+<p>① 递增和递减操作符</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">[01] 前置型,递增和递减操作在包含他们的语句被求值之前就执行。</div><div class="line">[02] 后置型,递增和递减操作在包含他们的语句被求值之后才执行。</div><div class="line">var num1  = 2;</div><div class="line">var num2  = 20;</div><div class="line">var num3 = --num1 + num2;	//21</div><div class="line">var num4 = num1 + num2;		//21</div><div class="line">----</div><div class="line">var num1  = 2;</div><div class="line">var num2  = 20;</div><div class="line">var num3 = num1-- + num2;	//22</div><div class="line">var num4 = num1 + num2;		//21</div></pre></td></tr></table></figure>
+<p>② 一元加和减操作符</p>
+<p>一元加操作符对结果不会有任何的影响。<br>一元减操作符主要用于表示负数。</p>
+<p>2.位操作符</p>
+<p><code>01 按位非(NOT)</code><br>使用~表示，执行按位非的结果就是返回数值的反码。<br><code>**操作数的负值减去1**</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var num1 = 25;</div><div class="line">var num2 = -num1 - 1;	//-26</div><div class="line">consol.log(~num1)		//-26</div></pre></td></tr></table></figure></p>
+<p><code>02 按位与(AND)</code><br> 使用&amp;表示，操作两个操作数。<br> <code>**只要有〇就为〇**</code></p>
+<p> <code>03 按位或(OR)</code><br> 使用|表示，操作两个操作数。<br> <code>**只要有1就为1**</code></p>
+<p> <code>04 按位异或(XOR)</code><br>  使用 ^ 表示，操作两个操作数。<br> <code>**相同则为0，不同则为1**</code></p>
+<p>  <code>05 左移|右移(|有符号|无符号)</code></p>
+<p>3.布尔操作符</p>
+<blockquote>
+<p>布尔操作符一共有三个，分别是：非、与、或</p>
+</blockquote>
+<p> <code>01 逻辑非</code><br> 符号：！<br> 说明：取反，可应用于任何值，！！相当于没有操作。</p>
+<p> <code>02 逻辑与</code><br> 符号：&amp;&amp;<br> 说明：两个值都为真的时候，结果为真。属于短路操作，如果第一个操作数能够决定结果，那么就不会再对第二个操作数求值。</p>
+<p><code>03 逻辑或</code><br>符号：||<br>说明：两个值只要有一个为真，那么结果为真。属于短路操作，如果第一个操作数为真，那么就不会再对第二个操作数求值了。<br>技巧：可以利用逻辑或短路操作的特点来避免为变量赋null或undefined值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var myObject = refObject || backupObject;</div><div class="line">//如果refObject的值不是null,那么它的值将被赋值给myObject</div><div class="line">//如果是null,那么就将backupObject的值赋值给myObject。</div></pre></td></tr></table></figure></p>
+<p>4.乘性操作符</p>
+<p><code>乘 *</code><br><code>除 /</code><br><code>模 %</code></p>
+<p>5.加性操作符</p>
+<p><code>加 +</code><br><code>减 -</code></p>
+<p>说明：上述五种操作符在操作数为非数值的时候内部会执行自动的类型转换。</p>
+<p>6.关系操作符</p>
+<p><code>大于 &gt;</code><br><code>小于 &lt;</code><br><code>小于等于 &lt;=</code><br><code>大于等于 &gt;=</code><br>说明：返回布尔类型的值，要么为false，要么为true。</p>
+<p>7.相等操作符</p>
+<p><code>01 相等和不相等[先转换再比较]，符号是 == 和！=</code></p>
+<p><strong>比较的规则</strong></p>
+<p>[01] 如果操作数中有布尔值，则先转换为数值再比较。</p>
+<p>[02] 如果是字符串和数值比较，则先将字符串转换为数值再比较。</p>
+<p>[03] 如果是对象和其他类型的值比较，则先调用对象的valueOf方法，然后用得到的基本类型值去比较。</p>
+<p>[04] null和undefined是相等的。</p>
+<p>[05] NaN和NaN不相等。</p>
+<p>[06] 如果两个操作符都是对象，则比较他们是不是同一个对象，如果指向的是同一个对象则返回true，否则返回false。</p>
+<p><code>02 全等和不全等[仅比较不转换],符号是===和！==</code></p>
+<p><strong>比较的规则</strong></p>
+<p>[01] null和undefined是不全等的，因为它们是不同类型的值。</p>
+<p>[02] 类型相同，且值相等，则返回true，否则返回false。</p>
+<p>8.条件操作符<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">符号：表达式1 ? 字面量1 ：字面量2</div><div class="line">说明：如果表达式1的结果为true，则使用字面量1，否则使用字面量2。</div></pre></td></tr></table></figure></p>
+<p>9.赋值操作符</p>
+<p>符号：=、+=、-=、*=、&lt;&lt;=等等</p>
+<p>说明：使用赋值操作符对性能而言，没有任何的提升，只是简化了赋值操作而已。</p>
+<h1 id="值类型和引用类型"><a href="#值类型和引用类型" class="headerlink" title="值类型和引用类型"></a>值类型和引用类型</h1><p><strong>01 值类型和引用类型简单说明</strong></p>
+<p>值类型主要有：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">数值</div><div class="line">字符串</div><div class="line">布尔类型</div><div class="line">undefined</div><div class="line">null</div></pre></td></tr></table></figure></p>
+<p>引用类型主要有：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">对象（Object类型）</div><div class="line">数组（Array）</div><div class="line">函数 (Function)</div></pre></td></tr></table></figure></p>
+<p><strong>值类型</strong>：保存为简单的数据值，赋值只是简单的数据值的复制</p>
+<p><strong>引用类型</strong>:保存为对象，其本质是指向内存位置的引用(地址)，赋值是对地址的复制</p>
+<p><strong>值类型代码示例</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> num1 = <span class="number">10</span>;</div><div class="line"><span class="keyword">var</span> num2 = num1;    <span class="comment">//把num1的值复制一份给num2,num1和num2的值相等,除此之外没有任何其他关系</span></div><div class="line"><span class="built_in">console</span>.log(num1,num2);     <span class="comment">//10,10</span></div><div class="line"><span class="built_in">console</span>.log(num1 == num2);  <span class="comment">//true</span></div><div class="line">num2 = <span class="number">20</span>;          <span class="comment">//修改num2的值为20,不会对num1产生任何的影响</span></div><div class="line"><span class="built_in">console</span>.log(num1,num2);     <span class="comment">//10,20</span></div><div class="line"><span class="built_in">console</span>.log(num1 == num2);  <span class="comment">//false</span></div></pre></td></tr></table></figure></p>
+<p><strong>引用类型代码示例</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"><span class="keyword">var</span> arr2 = arr1;</div><div class="line"><span class="built_in">console</span>.log(arr1,arr2);             <span class="comment">//[1,2,3],[1,2,3]</span></div><div class="line"><span class="built_in">console</span>.log(arr1 == arr2);          <span class="comment">//true</span></div><div class="line"><span class="keyword">var</span> arr3 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"><span class="built_in">console</span>.log(arr3);                  <span class="comment">//[1,2,3]</span></div><div class="line"><span class="built_in">console</span>.log(arr1 == arr3,arr2 == arr3); <span class="comment">//false,false</span></div><div class="line"><span class="comment">/**</span></div><div class="line"> * 代码说明:</div><div class="line"> * arr1和arr2在比较的时候,值相等(都是[1,2,3]),且引用相等(都指向堆中同一块数据),因此arr1和arr2相等</div><div class="line"> * arr3和arr1以及arr2比较的时候,值相等([1,2,3]),但是引用不相等(arr3指向的是堆中另外一块数据),因此不等</div><div class="line"> * 总结:引用类型在比较相等的时候,只有值和引用都相等才相等</div><div class="line"> * */</div></pre></td></tr></table></figure></p>
+<p><strong>02 值类型和引用类型的赋值</strong></p>
+<p><code>赋值操作(=):把当前变量存储的值复制一份给接收的变量</code></p>
+<p><code>值类型的赋值:把当前变量存储的值(具体的数据)复制一份给接收的变量</code><br><code>引用类型的赋值:把当前变量存储的值(具体数据的引用即地址)复制一份给接收的变量</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//引用类型使用注意</span></div><div class="line">  <span class="built_in">console</span>.log(arr1,arr2);         <span class="comment">//[1,2,3],[1,2,3];</span></div><div class="line">  <span class="built_in">console</span>.log(arr1 == arr2);      <span class="comment">//true</span></div><div class="line">  arr1.push(<span class="number">4</span>);</div><div class="line">  <span class="built_in">console</span>.log(arr1,arr2);         <span class="comment">//[1,2,3,4],[1,2,3,4]</span></div><div class="line"></div><div class="line">  <span class="comment">/**</span></div><div class="line">   * 代码说明:因为arr1和arr2内部的引用指向的是同一块数据,所以修改了arr1会对arr2也产生影响</div><div class="line">   * */</div></pre></td></tr></table></figure>
+<p><strong>03 值类型和引用类型作为函数参数处理</strong></p>
+<p><code>形参</code>:占位用的参数,用来接收数据的参数而已</p>
+<p><code>实参</code>:实际传递的参数 —</p>
+<p><code>函数的调用</code>:在函数调用的时候,函数默认会把实参的值赋值给形参</p>
+<p><strong>值类型作为参数</strong>：在函数内部对形参变量进行修改不会影响到实参的值</p>
+<p><strong>引用类型作为参数</strong>：在函数内部对形参变量进行修改会影响到实参的值，因为他们的引用指向同一个对象</p>
+<p><strong>04 值类型和引用类型的相关图示</strong></p>
+<p><strong>基本类型的赋值</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str1 = <span class="string">"hello zhangsan"</span>;</div><div class="line"><span class="keyword">var</span> str2 = str1;</div></pre></td></tr></table></figure></p>
+<p><img src="/assets/img/03.png" alt="p1对象的存储结构图"></p>
+<p><strong>引用类型的结构和赋值</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> car = &#123;</div><div class="line">    <span class="attr">color</span>:<span class="string">"黑色"</span>,</div><div class="line">    <span class="attr">number</span>:<span class="string">"B99"</span></div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> p1 = &#123;</div><div class="line">    <span class="attr">name</span>:<span class="string">"王宝宝"</span>,</div><div class="line">    <span class="attr">age</span>:<span class="number">30</span>,</div><div class="line">    <span class="attr">car</span>:car</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p><img src="/assets/img/01.png" alt="p1对象的存储结构图"></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj1 = &#123;</div><div class="line">       <span class="attr">name</span>:<span class="string">"lisi"</span>,</div><div class="line">       <span class="attr">age</span>:<span class="number">18</span></div><div class="line">   &#125;;</div><div class="line">   <span class="keyword">var</span> obj2 = obj1;</div></pre></td></tr></table></figure>
+<p><img src="/assets/img/02.png" alt="obj1和obj2的存储结构图"></p>
+<h1 id="对象的动态特性"><a href="#对象的动态特性" class="headerlink" title="对象的动态特性"></a>对象的动态特性</h1><p><code>在js中可以动态的对对象属性进行增加、修改和删除</code></p>
+<p><strong>代码示例</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//01 创建对象</span></div><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>:<span class="string">"刘德华"</span>,</div><div class="line">    <span class="attr">age</span>:<span class="number">60</span></div><div class="line">&#125;;</div><div class="line"><span class="comment">//02 动态的为对象添加属性</span></div><div class="line">obj.height = <span class="string">"180cm"</span>;</div><div class="line"><span class="built_in">console</span>.log(obj.height);</div><div class="line"><span class="comment">//03 动态的为对象添加方法</span></div><div class="line">obj.maiMeng = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"华仔会卖萌噢"</span>);</div><div class="line">&#125;;</div><div class="line">obj.maiMeng();</div><div class="line"><span class="comment">//04 修改属性的值:如果设置的属性以前不存在,那么就是添加,如果设置的属性已经存在了,那么就是修改</span></div><div class="line">obj.name = <span class="string">"王宝强"</span>;</div><div class="line"><span class="built_in">console</span>.log(obj.name)</div><div class="line"><span class="comment">//05 删除属性</span></div><div class="line"><span class="keyword">delete</span> obj.name;</div><div class="line"><span class="built_in">console</span>.log(obj.name);  <span class="comment">//undefined</span></div></pre></td></tr></table></figure></p>
+<p><strong>访问对象的方法</strong></p>
+<p>01 可以使用点语法访问</p>
+<p>02 可以使用[]语法访问，注意对象的属性必须是字符串</p>
+<h1 id="关键字in和delete的使用"><a href="#关键字in和delete的使用" class="headerlink" title="关键字in和delete的使用"></a>关键字in和delete的使用</h1><p><strong>01 in关键字</strong></p>
+<p>01 判断属性是否存在于对象中，注意所有的key都是字符串</p>
+<p>02 for in循环中  遍历对象的 键</p>
+<p><strong>代码示例</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">    <span class="attr">name</span>:<span class="string">"张三"</span>,</div><div class="line">    <span class="attr">age</span>:<span class="number">18</span></div><div class="line">&#125;;</div><div class="line"><span class="keyword">for</span>(k <span class="keyword">in</span> obj)</div><div class="line">&#123;</div><div class="line">    <span class="built_in">console</span>.log(k,obj[k]);</div><div class="line">&#125;</div><div class="line"><span class="comment">//检测obj对象中是否存在name这个属性</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">"name"</span> <span class="keyword">in</span> obj);</div></pre></td></tr></table></figure></p>
+<p><strong>注意</strong>：<code>in关键字操作数组的时候检测的是索引值并非数组元素</code></p>
+<p><strong>02 delete关键字</strong></p>
+<p>01 删除对象的属性</p>
+<p>02 删除未使用var声明的变量</p>
+<p>03 返回值为boolean类型，true则表示是否删除成功</p>
+<p><strong>注意</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">01 删除的属性如果不存在，返回true</div><div class="line">02 删除的如果是原型中的属性，返回true 但是删除不成功</div></pre></td></tr></table></figure></p>
+<h1 id="循环和分支"><a href="#循环和分支" class="headerlink" title="循环和分支"></a>循环和分支</h1><p><strong>循环结构</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span></div><div class="line"><span class="keyword">while</span></div><div class="line"><span class="keyword">do</span>...while</div><div class="line"><span class="keyword">for</span>..in</div></pre></td></tr></table></figure></p>
+<p><strong>分支结构</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>...else..</div><div class="line">swith..case</div></pre></td></tr></table></figure></p>
+<p><strong>break和continue对比</strong></p>
+<p><code>break:终止循环，循环中后面的代码不再执行</code></p>
+<p><code>continue:结束当前循环，循环后面的代码不再执行，继续下一次循环</code></p>
+<h1 id="调试工具的使用"><a href="#调试工具的使用" class="headerlink" title="调试工具的使用"></a>调试工具的使用</h1><p><strong>开启调试窗口</strong></p>
+<pre><code>windows 平台: f12; Mac: option+command+i;
+</code></pre><p><strong>调试窗口介绍</strong></p>
+<pre><code>指针: 选择页面中的元素
+
+手机: 使用移动端界面调试
+
+Elements: 查看页面 DOM 树
+
+Console: 控制台(注意, 控制台与该页面是一个整体, 在控制台中的任何操作, 会影响到页面)
+
+Source: 代码调试
+</code></pre><p><strong>调试工具的使用</strong></p>
+<pre><code>逐过程运行, 一次运行一个函数
+
+单步运行(逐步运行), 一次运行一句, 如果是函数, 进入函数体内运行
+
+继续运行. 从当前状态运行下去, 直到出现断点, 如果没有断点则运行结束
+</code></pre><p><strong>设置断点技巧</strong></p>
+<pre><code>逐步与逐过程混合
+断点加继续运行
+条件断点(右键添加 add contitional breakpoint)
+</code></pre><p><strong>利用 watch 监视窗口可以查看对象成员</strong></p>
+<h1 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h1><p><strong>常见的异常分类</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">运行环境的多样性导致的异常（浏览器）</div><div class="line">语法错误，代码错误</div></pre></td></tr></table></figure></p>
+<p><code>异常的特征</code>:一旦代码出现异常，后面的代码就不会再执行</p>
+<p><strong>异常捕获</strong></p>
+<p><code>使用try-catch语句捕获异常</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">try</span>&#123;</div><div class="line">    <span class="comment">//这里写可能出现异常的代码</span></div><div class="line">&#125;<span class="keyword">catch</span>(e)&#123;</div><div class="line">    <span class="comment">//这里的e就是捕获的异常对象</span></div><div class="line">    <span class="comment">//可以在这里写，出现异常后的处理代码</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>异常捕获语句执行的过程为：</p>
+<p>01 代码正常运行, 如果在try中出现了错误, try 里面出现错误的语句后面的代码都不再执行, 直接跳转到 catch 中</p>
+<p>02 在catch中处理错误信息</p>
+<p>03 继续执行后面的代码</p>
+<p>04 如果 try 中没有出现错误, 那么不走 catch 直接执行后面的代码</p>
+<p><code>捕获异常的优点：</code>通过try-catch语句进行异常捕获之后，代码将会继续执行，而不会中断。</p>
+<p>注意：<code>语法错误异常用try-catch语句无法捕获</code>，因为在预解析阶段，语法错误会直接检测出来，而不会等到运行的时候才报错。</p>
+<p><strong>try..catch使用示例</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//01 try ... catch结构的使用</span></div><div class="line"><span class="comment">//a();  若直接调用则爆出:Uncaught ReferenceError: a is not defined错误</span></div><div class="line"><span class="comment">//在开发中,我们对于可能会报错或者是发生异常的代码用try结构进行处理</span></div><div class="line"><span class="keyword">try</span>&#123;</div><div class="line">    a();    <span class="comment">//如果发生异常,那么至少不会到正程序中断</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">catch</span>(e)</div><div class="line">&#123;</div><div class="line">    <span class="comment">//如果try语句中发生了异常,那么会执行此处的代码块</span></div><div class="line">    <span class="comment">//参数e.为具体的异常信息,可以打印进行查看</span></div><div class="line">    <span class="built_in">console</span>.log(e);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">functionTest</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"functionTest"</span>);</div><div class="line">&#125;;</div><div class="line">functionTest();</div><div class="line"><span class="comment">//结论:使用try...catch结构,如果发生了异常,那么不会影响后面代码的执行,且我们可以在发生异常信息之后做出具体的处理</span></div></pre></td></tr></table></figure></p>
+<p><strong>手动抛出异常</strong></p>
+<p>案例：自己写的一个函数，需要一个参数，如果用户不传参数，此时想直接给用户抛出异常，就需要了解如何抛出异常。</p>
+<p>抛出异常使用throw关键字，语法如下：</p>
+<p><code>手动抛出异常信息（字符串）</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">try</span>&#123;</div><div class="line">    <span class="comment">//a();    //如果发生异常,那么至少不会到正程序中断</span></div><div class="line">    <span class="comment">//不使用系统默认的异常信息,尝试手动抛出</span></div><div class="line">    <span class="keyword">throw</span> <span class="string">"对不起,您调用了尚未定义的方法"</span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">catch</span>(e)</div><div class="line">&#123;</div><div class="line">    <span class="comment">//如果try语句中发生了异常,那么会执行此处的代码块</span></div><div class="line">    <span class="comment">//参数e.为具体的异常信息,可以打印进行查看</span></div><div class="line">    <span class="built_in">console</span>.log(e);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">functionTest</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"functionTest"</span>);</div><div class="line">&#125;;</div><div class="line">functionTest();</div></pre></td></tr></table></figure></p>
+<p><code>手动抛出异常信息（对象）</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">try</span>&#123;</div><div class="line">    <span class="comment">//a();    //如果发生异常,那么至少不会到正程序中断</span></div><div class="line">    <span class="comment">//不使用系统默认的异常信息,尝试手动抛出</span></div><div class="line">    <span class="keyword">throw</span> &#123;</div><div class="line">        <span class="attr">errMsg</span>:<span class="string">"具体的错误信息提示"</span>,</div><div class="line">        <span class="attr">errCode</span>:<span class="string">"指定错误类型的代号,如1001等"</span></div><div class="line">    &#125;;</div><div class="line">&#125;</div><div class="line"><span class="keyword">catch</span>(e)</div><div class="line">&#123;</div><div class="line">    <span class="comment">//如果try语句中发生了异常,那么会执行此处的代码块</span></div><div class="line">    <span class="comment">//参数e.为具体的异常信息,可以打印进行查看</span></div><div class="line">    <span class="built_in">console</span>.log(e);</div><div class="line">    <span class="comment">//在try语句中抛出的错误信息是什么,那么得到的异常信息就是什么</span></div><div class="line">    <span class="comment">//如果抛出的是字符串,那么得到的就是字符串</span></div><div class="line">    <span class="comment">//如果抛出的是对象,那么此处得到的就是对象</span></div><div class="line">    <span class="built_in">console</span>.log(e.errMsg);</div><div class="line">    <span class="built_in">console</span>.log(e.errCode);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">functionTest</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"functionTest"</span>);</div><div class="line">&#125;;</div><div class="line">functionTest();</div></pre></td></tr></table></figure></p>
+<p><strong>异常捕获语句的完整模式</strong></p>
+<p>异常捕获语句的完整模式为try-catch-finally<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">try</span>&#123;</div><div class="line">    <span class="comment">//在执行的时候可能发生异常的代码</span></div><div class="line">    b();</div><div class="line">&#125;</div><div class="line"><span class="keyword">catch</span> (e)</div><div class="line">&#123;</div><div class="line">    <span class="comment">//如果try代码块中的代码在执行中发生了异常,那么就会执行该代码块的代码</span></div><div class="line">    <span class="comment">//通过打印e对象可以查看具体的异常信息</span></div><div class="line">    <span class="built_in">console</span>.log(e); <span class="comment">//打印异常信息</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">finally</span> &#123;</div><div class="line">    <span class="comment">//不论try语句中的代码是否会发生异常,都一定会执行此处的代码块</span></div><div class="line">    <span class="comment">//一般在前端开发中很少使用,常用语后台开发的资源释放工作</span></div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"无论如何总要执行的代码"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>finally中的代码，不管是否发生异常，都会执行。一般用在后端语言中，用来释放资源，JavaScript中很少会用到。</p>
+<h1 id="DOM操作"><a href="#DOM操作" class="headerlink" title="DOM操作"></a>DOM操作</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">获取元素操作</div><div class="line"></div><div class="line">    getElementById</div><div class="line">    getElementsByTagName</div><div class="line">    getElementsByClassName</div><div class="line"></div><div class="line">元素节点操作</div><div class="line"></div><div class="line">    appendChild</div><div class="line">    insertBefore</div><div class="line">    removeChild</div><div class="line">    replaceChild</div><div class="line">    cloneNode</div><div class="line">    createElement</div><div class="line">    createTextNode（创建文本节点）</div><div class="line"></div><div class="line">属性节点操作</div><div class="line"></div><div class="line">    getAttribute</div><div class="line">    setAttribute</div><div class="line">    removeAttribute</div><div class="line"></div><div class="line">常用DOM属性</div><div class="line">    className</div><div class="line">    innerHTML</div><div class="line">    innerText/textContent value</div><div class="line">    children</div></pre></td></tr></table></figure>
+<p><strong>代码示例</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//0 获取页面中指定的标签,并设置其样式</span></div><div class="line">    <span class="keyword">var</span> divID = <span class="built_in">document</span>.getElementById(<span class="string">"divId"</span>);</div><div class="line">    divID.style.backgroundColor = <span class="string">"pink"</span>;</div><div class="line">    divID.style.height = <span class="string">"40px"</span>;</div><div class="line">    divID.style.width = <span class="string">"200px"</span>;</div><div class="line">    <span class="comment">//01 创建新的标签</span></div><div class="line">    <span class="keyword">var</span> div = <span class="built_in">document</span>.createElement(<span class="string">"div"</span>);</div><div class="line">    <span class="comment">//02 设置标签的样式</span></div><div class="line">    div.style.backgroundColor = <span class="string">"red"</span>;</div><div class="line">    div.style.height = <span class="string">"100px"</span>;</div><div class="line">    div.style.width = <span class="string">"300px"</span>;</div><div class="line">    div.style.fontSize = <span class="string">"20"</span>;</div><div class="line">    <span class="comment">//03 设置标签的内容</span></div><div class="line">    div.innerText = <span class="string">"这是一个自己创建的标签"</span>;</div><div class="line">    <span class="comment">//04 把标签插入到页面中</span></div><div class="line">    <span class="built_in">document</span>.body.appendChild(div);</div></pre></td></tr></table></figure></p>
+<h1 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h1><p><strong>01 面层过程和面向对象编程</strong></p>
+<p>01 面向对象编程和面向过程编程是一种编程思想,和具体的语言关系不大。</p>
+<p>02 面向过程编程和面向对象编程的主要区别<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">面向过程编程:</div><div class="line">     关注点在于解决问题需要的每一个详细的步骤</div><div class="line">     示例:</div><div class="line">         自己洗衣服的过程</div><div class="line">         ① 收集需要洗的脏衣服</div><div class="line">         ② 准备洗衣粉、洗衣液等</div><div class="line">         ③ 把衣服放到一个盆里</div><div class="line">         ④ 接水</div><div class="line">         ⑤ 把洗衣粉放到盆里</div><div class="line">         ⑥ 摩擦,摩擦,不断的摩擦</div><div class="line">         ⑦ 把洗好的衣服用清水冲洗干净</div><div class="line">         ⑧ 尽量把把洗好的衣服的水分拧干</div><div class="line">         ⑨ 晾晒</div><div class="line"> 面向对象编程:</div><div class="line">     关注点在于解决问题需要的对象身上</div><div class="line">     示例:</div><div class="line">         使用洗衣机洗衣服的过程</div><div class="line">         ① 收集需要洗的脏衣服</div><div class="line">         ② 找到合适的洗衣机</div><div class="line">         ③ 设定洗衣服和烘干的程序</div></pre></td></tr></table></figure></p>
+<p>03 面向过程和面向对象他们的区别就类似于自己洗衣服和使用洗衣机洗衣服|自己做饭吃和去餐馆吃饭</p>
+<p><strong>面向对象编程的相关概念</strong></p>
+<p>01 对象</p>
+<pre><code>什么是对象? 所有的一切都是对象,在开发中有一项重要的工作就是对象的划分
+一般来说,我们所指的对象是某个具体的事物,而非泛泛的类别
+</code></pre><p>02 对象的特征(静态描述信息)</p>
+<pre><code>所谓特征就是一些特定的描述信息
+如:学生(性别、年龄、班级、专业、籍贯、家庭住址)
+如:汽车(颜色、车牌、品牌、价格等)
+</code></pre><p>03 对象的行为(动态特性)</p>
+<pre><code>如:人(吃饭、睡觉、玩游戏、奔跑、运动等)
+如:狗(吃、睡、咬人、叫、流口水)
+</code></pre><p>04 js中的对象</p>
+<pre><code>键-值对(key-value)的集合。
+</code></pre><p>05 现实生活中的对象和js对象的对应关系</p>
+<pre><code>静态的描述信息 - js对象中的属性(属性就是定义在对象内部的变量)
+动态的行为特征 - js对象中的方法(方法就是定义在对象内部的函数)
+</code></pre><p>06 代码示例：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">    <span class="keyword">var</span> zhangsan = &#123;</div><div class="line">            <span class="attr">name</span>:<span class="string">"张三"</span>,</div><div class="line">            <span class="attr">sex</span>:<span class="string">"男"</span>,</div><div class="line">            <span class="attr">age</span>:<span class="number">18</span>,</div><div class="line">            <span class="attr">address</span>:<span class="string">"天上人间1号公馆"</span>,</div><div class="line">            <span class="attr">eat</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">'能吃'</span>);</div><div class="line">            &#125;,</div><div class="line">            <span class="attr">sleep</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">"能睡"</span>);</div><div class="line">            &#125;,</div><div class="line">            <span class="attr">say</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">"能说话"</span>);</div><div class="line">            &#125;,</div><div class="line">            <span class="attr">run</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">"能运动"</span>);</div><div class="line">            &#125;,</div><div class="line">            <span class="attr">song</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">"能唱歌"</span>);</div><div class="line">            &#125;</div><div class="line">        &#125;;</div><div class="line">        <span class="comment">//打印对象的属性并调用相关的方法</span></div><div class="line"><span class="built_in">console</span>.log(zhangsan.name,zhangsan.age,zhangsan.address);</div><div class="line">        zhangsan.say();</div><div class="line">        zhangsan.sleep();</div></pre></td></tr></table></figure></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">原型继承机制</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">简明教程</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/01/15/01/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2016/01/08/JSONP跨域/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JSONP跨域</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-    
+  
+
+  
 
 
           </div>
@@ -245,8 +500,8 @@ var _hmt = _hmt || [];
 		 fancybox: undefined,
 		  animate: undefined,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

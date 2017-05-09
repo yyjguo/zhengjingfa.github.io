@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/01/08/JSONP跨域/index.html">
 <meta property="og:site_name" content="Afanail">
 <meta property="og:description" content="Asynchronous JavaScript and XML (Ajax) 是Web2.0的关键技术。AJAX与服务器交换数据刷新局部网页,不需重载。  因为浏览器及同源策略的限制，ajax不允许跨域通信。同源是指协议、域名和端口都一致的情况。同源策略保证一个源的动态脚本不能读取或操作其他源的http响应和cookie，使浏览器隔离不同源的内容之间互相操作。">
-<meta property="og:updated_time" content="2017-05-08T08:17:58.000Z">
+<meta property="og:updated_time" content="2017-05-09T04:50:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JSONP跨域">
 <meta name="twitter:description" content="Asynchronous JavaScript and XML (Ajax) 是Web2.0的关键技术。AJAX与服务器交换数据刷新局部网页,不需重载。  因为浏览器及同源策略的限制，ajax不允许跨域通信。同源是指协议、域名和端口都一致的情况。同源策略保证一个源的动态脚本不能读取或操作其他源的http响应和cookie，使浏览器隔离不同源的内容之间互相操作。">
@@ -187,10 +187,28 @@ var _hmt = _hmt || [];
 <p>但是此时的主动权不在我们手里。</p>
 <h3 id="JSONP解决跨域"><a href="#JSONP解决跨域" class="headerlink" title="JSONP解决跨域"></a>JSONP解决跨域</h3><p>还可以使用更为主动的方法，使用JSONP解决跨域问题。分为以下几步：<br>我们知道多个不同的script标签中的数据是可以相互访问的，而script的src的本质就是将导入文件中的内容拷贝到当前script标签中，我们拿到百度搜索URL地址：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=ab&amp;cb=jQuery11020672211218553074_1491468814655</div></pre></td></tr></table></figure></p>
 <p>搜索之后的结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">jQuery11020672211218553074_1491468814655(&#123;q:&quot;ab&quot;,p:false,s:[&quot;abs&quot;,&quot;ab胶&quot;,&quot;abc&quot;,&quot;abac形式的成语&quot;,&quot;abcc形式的成语&quot;,&quot;abab式的词语&quot;,&quot;abo&quot;,&quot;abp&quot;,&quot;abstract&quot;,&quot;abs塑料&quot;]&#125;);</div></pre></td></tr></table></figure></p>
-<p>从而可以引出跨域(jsonP)原理：<br>1.src可以拿到非当前域的数据。<br>2.script的src的本质就是将导入文件中的内容拷贝到当前script标签中。<br>3.如果src返回的数据符合 函数名称(参数); 格式, 那么就可以实现跨域。<br>具体例子：<br>在本地的文件的script准备回调函数say,<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">say</span>(<span class="params">obj</span>) </span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(obj);     </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>从而可以引出跨域(jsonP)原理：<br>1.src可以拿到非当前域的数据。<br>2.script的src的本质就是将导入文件中的内容拷贝到当前script标签中。<br>3.如果src返回的数据符合 函数名称(参数); 格式, 那么就可以实现跨域。<br><strong>具体例子</strong>：<br>在本地的文件的script准备回调函数say,<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">say</span>(<span class="params">obj</span>) </span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(obj);     </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>通过script的src属性拿到百度要搜索的URL并且拼接<code>?wd=ab&amp;cb=say</code>参数，如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script src=&quot;https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=ab&amp;cb=say&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure></p>
 <p>最后，调用say方法，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">say(&#123;q:&quot;ab&quot;,p:false,s:[&quot;abs&quot;,&quot;ab胶&quot;,&quot;abc&quot;,&quot;abac形式的成语&quot;,&quot;abcc形式的成语&quot;,&quot;abab式的词语&quot;,&quot;abo&quot;,&quot;abp&quot;,&quot;abstract&quot;,&quot;abs塑料&quot;]&#125;);</div></pre></td></tr></table></figure></p>
-<p> 总体的流程大概就是这样子，不过实际开发中要与后台定好接口，希望能够帮到你。</p>
+<p><strong>具体例子</strong>： </p>
+<pre><code class="js">      //1.使用src，请求数据
+         &lt;script src="http://datainfo.duapp.com/shopdata/getGoods.php?callback=callback"&gt;
+     //2.在本地声明一个方法
+         function callback(args)      {  console.log(args); }
+        //3.要在服务端要处理跨域
+            $res = $_GET['callback'];
+            echo $res."('我是服务的数据')";
+    function callback(args) {
+        console.log(args);
+    }
+&lt;/script&gt;
+&lt;!--
+    如果服务器返回的是js代码，那么浏览器就会直接执行js代码
+    借助浏览器的特性来实现跨域
+--&gt;
+&lt;script src="http://datainfo.duapp.com/shopdata/getGoods.php?call6‘back=callback"&gt;&lt;/script&gt;
+</code></pre>
+<p>总体的流程大概就是这样子，不过实际开发中要与后台定好接口，希望能够帮到你。</p>
 
       
 

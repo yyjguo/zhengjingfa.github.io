@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/02/01/js-02/index.html">
 <meta property="og:site_name" content="Afanail">
 <meta property="og:description" content="面向对象方法被人谈论了二十多年了，直到今天，我们还一直在谈对象。  三.面向对象编程1.面向层过程和面向对象编程01 面向对象编程和面向过程编程是一种编程思想,和具体的语言关系不大。02 面向过程编程和面向对象编程的主要区别">
-<meta property="og:updated_time" content="2017-05-09T06:14:10.000Z">
+<meta property="og:updated_time" content="2017-05-09T06:18:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript简明教程（2）">
 <meta name="twitter:description" content="面向对象方法被人谈论了二十多年了，直到今天，我们还一直在谈对象。  三.面向对象编程1.面向层过程和面向对象编程01 面向对象编程和面向过程编程是一种编程思想,和具体的语言关系不大。02 面向过程编程和面向对象编程的主要区别">
@@ -218,8 +218,10 @@ var _hmt = _hmt || [];
 即以自定义构造函数方式创建出来的所有对象,自动拥有和共享该构造函数的原型对象中的所有属性和方法。
 </code></pre><p><strong>如何访问构造函数的原型对象</strong><br>① <code>构造函数.protoType</code><br>② <code>对象.__proto__（不推荐）</code></p>
 <p><strong>设置原型对象的属性和方法</strong><br>① <code>利用对象的动态特性来为构造函数的原型对象添加属性和方法</code><br>② <code>替换原型对象</code></p>
-<p><strong>实例和实例化</strong>：<br><code>实例化</code>:通过构造函数创建具体对象的过程。<br><code>实例</code>:通过构造函数实例化出来的对象,我们称之为该构造函数的一个实例。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">**原型的使用方法**</div><div class="line">① 利用对象的动态特性给原型添加属性|方法，如果要添加的方法过多,则有大量重复代码。</div><div class="line">② 直接替换原型对象：</div><div class="line">01 替换前后创建的对象所指向的原型对象不一致</div><div class="line">02 替换原型对象会切断和之前的原型对象之间的关系</div><div class="line"></div><div class="line">**原型对象的使用注意**</div><div class="line">```js</div><div class="line">    ① 访问属性:构造函数创建出来的对象在访问属性的时候,会先在实例内查找,如果没有找到则进一步到对应的原型对象中查找</div><div class="line">    ② 设置属性:在使用点语法进行赋值的时候,无法操作到对应的原型对象,如果该属性在对象中已经存在，则修改该属性的值。如果该属性在对象中尚未存在,则新增该属性。</div><div class="line">    ③ 设置原型对象的属性:</div><div class="line">    [01] 设置原型对象的属性,只能通过构造函数.Prototype的方式替换原型对象的方式设置</div><div class="line">    [02] 如果原型对象的属性是值类型，那么只能通过Person.prototype.属性的方式修改其值。如果原型对象的属性是引用类型,那么可以通过对象名.引用对象.属性名的方式设置修改</div><div class="line">                (001) 使用构造函数创建出来的多个对象的原型对象中的该属性指向的是同一块数据</div><div class="line">                (002) 某个对象对该原型对象属性进行了修改会影响到其他的对象</div></pre></td></tr></table></figure></p>
-<p><strong>proto</strong>属性说明：<strong>proto</strong>是一个非标准属性,即ECMAScript中并不包含该属性,这只是某些浏览器为了方便开发人员开发和调试而提供的一个属性,不具备通用性。<br>    建议:在调试的时候可以使用该属性,但不能出现在正式的代码中。</p>
+<p><strong>实例和实例化</strong>：<br><code>实例化</code>:通过构造函数创建具体对象的过程。<br><code>实例</code>:通过构造函数实例化出来的对象,我们称之为该构造函数的一个实例。<br>注意:在说实例的时候,一定要指定是某个具体构造函数的实例。</p>
+<p><strong>原型的使用方法</strong><br>① 利用对象的动态特性给原型添加属性|方法，如果要添加的方法过多,则有大量重复代码。<br>② 直接替换原型对象：<br>01 替换前后创建的对象所指向的原型对象不一致<br>02 替换原型对象会切断和之前的原型对象之间的关系</p>
+<p><strong>原型对象的使用注意</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">① 访问属性:构造函数创建出来的对象在访问属性的时候,会先在实例内查找,如果没有找到则进一步到对应的原型对象中查找。</div><div class="line">② 设置属性:在使用点语法进行赋值的时候,无法操作到对应的原型对象,如果该属性在对象中已经存在，则修改该属性的值。如果该属性在对象中尚未存在,则新增该属性。</div><div class="line">③ 设置原型对象的属性:</div><div class="line">[<span class="number">01</span>] 设置原型对象的属性,只能通过构造函数.Prototype的方式替换原型对象的方式设置。</div><div class="line">[<span class="number">02</span>] 如果原型对象的属性是值类型，那么只能通过Person.prototype.属性的方式修改其值。如果原型对象的属性是引用类型,那么可以通过对象名.引用对象.属性名的方式设置修改：</div><div class="line">            (<span class="number">001</span>) 使用构造函数创建出来的多个对象的原型对象中的该属性指向的是同一块数据。</div><div class="line">            (<span class="number">002</span>) 某个对象对该原型对象属性进行了修改会影响到其他的对象。</div></pre></td></tr></table></figure></p>
+<p><strong>proto</strong>属性说明：<strong>proto</strong>是一个非标准属性,即ECMAScript中并不包含该属性,这只是某些浏览器为了方便开发人员开发和调试而提供的一个属性,不具备通用性。建议:在调试的时候可以使用该属性,但不能出现在正式的代码中。</p>
 
       
 

@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>JavaScript简明教程（3） | Afanail</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="关于继承，通俗说子继业。在JavaScript中，Object是所有对象的父级|父类型|超类型：js中所有的对象都直接或间接的继承自Object。  五.继承5.1相关方法在讲继承之前，我们必须先了解一些相关的方法。 1.hasOwnProperty和in属性操作in关键字作用：用来检查对象中是否存在某个属性(不区分实例属性和原型属性)。语法：“属性名” in 对象。代码示例:">
+  <meta name="description" content="关于继承，通俗说子继父业。在JavaScript中，Object是所有对象的父级|父类型|超类型：js中所有的对象都直接或间接的继承自Object。  五.继承5.1相关方法在讲继承之前，我们必须先了解一些相关的方法。 1.hasOwnProperty和in属性操作in关键字作用：用来检查对象中是否存在某个属性(不区分实例属性和原型属性)。语法：“属性名” in 对象。代码示例:">
 <meta name="keywords" content="JavaScript,简明教程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript简明教程（3）">
 <meta property="og:url" content="http://yoursite.com/2016/02/18/js-3/index.html">
 <meta property="og:site_name" content="Afanail">
-<meta property="og:description" content="关于继承，通俗说子继业。在JavaScript中，Object是所有对象的父级|父类型|超类型：js中所有的对象都直接或间接的继承自Object。  五.继承5.1相关方法在讲继承之前，我们必须先了解一些相关的方法。 1.hasOwnProperty和in属性操作in关键字作用：用来检查对象中是否存在某个属性(不区分实例属性和原型属性)。语法：“属性名” in 对象。代码示例:">
-<meta property="og:updated_time" content="2017-05-10T05:04:43.000Z">
+<meta property="og:description" content="关于继承，通俗说子继父业。在JavaScript中，Object是所有对象的父级|父类型|超类型：js中所有的对象都直接或间接的继承自Object。  五.继承5.1相关方法在讲继承之前，我们必须先了解一些相关的方法。 1.hasOwnProperty和in属性操作in关键字作用：用来检查对象中是否存在某个属性(不区分实例属性和原型属性)。语法：“属性名” in 对象。代码示例:">
+<meta property="og:updated_time" content="2017-05-10T06:13:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript简明教程（3）">
-<meta name="twitter:description" content="关于继承，通俗说子继业。在JavaScript中，Object是所有对象的父级|父类型|超类型：js中所有的对象都直接或间接的继承自Object。  五.继承5.1相关方法在讲继承之前，我们必须先了解一些相关的方法。 1.hasOwnProperty和in属性操作in关键字作用：用来检查对象中是否存在某个属性(不区分实例属性和原型属性)。语法：“属性名” in 对象。代码示例:">
+<meta name="twitter:description" content="关于继承，通俗说子继父业。在JavaScript中，Object是所有对象的父级|父类型|超类型：js中所有的对象都直接或间接的继承自Object。  五.继承5.1相关方法在讲继承之前，我们必须先了解一些相关的方法。 1.hasOwnProperty和in属性操作in关键字作用：用来检查对象中是否存在某个属性(不区分实例属性和原型属性)。语法：“属性名” in 对象。代码示例:">
   
     <link rel="alternative" href="/atom.xml" title="Afanail" type="application/atom+xml">
   
@@ -179,7 +179,7 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>关于继承，通俗说子继业。在JavaScript中，Object是所有对象的父级|父类型|超类型：js中所有的对象都直接或间接的继承自Object。</p>
+<p>关于继承，通俗说子继父业。在JavaScript中，Object是所有对象的父级|父类型|超类型：js中所有的对象都直接或间接的继承自Object。</p>
 </blockquote>
 <h1 id="五-继承"><a href="#五-继承" class="headerlink" title="五.继承"></a>五.继承</h1><h2 id="5-1相关方法"><a href="#5-1相关方法" class="headerlink" title="5.1相关方法"></a>5.1相关方法</h2><p>在讲继承之前，我们必须先了解一些相关的方法。</p>
 <h3 id="1-hasOwnProperty和in属性操作"><a href="#1-hasOwnProperty和in属性操作" class="headerlink" title="1.hasOwnProperty和in属性操作"></a>1.hasOwnProperty和in属性操作</h3><p><strong>in关键字</strong><br>作用：用来检查对象中是否存在某个属性(不区分实例属性和原型属性)。语法：“属性名” in 对象。代码示例:<br><a id="more"></a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    <span class="comment">//01 提供一个构造函数</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.name = name;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//02 设置构造函数的原型对象的属性</span></div><div class="line">    Person.prototype.sayHello = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"hello"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//03 创建对象</span></div><div class="line">    <span class="keyword">var</span> p1 = <span class="keyword">new</span> Person();</div><div class="line">    <span class="comment">//04 使用in关键字判断对象中是否存在以下属性:name age sayHello</span></div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"age"</span> <span class="keyword">in</span> p1);       <span class="comment">//false</span></div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"name"</span> <span class="keyword">in</span> p1);      <span class="comment">//true</span></div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"sayHello"</span> <span class="keyword">in</span> p1);  <span class="comment">//true</span></div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure></p>

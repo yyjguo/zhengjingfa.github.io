@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Afanail</title>
+  <title>JavaScript简明教程（3） | Afanail</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端,js,jquery,javascript,html5,开发者,程序猿">
-<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Afanail">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="关于继承，通俗说子继业。在JavaScript中，Object是所有对象的父级|父类型|超类型：js中所有的对象都直接或间接的继承自Object。  五.继承5.1相关方法在讲继承之前，我们必须先了解一些相关的方法。 1.hasOwnProperty和in属性操作in关键字作用：用来检查对象中是否存在某个属性(不区分实例属性和原型属性)语法：“属性名” in 对象代码示例:">
+<meta name="keywords" content="JavaScript,简明教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript简明教程（3）">
+<meta property="og:url" content="http://yoursite.com/2016/02/18/js-3/index.html">
 <meta property="og:site_name" content="Afanail">
-<meta property="og:description" content="前端,js,jquery,javascript,html5,开发者,程序猿">
+<meta property="og:description" content="关于继承，通俗说子继业。在JavaScript中，Object是所有对象的父级|父类型|超类型：js中所有的对象都直接或间接的继承自Object。  五.继承5.1相关方法在讲继承之前，我们必须先了解一些相关的方法。 1.hasOwnProperty和in属性操作in关键字作用：用来检查对象中是否存在某个属性(不区分实例属性和原型属性)语法：“属性名” in 对象代码示例:">
+<meta property="og:updated_time" content="2017-05-10T04:59:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Afanail">
-<meta name="twitter:description" content="前端,js,jquery,javascript,html5,开发者,程序猿">
+<meta name="twitter:title" content="JavaScript简明教程（3）">
+<meta name="twitter:description" content="关于继承，通俗说子继业。在JavaScript中，Object是所有对象的父级|父类型|超类型：js中所有的对象都直接或间接的继承自Object。  五.继承5.1相关方法在讲继承之前，我们必须先了解一些相关的方法。 1.hasOwnProperty和in属性操作in关键字作用：用来检查对象中是否存在某个属性(不区分实例属性和原型属性)语法：“属性名” in 对象代码示例:">
   
     <link rel="alternative" href="/atom.xml" title="Afanail" type="application/atom+xml">
   
@@ -155,16 +156,14 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-js-3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-js-3" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/18/js-3/">JavaScript简明教程（3）</a>
+    <h1 class="article-title" itemprop="name">
+      JavaScript简明教程（3）
     </h1>
   
 
@@ -183,10 +182,44 @@ var _hmt = _hmt || [];
 <p>关于继承，通俗说子继业。在JavaScript中，Object是所有对象的父级|父类型|超类型：js中所有的对象都直接或间接的继承自Object。</p>
 </blockquote>
 <h1 id="五-继承"><a href="#五-继承" class="headerlink" title="五.继承"></a>五.继承</h1><h2 id="5-1相关方法"><a href="#5-1相关方法" class="headerlink" title="5.1相关方法"></a>5.1相关方法</h2><p>在讲继承之前，我们必须先了解一些相关的方法。</p>
-<h3 id="1-hasOwnProperty和in属性操作"><a href="#1-hasOwnProperty和in属性操作" class="headerlink" title="1.hasOwnProperty和in属性操作"></a>1.hasOwnProperty和in属性操作</h3><p><strong>in关键字</strong><br>作用：用来检查对象中是否存在某个属性(不区分实例属性和原型属性)<br>语法：“属性名” in 对象<br>代码示例:<br>
-        
-          <a class="article-more-a" href="/2016/02/18/js-3/#more">more >></a>
-        
+<h3 id="1-hasOwnProperty和in属性操作"><a href="#1-hasOwnProperty和in属性操作" class="headerlink" title="1.hasOwnProperty和in属性操作"></a>1.hasOwnProperty和in属性操作</h3><p><strong>in关键字</strong><br>作用：用来检查对象中是否存在某个属性(不区分实例属性和原型属性)<br>语法：“属性名” in 对象<br>代码示例:<br><a id="more"></a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    <span class="comment">//01 提供一个构造函数</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.name = name;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//02 设置构造函数的原型对象的属性</span></div><div class="line">    Person.prototype.sayHello = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"hello"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//03 创建对象</span></div><div class="line">    <span class="keyword">var</span> p1 = <span class="keyword">new</span> Person();</div><div class="line">    <span class="comment">//04 使用in关键字判断对象中是否存在以下属性:name age sayHello</span></div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"age"</span> <span class="keyword">in</span> p1);       <span class="comment">//false</span></div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"name"</span> <span class="keyword">in</span> p1);      <span class="comment">//true</span></div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"sayHello"</span> <span class="keyword">in</span> p1);  <span class="comment">//true</span></div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure></p>
+<p><strong>对象的hasOwnProperty方法</strong><br>作用：用来检查对象中是否存在指定的属性(只检查实例属性)<br>语法：对象.hasOwnProperty(“属性名”)<br>代码示例<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    <span class="comment">//01 提供一个构造函数</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.name = name;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//02 设置构造函数的原型对象的属性</span></div><div class="line">    Person.prototype.sayHello = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"hello"</span>);</div><div class="line">    &#125;</div><div class="line">    Person.prototype.des = <span class="string">"默认的描述信息"</span>;</div><div class="line">    <span class="comment">//03 创建对象</span></div><div class="line">    <span class="keyword">var</span> p1 = <span class="keyword">new</span> Person();</div><div class="line">    <span class="comment">//04 使用hasOwnProperty方法判断该属性是否是对象的实例属性</span></div><div class="line">    <span class="built_in">console</span>.log(p1.hasOwnProperty(<span class="string">"age"</span>));       <span class="comment">//false</span></div><div class="line">    <span class="built_in">console</span>.log(p1.hasOwnProperty(<span class="string">"name"</span>));      <span class="comment">//true</span></div><div class="line">    <span class="built_in">console</span>.log(p1.hasOwnProperty(<span class="string">"sayHello"</span>));  <span class="comment">//false</span></div><div class="line">    <span class="built_in">console</span>.log(p1.hasOwnProperty(<span class="string">"des"</span>));       <span class="comment">//false</span></div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure></p>
+<p><strong>判断某对象中存在且只存在某个原型属性</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">isProperty</span>(<span class="params">obj, property</span>) </span>&#123;</div><div class="line">       <span class="keyword">return</span> !obj.hasOwnProperty(property) &amp;&amp; (property <span class="keyword">in</span> obj);</div><div class="line">   &#125;</div></pre></td></tr></table></figure></p>
+<h3 id="2-constructor构造器属性"><a href="#2-constructor构造器属性" class="headerlink" title="2.constructor构造器属性"></a>2.constructor构造器属性</h3><p><strong>说明</strong><br>  使用构造函数创建对象,则</p>
+<pre><code>原型对象中的constructor属性指向对应的构造函数
+实例对象中的constructor指向对应的构造函数,其中这里的constructor就是从原型中获取的即constructor时实例对象中的原型属性,而非实例属性
+</code></pre><p><strong>代码验证</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//01 提供一个构造函数</span></div><div class="line">   <span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">       <span class="keyword">this</span>.name = name;</div><div class="line">   &#125;</div><div class="line">   <span class="comment">//02 设置构造函数的原型对象的属性</span></div><div class="line">   Person.prototype.sayHello = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">       <span class="built_in">console</span>.log(<span class="string">"hello"</span>);</div><div class="line">   &#125;;</div><div class="line">   Person.prototype.des = <span class="string">"默认的描述信息"</span>;</div><div class="line">   <span class="comment">//03 创建对象</span></div><div class="line">   <span class="keyword">var</span> p1 = <span class="keyword">new</span> Person();</div><div class="line">   <span class="function"><span class="keyword">function</span> <span class="title">isProperty</span>(<span class="params">obj, property</span>) </span>&#123;</div><div class="line">       <span class="keyword">return</span> !obj.hasOwnProperty(property) &amp;&amp; (property <span class="keyword">in</span> obj);</div><div class="line">   &#125;</div><div class="line">   <span class="built_in">console</span>.log(isProperty(p1, <span class="string">"constructor"</span>));    <span class="comment">//true</span></div></pre></td></tr></table></figure></p>
+<h3 id="3-isprotoTypeOf和instance"><a href="#3-isprotoTypeOf和instance" class="headerlink" title="3.isprotoTypeOf和instance"></a>3.isprotoTypeOf和instance</h3><p><strong>isprotoTypeOf</strong><br>作用：判断是否是某个实例对象的原型对象<br>语法:构造函数.protoType.isPrototypeOf(对象)<br>用法示例<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>) </span>&#123;&#125;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Dog</span>(<span class="params"></span>) </span>&#123;&#125;</div><div class="line">    Person.prototype.name = <span class="string">"嘿嘿"</span>;</div><div class="line">    <span class="keyword">var</span> p1 = <span class="keyword">new</span> Person();</div><div class="line">    <span class="built_in">console</span>.log(Person.prototype.isPrototypeOf(p1));<span class="comment">//rue</span></div><div class="line">    <span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.isPrototypeOf(p1));<span class="comment">//true</span></div><div class="line">    <span class="built_in">console</span>.log(Dog.prototype.isPrototypeOf(p1));<span class="comment">//false</span></div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure></p>
+<p><strong>instance</strong><br>作用：用于检查对象是否是某个构造函数(类型)的实例<br>语法：对象 instance 构造函数<br>注意：所有的对象都是Object构造函数（类型）的实例<br>用法示例<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    <span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line">    <span class="built_in">console</span>.log(arr <span class="keyword">instanceof</span> <span class="built_in">Array</span>);      <span class="comment">//true</span></div><div class="line">    <span class="built_in">console</span>.log(<span class="built_in">Array</span> <span class="keyword">instanceof</span> <span class="built_in">Object</span>);   <span class="comment">//true</span></div><div class="line">    <span class="built_in">console</span>.log(arr <span class="keyword">instanceof</span> <span class="built_in">Object</span>);     <span class="comment">//true</span></div><div class="line">    <span class="comment">//instanceOf在判断的时候,算上整条原型链</span></div><div class="line">    <span class="comment">//arr 是Array 和Object 任何一个类的示例</span></div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="5-2继承"><a href="#5-2继承" class="headerlink" title="5.2继承"></a>5.2继承</h2><h3 id="1-继承基本概念"><a href="#1-继承基本概念" class="headerlink" title="1.继承基本概念"></a>1.继承基本概念</h3><p><strong>继承</strong>：即通过一定的方式实现让某个类型A获取另外一个类型B的属性或方法。其中类型A称之为子类型，类型B称之为父类型或超类型。</p>
+<p><strong>javaScript中的继承</strong><br>Object是所有对象的父级|父类型|超类型：js中所有的对象都直接或间接的继承自Object。<br>继承有两种方式：接口继承和实现继承，在js中只支持实现继承，实现继承主要依赖原型链来完成。<br><strong>JavaScript中实现继承的几种方式</strong>：<br>说明:其他语言中继承通常通过类来实现，js中没有类的概念，js中的继承是某个对象继承另外一个对象，是基于对象的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">01 原型式继承</div><div class="line">02 原型链继承</div><div class="line">03 经典继承(借用构造函数)</div><div class="line">04 组合继承</div></pre></td></tr></table></figure></p>
+<h3 id="2-原型式继承"><a href="#2-原型式继承" class="headerlink" title="2.原型式继承"></a>2.原型式继承</h3><p><strong>原型链继承的方式A</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    <span class="comment">//01 提供一个构造函数</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name,age</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.name = name;</div><div class="line">        <span class="keyword">this</span>.age = age;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//02 设置原型对象的属性</span></div><div class="line">    Person.prototype.className = <span class="string">"逍遥派1班"</span>;</div><div class="line">    <span class="comment">//03 使用构造函数来创建原型对象</span></div><div class="line">    <span class="keyword">var</span> p1 = <span class="keyword">new</span> Person(<span class="string">"张三"</span>,<span class="number">10</span>);</div><div class="line">    <span class="keyword">var</span> p2 = <span class="keyword">new</span> Person(<span class="string">"李四"</span>,<span class="number">20</span>);</div><div class="line">    <span class="comment">//04 打印p1和p2对象中的className属性</span></div><div class="line">    <span class="built_in">console</span>.log(p1.className);</div><div class="line">    <span class="built_in">console</span>.log(p2.className);</div><div class="line">    <span class="comment">//结论:对象p1和p2继承了构造函数原型对象中的属性className</span></div><div class="line">    <span class="comment">//但是这并不是严格意义上的继承</span></div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure></p>
+<p><strong>原型链继承的方式B</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    <span class="comment">//01 提供一个构造函数</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name,age</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.name = name;</div><div class="line">        <span class="keyword">this</span>.age = age;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//02 设置原型对象的属性</span></div><div class="line">    Person.prototype = &#123;</div><div class="line">        <span class="attr">constructor</span>:Person,</div><div class="line">        <span class="attr">className</span>:<span class="string">"逍遥派1班"</span></div><div class="line">    &#125;;</div><div class="line">    <span class="comment">//03 使用构造函数来创建原型对象</span></div><div class="line">    <span class="keyword">var</span> p1 = <span class="keyword">new</span> Person(<span class="string">"张三"</span>,<span class="number">10</span>);</div><div class="line">    <span class="keyword">var</span> p2 = <span class="keyword">new</span> Person(<span class="string">"李四"</span>,<span class="number">20</span>);</div><div class="line">    <span class="comment">//04 打印p1和p2对象中的className属性</span></div><div class="line">    <span class="built_in">console</span>.log(p1.className);</div><div class="line">    <span class="built_in">console</span>.log(p2.className);</div><div class="line">    <span class="comment">//结论:对象p1和p2继承了构造函数原型对象中的属性className</span></div><div class="line">    <span class="comment">//注意:使用原型替换的方式实现继承的时候,原有原型对象中的属性和方法会丢失</span></div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure></p>
+<p><strong>原型链继承的方式C</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//01 提供超类型|父类型构造函数</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperClass</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.name = <span class="string">'SuperClass的名称'</span>;</div><div class="line">    <span class="keyword">this</span>.showName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//02 设置父类型的原型属性和原型方法</span></div><div class="line">SuperClass.prototype.info = <span class="string">'SuperClass的信息'</span>;</div><div class="line">SuperClass.prototype.showInfo = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.info);</div><div class="line">&#125;;</div><div class="line"><span class="comment">//03 提供子类型</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SubClass</span>(<span class="params"></span>) </span>&#123;</div><div class="line">&#125;</div><div class="line"><span class="comment">//04 设置继承(原型对象继承)</span></div><div class="line">SubClass.prototype = SuperClass.prototype;</div><div class="line">SubClass.prototype.constructor = SubClass;</div><div class="line"><span class="keyword">var</span> sub = <span class="keyword">new</span> SubClass();</div><div class="line"><span class="built_in">console</span>.log(sub.name);          <span class="comment">//undefined</span></div><div class="line"><span class="built_in">console</span>.log(sub.info);          <span class="comment">//SuperClass的信息</span></div><div class="line">sub.showInfo();                 <span class="comment">//SuperClass的信息</span></div><div class="line">sub.showName();                 <span class="comment">//sub.showName is not a function</span></div></pre></td></tr></table></figure></p>
+<p>点评：上面的方法可以可以继承超类型中的原型属性和原型方法，但是无法继承实例属性和实例方法</p>
+<h3 id="3-原型链继承"><a href="#3-原型链继承" class="headerlink" title="3.原型链继承"></a>3.原型链继承</h3><p>实现思想：利用原型（链）让一个对象继承另一个对象的属性和方法<br>实现本质：重写原型对象</p>
+<p><strong>原型链</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">① 每个构造函数都有原型对象</div><div class="line">② 每个对象都有自己的构造函数</div><div class="line">③ 每个构造函数的原型都是一个对象</div><div class="line">④ 那么这个构造函数的原型对象也有自己的构造函数</div><div class="line">⑤ 那么这个构造函数的原型对象的构造函数也有自己的原型对象</div><div class="line">以上形成一个链式的结构,称之为原型链</div></pre></td></tr></table></figure></p>
+<p><strong>原型链中的属性搜索原则</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">当访问某个对象的成员的时候,会先在自身中查找,如果找到则直接使用</div><div class="line">如果在自身中没有找到,则去当前创建当前对象的构造函数的原型对象中查找,如果找到了则直接使用</div><div class="line">如果在该原型对象中没有找到,则继续查找原型对象的原型对象(创建该原型对象的构造函数所对应的原型对象),如果找到则直接使用</div><div class="line">如果在原型对象的原型对象中也没有找到,则继续向上搜索....</div><div class="line">直到Object的原型对象,若还是没有,则返回undefined(属性)或报错(方法)。</div></pre></td></tr></table></figure></p>
+<p><strong>基本写法·代码示例</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//01 提供超类型|父类型</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperClass</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.name = <span class="string">'SuperClass的名称'</span>;</div><div class="line">    <span class="keyword">this</span>.showName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//02 设置父类型的原型属性和原型方法</span></div><div class="line">SuperClass.prototype.info = <span class="string">'SuperClass的信息'</span>;</div><div class="line">SuperClass.prototype.showInfo = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.info);</div><div class="line">&#125;;</div><div class="line"><span class="comment">//03 提供子类型</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SubClass</span>(<span class="params"></span>) </span>&#123;</div><div class="line">&#125;</div><div class="line"><span class="comment">//04 设置继承(原型对象继承)</span></div><div class="line">SubClass.prototype = <span class="keyword">new</span> SuperClass();</div><div class="line">SubClass.prototype.constructor = SubClass;</div><div class="line"><span class="keyword">var</span> sub = <span class="keyword">new</span> SubClass();</div><div class="line"><span class="built_in">console</span>.log(sub.name);          <span class="comment">//SuperClass的名称</span></div><div class="line"><span class="built_in">console</span>.log(sub.info);          <span class="comment">//SuperClass的信息</span></div><div class="line">sub.showInfo();                 <span class="comment">//SuperClass的信息</span></div><div class="line">sub.showName();                 <span class="comment">//SuperClass的名称</span></div></pre></td></tr></table></figure></p>
+<p>点评：可以继承父类型中的原型属性|原型方法,以及实例属性和实例方法</p>
+<h4 id="原型链继承的注意点和问题"><a href="#原型链继承的注意点和问题" class="headerlink" title="原型链继承的注意点和问题"></a>原型链继承的注意点和问题</h4><p><strong>注意点</strong><br>① 确定原型和实例的关系 instanceof + isPrototypeOf()<br>② 注意重写原型对象的位置，必须先实现原型继承，然后再设置子对象的原型属性和原型方法<br>③ 完成继承之后，不能使用字面量的方式来创建原型[因为会切断原型]</p>
+<p><strong>问题</strong><br>① 父对象的实例属性会转换为子类型原型的原型属性，而如果父类型是实例属性是引用类型则会存在共享问题<br>② 在创建子类型的实例时，不能向父类型的构造函数中传递参数<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//01 提供父对象的构造函数</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperType</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//02 在构造函数中中设置实例属性,该属性为引用类型</span></div><div class="line">    <span class="keyword">this</span>.family = [<span class="string">'哥哥'</span>,<span class="string">'姐姐'</span>,<span class="string">'爸爸'</span>,<span class="string">'妈妈'</span>];</div><div class="line">&#125;;</div><div class="line"><span class="comment">//03 提供子对象的构造函数</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SubType</span>(<span class="params"></span>) </span>&#123;&#125;;</div><div class="line"><span class="comment">//04 设置原型继承</span></div><div class="line">SubType.prototype = <span class="keyword">new</span> SuperType();</div><div class="line"><span class="comment">//05 创建父对象构造函数的实例对象,并对内部的实例化属性进行修改</span></div><div class="line"><span class="keyword">var</span> subDemo1 = <span class="keyword">new</span> SubType();</div><div class="line"><span class="keyword">var</span> subDemo2 = <span class="keyword">new</span> SubType();</div><div class="line">alert(subDemo1.family);      <span class="comment">//哥哥,姐姐,爸爸,妈妈</span></div><div class="line">alert(subDemo2.family);      <span class="comment">//哥哥,姐姐,爸爸,妈妈</span></div><div class="line">subDemo1.family.push(<span class="string">'爷爷'</span>,<span class="string">'奶奶'</span>);</div><div class="line">alert(subDemo1.family);    <span class="comment">//哥哥,姐姐,爸爸,妈妈,爷爷,奶奶</span></div><div class="line">alert(subDemo2.family);    <span class="comment">//哥哥,姐姐,爸爸,妈妈,爷爷,奶奶</span></div></pre></td></tr></table></figure></p>
+<h3 id="4-经典继承（借用构造函数）"><a href="#4-经典继承（借用构造函数）" class="headerlink" title="4.经典继承（借用构造函数）"></a>4.经典继承（借用构造函数）</h3><p>经典继承又称为借用构造函数|伪造继承</p>
+<p><strong>基本思想</strong><br>在子类型构造函数的内部调用超类型|父类型构造函数<br>说明：需要借助call|apply方法<br>代码示例<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//01 提供父类型(对象)的构造函数</span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">SuperType</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">      <span class="comment">//02 在构造函数中中设置实例属性,该属性为引用类型</span></div><div class="line">      <span class="keyword">this</span>.family = [<span class="string">'哥哥'</span>,<span class="string">'姐姐'</span>,<span class="string">'爸爸'</span>,<span class="string">'妈妈'</span>];</div><div class="line">      <span class="comment">//实例属性</span></div><div class="line">      <span class="keyword">this</span>.name = name;</div><div class="line">  &#125;;</div><div class="line">  SuperType.prototype.info = <span class="string">'父类型的原型属性'</span>;</div><div class="line">  <span class="comment">//03 提供子类型（对象）的构造函数</span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">SubType</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="comment">//经典继承|借用构造函数|伪造对象继承</span></div><div class="line">      <span class="comment">//SuperType.call(this);</span></div><div class="line">      <span class="comment">//构造参数传递参数</span></div><div class="line">      SuperType.call(<span class="keyword">this</span>,<span class="string">'张老汉'</span>);</div><div class="line">  &#125;;</div><div class="line">  <span class="comment">//04 创建父类型的实例对象,并对内部的实例化属性进行修改</span></div><div class="line">  <span class="keyword">var</span> subDemo1 = <span class="keyword">new</span> SubType();</div><div class="line">  <span class="keyword">var</span> subDemo2 = <span class="keyword">new</span> SubType();</div><div class="line">  alert(subDemo1.info);        <span class="comment">//undefined</span></div><div class="line">  alert(subDemo1.family);      <span class="comment">//哥哥,姐姐,爸爸,妈妈</span></div><div class="line">  alert(subDemo2.family);      <span class="comment">//哥哥,姐姐,爸爸,妈妈</span></div><div class="line">  subDemo1.family.push(<span class="string">'爷爷'</span>,<span class="string">'奶奶'</span>);</div><div class="line">  alert(subDemo1.family);    <span class="comment">//哥哥,姐姐,爸爸,妈妈,爷爷,奶奶</span></div><div class="line">  alert(subDemo2.family);    <span class="comment">//哥哥,姐姐,爸爸,妈妈</span></div><div class="line">  <span class="comment">//测试构造函数传递参数</span></div><div class="line">  alert(subDemo1.name);</div></pre></td></tr></table></figure></p>
+<p>点评：能够继承父类型的实例属性,但是无法继承父类型的原型属性和原型方法</p>
+<p><strong>经典继承的优点</strong><br>① 解决实例对象共享问题，通过调用父对象的构造函数来实现每个子类型（对象）的实例对象均拥有一份父类型实例属性和方法的副本<br>② 可以在调用call方法的时候向构造函数传递参数</p>
+<p><strong>经典继承的问题</strong><br>① 冒充继承的方法无法实现函数的重用<br>② 无法继承父对象的原型属性和原型方法</p>
+<h3 id="5-组合继承"><a href="#5-组合继承" class="headerlink" title="5.组合继承"></a>5.组合继承</h3><p>组合继承|伪经典继承</p>
+<p><strong>基本思想</strong><br>① 使用原型链实现对原型属性和方法的继承<br>② 通过伪造(冒充)构造函数来实现对实例属性的继承<br>代码示例<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//01 提供父类型的构造函数</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperType</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">    <span class="comment">//在构造函数中中设置实例属性,该属性为引用类型</span></div><div class="line">    <span class="keyword">this</span>.family = [<span class="string">'哥哥'</span>,<span class="string">'姐姐'</span>,<span class="string">'爸爸'</span>,<span class="string">'妈妈'</span>];</div><div class="line">    <span class="comment">//实例属性</span></div><div class="line">    <span class="keyword">this</span>.name = name;</div><div class="line">&#125;;</div><div class="line"><span class="comment">//原型方法</span></div><div class="line">SuperType.prototype.showName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</div><div class="line">&#125;</div><div class="line"><span class="comment">//02 提供子类型的构造函数</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SubType</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">    <span class="comment">//冒充|伪造 构造参数传递参数</span></div><div class="line">    SuperType.call(<span class="keyword">this</span>,name);</div><div class="line">&#125;;</div><div class="line">SubType.prototype = SuperType.prototype;</div><div class="line"><span class="comment">//SubType.prototype = new SuperType();</span></div><div class="line"><span class="comment">//02 创建父类型的实例对象,并对内部的实例化属性进行修改</span></div><div class="line"><span class="keyword">var</span> subDemo1 = <span class="keyword">new</span> SubType(<span class="string">'张三'</span>);</div><div class="line"><span class="keyword">var</span> subDemo2 = <span class="keyword">new</span> SubType(<span class="string">'张四'</span>);</div><div class="line">alert(subDemo1.family);    <span class="comment">//哥哥,姐姐,爸爸,妈妈</span></div><div class="line">alert(subDemo2.family);      <span class="comment">//哥哥,姐姐,爸爸,妈妈</span></div><div class="line">subDemo1.family.push(<span class="string">'爷爷'</span>,<span class="string">'奶奶'</span>);</div><div class="line">alert(subDemo1.family);    <span class="comment">//哥哥,姐姐,爸爸,妈妈,爷爷,奶奶</span></div><div class="line">alert(subDemo2.family);    <span class="comment">//哥哥,姐姐,爸爸,妈妈</span></div><div class="line"><span class="comment">//测试构造函数传递参数</span></div><div class="line">subDemo1.showName();    <span class="comment">//张三</span></div><div class="line">subDemo2.showName();    <span class="comment">//张四</span></div></pre></td></tr></table></figure></p>
+<h3 id="6-基本包装类型"><a href="#6-基本包装类型" class="headerlink" title="6.基本包装类型"></a>6.基本包装类型</h3><p>基本类型：字符串 + 数值 + null + undefined + 布尔值<br>为了便于操作基本类型，ECMAScript提供了三个特殊的引用类型：<code>Boolean + Number + String</code>。<br>上述类型和其他的引用类型类似，同时也具备与各自的基本类型相应的特殊行为，每当我们读取一个基本类型的值的时候，后台就会创建一个对应的基本包装类型对象，从而让我们能够调用一些方法来操作这些数据。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'测试字符串'</span>;</div><div class="line"><span class="built_in">console</span>.log(str.length);            <span class="comment">//5</span></div><div class="line"><span class="built_in">console</span>.log(str.substring(<span class="number">2</span>));      <span class="comment">//字符串</span></div></pre></td></tr></table></figure></p>
+<p><code>思考</code>：属性和方法本是对象的特征，字符串如何能够拥有length属性以及其他类似subString等方法，内部怎么实现的？<br>基本类型值并不是对象，因此从逻辑上讨论他们不应该有属性和方法。 内部的具体处理:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">（<span class="number">1</span>）创建<span class="built_in">String</span>类型的一个实例对象</div><div class="line">（<span class="number">2</span>）在实例对象上面读取指定的属性（length）,调用指定的方法（subString）</div><div class="line">（<span class="number">3</span>）销毁该对象</div></pre></td></tr></table></figure></p>
+<p><strong>Number</strong><br>Number是与数字值相对应的引用类型。<br>创建Number类型的对象：var num = new Number(10);</p>
+<p><strong> String </strong><br>String是字符串的对象包装类型。<br>创建字符串类型的对象：var str = new String(‘hello World’);</p>
+<p><strong>Boolean</strong><br>Boolean是与布尔值对象的引用类型。<br>可以通过调用Boolean构造函数传递参数来创建boolean类型的对象。<br>var bool = new Boolean(true);</p>
+<p><strong>基本包装类型的代码示例</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//001 String</span></div><div class="line"><span class="keyword">var</span> str = <span class="string">'测试字符串'</span>;</div><div class="line"><span class="built_in">console</span>.log(str.length);            <span class="comment">//5</span></div><div class="line"><span class="built_in">console</span>.log(str.substring(<span class="number">2</span>));      <span class="comment">//字符串</span></div><div class="line"><span class="comment">//002 Number</span></div><div class="line"><span class="keyword">var</span> num = <span class="keyword">new</span> <span class="built_in">Number</span>(<span class="number">10</span>);</div><div class="line"><span class="built_in">console</span>.log(num);                   <span class="comment">//Number &#123;[[PrimitiveValue]]: 10&#125;</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> num);            <span class="comment">//object</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="number">10</span>);             <span class="comment">//number</span></div><div class="line"><span class="comment">//003 Boolean</span></div><div class="line"><span class="keyword">var</span> bool = <span class="keyword">new</span> <span class="built_in">Boolean</span>(<span class="literal">true</span>);</div><div class="line"><span class="built_in">console</span>.log(bool);                  <span class="comment">//Boolean &#123;[[PrimitiveValue]]: true&#125;</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> bool);           <span class="comment">//object</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="literal">true</span>);           <span class="comment">//boolean</span></div></pre></td></tr></table></figure></p>
+<p><strong>基本包装类型的注意点</strong><br>[1] 对象还是基本数据类型值？<br>对象：通过new 调用构造函数创建出来的是对象<br>基本数据类型值：直接通过字面量方式赋值|通过省略new关键字调用构造函数方式创建的是基本数据类型值。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">ex:</div><div class="line">    <span class="keyword">var</span> str1 = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">'hello'</span>);</div><div class="line">    <span class="keyword">var</span> str2 = <span class="string">'hello'</span>;</div><div class="line">    <span class="keyword">var</span> str3 = <span class="built_in">String</span>(<span class="string">'hello'</span>);</div><div class="line">    说明：以上代码中，str1是对象，而str2和str3是字符串（基本数据类型值）</div></pre></td></tr></table></figure></p>
+<p>[2] 相等问题<br>基本类型值判断相等=&gt;值相等<br>引用类型值判断相等=&gt;值相等且引用相等<br>对象是引用类型，因此在判断相等的时候有诸多的注意点和容易出错的地方<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">ex</div><div class="line">    <span class="keyword">var</span> str1 = <span class="string">'这是一个字符串'</span>;           <span class="comment">//基本数据类型</span></div><div class="line">    <span class="keyword">var</span> str2 = <span class="built_in">String</span>(<span class="string">'这是一个字符串'</span>);   <span class="comment">//基本数据类型</span></div><div class="line">    <span class="built_in">console</span>.log(str1 == str2);        <span class="comment">//true 相等</span></div><div class="line">    <span class="keyword">var</span> str3 = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">'这是一个字符串'</span>);  <span class="comment">//引用类型-对象</span></div><div class="line">    <span class="built_in">console</span>.log(str1 == str3);    <span class="comment">//true    //值相等</span></div><div class="line">    <span class="built_in">console</span>.log(str2 == str3);    <span class="comment">//true    //值相等</span></div><div class="line">    <span class="built_in">console</span>.log(str1 === str3); <span class="comment">//false //值相等,但是引用不相等</span></div><div class="line">    <span class="built_in">console</span>.log(str2 === str3); <span class="comment">//false //值相等,但是引用不相等</span></div><div class="line">    <span class="comment">//判断下面的变量是否相等</span></div><div class="line">    <span class="keyword">var</span> num1 = <span class="number">10</span>;                  <span class="comment">//基本数据类型</span></div><div class="line">    <span class="keyword">var</span> num2 = <span class="keyword">new</span> <span class="built_in">Number</span>(<span class="number">10</span>);      <span class="comment">//对象</span></div><div class="line">    <span class="built_in">console</span>.log(num1 == num2);      <span class="comment">//true</span></div><div class="line">    <span class="built_in">console</span>.log(num1 ===  num2);    <span class="comment">//false</span></div><div class="line">    <span class="keyword">var</span> bool1 = <span class="literal">true</span>;</div><div class="line">    <span class="keyword">var</span> bool2 = <span class="keyword">new</span> <span class="built_in">Boolean</span>(<span class="literal">true</span>);</div><div class="line">    <span class="built_in">console</span>.log(bool1 == bool2);    <span class="comment">//true</span></div><div class="line">    <span class="built_in">console</span>.log(bool1 === bool2);   <span class="comment">//false</span></div></pre></td></tr></table></figure></p>
+
       
 
       
@@ -212,514 +245,85 @@ var _hmt = _hmt || [];
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/02/18/js-3/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/02/18/js-3/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
-
-
-
   
-    <article id="post-js-02" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/01/js-02/">JavaScript简明教程（2）</a>
-    </h1>
   
-
-        <!-- 显示阅读和评论数 -->
-
-        
-        <a href="/2016/02/01/js-02/" class="archive-article-date">
-  	<time datetime="2016-02-01T05:15:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-02-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>面向对象方法被人谈论了二十多年了，直到今天，我们还一直在谈对象。</p>
-</blockquote>
-<h1 id="三-面向对象编程"><a href="#三-面向对象编程" class="headerlink" title="三.面向对象编程"></a>三.面向对象编程</h1><h3 id="1-面向层过程和面向对象编程"><a href="#1-面向层过程和面向对象编程" class="headerlink" title="1.面向层过程和面向对象编程"></a>1.面向层过程和面向对象编程</h3><p>01 面向对象编程和面向过程编程是一种编程思想,和具体的语言关系不大。<br>02 面向过程编程和面向对象编程的主要区别<br>
-        
-          <a class="article-more-a" href="/2016/02/01/js-02/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">简明教程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/02/01/js-02/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
+    <a href="/2016/02/01/js-02/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScript简明教程（2）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 
 
 
   
-    <article id="post-01" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/15/01/">JavaScript简明教程（1）</a>
-    </h1>
   
 
-        <!-- 显示阅读和评论数 -->
-
-        
-        <a href="/2016/01/15/01/" class="archive-article-date">
-  	<time datetime="2016-01-15T08:36:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-01-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>JavaScript与Java没有半毛钱关系，网景公司员工Brendan Eich用了10天时间设计了JavaScript语言。</p>
-</blockquote>
-<h1 id="一-JavaScript的范围"><a href="#一-JavaScript的范围" class="headerlink" title="一.JavaScript的范围"></a>一.JavaScript的范围</h1><p><strong>JavaScript的范围：BOM + DOM + ECMAScript</strong></p>
-<h3 id="1-BOM简单说明"><a href="#1-BOM简单说明" class="headerlink" title="1.BOM简单说明"></a>1.BOM简单说明</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">BOM即Browser Object Mode,浏览器对象模型。</div><div class="line">BOM提供了独立于内容而与浏览器窗口进行交互的对象。</div><div class="line">BOM由一系列相关的对象构成，并且每个对象都提供了很多方法与属性。</div><div class="line">因为BOM主要用于管理窗口与窗口之间的通信，因此其核心对象是window。</div><div class="line">BOM缺乏标准，JavaScript语法的标准化组织是ECMA，DOM的标准化组织是W3C。</div><div class="line">BOM结构体系</div></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2016/01/15/01/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">简明教程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/01/15/01/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-JSONP跨域" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/08/JSONP跨域/">JSONP跨域</a>
-    </h1>
   
 
-        <!-- 显示阅读和评论数 -->
-
-        
-        <a href="/2016/01/08/JSONP跨域/" class="archive-article-date">
-  	<time datetime="2016-01-07T16:55:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-01-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>Asynchronous JavaScript and XML (Ajax) 是Web2.0的关键技术。AJAX与服务器交换数据刷新局部网页,不需重载。</p>
-</blockquote>
-<p>因为浏览器及同源策略的限制，ajax不允许跨域通信。同源是指协议、域名和端口都一致的情况。同源策略保证一个源的动态脚本不能读取或操作其他源的http响应和cookie，使浏览器隔离不同源的内容之间互相操作。<br>
-        
-          <a class="article-more-a" href="/2016/01/08/JSONP跨域/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JSONP跨域</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/01/08/JSONP跨域/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-js原型继承" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/08/js原型继承/">可能是最简单的js原型继承</a>
-    </h1>
-  
-
-        <!-- 显示阅读和评论数 -->
-
-        
-        <a href="/2015/12/08/js原型继承/" class="archive-article-date">
-  	<time datetime="2015-12-08T07:35:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-12-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>JavaScript是一门奇妙的弱类型语言，原型继承与其它语言的类继承有所区别，下面通过一个简单的例子展示js的原型继承。</p>
-</blockquote>
-<h3 id="1-你有对象吗？"><a href="#1-你有对象吗？" class="headerlink" title="1.你有对象吗？"></a>1.你有对象吗？</h3><p>你有对象吗？没有，赶紧就new一个吧！<br>首先，创建构造函数Parent<br>然后，new出一个Parent的实例对象child<br>此时，构造函数Parent拥有以下属性aString、aNumber、anObject,构造函数Parent的原型对象有aFunction方法。<br>
-        
-          <a class="article-more-a" href="/2015/12/08/js原型继承/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">原型继承机制</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/12/08/js原型继承/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-有趣的ChromeDevTools" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/11/有趣的ChromeDevTools/">有趣的Chrome DevTools</a>
-    </h1>
-  
-
-        <!-- 显示阅读和评论数 -->
-
-        
-        <a href="/2015/11/11/有趣的ChromeDevTools/" class="archive-article-date">
-  	<time datetime="2015-11-11T13:46:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>Chrome 自带开发者工具很有趣，怎么个有趣法呢？Chrome的JS控制台有很多很多神奇而且有趣的功能。此文仅例举其中几个，一起来看看吧。</p>
-</blockquote>
-<p>我们调试的时候控制台总会有一大堆密密麻麻的代码时，请试着输入 clear() 然后回车，清空所有，回到原始界面。<br>
-        
-          <a class="article-more-a" href="/2015/11/11/有趣的ChromeDevTools/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Chrome DevTools</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/11/11/有趣的ChromeDevTools/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-五分钟学会简单使用git" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/23/五分钟学会简单使用git/">五分钟学会简单使用git</a>
-    </h1>
-  
-
-        <!-- 显示阅读和评论数 -->
-
-        
-        <a href="/2015/09/23/五分钟学会简单使用git/" class="archive-article-date">
-  	<time datetime="2015-09-22T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-09-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>五分钟，简单入门。学会之后可以愉快的管理你的文件啦。</p>
-</blockquote>
-<h2 id="简单使用"><a href="#简单使用" class="headerlink" title="简单使用"></a>简单使用</h2><pre><code>git 其实很简单，有多简单呢？
-    1. git init 初始化一个仓库；
-    2. git add . 添加文件到暂存区；
-    3. git commit -m&apos;messeage&apos;  提交至版本库；
-    4. git push origin master 推送至远程仓库；
-</code></pre>
-        
-          <a class="article-more-a" href="/2015/09/23/五分钟学会简单使用git/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">版本控制</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/09/23/五分钟学会简单使用git/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-12年怀旧" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/15/12年怀旧/">12年逗比如我</a>
-    </h1>
-  
-
-        <!-- 显示阅读和评论数 -->
-
-        
-        <a href="/2015/04/15/12年怀旧/" class="archive-article-date">
-  	<time datetime="2015-04-15T13:27:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-04-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>12年写的乱七八遭，拿出来怀旧，权当笑话，笑笑更开心！</p>
-</blockquote>
-<h2 id="一周大一秀"><a href="#一周大一秀" class="headerlink" title="一周大一秀"></a>一周大一秀</h2><p>欢迎收听一周大一秀，观众朋友们大家好。好学生就是我，我就是曾大贤。欢迎收听本节目，请大家用热烈的掌声欢迎我们今天的主角出场。他就是人见人爱，花见花开，俗称一朵海棠压梨花的帅哥。没错，你猜对了，好学生就是我，我就是曾大贤。接下来请大家千万把耳屎勾干净了，洗耳恭听嘛，哈哈。<br>
-        
-          <a class="article-more-a" href="/2015/04/15/12年怀旧/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">娱乐</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">怀旧</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/04/15/12年怀旧/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
   
 
 
@@ -752,8 +356,8 @@ var _hmt = _hmt || [];
 		mathjax: false,
 		 fancybox: undefined,
 		  animate: undefined,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

@@ -27,7 +27,7 @@
 <meta property="og:image" content="http://www.1oveit.club/assets/img/chrome编辑器.png">
 <meta property="og:image" content="http://www.1oveit.club/assets/img/table.png">
 <meta property="og:image" content="http://www.1oveit.club/assets/img/检测.png">
-<meta property="og:updated_time" content="2017-05-08T02:46:04.000Z">
+<meta property="og:updated_time" content="2017-05-11T16:59:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="有趣的Chrome DevTools">
 <meta name="twitter:description" content="Chrome 自带开发者工具很有趣，怎么个有趣法呢？Chrome的JS控制台有很多很多神奇而且有趣的功能。此文仅例举其中几个，一起来看看吧。  我们调试的时候控制台总会有一大堆密密麻麻的代码时，请试着输入 clear() 然后回车，清空所有，回到原始界面。">
@@ -332,13 +332,13 @@
 <p>Chrome 自带开发者工具很有趣，怎么个有趣法呢？Chrome的JS控制台有很多很多神奇而且有趣的功能。此文仅例举其中几个，一起来看看吧。</p>
 </blockquote>
 <p>我们调试的时候控制台总会有一大堆密密麻麻的代码时，请试着输入 clear() 然后回车，清空所有，回到原始界面。<br><a id="more"></a>    </p>
-<h4 id="1-jq选择器"><a href="#1-jq选择器" class="headerlink" title="1.jq选择器"></a>1.jq选择器</h4><p>第一个有趣的事情就是获取页面上的DOM元素啦！<br>在控制台里通过jQuery选择器选取DOM元素.</p>
+<h3 id="jq选择器"><a href="#jq选择器" class="headerlink" title="jq选择器"></a>jq选择器</h3><p>第一个有趣的事情就是获取页面上的DOM元素啦！<br>在控制台里通过jQuery选择器选取DOM元素.</p>
 <p>如 <code>$(&#39;tagName&#39;) $(&#39;.class&#39;) $(&#39;#id&#39;)</code>等选择器。<br>其实是通过document.querySelector(‘’)返回第一个匹配的DOM元素。<br>通过 <code>$$(&#39;tagName&#39;) $$(&#39;.className&#39;)</code>两个<code>$$</code>符号来选择返回的一个相应的DOM数组。瞧：<br><img src="/assets/img/jquery选择器.png" alt="jquery选择器"></p>
-<h4 id="2-获取DOM元素绑定事件"><a href="#2-获取DOM元素绑定事件" class="headerlink" title="2.获取DOM元素绑定事件"></a>2.获取DOM元素绑定事件</h4><p>其实也是一句代码搞定的事情，但是在调试的时候却非常有用。通过在控制台输入<code>getEventListeners($(&#39;selector&#39;))</code>返回数组对象的格式并且返回元素绑定的所有事件。然后通过<code>getEventListeners($(&#39;selector&#39;)).click[0].listener</code>获取元素绑定的click事件。<br><img src="/assets/img/调试.jpeg" alt="调试"></p>
-<h4 id="3-Chrome编辑器"><a href="#3-Chrome编辑器" class="headerlink" title="3.Chrome编辑器"></a>3.Chrome编辑器</h4><p>如果浏览器可以编辑，要记得导出喔。在控制台轻轻输入一句代码，然后试着编辑页面，接下来就是奇迹发生的时候！赶快试一下吧！<br><img src="/assets/img/chrome编辑器.png" alt="Chrome编辑器"></p>
-<h4 id="4-监测事件"><a href="#4-监测事件" class="headerlink" title="4.监测事件"></a>4.监测事件</h4><p>通过输入<code>monitorEvents($(&#39;selector&#39;))</code> 监测元素上绑定的所有事件，该元素某个事件被触发就会在控制台里显示出来。<code>monitorEvents($(&#39;selector&#39;),&#39;eventName&#39;)</code>监听元素上绑定的具体事件。第二个参数代表事件类型的名称。<code>monitorEvents($(&#39;selector&#39;),[&#39;eventName1&#39;,&#39;eventName3&#39;,….])</code>同时检测具体指定的多个事件类型。<br><code>unmonitorEvents($(&#39;selector&#39;))</code> 用来停止对某个元素的事件监测。</p>
-<h4 id="5-表格形式输出数组"><a href="#5-表格形式输出数组" class="headerlink" title="5.表格形式输出数组"></a>5.表格形式输出数组</h4><p>先输入数组arr,然后通过输入<code>console.table(variableName)</code>以表格形式查看，<br>如下图：<br><img src="/assets/img/table.png" alt="table"></p>
-<h4 id="6-检查元素"><a href="#6-检查元素" class="headerlink" title="6.检查元素"></a>6.检查元素</h4><p>你可以直接在控制台里输入下面的方法来检查元素<code>inspect($(&#39;selector&#39;))</code> 会检查所有匹配选择器的DOM元素，并返回所有选择器选择的DOM对象。<code>inspect($(&#39;img&#39;)[1])</code> 检查并返回页面上第2个img元素。<br><img src="/assets/img/检测.png" alt="jianche"><br>最后，Chrome DevTools是十分强大的调试工具，这只是冰上一角，深入了解请戳<a href="https://developers.google.com/web/tools/chrome-devtools/" target="_blank" rel="external">chrome-devtools</a></p>
+<h3 id="获取DOM元素绑定事件"><a href="#获取DOM元素绑定事件" class="headerlink" title="获取DOM元素绑定事件"></a>获取DOM元素绑定事件</h3><p>其实也是一句代码搞定的事情，但是在调试的时候却非常有用。通过在控制台输入<code>getEventListeners($(&#39;selector&#39;))</code>返回数组对象的格式并且返回元素绑定的所有事件。然后通过<code>getEventListeners($(&#39;selector&#39;)).click[0].listener</code>获取元素绑定的click事件。<br><img src="/assets/img/调试.jpeg" alt="调试"></p>
+<h3 id="Chrome编辑器"><a href="#Chrome编辑器" class="headerlink" title="Chrome编辑器"></a>Chrome编辑器</h3><p>如果浏览器可以编辑，要记得导出喔。在控制台轻轻输入一句代码，然后试着编辑页面，接下来就是奇迹发生的时候！赶快试一下吧！<br><img src="/assets/img/chrome编辑器.png" alt="Chrome编辑器"></p>
+<h3 id="监测事件"><a href="#监测事件" class="headerlink" title="监测事件"></a>监测事件</h3><p>通过输入<code>monitorEvents($(&#39;selector&#39;))</code> 监测元素上绑定的所有事件，该元素某个事件被触发就会在控制台里显示出来。<code>monitorEvents($(&#39;selector&#39;),&#39;eventName&#39;)</code>监听元素上绑定的具体事件。第二个参数代表事件类型的名称。<code>monitorEvents($(&#39;selector&#39;),[&#39;eventName1&#39;,&#39;eventName3&#39;,….])</code>同时检测具体指定的多个事件类型。<br><code>unmonitorEvents($(&#39;selector&#39;))</code> 用来停止对某个元素的事件监测。</p>
+<h3 id="表格形式输出数组"><a href="#表格形式输出数组" class="headerlink" title="表格形式输出数组"></a>表格形式输出数组</h3><p>先输入数组arr,然后通过输入<code>console.table(variableName)</code>以表格形式查看，<br>如下图：<br><img src="/assets/img/table.png" alt="table"></p>
+<h3 id="检查元素"><a href="#检查元素" class="headerlink" title="检查元素"></a>检查元素</h3><p>你可以直接在控制台里输入下面的方法来检查元素<code>inspect($(&#39;selector&#39;))</code> 会检查所有匹配选择器的DOM元素，并返回所有选择器选择的DOM对象。<code>inspect($(&#39;img&#39;)[1])</code> 检查并返回页面上第2个img元素。<br><img src="/assets/img/检测.png" alt="jianche"><br>最后，Chrome DevTools是十分强大的调试工具，这只是冰上一角，深入了解请戳<a href="https://developers.google.com/web/tools/chrome-devtools/" target="_blank" rel="external">chrome-devtools</a></p>
 
       
     </div>
@@ -350,7 +350,7 @@
         <p><span>本文标题:</span><a href="/2015/11/11/有趣的ChromeDevTools/">有趣的Chrome DevTools</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Afanail</a></p>
         <p><span>发布时间:</span>2015-11-11, 21:46:45</p>
-        <p><span>最后更新:</span>2017-05-08, 10:46:04</p>
+        <p><span>最后更新:</span>2017-05-12, 00:59:40</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2015/11/11/有趣的ChromeDevTools/" title="有趣的Chrome DevTools">http://www.1oveit.club/2015/11/11/有趣的ChromeDevTools/</a>
             <span class="copy-path" data-clipboard-text="原文: http://www.1oveit.club/2015/11/11/有趣的ChromeDevTools/　　作者: Afanail" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -386,7 +386,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-jq选择器"><span class="toc-number">1.</span> <span class="toc-text">1.jq选择器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-获取DOM元素绑定事件"><span class="toc-number">2.</span> <span class="toc-text">2.获取DOM元素绑定事件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-Chrome编辑器"><span class="toc-number">3.</span> <span class="toc-text">3.Chrome编辑器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-监测事件"><span class="toc-number">4.</span> <span class="toc-text">4.监测事件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-表格形式输出数组"><span class="toc-number">5.</span> <span class="toc-text">5.表格形式输出数组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-检查元素"><span class="toc-number">6.</span> <span class="toc-text">6.检查元素</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#jq选择器"><span class="toc-number">1.</span> <span class="toc-text">jq选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#获取DOM元素绑定事件"><span class="toc-number">2.</span> <span class="toc-text">获取DOM元素绑定事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chrome编辑器"><span class="toc-number">3.</span> <span class="toc-text">Chrome编辑器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#监测事件"><span class="toc-number">4.</span> <span class="toc-text">监测事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#表格形式输出数组"><span class="toc-number">5.</span> <span class="toc-text">表格形式输出数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#检查元素"><span class="toc-number">6.</span> <span class="toc-text">检查元素</span></a></li></ol>
         
     </div>
     <style>
@@ -471,7 +471,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/03/05/js-04/">JavaScript简明教程（4）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/18/js-3/">JavaScript简明教程（3）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/01/js-02/">JavaScript简明教程（2）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/15/01/">JavaScript简明教程（1）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/08/JSONP跨域/">JSONP跨域</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/08/js原型继承/">可能是最简单的js原型继承</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/11/有趣的ChromeDevTools/">有趣的Chrome DevTools</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/09/23/五分钟学会简单使用git/">五分钟学会简单使用git</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/04/15/12年怀旧/">12年逗比如我</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/03/05/js-04/">JavaScript简明教程（4）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/18/js-3/">JavaScript简明教程（3）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/18/js-05/">JavaScript简明教程（5）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/01/js-02/">JavaScript简明教程（2）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/15/01/">JavaScript简明教程（1）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/08/JSONP跨域/">JSONP跨域</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/08/js原型继承/">可能是最简单的js原型继承</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/11/有趣的ChromeDevTools/">有趣的Chrome DevTools</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/09/23/五分钟学会简单使用git/">五分钟学会简单使用git</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/04/15/12年怀旧/">12年逗比如我</a></li></ul>
 
 
 

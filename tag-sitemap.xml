@@ -2,13 +2,6 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>http://www.1oveit.club/tags/Chrome-DevTools/</loc>
-        <lastmod>2017-05-08T02:46:04.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://www.1oveit.club/tags/git/</loc>
         <lastmod>2017-05-08T02:46:43.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -37,20 +30,6 @@
     </url>
 
     <url>
-        <loc>http://www.1oveit.club/tags/javascript/</loc>
-        <lastmod>2017-05-08T02:47:55.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://www.1oveit.club/tags/%E5%8E%9F%E5%9E%8B%E7%BB%A7%E6%89%BF%E6%9C%BA%E5%88%B6/</loc>
-        <lastmod>2017-05-08T02:47:55.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://www.1oveit.club/tags/JSONP%E8%B7%A8%E5%9F%9F/</loc>
         <lastmod>2017-05-09T04:50:22.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -58,15 +37,36 @@
     </url>
 
     <url>
+        <loc>http://www.1oveit.club/tags/Chrome-DevTools/</loc>
+        <lastmod>2017-05-11T16:59:40.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.1oveit.club/tags/javascript/</loc>
+        <lastmod>2017-05-11T17:01:18.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.1oveit.club/tags/%E5%8E%9F%E5%9E%8B%E7%BB%A7%E6%89%BF%E6%9C%BA%E5%88%B6/</loc>
+        <lastmod>2017-05-11T17:01:18.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://www.1oveit.club/tags/JavaScript/</loc>
-        <lastmod>2017-05-11T08:31:59.000Z</lastmod>
+        <lastmod>2017-05-11T17:36:25.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://www.1oveit.club/tags/%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/</loc>
-        <lastmod>2017-05-11T08:31:59.000Z</lastmod>
+        <lastmod>2017-05-11T17:36:25.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="JavaScript是一门奇妙的弱类型语言，原型继承与其它语言的类继承有所区别，下面通过一个简单的例子展示js的原型继承。  1.你有对象吗？你有对象吗？没有，赶紧就new一个吧！首先，创建构造函数Parent然后，new出一个Parent的实例对象child此时，构造函数Parent拥有以下属性aString、aNumber、anObject,构造函数Parent的原型对象有aFunction">
+<meta name="description" content="JavaScript是一门奇妙的弱类型语言，原型继承与其它语言的类继承有所区别，下面通过一个简单的例子展示js的原型继承。  你有对象吗？你有对象吗？没有，赶紧就new一个吧！首先，创建构造函数Parent然后，new出一个Parent的实例对象child此时，构造函数Parent拥有以下属性aString、aNumber、anObject,构造函数Parent的原型对象有aFunction方法">
 <meta name="keywords" content="javascript,原型继承机制">
 <meta property="og:type" content="article">
 <meta property="og:title" content="可能是最简单的js原型继承">
 <meta property="og:url" content="http://www.1oveit.club/2015/12/08/js原型继承/index.html">
 <meta property="og:site_name" content="Afanail">
-<meta property="og:description" content="JavaScript是一门奇妙的弱类型语言，原型继承与其它语言的类继承有所区别，下面通过一个简单的例子展示js的原型继承。  1.你有对象吗？你有对象吗？没有，赶紧就new一个吧！首先，创建构造函数Parent然后，new出一个Parent的实例对象child此时，构造函数Parent拥有以下属性aString、aNumber、anObject,构造函数Parent的原型对象有aFunction">
+<meta property="og:description" content="JavaScript是一门奇妙的弱类型语言，原型继承与其它语言的类继承有所区别，下面通过一个简单的例子展示js的原型继承。  你有对象吗？你有对象吗？没有，赶紧就new一个吧！首先，创建构造函数Parent然后，new出一个Parent的实例对象child此时，构造函数Parent拥有以下属性aString、aNumber、anObject,构造函数Parent的原型对象有aFunction方法">
 <meta property="og:image" content="http://www.1oveit.club/assets/img/js原型.png">
-<meta property="og:updated_time" content="2017-05-08T02:47:55.000Z">
+<meta property="og:updated_time" content="2017-05-11T17:01:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="可能是最简单的js原型继承">
-<meta name="twitter:description" content="JavaScript是一门奇妙的弱类型语言，原型继承与其它语言的类继承有所区别，下面通过一个简单的例子展示js的原型继承。  1.你有对象吗？你有对象吗？没有，赶紧就new一个吧！首先，创建构造函数Parent然后，new出一个Parent的实例对象child此时，构造函数Parent拥有以下属性aString、aNumber、anObject,构造函数Parent的原型对象有aFunction">
+<meta name="twitter:description" content="JavaScript是一门奇妙的弱类型语言，原型继承与其它语言的类继承有所区别，下面通过一个简单的例子展示js的原型继承。  你有对象吗？你有对象吗？没有，赶紧就new一个吧！首先，创建构造函数Parent然后，new出一个Parent的实例对象child此时，构造函数Parent拥有以下属性aString、aNumber、anObject,构造函数Parent的原型对象有aFunction方法">
 <meta name="twitter:image" content="http://www.1oveit.club/assets/img/js原型.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
@@ -327,10 +327,10 @@
         <blockquote>
 <p>JavaScript是一门奇妙的弱类型语言，原型继承与其它语言的类继承有所区别，下面通过一个简单的例子展示js的原型继承。</p>
 </blockquote>
-<h3 id="1-你有对象吗？"><a href="#1-你有对象吗？" class="headerlink" title="1.你有对象吗？"></a>1.你有对象吗？</h3><p>你有对象吗？没有，赶紧就new一个吧！<br>首先，创建构造函数Parent<br>然后，new出一个Parent的实例对象child<br>此时，构造函数Parent拥有以下属性aString、aNumber、anObject,构造函数Parent的原型对象有aFunction方法。<br><a id="more"></a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Parent</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.aString = <span class="string">'string'</span>;</div><div class="line">    <span class="keyword">this</span>.aNumber = <span class="string">'number'</span>;</div><div class="line">    <span class="keyword">this</span>.anObject = <span class="string">'object'</span></div><div class="line">&#125;</div><div class="line">Parent.prototype = &#123;</div><div class="line">    <span class="attr">constructor</span>: Parent,</div><div class="line">    <span class="attr">aFunction</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        alert(<span class="string">'i am function'</span>);</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<h2 id="你有对象吗？"><a href="#你有对象吗？" class="headerlink" title="你有对象吗？"></a>你有对象吗？</h2><p>你有对象吗？没有，赶紧就new一个吧！<br>首先，创建构造函数Parent<br>然后，new出一个Parent的实例对象child<br>此时，构造函数Parent拥有以下属性aString、aNumber、anObject,构造函数Parent的原型对象有aFunction方法。<br><a id="more"></a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Parent</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.aString = <span class="string">'string'</span>;</div><div class="line">    <span class="keyword">this</span>.aNumber = <span class="string">'number'</span>;</div><div class="line">    <span class="keyword">this</span>.anObject = <span class="string">'object'</span></div><div class="line">&#125;</div><div class="line">Parent.prototype = &#123;</div><div class="line">    <span class="attr">constructor</span>: Parent,</div><div class="line">    <span class="attr">aFunction</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        alert(<span class="string">'i am function'</span>);</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
 <p>然后，new出一个Parent的实例对象child<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> child = <span class="keyword">new</span> Parent();</div></pre></td></tr></table></figure></p>
 <p>简单的原型继承图如下：<br><img src="/assets/img/js原型.png" alt="js原型"></p>
-<h3 id="2-实现继承"><a href="#2-实现继承" class="headerlink" title="2.实现继承"></a>2.实现继承</h3><p>实例对象默认拥有构造函数本身的属性和方法。但是，要知道构造函数荷构造函数的原型对象是俩个不同的函数（对象），原型对象拥有的属性和方法可以被实例化对象所共享。<br>也就是说实例对象child此时拥有属性aString、aNumber、anObject，this指向实例对象。child本身并没有aFunction方法。但是你调用此方法时，却发现能调用，这是怎么回事呢？<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">child.aFunction();</div></pre></td></tr></table></figure></p>
+<p>#~~~~# 实现继承<br>实例对象默认拥有构造函数本身的属性和方法。但是，要知道构造函数荷构造函数的原型对象是俩个不同的函数（对象），原型对象拥有的属性和方法可以被实例化对象所共享。<br>也就是说实例对象child此时拥有属性aString、aNumber、anObject，this指向实例对象。child本身并没有aFunction方法。但是你调用此方法时，却发现能调用，这是怎么回事呢？<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">child.aFunction();</div></pre></td></tr></table></figure></p>
 <p>这就是我们所说的原型对象原拥有的属性和方法可以被实例化对象所共享的原因。<br>通过简单的例子，希望能帮到你，如果想深入学习javascript，请深戳<a href="https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript" target="_blank" rel="external">MDZ开发者</a></p>
 
       
@@ -343,7 +343,7 @@
         <p><span>本文标题:</span><a href="/2015/12/08/js原型继承/">可能是最简单的js原型继承</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Afanail</a></p>
         <p><span>发布时间:</span>2015-12-08, 15:35:45</p>
-        <p><span>最后更新:</span>2017-05-08, 10:47:55</p>
+        <p><span>最后更新:</span>2017-05-12, 01:01:18</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2015/12/08/js原型继承/" title="可能是最简单的js原型继承">http://www.1oveit.club/2015/12/08/js原型继承/</a>
             <span class="copy-path" data-clipboard-text="原文: http://www.1oveit.club/2015/12/08/js原型继承/　　作者: Afanail" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -379,7 +379,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-你有对象吗？"><span class="toc-number">1.</span> <span class="toc-text">1.你有对象吗？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-实现继承"><span class="toc-number">2.</span> <span class="toc-text">2.实现继承</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#你有对象吗？"><span class="toc-number">1.</span> <span class="toc-text">你有对象吗？</span></a></li></ol>
         
     </div>
     <style>
@@ -464,7 +464,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/03/05/js-04/">JavaScript简明教程（4）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/18/js-3/">JavaScript简明教程（3）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/01/js-02/">JavaScript简明教程（2）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/15/01/">JavaScript简明教程（1）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/08/JSONP跨域/">JSONP跨域</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/08/js原型继承/">可能是最简单的js原型继承</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/11/有趣的ChromeDevTools/">有趣的Chrome DevTools</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/09/23/五分钟学会简单使用git/">五分钟学会简单使用git</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/04/15/12年怀旧/">12年逗比如我</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/03/05/js-04/">JavaScript简明教程（4）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/18/js-3/">JavaScript简明教程（3）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/18/js-05/">JavaScript简明教程（5）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/01/js-02/">JavaScript简明教程（2）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/15/01/">JavaScript简明教程（1）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/08/JSONP跨域/">JSONP跨域</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/08/js原型继承/">可能是最简单的js原型继承</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/11/有趣的ChromeDevTools/">有趣的Chrome DevTools</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/09/23/五分钟学会简单使用git/">五分钟学会简单使用git</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/04/15/12年怀旧/">12年逗比如我</a></li></ul>
 
 
 

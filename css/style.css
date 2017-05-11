@@ -1491,8 +1491,15 @@ body .ui-tooltip {
   margin-left: 30px;
 }
 .article-entry ul > li {
-  margin-left: 1.1em;
-  list-style-type: square;
+  list-style: none;
+  margin: 0;
+}
+.article-entry ul > li:before {
+  content: '\f061';
+  font-family: FontAwesome;
+  font-size: 0.8em;
+  margin-right: 0.5em;
+  color: #c8c8c8;
 }
 .article-entry h1,
 .article-entry h2,

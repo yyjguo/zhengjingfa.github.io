@@ -288,6 +288,78 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-js-07" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/18/js-07/" class="article-date">
+      <time datetime="2016-04-17T17:09:24.000Z" itemprop="datePublished">2016-04-18</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/18/js-07/">JavaScript简明教程（7）</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <blockquote>
+<p>很高兴你能看到这里，希望对你学习JavaScript有帮助。这是最后一章节，主要讲有关JavaScript的设计模式。</p>
+</blockquote>
+<h1 id="函数属性缓存"><a href="#函数属性缓存" class="headerlink" title="函数属性缓存"></a>函数属性缓存</h1><p>思路说明</p>
+<pre><code>01 函数是对象，因此可以在函数上面添加属性和方法
+02 如果某个函数需要接受参数，可能会反复计算且在函数内部需要进行耗时的大量的逻辑处理才能得到结果
+03 那么我们可以考虑把函数的参数，而计算得到的结果保存在函数对象中（函数的参数作为key,所得的结果作为value）
+04 等需要获取参数对应指定结果的时候，考虑先去缓存中查找，如果有那么就直接使用，若没有则计算并保存一份到缓存中。
+</code></pre>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/简明教程/">简明教程</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2016/04/18/js-07/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-js-06" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -882,78 +954,6 @@
       
         <p class="article-more-link">
           <a href="/2015/11/11/有趣的ChromeDevTools/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-五分钟学会简单使用git" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/09/23/五分钟学会简单使用git/" class="article-date">
-      <time datetime="2015-09-22T16:00:00.000Z" itemprop="datePublished">2015-09-23</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/23/五分钟学会简单使用git/">五分钟学会简单使用git</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <blockquote>
-<p>五分钟，简单入门。学会之后可以愉快的管理你的文件啦。</p>
-</blockquote>
-<h2 id="简单使用"><a href="#简单使用" class="headerlink" title="简单使用"></a>简单使用</h2><pre><code>git 其实很简单，有多简单呢？
-    1. git init 初始化一个仓库；
-    2. git add . 添加文件到暂存区；
-    3. git commit -m&apos;messeage&apos;  提交至版本库；
-    4. git push origin master 推送至远程仓库；
-</code></pre>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/版本控制/">版本控制</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2015/09/23/五分钟学会简单使用git/#more">阅读全文 >></a>
         </p>
       
       <div class="clearfix"></div>

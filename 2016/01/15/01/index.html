@@ -287,46 +287,46 @@
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap"><article id="post-01" class="article article-type-post" itemscope itemprop="blogPost">
-  
+    
     <div class="article-meta">
-      <a href="/2016/01/15/01/" class="article-date">
+        <a href="/2016/01/15/01/" class="article-date">
       <time datetime="2016-01-15T08:36:35.000Z" itemprop="datePublished">2016-01-15</time>
 </a>
 
 
     </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+    <div class="article-inner">
         
+        <input type="hidden" class="isFancy" />
+        
+        
+        <header class="article-header">
+            
   
     <h1 class="article-title" itemprop="name">
       JavaScript简明教程（1）
     </h1>
   
 
-      </header>
-      
-      <div class="article-info article-info-post">
+        </header>
         
+        <div class="article-info article-info-post">
+            
 
-        
+            
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/简明教程/">简明教程</a></li></ul>
     </div>
 
-        <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <blockquote>
+            <div class="clearfix"></div>
+        </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            
+            <blockquote>
 <p>JavaScript与Java没有半毛钱关系，网景公司员工Brendan Eich用了10天时间设计了JavaScript语言。</p>
 </blockquote>
 <h1 id="JavaScript的范围"><a href="#JavaScript的范围" class="headerlink" title="JavaScript的范围"></a>JavaScript的范围</h1><p><strong>JavaScript的范围：BOM + DOM + ECMAScript</strong></p>
@@ -391,11 +391,11 @@
 <p>常用DOM属性<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">className</div><div class="line">innerHTML</div><div class="line">innerText/textContent value</div><div class="line">children</div></pre></td></tr></table></figure></p>
 <p><strong>代码示例</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//0 获取页面中指定的标签,并设置其样式</span></div><div class="line">    <span class="keyword">var</span> divID = <span class="built_in">document</span>.getElementById(<span class="string">"divId"</span>);</div><div class="line">    divID.style.backgroundColor = <span class="string">"pink"</span>;</div><div class="line">    divID.style.height = <span class="string">"40px"</span>;</div><div class="line">    divID.style.width = <span class="string">"200px"</span>;</div><div class="line">    <span class="comment">//01 创建新的标签</span></div><div class="line">    <span class="keyword">var</span> div = <span class="built_in">document</span>.createElement(<span class="string">"div"</span>);</div><div class="line">    <span class="comment">//02 设置标签的样式</span></div><div class="line">    div.style.backgroundColor = <span class="string">"red"</span>;</div><div class="line">    div.style.height = <span class="string">"100px"</span>;</div><div class="line">    div.style.width = <span class="string">"300px"</span>;</div><div class="line">    div.style.fontSize = <span class="string">"20"</span>;</div><div class="line">    <span class="comment">//03 设置标签的内容</span></div><div class="line">    div.innerText = <span class="string">"这是一个自己创建的标签"</span>;</div><div class="line">    <span class="comment">//04 把标签插入到页面中</span></div><div class="line">    <span class="built_in">document</span>.body.appendChild(div);</div></pre></td></tr></table></figure></p>
 
-      
+            
+        </div>
+        
     </div>
     
-  </div>
-  
     
     <div class="copyright">
         <p><span>本文标题:</span><a href="/2016/01/15/01/">JavaScript简明教程（1）</a></p>
@@ -431,7 +431,37 @@
         
     </nav>
 
-  
+    
+    
+    
+<div style="padding: 0; margin: 20px auto; width: 90%; text-align: center;">
+    <br>
+    <div>哎呦，不行了，要睡觉了，赏我点咖啡钱吧，您的支持将鼓励我继续创作！</div>
+    <br>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+        <div class="btn btn-pay">打赏支持</div>
+    </button>
+    <br>
+    <br>
+    <div id="QR" style="display: none;">
+        
+        <div id="wechat" style="display: inline-block;">
+            <img id="wechat_qr" src="/img/wechat-reward-qr.jpeg" alt="Afanail WeChat Pay"/>
+            <p>微信打赏</p>
+        </div>
+        
+        
+        <div id="alipay" style="display: inline-block">
+            <img id="alipay_qr" src="/img/alipay-reward-qr.jpeg" alt="Afanail Alipay"/>
+            <p>支付宝打赏</p>
+        </div>
+        
+        <br>
+        <br>
+    </div>
+</div>
+
+    
 </article>
 
     <div id="toc" class="toc-article">
@@ -459,7 +489,7 @@
 
 
 
-    
+
 <div class="share">
     
         <div class="bdsharebuttonbox">
@@ -486,8 +516,8 @@
 
 
 
-    
-        <section class="youyan" id="comments">
+
+<section class="youyan" id="comments">
     <script>
         var loadComment = function(){
             var d = document, s = d.createElement('script');
@@ -501,7 +531,14 @@
 
     <div id="uyan_frame"></div>
 </section>
-    
+
+
+<!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2133352"></script>
+<!-- UY END -->
+
+
 
 
 
@@ -527,9 +564,9 @@
 
 
 
-    <script>
-        
-    </script>
+<script>
+    
+</script>
 </div>
       <footer id="footer">
     <div class="outer">

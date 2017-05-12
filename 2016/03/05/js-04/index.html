@@ -286,46 +286,46 @@
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap"><article id="post-js-04" class="article article-type-post" itemscope itemprop="blogPost">
-  
+    
     <div class="article-meta">
-      <a href="/2016/03/05/js-04/" class="article-date">
+        <a href="/2016/03/05/js-04/" class="article-date">
       <time datetime="2016-03-05T05:26:28.000Z" itemprop="datePublished">2016-03-05</time>
 </a>
 
 
     </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+    <div class="article-inner">
         
+        <input type="hidden" class="isFancy" />
+        
+        
+        <header class="article-header">
+            
   
     <h1 class="article-title" itemprop="name">
       JavaScript简明教程（4）
     </h1>
   
 
-      </header>
-      
-      <div class="article-info article-info-post">
+        </header>
         
+        <div class="article-info article-info-post">
+            
 
-        
+            
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/简明教程/">简明教程</a></li></ul>
     </div>
 
-        <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <blockquote>
+            <div class="clearfix"></div>
+        </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            
+            <blockquote>
 <p>本章节主要讲解了原型链及相关方法。</p>
 </blockquote>
 <h1 id="原型链及相关属性方法简单说明"><a href="#原型链及相关属性方法简单说明" class="headerlink" title="原型链及相关属性方法简单说明"></a>原型链及相关属性方法简单说明</h1><h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><p><strong>代码示例</strong><br><a id="more"></a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    <span class="comment">//01 提供Person构造函数</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name,age</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.name = name;</div><div class="line">        <span class="keyword">this</span>.age = age;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//02 设置Person的原型对象</span></div><div class="line">    Person.prototype.showName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//03 创建Student构造函数</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Student</span>(<span class="params">number</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.numer = number</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//04 设置Student的原型对象</span></div><div class="line">    Student.prototype = <span class="keyword">new</span> Person();</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
@@ -417,11 +417,11 @@ Object本身也是对象,其构造函数为:function Function() { [native code]
 <p><strong>面向对象的方式管理图书</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line">&lt;scrip&gt;</div><div class="line">    <span class="keyword">var</span> obj = [</div><div class="line">        &#123;<span class="attr">name</span>:<span class="string">"什么是批判"</span>,<span class="attr">author</span>:<span class="string">"福柯"</span>&#125;,</div><div class="line">        &#123;<span class="attr">name</span>:<span class="string">"飞鸟集"</span>,<span class="attr">author</span>:<span class="string">"泰戈尔"</span>&#125;</div><div class="line">    ];</div><div class="line">泰    <span class="function"><span class="keyword">function</span> <span class="title">BookManager</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.bookList = <span class="literal">null</span>;</div><div class="line">    &#125;</div><div class="line">   BookManager.prototype = &#123;</div><div class="line">        <span class="attr">constructor</span>:BookManager,</div><div class="line">        <span class="attr">init</span>:<span class="function"><span class="keyword">function</span> (<span class="params">arr</span>) </span>&#123;</div><div class="line">            <span class="keyword">this</span>.bookList = arr || [];</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">addBook</span>:<span class="function"><span class="keyword">function</span> (<span class="params">bookObj</span>) </span>&#123;</div><div class="line">            <span class="keyword">this</span>.bookList.push(bookObj)</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">getBook</span>:<span class="function"><span class="keyword">function</span> (<span class="params">name</span>) </span>&#123;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="keyword">this</span>.bookList.length; i++) &#123;</div><div class="line">            <span class="keyword">var</span> obj = <span class="keyword">this</span>.bookList[i];</div><div class="line">            <span class="keyword">if</span> (obj.name == name)</div><div class="line">            &#123;</div><div class="line">                <span class="keyword">return</span> obj;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</div><div class="line">    &#125;,</div><div class="line">        <span class="attr">updateBookData</span>:<span class="function"><span class="keyword">function</span> (<span class="params">name,authorName</span>)</span>&#123;</div><div class="line">            <span class="keyword">var</span> obj = <span class="keyword">this</span>.getBook(name);</div><div class="line">            obj.author = authorName;</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">removeBook</span>:<span class="function"><span class="keyword">function</span> (<span class="params">name</span>) </span>&#123;</div><div class="line">            <span class="keyword">var</span> obj = <span class="keyword">this</span>.getBook(name);</div><div class="line">            <span class="keyword">var</span> index = <span class="keyword">this</span>.bookList.indexOf(obj);</div><div class="line">            <span class="keyword">this</span>.bookList.splice(index,<span class="number">1</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="comment">//01 创建对象</span></div><div class="line">    <span class="keyword">var</span> YYManager = <span class="keyword">new</span> BookManager();</div><div class="line">    YYManager.init(obj);</div><div class="line">    <span class="built_in">console</span>.log(YYManager.bookList);</div><div class="line">    <span class="comment">//02 演示添加操作</span></div><div class="line">    YYManager.addBook(&#123;<span class="attr">name</span>:<span class="string">"花田半亩"</span>,<span class="attr">author</span>:<span class="string">"田维"</span>&#125;);</div><div class="line">    <span class="built_in">console</span>.log(YYManager.bookList);</div><div class="line">    <span class="comment">//03 演示查询操作</span></div><div class="line">    <span class="built_in">console</span>.log(YYManager.getBook(<span class="string">"花田半亩"</span>));</div><div class="line">    <span class="comment">//04 演示更新操作</span></div><div class="line">    YYManager.updateBookData(<span class="string">"花田半亩"</span>,<span class="string">"甜田"</span>);</div><div class="line">    <span class="built_in">console</span>.log(YYManager.getBook(<span class="string">"花田半亩"</span>));;</div><div class="line">    <span class="comment">//05 演示删除操作</span></div><div class="line">    YYManager.removeBook(<span class="string">"什么是批判"</span>);</div><div class="line">    <span class="built_in">console</span>.log(YYManager.bookList);</div><div class="line">    <span class="comment">//02 创建第二个人的图书管理对象</span></div><div class="line">    <span class="keyword">var</span> wulitaotaoMManager = <span class="keyword">new</span> BookManager();</div><div class="line">    wulitaotaoMManager.init([&#123;<span class="attr">name</span>:<span class="string">"装逼速成"</span>,<span class="attr">author</span>:<span class="string">"六扇门"</span>&#125;]);</div><div class="line">    <span class="built_in">console</span>.log(wulitaotaoMManager.bookList);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
 <p>总结<br>01 提供构造函数，在构造函数内部设置实例化属性<br>02 把常用的操作提取成对象的实例方法，写在原型对象身上<br>03 提供init方法，用于初始化数据<br>04 注意：如果切断了原型对象那么需要修正内部的构造器属性指向</p>
 
-      
+            
+        </div>
+        
     </div>
     
-  </div>
-  
     
     <div class="copyright">
         <p><span>本文标题:</span><a href="/2016/03/05/js-04/">JavaScript简明教程（4）</a></p>
@@ -457,7 +457,37 @@ Object本身也是对象,其构造函数为:function Function() { [native code]
         
     </nav>
 
-  
+    
+    
+    
+<div style="padding: 0; margin: 20px auto; width: 90%; text-align: center;">
+    <br>
+    <div>哎呦，不行了，要睡觉了，赏我点咖啡钱吧，您的支持将鼓励我继续创作！</div>
+    <br>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+        <div class="btn btn-pay">打赏支持</div>
+    </button>
+    <br>
+    <br>
+    <div id="QR" style="display: none;">
+        
+        <div id="wechat" style="display: inline-block;">
+            <img id="wechat_qr" src="/img/wechat-reward-qr.jpeg" alt="Afanail WeChat Pay"/>
+            <p>微信打赏</p>
+        </div>
+        
+        
+        <div id="alipay" style="display: inline-block">
+            <img id="alipay_qr" src="/img/alipay-reward-qr.jpeg" alt="Afanail Alipay"/>
+            <p>支付宝打赏</p>
+        </div>
+        
+        <br>
+        <br>
+    </div>
+</div>
+
+    
 </article>
 
     <div id="toc" class="toc-article">
@@ -485,7 +515,7 @@ Object本身也是对象,其构造函数为:function Function() { [native code]
 
 
 
-    
+
 <div class="share">
     
         <div class="bdsharebuttonbox">
@@ -512,8 +542,8 @@ Object本身也是对象,其构造函数为:function Function() { [native code]
 
 
 
-    
-        <section class="youyan" id="comments">
+
+<section class="youyan" id="comments">
     <script>
         var loadComment = function(){
             var d = document, s = d.createElement('script');
@@ -527,7 +557,14 @@ Object本身也是对象,其构造函数为:function Function() { [native code]
 
     <div id="uyan_frame"></div>
 </section>
-    
+
+
+<!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2133352"></script>
+<!-- UY END -->
+
+
 
 
 
@@ -553,9 +590,9 @@ Object本身也是对象,其构造函数为:function Function() { [native code]
 
 
 
-    <script>
-        
-    </script>
+<script>
+    
+</script>
 </div>
       <footer id="footer">
     <div class="outer">

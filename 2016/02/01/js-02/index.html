@@ -283,46 +283,46 @@
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap"><article id="post-js-02" class="article article-type-post" itemscope itemprop="blogPost">
-  
+    
     <div class="article-meta">
-      <a href="/2016/02/01/js-02/" class="article-date">
+        <a href="/2016/02/01/js-02/" class="article-date">
       <time datetime="2016-02-01T05:15:15.000Z" itemprop="datePublished">2016-02-01</time>
 </a>
 
 
     </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+    <div class="article-inner">
         
+        <input type="hidden" class="isFancy" />
+        
+        
+        <header class="article-header">
+            
   
     <h1 class="article-title" itemprop="name">
       JavaScript简明教程（2）
     </h1>
   
 
-      </header>
-      
-      <div class="article-info article-info-post">
+        </header>
         
+        <div class="article-info article-info-post">
+            
 
-        
+            
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/简明教程/">简明教程</a></li></ul>
     </div>
 
-        <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <blockquote>
+            <div class="clearfix"></div>
+        </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            
+            <blockquote>
 <p>面向对象方法被人谈论了二十多年了，直到今天，我们还一直在谈对象。</p>
 </blockquote>
 <h1 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h1><h2 id="面向层过程和面向对象编程"><a href="#面向层过程和面向对象编程" class="headerlink" title="面向层过程和面向对象编程"></a>面向层过程和面向对象编程</h2><p>01 面向对象编程和面向过程编程是一种编程思想,和具体的语言关系不大。<br>02 面向过程编程和面向对象编程的主要区别<br><a id="more"></a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">面向过程编程:</div><div class="line">     关注点在于解决问题需要的每一个详细的步骤</div><div class="line">     示例:</div><div class="line">         自己洗衣服的过程</div><div class="line">         ① 收集需要洗的脏衣服</div><div class="line">         ② 准备洗衣粉、洗衣液等</div><div class="line">         ③ 把衣服放到一个盆里</div><div class="line">         ④ 接水</div><div class="line">         ⑤ 把洗衣粉放到盆里</div><div class="line">         ⑥ 摩擦,摩擦,不断的摩擦</div><div class="line">         ⑦ 把洗好的衣服用清水冲洗干净</div><div class="line">         ⑧ 尽量把把洗好的衣服的水分拧干</div><div class="line">         ⑨ 晾晒</div><div class="line"> 面向对象编程:</div><div class="line">     关注点在于解决问题需要的对象身上</div><div class="line">     示例:</div><div class="line">         使用洗衣机洗衣服的过程</div><div class="line">         ① 收集需要洗的脏衣服</div><div class="line">         ② 找到合适的洗衣机</div><div class="line">         ③ 设定洗衣服和烘干的程序</div></pre></td></tr></table></figure></p>
@@ -367,11 +367,11 @@
 <p><strong>原型对象的使用注意</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">① 访问属性:构造函数创建出来的对象在访问属性的时候,会先在实例内查找,如果没有找到则进一步到对应的原型对象中查找。</div><div class="line">② 设置属性:在使用点语法进行赋值的时候,无法操作到对应的原型对象,如果该属性在对象中已经存在，则修改该属性的值。如果该属性在对象中尚未存在,则新增该属性。</div><div class="line">③ 设置原型对象的属性:</div><div class="line">[<span class="number">01</span>] 设置原型对象的属性,只能通过构造函数.Prototype的方式替换原型对象的方式设置。</div><div class="line">[<span class="number">02</span>] 如果原型对象的属性是值类型，那么只能通过Person.prototype.属性的方式修改其值。如果原型对象的属性是引用类型,那么可以通过对象名.引用对象.属性名的方式设置修改：</div><div class="line">            (<span class="number">001</span>) 使用构造函数创建出来的多个对象的原型对象中的该属性指向的是同一块数据。</div><div class="line">            (<span class="number">002</span>) 某个对象对该原型对象属性进行了修改会影响到其他的对象。</div></pre></td></tr></table></figure></p>
 <p><code>__proto__</code>属性说明：<code>__proto__</code>是一个非标准属性,即ECMAScript中并不包含该属性,这只是某些浏览器为了方便开发人员开发和调试而提供的一个属性,不具备通用性。建议:在调试的时候可以使用该属性,但不能出现在正式的代码中。</p>
 
-      
+            
+        </div>
+        
     </div>
     
-  </div>
-  
     
     <div class="copyright">
         <p><span>本文标题:</span><a href="/2016/02/01/js-02/">JavaScript简明教程（2）</a></p>
@@ -407,7 +407,37 @@
         
     </nav>
 
-  
+    
+    
+    
+<div style="padding: 0; margin: 20px auto; width: 90%; text-align: center;">
+    <br>
+    <div>哎呦，不行了，要睡觉了，赏我点咖啡钱吧，您的支持将鼓励我继续创作！</div>
+    <br>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+        <div class="btn btn-pay">打赏支持</div>
+    </button>
+    <br>
+    <br>
+    <div id="QR" style="display: none;">
+        
+        <div id="wechat" style="display: inline-block;">
+            <img id="wechat_qr" src="/img/wechat-reward-qr.jpeg" alt="Afanail WeChat Pay"/>
+            <p>微信打赏</p>
+        </div>
+        
+        
+        <div id="alipay" style="display: inline-block">
+            <img id="alipay_qr" src="/img/alipay-reward-qr.jpeg" alt="Afanail Alipay"/>
+            <p>支付宝打赏</p>
+        </div>
+        
+        <br>
+        <br>
+    </div>
+</div>
+
+    
 </article>
 
     <div id="toc" class="toc-article">
@@ -435,7 +465,7 @@
 
 
 
-    
+
 <div class="share">
     
         <div class="bdsharebuttonbox">
@@ -462,8 +492,8 @@
 
 
 
-    
-        <section class="youyan" id="comments">
+
+<section class="youyan" id="comments">
     <script>
         var loadComment = function(){
             var d = document, s = d.createElement('script');
@@ -477,7 +507,14 @@
 
     <div id="uyan_frame"></div>
 </section>
-    
+
+
+<!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2133352"></script>
+<!-- UY END -->
+
+
 
 
 
@@ -503,9 +540,9 @@
 
 
 
-    <script>
-        
-    </script>
+<script>
+    
+</script>
 </div>
       <footer id="footer">
     <div class="outer">

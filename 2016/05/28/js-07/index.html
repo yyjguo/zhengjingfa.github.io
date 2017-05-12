@@ -283,46 +283,46 @@
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap"><article id="post-js-07" class="article article-type-post" itemscope itemprop="blogPost">
-  
+    
     <div class="article-meta">
-      <a href="/2016/05/28/js-07/" class="article-date">
+        <a href="/2016/05/28/js-07/" class="article-date">
       <time datetime="2016-05-28T01:05:25.000Z" itemprop="datePublished">2016-05-28</time>
 </a>
 
 
     </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+    <div class="article-inner">
         
+        <input type="hidden" class="isFancy" />
+        
+        
+        <header class="article-header">
+            
   
     <h1 class="article-title" itemprop="name">
       JavaScript简明教程（7）
     </h1>
   
 
-      </header>
-      
-      <div class="article-info article-info-post">
+        </header>
         
+        <div class="article-info article-info-post">
+            
 
-        
+            
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/简明教程/">简明教程</a></li></ul>
     </div>
 
-        <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <blockquote>
+            <div class="clearfix"></div>
+        </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            
+            <blockquote>
 <p>很高兴你能看到这里，希望对你学习JavaScript有帮助。这是最后一章节，主要讲有关JavaScript的设计模式。</p>
 </blockquote>
 <h1 id="函数属性缓存"><a href="#函数属性缓存" class="headerlink" title="函数属性缓存"></a>函数属性缓存</h1><p>思路说明</p>
@@ -415,11 +415,11 @@
 <p><strong>观察者模式的特点（优点）</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">01 观察者模式可以广泛应用于异步编程中，这是一种替代传递回调函数的方案</div><div class="line">02 观察者模式可以取代对象之间硬性编码的通知机制，一个对象不再是显示的调用另外一个对象的接口，这种模式让两个对象松耦合的联系在一起，它们不需要清楚彼此的实现细节就能够相互通信。</div><div class="line">03 在这种设计模式中，不再是一个对象调用另外一个对象的方法，而是一个对象订阅另一个对象的特定活动并且在状态改变后获得通知</div></pre></td></tr></table></figure></p>
 <p><strong>模型</strong><br>01 订阅者也称为<code>观察者</code><br>02 被观察的对象称为<code>发布者</code>或者是主题<br>03 当发生一个重要事件的时候，发布者将会通知所有订阅者并且经常以事件的形式来传递消息。<br>示例代码<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//01 提取成公共的发行者对象</span></div><div class="line">    <span class="keyword">var</span> publisher = &#123;</div><div class="line">        <span class="attr">users</span>:&#123;</div><div class="line">            <span class="attr">default</span>:[]</div><div class="line">        &#125;,   <span class="comment">//所有的订阅者对象</span></div><div class="line">        addUser:<span class="function"><span class="keyword">function</span> (<span class="params">fn,type</span>) </span>&#123;</div><div class="line">            <span class="comment">//对订阅的类型进行判断</span></div><div class="line">            <span class="keyword">var</span> type = type || <span class="string">"default"</span>;</div><div class="line">            <span class="comment">//如果是新的订阅类型,那么我们需要做初始化的处理</span></div><div class="line">            <span class="keyword">if</span> (<span class="keyword">this</span>.users[type] == <span class="literal">undefined</span>)</div><div class="line">            &#123;</div><div class="line">                <span class="keyword">this</span>.users[type] = [];</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">this</span>.users[type].push(fn);</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">removeUser</span>:<span class="function"><span class="keyword">function</span> (<span class="params">fn,type</span>) </span>&#123;</div><div class="line">            <span class="keyword">this</span>.tool(type,<span class="string">"removerUser"</span>,fn);</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">publish</span>:<span class="function"><span class="keyword">function</span> (<span class="params">type</span>) </span>&#123;</div><div class="line">            <span class="keyword">this</span>.tool(type,<span class="string">"publish"</span>);</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">tool</span>:<span class="function"><span class="keyword">function</span> (<span class="params">type,funcType,fn</span>) </span>&#123;</div><div class="line">            <span class="keyword">var</span> type = type || <span class="string">"default"</span>;</div><div class="line">            <span class="keyword">var</span> users = <span class="keyword">this</span>.users[type];</div><div class="line">            <span class="keyword">if</span> (users == <span class="literal">undefined</span>)</div><div class="line">            &#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">"当前没有任何订阅者"</span>);</div><div class="line">                <span class="keyword">return</span>;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; users.length; i++) &#123;</div><div class="line">                <span class="keyword">if</span> (funcType == <span class="string">'publish'</span>)</div><div class="line">                &#123;</div><div class="line">                    users[i]()</div><div class="line">                &#125;<span class="keyword">else</span></div><div class="line">                &#123;</div><div class="line">                    <span class="keyword">if</span> (users[i] == fn)</div><div class="line">                    &#123;</div><div class="line">                        users.splice(i, <span class="number">1</span>);</div><div class="line">                        <span class="keyword">break</span>;</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">    <span class="comment">//02 提供一个工具函数,能够利用发行者对象的模板来快速创建新的发布者</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">makePaper</span>(<span class="params">o</span>) </span>&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> publisher) &#123;</div><div class="line">            <span class="keyword">if</span> (publisher.hasOwnProperty(i) &amp;&amp; <span class="keyword">typeof</span> publisher[i] == <span class="string">'function'</span>)</div><div class="line">            &#123;</div><div class="line">                o[i] = publisher[i];</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        o.users = &#123;<span class="attr">default</span>:[]&#125;;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//03 创建发布者</span></div><div class="line">    <span class="keyword">var</span> paper1 = &#123;</div><div class="line">        <span class="attr">day</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">this</span>.publish();</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">month</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">this</span>.publish(<span class="string">"month"</span>)</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">year</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">this</span>.publish(<span class="string">"year"</span>)</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">    <span class="comment">//把某个对象编程一个发布者</span></div><div class="line">    makePaper(paper1);</div><div class="line">    <span class="comment">//04 创建订阅者(当发布者发布消息的时候,订阅者能够收到信息--自动调用订阅者的方法)</span></div><div class="line">    <span class="keyword">var</span> obj = &#123;</div><div class="line">        <span class="attr">lookDayNews</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">"obj - 查看最新的日报信息"</span>);</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">lookImageNews</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">"obj - 查看图片信息"</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">    <span class="comment">//05 设置订阅</span></div><div class="line">    paper1.addUser(obj.lookDayNews);</div><div class="line">    paper1.addUser(obj.lookImageNews,<span class="string">'month'</span>);</div><div class="line">    paper1.day();</div><div class="line">    paper1.month();</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
 
-      
+            
+        </div>
+        
     </div>
     
-  </div>
-  
     
     <div class="copyright">
         <p><span>本文标题:</span><a href="/2016/05/28/js-07/">JavaScript简明教程（7）</a></p>
@@ -449,7 +449,37 @@
         
     </nav>
 
-  
+    
+    
+    
+<div style="padding: 0; margin: 20px auto; width: 90%; text-align: center;">
+    <br>
+    <div>哎呦，不行了，要睡觉了，赏我点咖啡钱吧，您的支持将鼓励我继续创作！</div>
+    <br>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+        <div class="btn btn-pay">打赏支持</div>
+    </button>
+    <br>
+    <br>
+    <div id="QR" style="display: none;">
+        
+        <div id="wechat" style="display: inline-block;">
+            <img id="wechat_qr" src="/img/wechat-reward-qr.jpeg" alt="Afanail WeChat Pay"/>
+            <p>微信打赏</p>
+        </div>
+        
+        
+        <div id="alipay" style="display: inline-block">
+            <img id="alipay_qr" src="/img/alipay-reward-qr.jpeg" alt="Afanail Alipay"/>
+            <p>支付宝打赏</p>
+        </div>
+        
+        <br>
+        <br>
+    </div>
+</div>
+
+    
 </article>
 
     <div id="toc" class="toc-article">
@@ -477,7 +507,7 @@
 
 
 
-    
+
 <div class="share">
     
         <div class="bdsharebuttonbox">
@@ -504,8 +534,8 @@
 
 
 
-    
-        <section class="youyan" id="comments">
+
+<section class="youyan" id="comments">
     <script>
         var loadComment = function(){
             var d = document, s = d.createElement('script');
@@ -519,7 +549,14 @@
 
     <div id="uyan_frame"></div>
 </section>
-    
+
+
+<!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2133352"></script>
+<!-- UY END -->
+
+
 
 
 
@@ -543,9 +580,9 @@
 
 
 
-    <script>
-        
-    </script>
+<script>
+    
+</script>
 </div>
       <footer id="footer">
     <div class="outer">

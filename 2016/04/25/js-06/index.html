@@ -283,46 +283,46 @@
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap"><article id="post-js-06" class="article article-type-post" itemscope itemprop="blogPost">
-  
+    
     <div class="article-meta">
-      <a href="/2016/04/25/js-06/" class="article-date">
+        <a href="/2016/04/25/js-06/" class="article-date">
       <time datetime="2016-04-25T03:19:14.000Z" itemprop="datePublished">2016-04-25</time>
 </a>
 
 
     </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+    <div class="article-inner">
         
+        <input type="hidden" class="isFancy" />
+        
+        
+        <header class="article-header">
+            
   
     <h1 class="article-title" itemprop="name">
       JavaScript简明教程（6）
     </h1>
   
 
-      </header>
-      
-      <div class="article-info article-info-post">
+        </header>
         
+        <div class="article-info article-info-post">
+            
 
-        
+            
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/简明教程/">简明教程</a></li></ul>
     </div>
 
-        <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <blockquote>
+            <div class="clearfix"></div>
+        </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            
+            <blockquote>
 <p>闭包是学习JavaScript的难点之一，因JavaScript是单线程，故回调使用频繁，本章节主要讲了闭包以及回调。</p>
 </blockquote>
 <h1 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h1><p><strong>闭包简单说明</strong></p>
@@ -424,11 +424,11 @@
 <p>代码示例（多个参数）<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> func = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> key = <span class="built_in">JSON</span>.stringify(<span class="built_in">Object</span>.prototype.slice.call(<span class="built_in">arguments</span>));</div><div class="line">    <span class="keyword">if</span> (func.cache[key] == <span class="literal">undefined</span>)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">var</span> result = <span class="string">"字符串"</span>; <span class="comment">//初始化值</span></div><div class="line">        <span class="comment">//...对result做复杂的计算</span></div><div class="line">        func.cache[key] = result + key;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> func.cache[key];</div><div class="line">&#125;</div><div class="line">func.cache = &#123;&#125;;    <span class="comment">//空对象</span></div><div class="line">func(<span class="string">"123"</span>,<span class="string">"456"</span>);  <span class="comment">//</span></div><div class="line"><span class="comment">//说明:如果传入的参数数量超过1,则可以将传入的参数序列化为一个json字符串作为参数处理。</span></div></pre></td></tr></table></figure></p>
 <p>代码说明：<br>slice:<code>返回一个新的数组，包含从 start 到 end （不包括该元素）的 arrayObject 中的元素</code></p>
 
-      
+            
+        </div>
+        
     </div>
     
-  </div>
-  
     
     <div class="copyright">
         <p><span>本文标题:</span><a href="/2016/04/25/js-06/">JavaScript简明教程（6）</a></p>
@@ -464,7 +464,37 @@
         
     </nav>
 
-  
+    
+    
+    
+<div style="padding: 0; margin: 20px auto; width: 90%; text-align: center;">
+    <br>
+    <div>哎呦，不行了，要睡觉了，赏我点咖啡钱吧，您的支持将鼓励我继续创作！</div>
+    <br>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+        <div class="btn btn-pay">打赏支持</div>
+    </button>
+    <br>
+    <br>
+    <div id="QR" style="display: none;">
+        
+        <div id="wechat" style="display: inline-block;">
+            <img id="wechat_qr" src="/img/wechat-reward-qr.jpeg" alt="Afanail WeChat Pay"/>
+            <p>微信打赏</p>
+        </div>
+        
+        
+        <div id="alipay" style="display: inline-block">
+            <img id="alipay_qr" src="/img/alipay-reward-qr.jpeg" alt="Afanail Alipay"/>
+            <p>支付宝打赏</p>
+        </div>
+        
+        <br>
+        <br>
+    </div>
+</div>
+
+    
 </article>
 
     <div id="toc" class="toc-article">
@@ -492,7 +522,7 @@
 
 
 
-    
+
 <div class="share">
     
         <div class="bdsharebuttonbox">
@@ -519,8 +549,8 @@
 
 
 
-    
-        <section class="youyan" id="comments">
+
+<section class="youyan" id="comments">
     <script>
         var loadComment = function(){
             var d = document, s = d.createElement('script');
@@ -534,7 +564,14 @@
 
     <div id="uyan_frame"></div>
 </section>
-    
+
+
+<!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2133352"></script>
+<!-- UY END -->
+
+
 
 
 
@@ -560,9 +597,9 @@
 
 
 
-    <script>
-        
-    </script>
+<script>
+    
+</script>
 </div>
       <footer id="footer">
     <div class="outer">

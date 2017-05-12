@@ -289,46 +289,46 @@
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap"><article id="post-有趣的ChromeDevTools" class="article article-type-post" itemscope itemprop="blogPost">
-  
+    
     <div class="article-meta">
-      <a href="/2015/11/11/有趣的ChromeDevTools/" class="article-date">
+        <a href="/2015/11/11/有趣的ChromeDevTools/" class="article-date">
       <time datetime="2015-11-11T13:46:45.000Z" itemprop="datePublished">2015-11-11</time>
 </a>
 
 
     </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+    <div class="article-inner">
         
+        <input type="hidden" class="isFancy" />
+        
+        
+        <header class="article-header">
+            
   
     <h1 class="article-title" itemprop="name">
       有趣的Chrome DevTools
     </h1>
   
 
-      </header>
-      
-      <div class="article-info article-info-post">
+        </header>
         
+        <div class="article-info article-info-post">
+            
 
-        
+            
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Chrome-DevTools/">Chrome DevTools</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
     </div>
 
-        <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <blockquote>
+            <div class="clearfix"></div>
+        </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            
+            <blockquote>
 <p>Chrome 自带开发者工具很有趣，怎么个有趣法呢？Chrome的JS控制台有很多很多神奇而且有趣的功能。此文仅例举其中几个，一起来看看吧。</p>
 </blockquote>
 <p>我们调试的时候控制台总会有一大堆密密麻麻的代码时，请试着输入 clear() 然后回车，清空所有，回到原始界面。<br><a id="more"></a>    </p>
@@ -340,11 +340,11 @@
 <h3 id="表格形式输出数组"><a href="#表格形式输出数组" class="headerlink" title="表格形式输出数组"></a>表格形式输出数组</h3><p>先输入数组arr,然后通过输入<code>console.table(variableName)</code>以表格形式查看，<br>如下图：<br><img src="/assets/img/table.png" alt="table"></p>
 <h3 id="检查元素"><a href="#检查元素" class="headerlink" title="检查元素"></a>检查元素</h3><p>你可以直接在控制台里输入下面的方法来检查元素<code>inspect($(&#39;selector&#39;))</code> 会检查所有匹配选择器的DOM元素，并返回所有选择器选择的DOM对象。<code>inspect($(&#39;img&#39;)[1])</code> 检查并返回页面上第2个img元素。<br><img src="/assets/img/检测.png" alt="jianche"><br>最后，Chrome DevTools是十分强大的调试工具，这只是冰上一角，深入了解请戳<a href="https://developers.google.com/web/tools/chrome-devtools/" target="_blank" rel="external">chrome-devtools</a></p>
 
-      
+            
+        </div>
+        
     </div>
     
-  </div>
-  
     
     <div class="copyright">
         <p><span>本文标题:</span><a href="/2015/11/11/有趣的ChromeDevTools/">有趣的Chrome DevTools</a></p>
@@ -380,7 +380,37 @@
         
     </nav>
 
-  
+    
+    
+    
+<div style="padding: 0; margin: 20px auto; width: 90%; text-align: center;">
+    <br>
+    <div>哎呦，不行了，要睡觉了，赏我点咖啡钱吧，您的支持将鼓励我继续创作！</div>
+    <br>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+        <div class="btn btn-pay">打赏支持</div>
+    </button>
+    <br>
+    <br>
+    <div id="QR" style="display: none;">
+        
+        <div id="wechat" style="display: inline-block;">
+            <img id="wechat_qr" src="/img/wechat-reward-qr.jpeg" alt="Afanail WeChat Pay"/>
+            <p>微信打赏</p>
+        </div>
+        
+        
+        <div id="alipay" style="display: inline-block">
+            <img id="alipay_qr" src="/img/alipay-reward-qr.jpeg" alt="Afanail Alipay"/>
+            <p>支付宝打赏</p>
+        </div>
+        
+        <br>
+        <br>
+    </div>
+</div>
+
+    
 </article>
 
     <div id="toc" class="toc-article">
@@ -408,7 +438,7 @@
 
 
 
-    
+
 <div class="share">
     
         <div class="bdsharebuttonbox">
@@ -435,8 +465,8 @@
 
 
 
-    
-        <section class="youyan" id="comments">
+
+<section class="youyan" id="comments">
     <script>
         var loadComment = function(){
             var d = document, s = d.createElement('script');
@@ -450,7 +480,14 @@
 
     <div id="uyan_frame"></div>
 </section>
-    
+
+
+<!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2133352"></script>
+<!-- UY END -->
+
+
 
 
 
@@ -476,9 +513,9 @@
 
 
 
-    <script>
-        
-    </script>
+<script>
+    
+</script>
 </div>
       <footer id="footer">
     <div class="outer">

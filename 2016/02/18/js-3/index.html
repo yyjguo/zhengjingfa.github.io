@@ -283,46 +283,46 @@
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap"><article id="post-js-3" class="article article-type-post" itemscope itemprop="blogPost">
-  
+    
     <div class="article-meta">
-      <a href="/2016/02/18/js-3/" class="article-date">
+        <a href="/2016/02/18/js-3/" class="article-date">
       <time datetime="2016-02-18T03:55:29.000Z" itemprop="datePublished">2016-02-18</time>
 </a>
 
 
     </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+    <div class="article-inner">
         
+        <input type="hidden" class="isFancy" />
+        
+        
+        <header class="article-header">
+            
   
     <h1 class="article-title" itemprop="name">
       JavaScript简明教程（3）
     </h1>
   
 
-      </header>
-      
-      <div class="article-info article-info-post">
+        </header>
         
+        <div class="article-info article-info-post">
+            
 
-        
+            
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/简明教程/">简明教程</a></li></ul>
     </div>
 
-        <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <blockquote>
+            <div class="clearfix"></div>
+        </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            
+            <blockquote>
 <p>关于继承，通俗说子继父业。在JavaScript中，Object是所有对象的父级|父类型|超类型：js中所有的对象都直接或间接的继承自Object。</p>
 </blockquote>
 <h1 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h1><h2 id="相关方法"><a href="#相关方法" class="headerlink" title="相关方法"></a>相关方法</h2><p>在讲继承之前，我们必须先了解一些相关的方法。</p>
@@ -364,11 +364,11 @@
 <p><strong>基本包装类型的注意点</strong><br>[1] 对象还是基本数据类型值？<br>对象：通过new 调用构造函数创建出来的是对象<br>基本数据类型值：直接通过字面量方式赋值|通过省略new关键字调用构造函数方式创建的是基本数据类型值。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">ex:</div><div class="line">    <span class="keyword">var</span> str1 = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">'hello'</span>);</div><div class="line">    <span class="keyword">var</span> str2 = <span class="string">'hello'</span>;</div><div class="line">    <span class="keyword">var</span> str3 = <span class="built_in">String</span>(<span class="string">'hello'</span>);</div><div class="line">    说明：以上代码中，str1是对象，而str2和str3是字符串（基本数据类型值）</div></pre></td></tr></table></figure></p>
 <p>[2] 相等问题<br>基本类型值判断相等=&gt;值相等<br>引用类型值判断相等=&gt;值相等且引用相等<br>对象是引用类型，因此在判断相等的时候有诸多的注意点和容易出错的地方<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">ex</div><div class="line">    <span class="keyword">var</span> str1 = <span class="string">'这是一个字符串'</span>;           <span class="comment">//基本数据类型</span></div><div class="line">    <span class="keyword">var</span> str2 = <span class="built_in">String</span>(<span class="string">'这是一个字符串'</span>);   <span class="comment">//基本数据类型</span></div><div class="line">    <span class="built_in">console</span>.log(str1 == str2);        <span class="comment">//true 相等</span></div><div class="line">    <span class="keyword">var</span> str3 = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">'这是一个字符串'</span>);  <span class="comment">//引用类型-对象</span></div><div class="line">    <span class="built_in">console</span>.log(str1 == str3);    <span class="comment">//true    //值相等</span></div><div class="line">    <span class="built_in">console</span>.log(str2 == str3);    <span class="comment">//true    //值相等</span></div><div class="line">    <span class="built_in">console</span>.log(str1 === str3); <span class="comment">//false //值相等,但是引用不相等</span></div><div class="line">    <span class="built_in">console</span>.log(str2 === str3); <span class="comment">//false //值相等,但是引用不相等</span></div><div class="line">    <span class="comment">//判断下面的变量是否相等</span></div><div class="line">    <span class="keyword">var</span> num1 = <span class="number">10</span>;                  <span class="comment">//基本数据类型</span></div><div class="line">    <span class="keyword">var</span> num2 = <span class="keyword">new</span> <span class="built_in">Number</span>(<span class="number">10</span>);      <span class="comment">//对象</span></div><div class="line">    <span class="built_in">console</span>.log(num1 == num2);      <span class="comment">//true</span></div><div class="line">    <span class="built_in">console</span>.log(num1 ===  num2);    <span class="comment">//false</span></div><div class="line">    <span class="keyword">var</span> bool1 = <span class="literal">true</span>;</div><div class="line">    <span class="keyword">var</span> bool2 = <span class="keyword">new</span> <span class="built_in">Boolean</span>(<span class="literal">true</span>);</div><div class="line">    <span class="built_in">console</span>.log(bool1 == bool2);    <span class="comment">//true</span></div><div class="line">    <span class="built_in">console</span>.log(bool1 === bool2);   <span class="comment">//false</span></div></pre></td></tr></table></figure></p>
 
-      
+            
+        </div>
+        
     </div>
     
-  </div>
-  
     
     <div class="copyright">
         <p><span>本文标题:</span><a href="/2016/02/18/js-3/">JavaScript简明教程（3）</a></p>
@@ -404,7 +404,37 @@
         
     </nav>
 
-  
+    
+    
+    
+<div style="padding: 0; margin: 20px auto; width: 90%; text-align: center;">
+    <br>
+    <div>哎呦，不行了，要睡觉了，赏我点咖啡钱吧，您的支持将鼓励我继续创作！</div>
+    <br>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+        <div class="btn btn-pay">打赏支持</div>
+    </button>
+    <br>
+    <br>
+    <div id="QR" style="display: none;">
+        
+        <div id="wechat" style="display: inline-block;">
+            <img id="wechat_qr" src="/img/wechat-reward-qr.jpeg" alt="Afanail WeChat Pay"/>
+            <p>微信打赏</p>
+        </div>
+        
+        
+        <div id="alipay" style="display: inline-block">
+            <img id="alipay_qr" src="/img/alipay-reward-qr.jpeg" alt="Afanail Alipay"/>
+            <p>支付宝打赏</p>
+        </div>
+        
+        <br>
+        <br>
+    </div>
+</div>
+
+    
 </article>
 
     <div id="toc" class="toc-article">
@@ -432,7 +462,7 @@
 
 
 
-    
+
 <div class="share">
     
         <div class="bdsharebuttonbox">
@@ -459,8 +489,8 @@
 
 
 
-    
-        <section class="youyan" id="comments">
+
+<section class="youyan" id="comments">
     <script>
         var loadComment = function(){
             var d = document, s = d.createElement('script');
@@ -474,7 +504,14 @@
 
     <div id="uyan_frame"></div>
 </section>
-    
+
+
+<!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2133352"></script>
+<!-- UY END -->
+
+
 
 
 
@@ -500,9 +537,9 @@
 
 
 
-    <script>
-        
-    </script>
+<script>
+    
+</script>
 </div>
       <footer id="footer">
     <div class="outer">

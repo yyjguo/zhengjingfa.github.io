@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="五分钟，简单入门。学会之后可以愉快的管理你的文件啦。  简单使用git 其实很简单，有多简单呢？     1. git init 初始化一个仓库；     2. git add . 添加文件到暂存区；     3. git commit -m&amp;apos;messeage&amp;apos;  提交至版本库；     4. git push origin master 推送至远程仓库；">
-<meta name="keywords" content="git,版本控制">
+<meta name="description" content="jQuery时下非常流行，简单好用，工作必用。想更深入学习，可以通过研究其源代码。     jQuery是一个闭包（即时函数）(function( window, undefined ) {}) 让我们来看一看jQuery源代码的基本信息">
+<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
 <meta property="og:type" content="article">
-<meta property="og:title" content="五分钟学会简单使用git">
-<meta property="og:url" content="http://www.1oveit.club/2015/09/23/五分钟学会简单使用git/index.html">
+<meta property="og:title" content="jQuery 源码简单分析">
+<meta property="og:url" content="http://www.1oveit.club/2015/08/13/jQuery-源码分析/index.html">
 <meta property="og:site_name" content="Afanail">
-<meta property="og:description" content="五分钟，简单入门。学会之后可以愉快的管理你的文件啦。  简单使用git 其实很简单，有多简单呢？     1. git init 初始化一个仓库；     2. git add . 添加文件到暂存区；     3. git commit -m&amp;apos;messeage&amp;apos;  提交至版本库；     4. git push origin master 推送至远程仓库；">
-<meta property="og:updated_time" content="2017-05-08T02:46:43.000Z">
+<meta property="og:description" content="jQuery时下非常流行，简单好用，工作必用。想更深入学习，可以通过研究其源代码。     jQuery是一个闭包（即时函数）(function( window, undefined ) {}) 让我们来看一看jQuery源代码的基本信息">
+<meta property="og:updated_time" content="2017-05-12T17:15:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="五分钟学会简单使用git">
-<meta name="twitter:description" content="五分钟，简单入门。学会之后可以愉快的管理你的文件啦。  简单使用git 其实很简单，有多简单呢？     1. git init 初始化一个仓库；     2. git add . 添加文件到暂存区；     3. git commit -m&amp;apos;messeage&amp;apos;  提交至版本库；     4. git push origin master 推送至远程仓库；">
+<meta name="twitter:title" content="jQuery 源码简单分析">
+<meta name="twitter:description" content="jQuery时下非常流行，简单好用，工作必用。想更深入学习，可以通过研究其源代码。     jQuery是一个闭包（即时函数）(function( window, undefined ) {}) 让我们来看一看jQuery源代码的基本信息">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>五分钟学会简单使用git | Afanail</title>
+<title>jQuery 源码简单分析 | Afanail</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -282,11 +282,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-五分钟学会简单使用git" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-jQuery-源码分析" class="article article-type-post" itemscope itemprop="blogPost">
     
     <div class="article-meta">
-        <a href="/2015/09/23/五分钟学会简单使用git/" class="article-date">
-      <time datetime="2015-09-22T16:00:00.000Z" itemprop="datePublished">2015-09-23</time>
+        <a href="/2015/08/13/jQuery-源码分析/" class="article-date">
+      <time datetime="2015-08-12T16:33:34.000Z" itemprop="datePublished">2015-08-13</time>
 </a>
 
 
@@ -301,7 +301,7 @@
             
   
     <h1 class="article-title" itemprop="name">
-      五分钟学会简单使用git
+      jQuery 源码简单分析
     </h1>
   
 
@@ -311,10 +311,6 @@
             
 
             
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/版本控制/">版本控制</a></li></ul>
-    </div>
-
             <div class="clearfix"></div>
         </div>
         
@@ -323,37 +319,42 @@
             
             
             <blockquote>
-<p>五分钟，简单入门。学会之后可以愉快的管理你的文件啦。</p>
+<p>jQuery时下非常流行，简单好用，工作必用。想更深入学习，可以通过研究其源代码。   </p>
 </blockquote>
-<h2 id="简单使用"><a href="#简单使用" class="headerlink" title="简单使用"></a>简单使用</h2><pre><code>git 其实很简单，有多简单呢？
-    1. git init 初始化一个仓库；
-    2. git add . 添加文件到暂存区；
-    3. git commit -m&apos;messeage&apos;  提交至版本库；
-    4. git push origin master 推送至远程仓库；
-</code></pre><a id="more"></a>
-<h2 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h2><pre><code>什么是平衡分支？实际工作中一般新建平衡分支用于开发调试等，然后再合并到主分支。
-    1.git checkout -b dev 新建dev分支并切换到dev分支。
-    相当于：git branch dev  创建dev分支；  
-    git checkout dev 切换到dev分支；
-    2. 开发或者调试结束后  
-    git add * 添加所有文件到暂存区； 
-    git commit -m&apos;messeage&apos; 提交至版本库；  
-    3.git checkout master 切换到主分支；  
-    git merge dev 合并分支；
-    git branch -d dev   删除分支；  
-</code></pre><h2 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h2><pre><code>什么是冲突？同一份文件同一个地方被不同的协作者修改了，最后一个推送至远程的会产生冲突。  
-解决冲突：git pull 更新本地仓库
-打开冲突文件，找到冲突部分，协调修改。
-   1 TODO
-   2 &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-   3 我修改的
-   4 =======
-   5 协作者修改的
-   6 &gt;&gt;&gt;&gt;&gt;&gt;&gt; 
-经过协调，修改为       
-   1 TODO
-   2 经过协调修改的
-</code></pre><p>到这里，你已经基本上掌握了git的使用了，想再深入了解，请点击<a href="http://git.oschina.net/progit/1-起步.html#1.1-关于版本控制" target="_blank" rel="external">git Pro中文</a></p>
+<h1 id="jQuery是一个闭包（即时函数）"><a href="#jQuery是一个闭包（即时函数）" class="headerlink" title="jQuery是一个闭包（即时函数）"></a>jQuery是一个闭包（即时函数）</h1><pre><code>(function( window, undefined ) {})
+</code></pre><p>让我们来看一看jQuery源代码的基本信息<br><a id="more"></a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"> <span class="comment">/*!</span></div><div class="line">* jQuery JavaScript Library v2.0.0 版本信息</div><div class="line">* http://jquery.com/ 官方网站</div><div class="line">*</div><div class="line">* Includes Sizzle.js 复杂选择器文件名称</div><div class="line">* http://sizzlejs.com/  复杂选择器文件网站</div><div class="line">*</div><div class="line">* Copyright 2005, 2013 jQuery Foundation, Inc. and other contributors  版权信息</div><div class="line">* Released under the MIT license 开源协议</div><div class="line">* http://jquery.org/license</div><div class="line">*</div><div class="line">* Date: 2013-04-18 更新时间</div><div class="line">*/</div></pre></td></tr></table></figure></p>
+<p>这说明jQuery有多个版本,现在我们分析的是2.0.0版本，在之前的版本版本需要兼容IE678,里面有大量的兼容性处理。从2.0.0版本入手开始研究,从上往下解读注释</p>
+<pre><code>包括:
+    01 官方网站
+    02 复杂选择器
+    03 版权信息和开源协议
+    04 #1335和bug管理系统
+</code></pre><h2 id="jQ本质就是一个闭包"><a href="#jQ本质就是一个闭包" class="headerlink" title="jQ本质就是一个闭包"></a>jQ本质就是一个闭包</h2><p>   使用闭包的好处：</p>
+<pre><code>① 为了避免和其他框架产生冲突(代码说明) 
+② 多个框架中如果出现了同名的变量或者是函数那么会存在覆盖或者是冲突,而使用闭包结构可以处理这个问题
+③ 其它
+</code></pre><p>   传递window参数的好处：  </p>
+<pre><code>① 参数的区分:形式参数和实际参数
+② 函数作用域说明:函数内部的数据外界无法访问(引申闭包相关知识点)
+③ 把内部的数据传递给外部使用
+④ 用于压缩代码(不是很理解)
+</code></pre><p>   传递window参数的好处：</p>
+<pre><code>① 方便代码的压缩
+② 使用undefined作为形参传入,为了防止代码的修改(在IE以前的版本中undefined可以被修改)
+</code></pre><h1 id="jQuery被写成了一个工厂函数"><a href="#jQuery被写成了一个工厂函数" class="headerlink" title="jQuery被写成了一个工厂函数"></a>jQuery被写成了一个工厂函数</h1><p>根据我们已经清楚的部分来开始初步的搭建框架结构,主要包括以下部分</p>
+<pre><code>    001 该框架的最外层是一个立即调用函数(闭包),需要接受两个参数window和undefined
+    002 提供一个jQuery工厂函数
+    003 设置jQuery函数对象的原型对象(直接替换),并修正构造器属性,添加init方法
+    004 在jQuery工厂函数内部返回使用init方法创建的对象
+    005 设置原型对象赋值并讲解fn就是原型对象
+03 讲解外界应该如何使用jQuery函数
+    001 依据我们使用jQuery框架的经验,在HTML文件中通过jQuery或者是$来访问
+    002 分析外部如何访问闭包内部的数据(在闭包中提供接口返回|把闭包中需要让外界访问的对象通过全局变量传递)
+    003 书写代码 window.$ = window.jQuery = jQuery;
+    004 注意说明:外界在调用的时候是通过jQuery()这种方式调用的,那么获取的就是一个jQuery.prototype.init类型的实例化对象
+04 验证并说明调用jQuery得到的是jQuery.fn.init类型的实例化对象
+</code></pre><p>代码示例：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">包含功能:</div><div class="line">    (1) 整体结构(立即调用函数)</div><div class="line">    (2) jQuery工厂函数定义</div><div class="line">    (3) fn函数</div><div class="line">    (4) window.$ 和window.jQuery</div><div class="line">*/</div><div class="line">(function (window) &#123;</div><div class="line">    //01 jQuery工厂函数</div><div class="line">    var jQuery = function () &#123;</div><div class="line">        //02 返回一个jQuery.prototype.init类型的实例化对象</div><div class="line">        return new jQuery.fn.init();</div><div class="line">    &#125;;</div><div class="line">    //03 替换jQuery工厂函数的原型对象</div><div class="line">    jQuery.prototype = &#123;</div><div class="line">        //修正构造器属性</div><div class="line">        constructor:jQuery,</div><div class="line">        init:function () &#123;</div><div class="line">            //...init方法内部实现细节</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    //04 把jQuery工厂函数的原型对象赋值给jQuery.prototype.init的原型对象</div><div class="line">    jQuery.prototype.init.prototype = jQuery.prototype;</div><div class="line">    //05 为jQuery工厂函数添加fn属性,该方法指向jQuery的原型对象</div><div class="line">    jQuery.fn = jQuery.prototype;</div><div class="line">    //06 设置让外界能够拿到并使用jQuery工厂函数</div><div class="line">    window.$ = window.jQuery = jQuery;</div><div class="line">&#125;)(window);</div></pre></td></tr></table></figure></p>
+<p>上面分析的很简单，如果想要深入了解可以到GitHub网站等，希望对您有帮助</p>
 
             
         </div>
@@ -362,13 +363,13 @@
     
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2015/09/23/五分钟学会简单使用git/">五分钟学会简单使用git</a></p>
+        <p><span>本文标题:</span><a href="/2015/08/13/jQuery-源码分析/">jQuery 源码简单分析</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Afanail</a></p>
-        <p><span>发布时间:</span>2015-09-23, 00:00:00</p>
-        <p><span>最后更新:</span>2017-05-08, 10:46:43</p>
+        <p><span>发布时间:</span>2015-08-13, 00:33:34</p>
+        <p><span>最后更新:</span>2017-05-13, 01:15:48</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2015/09/23/五分钟学会简单使用git/" title="五分钟学会简单使用git">http://www.1oveit.club/2015/09/23/五分钟学会简单使用git/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://www.1oveit.club/2015/09/23/五分钟学会简单使用git/　　作者: Afanail" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2015/08/13/jQuery-源码分析/" title="jQuery 源码简单分析">http://www.1oveit.club/2015/08/13/jQuery-源码分析/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.1oveit.club/2015/08/13/jQuery-源码分析/　　作者: Afanail" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -381,15 +382,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2015/11/11/有趣的ChromeDevTools/">
-                    有趣的Chrome DevTools
+                <a href="/2015/09/23/五分钟学会简单使用git/">
+                    五分钟学会简单使用git
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2015/08/13/jQuery-源码分析/">
-                    jQuery 源码简单分析
+                <a href="/2015/08/10/12年怀旧/">
+                    12年逗比如我
                 </a>
             </div>
         
@@ -426,7 +427,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简单使用"><span class="toc-number">1.</span> <span class="toc-text">简单使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分支管理"><span class="toc-number">2.</span> <span class="toc-text">分支管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决冲突"><span class="toc-number">3.</span> <span class="toc-text">解决冲突</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#jQuery是一个闭包（即时函数）"><span class="toc-number">1.</span> <span class="toc-text">jQuery是一个闭包（即时函数）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#jQ本质就是一个闭包"><span class="toc-number">1.1.</span> <span class="toc-text">jQ本质就是一个闭包</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#jQuery被写成了一个工厂函数"><span class="toc-number">2.</span> <span class="toc-text">jQuery被写成了一个工厂函数</span></a></li></ol>
         
     </div>
     <style>
@@ -462,7 +463,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"五分钟学会简单使用git　| Afanail　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"jQuery 源码简单分析　| Afanail　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -504,7 +505,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2015/11/11/有趣的ChromeDevTools/" title="上一篇: 有趣的Chrome DevTools">
+            <a href="/2015/09/23/五分钟学会简单使用git/" title="上一篇: 五分钟学会简单使用git">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -512,7 +513,7 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2015/08/13/jQuery-源码分析/" title="下一篇: jQuery 源码简单分析">
+            <a href="/2015/08/10/12年怀旧/" title="下一篇: 12年逗比如我">
                 <i class="fa fa-angle-right"></i>
             </a>
         

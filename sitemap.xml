@@ -3,12 +3,17 @@
 
     <sitemap>
         <loc>http://www.1oveit.club/post-sitemap.xml</loc>
-        <lastmod>2017-05-13T05:37:43.000Z</lastmod>
+        <lastmod>2017-05-13T10:36:43.000Z</lastmod>
     </sitemap>
 
     <sitemap>
         <loc>http://www.1oveit.club/page-sitemap.xml</loc>
         <lastmod>2017-05-11T14:26:29.000Z</lastmod>
+    </sitemap>
+
+    <sitemap>
+        <loc>http://www.1oveit.club/category-sitemap.xml</loc>
+        <lastmod>2017-05-13T10:36:43.000Z</lastmod>
     </sitemap>
 
     <sitemap>

@@ -814,6 +814,14 @@ Object本身也是对象,其构造函数为:function Function() { [native code]
 ]]></content>
       
         
+        <tags>
+            
+            <tag> jQuery </tag>
+            
+            <tag> 源码分析 </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>

@@ -549,6 +549,12 @@ Object本身也是对象,其构造函数为:function Function() { [native code]
 <p>因本人能力有限，教程中难免出现疏忽，对此带来的不便敬请见谅。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> JavaScript简明教程 </category>
+            
+        </categories>
+        
         
         <tags>
             
@@ -657,6 +663,12 @@ Object本身也是对象,其构造函数为:function Function() { [native code]
 <p><strong>模型</strong><br>01 订阅者也称为<code>观察者</code><br>02 被观察的对象称为<code>发布者</code>或者是主题<br>03 当发生一个重要事件的时候，发布者将会通知所有订阅者并且经常以事件的形式来传递消息。<br>示例代码<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//01 提取成公共的发行者对象</span></div><div class="line">    <span class="keyword">var</span> publisher = &#123;</div><div class="line">        <span class="attr">users</span>:&#123;</div><div class="line">            <span class="attr">default</span>:[]</div><div class="line">        &#125;,   <span class="comment">//所有的订阅者对象</span></div><div class="line">        addUser:<span class="function"><span class="keyword">function</span> (<span class="params">fn,type</span>) </span>&#123;</div><div class="line">            <span class="comment">//对订阅的类型进行判断</span></div><div class="line">            <span class="keyword">var</span> type = type || <span class="string">"default"</span>;</div><div class="line">            <span class="comment">//如果是新的订阅类型,那么我们需要做初始化的处理</span></div><div class="line">            <span class="keyword">if</span> (<span class="keyword">this</span>.users[type] == <span class="literal">undefined</span>)</div><div class="line">            &#123;</div><div class="line">                <span class="keyword">this</span>.users[type] = [];</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">this</span>.users[type].push(fn);</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">removeUser</span>:<span class="function"><span class="keyword">function</span> (<span class="params">fn,type</span>) </span>&#123;</div><div class="line">            <span class="keyword">this</span>.tool(type,<span class="string">"removerUser"</span>,fn);</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">publish</span>:<span class="function"><span class="keyword">function</span> (<span class="params">type</span>) </span>&#123;</div><div class="line">            <span class="keyword">this</span>.tool(type,<span class="string">"publish"</span>);</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">tool</span>:<span class="function"><span class="keyword">function</span> (<span class="params">type,funcType,fn</span>) </span>&#123;</div><div class="line">            <span class="keyword">var</span> type = type || <span class="string">"default"</span>;</div><div class="line">            <span class="keyword">var</span> users = <span class="keyword">this</span>.users[type];</div><div class="line">            <span class="keyword">if</span> (users == <span class="literal">undefined</span>)</div><div class="line">            &#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">"当前没有任何订阅者"</span>);</div><div class="line">                <span class="keyword">return</span>;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; users.length; i++) &#123;</div><div class="line">                <span class="keyword">if</span> (funcType == <span class="string">'publish'</span>)</div><div class="line">                &#123;</div><div class="line">                    users[i]()</div><div class="line">                &#125;<span class="keyword">else</span></div><div class="line">                &#123;</div><div class="line">                    <span class="keyword">if</span> (users[i] == fn)</div><div class="line">                    &#123;</div><div class="line">                        users.splice(i, <span class="number">1</span>);</div><div class="line">                        <span class="keyword">break</span>;</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">    <span class="comment">//02 提供一个工具函数,能够利用发行者对象的模板来快速创建新的发布者</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">makePaper</span>(<span class="params">o</span>) </span>&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> publisher) &#123;</div><div class="line">            <span class="keyword">if</span> (publisher.hasOwnProperty(i) &amp;&amp; <span class="keyword">typeof</span> publisher[i] == <span class="string">'function'</span>)</div><div class="line">            &#123;</div><div class="line">                o[i] = publisher[i];</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        o.users = &#123;<span class="attr">default</span>:[]&#125;;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//03 创建发布者</span></div><div class="line">    <span class="keyword">var</span> paper1 = &#123;</div><div class="line">        <span class="attr">day</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">this</span>.publish();</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">month</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">this</span>.publish(<span class="string">"month"</span>)</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">year</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">this</span>.publish(<span class="string">"year"</span>)</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">    <span class="comment">//把某个对象编程一个发布者</span></div><div class="line">    makePaper(paper1);</div><div class="line">    <span class="comment">//04 创建订阅者(当发布者发布消息的时候,订阅者能够收到信息--自动调用订阅者的方法)</span></div><div class="line">    <span class="keyword">var</span> obj = &#123;</div><div class="line">        <span class="attr">lookDayNews</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">"obj - 查看最新的日报信息"</span>);</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">lookImageNews</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">"obj - 查看图片信息"</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">    <span class="comment">//05 设置订阅</span></div><div class="line">    paper1.addUser(obj.lookDayNews);</div><div class="line">    paper1.addUser(obj.lookImageNews,<span class="string">'month'</span>);</div><div class="line">    paper1.day();</div><div class="line">    paper1.month();</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
 ]]></content>
       
+        <categories>
+            
+            <category> JavaScript简明教程 </category>
+            
+        </categories>
+        
         
         <tags>
             
@@ -774,6 +786,12 @@ Object本身也是对象,其构造函数为:function Function() { [native code]
 <p>代码说明：<br>slice:<code>返回一个新的数组，包含从 start 到 end （不包括该元素）的 arrayObject 中的元素</code></p>
 ]]></content>
       
+        <categories>
+            
+            <category> JavaScript简明教程 </category>
+            
+        </categories>
+        
         
         <tags>
             
@@ -870,6 +888,12 @@ Object本身也是对象,其构造函数为:function Function() { [native code]
 03 重复上面的步骤,直到0级作用域,如果还是找不到那么就返回undefined(报错)
 </code></pre>]]></content>
       
+        <categories>
+            
+            <category> JavaScript简明教程 </category>
+            
+        </categories>
+        
         
         <tags>
             
@@ -977,6 +1001,12 @@ Object本身也是对象,其构造函数为:function Function() { [native code]
 <p>总结<br>01 提供构造函数，在构造函数内部设置实例化属性<br>02 把常用的操作提取成对象的实例方法，写在原型对象身上<br>03 提供init方法，用于初始化数据<br>04 注意：如果切断了原型对象那么需要修正内部的构造器属性指向</p>
 ]]></content>
       
+        <categories>
+            
+            <category> JavaScript简明教程 </category>
+            
+        </categories>
+        
         
         <tags>
             
@@ -1034,6 +1064,12 @@ Object本身也是对象,其构造函数为:function Function() { [native code]
 <p>[2] 相等问题<br>基本类型值判断相等=&gt;值相等<br>引用类型值判断相等=&gt;值相等且引用相等<br>对象是引用类型，因此在判断相等的时候有诸多的注意点和容易出错的地方<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">ex</div><div class="line">    <span class="keyword">var</span> str1 = <span class="string">'这是一个字符串'</span>;           <span class="comment">//基本数据类型</span></div><div class="line">    <span class="keyword">var</span> str2 = <span class="built_in">String</span>(<span class="string">'这是一个字符串'</span>);   <span class="comment">//基本数据类型</span></div><div class="line">    <span class="built_in">console</span>.log(str1 == str2);        <span class="comment">//true 相等</span></div><div class="line">    <span class="keyword">var</span> str3 = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">'这是一个字符串'</span>);  <span class="comment">//引用类型-对象</span></div><div class="line">    <span class="built_in">console</span>.log(str1 == str3);    <span class="comment">//true    //值相等</span></div><div class="line">    <span class="built_in">console</span>.log(str2 == str3);    <span class="comment">//true    //值相等</span></div><div class="line">    <span class="built_in">console</span>.log(str1 === str3); <span class="comment">//false //值相等,但是引用不相等</span></div><div class="line">    <span class="built_in">console</span>.log(str2 === str3); <span class="comment">//false //值相等,但是引用不相等</span></div><div class="line">    <span class="comment">//判断下面的变量是否相等</span></div><div class="line">    <span class="keyword">var</span> num1 = <span class="number">10</span>;                  <span class="comment">//基本数据类型</span></div><div class="line">    <span class="keyword">var</span> num2 = <span class="keyword">new</span> <span class="built_in">Number</span>(<span class="number">10</span>);      <span class="comment">//对象</span></div><div class="line">    <span class="built_in">console</span>.log(num1 == num2);      <span class="comment">//true</span></div><div class="line">    <span class="built_in">console</span>.log(num1 ===  num2);    <span class="comment">//false</span></div><div class="line">    <span class="keyword">var</span> bool1 = <span class="literal">true</span>;</div><div class="line">    <span class="keyword">var</span> bool2 = <span class="keyword">new</span> <span class="built_in">Boolean</span>(<span class="literal">true</span>);</div><div class="line">    <span class="built_in">console</span>.log(bool1 == bool2);    <span class="comment">//true</span></div><div class="line">    <span class="built_in">console</span>.log(bool1 === bool2);   <span class="comment">//false</span></div></pre></td></tr></table></figure></p>
 ]]></content>
       
+        <categories>
+            
+            <category> JavaScript简明教程 </category>
+            
+        </categories>
+        
         
         <tags>
             
@@ -1094,6 +1130,12 @@ Object本身也是对象,其构造函数为:function Function() { [native code]
 <p><code>__proto__</code>属性说明：<code>__proto__</code>是一个非标准属性,即ECMAScript中并不包含该属性,这只是某些浏览器为了方便开发人员开发和调试而提供的一个属性,不具备通用性。建议:在调试的时候可以使用该属性,但不能出现在正式的代码中。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> JavaScript简明教程 </category>
+            
+        </categories>
+        
         
         <tags>
             
@@ -1174,6 +1216,12 @@ Object本身也是对象,其构造函数为:function Function() { [native code]
 <p><strong>代码示例</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//0 获取页面中指定的标签,并设置其样式</span></div><div class="line">    <span class="keyword">var</span> divID = <span class="built_in">document</span>.getElementById(<span class="string">"divId"</span>);</div><div class="line">    divID.style.backgroundColor = <span class="string">"pink"</span>;</div><div class="line">    divID.style.height = <span class="string">"40px"</span>;</div><div class="line">    divID.style.width = <span class="string">"200px"</span>;</div><div class="line">    <span class="comment">//01 创建新的标签</span></div><div class="line">    <span class="keyword">var</span> div = <span class="built_in">document</span>.createElement(<span class="string">"div"</span>);</div><div class="line">    <span class="comment">//02 设置标签的样式</span></div><div class="line">    div.style.backgroundColor = <span class="string">"red"</span>;</div><div class="line">    div.style.height = <span class="string">"100px"</span>;</div><div class="line">    div.style.width = <span class="string">"300px"</span>;</div><div class="line">    div.style.fontSize = <span class="string">"20"</span>;</div><div class="line">    <span class="comment">//03 设置标签的内容</span></div><div class="line">    div.innerText = <span class="string">"这是一个自己创建的标签"</span>;</div><div class="line">    <span class="comment">//04 把标签插入到页面中</span></div><div class="line">    <span class="built_in">document</span>.body.appendChild(div);</div></pre></td></tr></table></figure></p>
 ]]></content>
       
+        <categories>
+            
+            <category> JavaScript简明教程 </category>
+            
+        </categories>
+        
         
         <tags>
             
@@ -1397,6 +1445,12 @@ Object本身也是对象,其构造函数为:function Function() { [native code]
 <p>上面分析的很简单，如果想要深入了解可以到GitHub网站等，希望对您有帮助</p>
 ]]></content>
       
+        <categories>
+            
+            <category> jQuery </category>
+            
+        </categories>
+        
         
         <tags>
             

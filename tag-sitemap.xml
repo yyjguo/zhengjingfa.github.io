@@ -107,8 +107,15 @@
     </url>
 
     <url>
-        <loc>http://www.1oveit.club/tags/%E9%9A%8F%E7%AC%94-updating/</loc>
-        <lastmod>2017-05-13T10:36:43.000Z</lastmod>
+        <loc>http://www.1oveit.club/tags/%E9%9A%8F%E7%AC%94/</loc>
+        <lastmod>2017-05-13T10:38:35.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.1oveit.club/tags/updating/</loc>
+        <lastmod>2017-05-13T10:38:35.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

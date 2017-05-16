@@ -209,7 +209,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Chrome-DevTools/">Chrome DevTools</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JSONP跨域/">JSONP跨域</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvm/">nvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/updating/">updating</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/原型继承机制/">原型继承机制</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/娱乐/">娱乐</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/怀旧/">怀旧</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/源码分析/">源码分析</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/版本控制/">版本控制</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/版本管理工具/">版本管理工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/简明教程/">简明教程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Chrome-DevTools/">Chrome DevTools</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JSONP跨域/">JSONP跨域</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/">js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvm/">nvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/updating/">updating</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/原型继承机制/">原型继承机制</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/娱乐/">娱乐</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/怀旧/">怀旧</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/源码分析/">源码分析</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/版本控制/">版本控制</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/版本管理工具/">版本管理工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/简明教程/">简明教程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
                     </div>
                 </section>
                 
@@ -947,11 +947,11 @@
 
 
   
-    <article id="post-JSONP跨域" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-解决页面抖动" class="article article-type-post" itemscope itemprop="blogPost">
     
     <div class="article-meta">
-        <a href="/2016/01/08/JSONP跨域/" class="article-date">
-      <time datetime="2016-01-07T16:55:40.000Z" itemprop="datePublished">2016-01-08</time>
+        <a href="/2016/01/11/解决页面抖动/" class="article-date">
+      <time datetime="2016-01-10T16:17:25.000Z" itemprop="datePublished">2016-01-11</time>
 </a>
 
 
@@ -966,7 +966,7 @@
             
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/08/JSONP跨域/">JSONP跨域</a>
+      <a class="article-title" href="/2016/01/11/解决页面抖动/">固定导航，不做抖man</a>
     </h1>
   
 
@@ -977,9 +977,9 @@
             
             
             <blockquote>
-<p>Asynchronous JavaScript and XML (Ajax) 是Web2.0的关键技术。AJAX与服务器交换数据刷新局部网页,不需重载。</p>
+<p>如何hold住导航？</p>
 </blockquote>
-<p>因为浏览器及同源策略的限制，ajax不允许跨域通信。同源是指协议、域名和端口都一致的情况。同源策略保证一个源的动态脚本不能读取或操作其他源的http响应和cookie，使浏览器隔离不同源的内容之间互相操作。<br>
+<h1 id="页面结构"><a href="#页面结构" class="headerlink" title="页面结构"></a>页面结构</h1><p>假设一个网页由Header,Nav,Main三部分构成。<br>
             
             
         </div>
@@ -990,12 +990,12 @@
 
             
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JSONP跨域/">JSONP跨域</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
     </div>
 
             
             <p class="article-more-link">
-                <a href="/2016/01/08/JSONP跨域/#more">阅读全文 >></a>
+                <a href="/2016/01/11/解决页面抖动/#more">阅读全文 >></a>
             </p>
             
             <div class="clearfix"></div>

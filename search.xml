@@ -1234,6 +1234,38 @@ Object本身也是对象,其构造函数为:function Function() { [native code]
     </entry>
     
     <entry>
+      <title><![CDATA[固定导航，不做抖man]]></title>
+      <url>/2016/01/11/%E8%A7%A3%E5%86%B3%E9%A1%B5%E9%9D%A2%E6%8A%96%E5%8A%A8/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>如何hold住导航？</p>
+</blockquote>
+<h1 id="页面结构"><a href="#页面结构" class="headerlink" title="页面结构"></a>页面结构</h1><p>假设一个网页由Header,Nav,Main三部分构成。<br><a id="more"></a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Header(Logo, other information)</div><div class="line"></div><div class="line">----------------------------------------------</div><div class="line"></div><div class="line">Nav(Nav,menu,links)</div><div class="line"></div><div class="line">----------------------------------------------</div><div class="line"></div><div class="line">Main(Container, Content)</div><div class="line"></div><div class="line">-----------------------------------------------</div></pre></td></tr></table></figure></p>
+<h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><p>根据需求，当大于Header的高度时，固定住导航。当我们滚动滚轮时候，此时 Header 会被 Nav 所遮住，再往下面滚动时Nav会固定在顶部。最常规的解决方法,让Header固定定位，Nav上边距为Header的高度：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">Header</span>：<span class="selector-tag">position</span>: <span class="selector-tag">fixed</span></div><div class="line"></div><div class="line"><span class="selector-tag">Nav</span>: <span class="selector-tag">margin-top</span>: <span class="selector-tag">A</span><span class="selector-class">.height</span></div></pre></td></tr></table></figure></p>
+<p>设置滚动事件：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (scrollTop &gt; Header.height) &#123;</div><div class="line">    <span class="attr">Nav</span>: position: fixed</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="attr">Nav</span>: position: initial</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这样做会所产生的问题：</p>
+<pre><code>当 Header fixed 后，页面高度由 Header + Nav + Main 变为 Header + Main，导致 Main 自动上移了 Nav.height，从而使 scrollTop 变小。这样根据滚动事件将执行 Nav: position: initial，用鼠标慢慢拖动时，Nav 会进行多次抖动（fixed-&gt;initial-&gt;fixed-&gt;initial-&gt;......）。
+</code></pre><p>解决的方法如下：</p>
+<pre><code>使 Header fixed 后，页面高度依旧为 Header + Nav + Main。
+
+    Header: margin-top: A.height
+
+    Nav-wrap： height: Nav.height
+
+为了使用户产生 Header fixed 后的视觉动感，可设置 scrollTop &gt; Header.height + Nav.height / 3
+</code></pre>]]></content>
+      
+        
+        <tags>
+            
+            <tag> css </tag>
+            
+            <tag> js </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[JSONP跨域]]></title>
       <url>/2016/01/08/JSONP%E8%B7%A8%E5%9F%9F/</url>
       <content type="html"><![CDATA[<blockquote>
@@ -1383,7 +1415,9 @@ Object本身也是对象,其构造函数为:function Function() { [native code]
       <content type="html"><![CDATA[<blockquote>
 <p>你好，世界。</p>
 </blockquote>
-<h1 id="起笔不详"><a href="#起笔不详" class="headerlink" title="起笔不详"></a>起笔不详</h1><p>有很多瞬间，起笔不详。对人生的探索，岂止于：你好，世界！<br>走过很多路，读过些书。永如分子躁动，也只是：你好，世界！</p>
+<h1 id="起笔不详"><a href="#起笔不详" class="headerlink" title="起笔不详"></a>起笔不详</h1><p>在遥远的海洋上，夕阳无限好。摇摇曳曳，余光随着波浪，尽情摇摆。海面像往常一样平静。这是这座小城第824年历史的纪念日，历史悠久，耐人探索。</p>
+<p>吃完晚饭六点多，一家人来到海边散步。女儿已经5岁了，扎着小尾辫子。一手牵着妈妈，一手牵着爸爸，唱着上课老师教的歌曲。忽然，不知道那里逃出来的狗，灰棕灰，气势汹汹.</p>
+<p>这可不得了，这冲着人去咬。猝不及防，小女孩被狗咬伤了。没想到，意外总是这么意外。今天是小女孩的五岁生日。</p>
 ]]></content>
       
         <categories>

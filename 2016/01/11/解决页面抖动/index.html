@@ -15,16 +15,17 @@
 
 
 
-<meta name="description" content="前端,js,jquery,javascript,html5,开发者,程序猿">
-<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Afanail">
-<meta property="og:url" content="http://www.1oveit.club/tags/Chrome-DevTools/index.html">
+<meta name="description" content="如何hold住导航？  页面结构假设一个网页由Header,Nav,Main三部分构成。">
+<meta name="keywords" content="css,js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="固定导航，不做抖man">
+<meta property="og:url" content="http://www.1oveit.club/2016/01/11/解决页面抖动/index.html">
 <meta property="og:site_name" content="Afanail">
-<meta property="og:description" content="前端,js,jquery,javascript,html5,开发者,程序猿">
+<meta property="og:description" content="如何hold住导航？  页面结构假设一个网页由Header,Nav,Main三部分构成。">
+<meta property="og:updated_time" content="2017-05-16T16:39:49.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Afanail">
-<meta name="twitter:description" content="前端,js,jquery,javascript,html5,开发者,程序猿">
+<meta name="twitter:title" content="固定导航，不做抖man">
+<meta name="twitter:description" content="如何hold住导航？  页面结构假设一个网页由Header,Nav,Main三部分构成。">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Tag: Chrome DevTools | Afanail</title>
+<title>固定导航，不做抖man | Afanail</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -66,9 +67,9 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: false,
+        isPost: true,
         isArchive: false,
-        isTag: true,
+        isTag: false,
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
@@ -281,56 +282,234 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap">
-  
-  
+      <div class="body-wrap"><article id="post-解决页面抖动" class="article article-type-post" itemscope itemprop="blogPost">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2015/11/11/有趣的ChromeDevTools/" class="archive-article-date">
-      <time datetime="2015-11-11T13:46:45.000Z" itemprop="datePublished">11-11</time>
+    <div class="article-meta">
+        <a href="/2016/01/11/解决页面抖动/" class="article-date">
+      <time datetime="2016-01-10T16:17:25.000Z" itemprop="datePublished">2016-01-11</time>
 </a>
 
 
-        </div>
-         
+    </div>
+    
+    <div class="article-inner">
+        
+        <input type="hidden" class="isFancy" />
+        
+        
+        <header class="article-header">
+            
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/11/有趣的ChromeDevTools/">有趣的Chrome DevTools</a>
+    <h1 class="article-title" itemprop="name">
+      固定导航，不做抖man
     </h1>
   
 
-        <div class="article-info info-on-archive">
-          
+        </header>
+        
+        <div class="article-info article-info-post">
+            
 
-          
+            
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Chrome-DevTools/">Chrome DevTools</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
     </div>
 
+            <div class="clearfix"></div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            
+            <blockquote>
+<p>如何hold住导航？</p>
+</blockquote>
+<h1 id="页面结构"><a href="#页面结构" class="headerlink" title="页面结构"></a>页面结构</h1><p>假设一个网页由Header,Nav,Main三部分构成。<br><a id="more"></a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Header(Logo, other information)</div><div class="line"></div><div class="line">----------------------------------------------</div><div class="line"></div><div class="line">Nav(Nav,menu,links)</div><div class="line"></div><div class="line">----------------------------------------------</div><div class="line"></div><div class="line">Main(Container, Content)</div><div class="line"></div><div class="line">-----------------------------------------------</div></pre></td></tr></table></figure></p>
+<h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><p>根据需求，当大于Header的高度时，固定住导航。当我们滚动滚轮时候，此时 Header 会被 Nav 所遮住，再往下面滚动时Nav会固定在顶部。最常规的解决方法,让Header固定定位，Nav上边距为Header的高度：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">Header</span>：<span class="selector-tag">position</span>: <span class="selector-tag">fixed</span></div><div class="line"></div><div class="line"><span class="selector-tag">Nav</span>: <span class="selector-tag">margin-top</span>: <span class="selector-tag">A</span><span class="selector-class">.height</span></div></pre></td></tr></table></figure></p>
+<p>设置滚动事件：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (scrollTop &gt; Header.height) &#123;</div><div class="line">    <span class="attr">Nav</span>: position: fixed</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="attr">Nav</span>: position: initial</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这样做会所产生的问题：</p>
+<pre><code>当 Header fixed 后，页面高度由 Header + Nav + Main 变为 Header + Main，导致 Main 自动上移了 Nav.height，从而使 scrollTop 变小。这样根据滚动事件将执行 Nav: position: initial，用鼠标慢慢拖动时，Nav 会进行多次抖动（fixed-&gt;initial-&gt;fixed-&gt;initial-&gt;......）。
+</code></pre><p>解决的方法如下：</p>
+<pre><code>使 Header fixed 后，页面高度依旧为 Header + Nav + Main。
+
+    Header: margin-top: A.height
+
+    Nav-wrap： height: Nav.height
+
+为了使用户产生 Header fixed 后的视觉动感，可设置 scrollTop &gt; Header.height + Nav.height / 3
+</code></pre>
+            
+        </div>
+        
+    </div>
+    
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/01/11/解决页面抖动/">固定导航，不做抖man</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Afanail</a></p>
+        <p><span>发布时间:</span>2016-01-11, 00:17:25</p>
+        <p><span>最后更新:</span>2017-05-17, 00:39:49</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/01/11/解决页面抖动/" title="固定导航，不做抖man">http://www.1oveit.club/2016/01/11/解决页面抖动/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.1oveit.club/2016/01/11/解决页面抖动/　　作者: Afanail" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2016/01/15/01/">
+                    JavaScript简明教程（1）
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/01/08/JSONP跨域/">
+                    JSONP跨域
+                </a>
+            </div>
+        
+    </nav>
 
     
+    
+    
+<div style="padding: 0; margin: 20px auto; width: 90%; text-align: center;">
+    <br>
+    <div>哎呦，不行了，要睡觉了，赏我点咖啡钱吧，您的支持将鼓励我继续创作！</div>
+    <br>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+        <div class="btn btn-pay">打赏支持</div>
+    </button>
+    <br>
+    <br>
+    <div id="QR" style="display: none;">
+        
+        <div id="wechat" style="display: inline-block;">
+            <img id="wechat_qr" src="/img/wechat-reward-qr.jpeg" alt="Afanail WeChat Pay"/>
+            <p>微信打赏</p>
+        </div>
+        
+        
+        <br>
+        <br>
+    </div>
+</div>
 
+    
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#页面结构"><span class="toc-number">1.</span> <span class="toc-text">页面结构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解决方法"><span class="toc-number">2.</span> <span class="toc-text">解决方法</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-2 i,
+        .toc-level-2 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"固定导航，不做抖man　| Afanail　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+
+<section class="youyan" id="comments">
+    <script>
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = 'http://v2.uyan.cc/code/uyan.js?uid=2133352';
+            (d.head || d.body).appendChild(s);
+        }
+
+    </script>
+    
+    <script> loadComment(); </script>
+
+    <div id="uyan_frame"></div>
+</section>
+
+
+<!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2133352"></script>
+<!-- UY END -->
+
+
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2016/01/15/01/" title="上一篇: JavaScript简明教程（1）">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/01/08/JSONP跨域/" title="下一篇: JSONP跨域">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/06/02/nav-Mac安装使用/">nvm-Mac安装使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/29/javaScript简明教程（全）/">JavaScript简明教程（全）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/28/js-07/">JavaScript简明教程（7）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/25/js-06/">JavaScript简明教程（6）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/18/js-05/">JavaScript简明教程（5）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/05/js-04/">JavaScript简明教程（4）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/18/js-3/">JavaScript简明教程（3）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/01/js-02/">JavaScript简明教程（2）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/15/01/">JavaScript简明教程（1）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/11/解决页面抖动/">固定导航，不做抖man</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/08/JSONP跨域/">JSONP跨域</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/08/js原型继承/">可能是最简单的js原型继承</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/11/有趣的ChromeDevTools/">有趣的Chrome DevTools</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/09/23/五分钟学会简单使用git/">五分钟学会简单使用git</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/24/你好，世界/">你好，世界</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/13/jQuery-源码分析/">jQuery 源码简单分析</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/08/10/12年怀旧/">12年逗比如我</a></li></ul>
+
+
+
+
+<script>
+    
+</script>
 </div>
       <footer id="footer">
     <div class="outer">

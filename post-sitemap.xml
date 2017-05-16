@@ -7,6 +7,22 @@
     </url>
 
     <url>
+        <loc>http://www.1oveit.club/2015/08/24/%E4%BD%A0%E5%A5%BD%EF%BC%8C%E4%B8%96%E7%95%8C/</loc>
+        <lastmod>2017-05-16T16:42:18.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.1oveit.club/2016/01/11/%E8%A7%A3%E5%86%B3%E9%A1%B5%E9%9D%A2%E6%8A%96%E5%8A%A8/</loc>
+        <lastmod>2017-05-16T16:39:49.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://www.1oveit.club/2016/01/15/01/</loc>
         <lastmod>2017-05-13T10:45:13.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -23,7 +39,7 @@
     </url>
 
     <url>
-        <loc>http://www.1oveit.club/2016/03/18/js-05/</loc>
+        <loc>http://www.1oveit.club/2016/04/25/js-06/</loc>
         <lastmod>2017-05-13T10:45:13.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -39,7 +55,7 @@
     </url>
 
     <url>
-        <loc>http://www.1oveit.club/2016/03/05/js-04/</loc>
+        <loc>http://www.1oveit.club/2016/03/18/js-05/</loc>
         <lastmod>2017-05-13T10:45:13.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -47,7 +63,7 @@
     </url>
 
     <url>
-        <loc>http://www.1oveit.club/2016/04/25/js-06/</loc>
+        <loc>http://www.1oveit.club/2016/03/05/js-04/</loc>
         <lastmod>2017-05-13T10:45:13.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -73,14 +89,6 @@
     <url>
         <loc>http://www.1oveit.club/2016/05/29/javaScript%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B%EF%BC%88%E5%85%A8%EF%BC%89/</loc>
         <lastmod>2017-05-13T10:43:40.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://www.1oveit.club/2015/08/24/%E4%BD%A0%E5%A5%BD%EF%BC%8C%E4%B8%96%E7%95%8C/</loc>
-        <lastmod>2017-05-13T10:38:35.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

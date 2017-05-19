@@ -107,29 +107,8 @@
     </url>
 
     <url>
-        <loc>http://www.1oveit.club/tags/css/</loc>
-        <lastmod>2017-05-18T00:48:05.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://www.1oveit.club/tags/js/</loc>
         <lastmod>2017-05-18T00:48:05.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://www.1oveit.club/tags/%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/</loc>
-        <lastmod>2017-05-18T17:37:03.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://www.1oveit.club/tags/HTML/</loc>
-        <lastmod>2017-05-18T17:37:03.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -144,6 +123,27 @@
     <url>
         <loc>http://www.1oveit.club/tags/%E9%9A%8F%E7%AC%94/</loc>
         <lastmod>2017-05-19T01:37:45.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.1oveit.club/tags/HTML/</loc>
+        <lastmod>2017-05-19T13:27:57.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.1oveit.club/tags/%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/</loc>
+        <lastmod>2017-05-19T14:40:13.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.1oveit.club/tags/css/</loc>
+        <lastmod>2017-05-19T14:40:13.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

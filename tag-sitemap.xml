@@ -129,14 +129,21 @@
 
     <url>
         <loc>http://www.1oveit.club/tags/%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/</loc>
-        <lastmod>2017-05-18T17:15:48.000Z</lastmod>
+        <lastmod>2017-05-18T17:37:03.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://www.1oveit.club/tags/HTML/</loc>
-        <lastmod>2017-05-18T17:15:48.000Z</lastmod>
+        <lastmod>2017-05-18T17:37:03.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.1oveit.club/tags/Google-I-O-2017/</loc>
+        <lastmod>2017-05-19T00:59:42.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

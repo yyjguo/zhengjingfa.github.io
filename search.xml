@@ -8,8 +8,7 @@
       <content type="html"><![CDATA[<blockquote>
 <p>不知道下一年，世界又会是哪个科技引领潮流。</p>
 </blockquote>
-<h1 id="web-component"><a href="#web-component" class="headerlink" title="web component"></a>web component</h1><p>Twitter和来自印度的Ola，现场展示了<code>modern mobile webApp</code>。虽然组件化的框架<code>polymer</code>从15年开始已经发布，但是polymer框架2.0现在才进入预发布状态。<code>work box</code>的出现很大程度上弥补了<code>server work</code>的不足。so will polymer be a competitor to react? 好吧，welcome back  polymer! React is a JavaScript framwork for rendering HTML! React is not certainly not Web Components.</p>
-<p>add webApp to home screen, 然后和native app做对比，从数据流量，媒介，手机流畅度等方面介绍webApp。<code>progressive web app</code>越来越受欢迎。未来web领域可能与VR结合，但是未来一起不可预料，又可以想象。</p>
+<h1 id="web-component"><a href="#web-component" class="headerlink" title="web component"></a>web component</h1><p>Twitter和来自印度的Ola，现场展示了<code>modern mobile webApp</code>。虽然组件化的框架<code>polymer</code>从15年开始已经发布，但是polymer框架2.0现在才进入预发布状态。<code>work box</code>的出现很大程度上弥补了<code>server work</code>的不足。so will polymer be a competitor to react? 好吧，welcome back  polymer! React is a JavaScript framwork for rendering HTML! React is not certainly not Web Components.<br><a id="more"></a><br>add webApp to home screen, 然后和native app做对比，从数据流量，媒介，手机流畅度等方面介绍webApp。<code>progressive web app</code>越来越受欢迎。未来web领域可能与VR结合，但是未来一起不可预料，又可以想象。</p>
 <p><code>front-end developers</code> 现在可以让自己的website试用谷歌的 <code>AMP-bind</code> and <code>PWA</code>接口。这无疑给<code>front-end developer</code>多一种新的选择去构建自己的<code>progressive web app</code>。</p>
 <p>看完第一场演讲，深觉印度的IT行业发展之快。感触良多，未来不可预料，又可以想象！</p>
 ]]></content>

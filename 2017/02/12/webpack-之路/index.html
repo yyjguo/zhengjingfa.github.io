@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="Asynchronous JavaScript and XML (Ajax) 是Web2.0的关键技术。AJAX与服务器交换数据刷新局部网页,不需重载。  因为浏览器及同源策略的限制，ajax不允许跨域通信。同源是指协议、域名和端口都一致的情况。同源策略保证一个源的动态脚本不能读取或操作其他源的http响应和cookie，使浏览器隔离不同源的内容之间互相操作。">
-<meta name="keywords" content="JSONP跨域">
+<meta name="description" content="本地安装npm包后如何在命令行运行 在npm安装包的时候，如果使用全局安装，即npm install  -g，则在安装完成后可以在终端运行作为命令去运行，但是如果是本地安装的包npm install –save-dev ，则无法这样直接运行。那么如何运行本地安装的包呢？首先进入项目目录（即package.json所在目录），然后使用以下命令即可运行：1$ node_modules/.bin/&amp;lt">
+<meta name="keywords" content="Webpack">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JSONP跨域">
-<meta property="og:url" content="http://www.1oveit.club/2016/07/08/JSONP跨域/index.html">
+<meta property="og:title" content="Webpack2.x踩坑与总结">
+<meta property="og:url" content="http://www.1oveit.club/2017/02/12/webpack-之路/index.html">
 <meta property="og:site_name" content="Afanail">
-<meta property="og:description" content="Asynchronous JavaScript and XML (Ajax) 是Web2.0的关键技术。AJAX与服务器交换数据刷新局部网页,不需重载。  因为浏览器及同源策略的限制，ajax不允许跨域通信。同源是指协议、域名和端口都一致的情况。同源策略保证一个源的动态脚本不能读取或操作其他源的http响应和cookie，使浏览器隔离不同源的内容之间互相操作。">
-<meta property="og:updated_time" content="2017-05-22T07:26:04.000Z">
+<meta property="og:description" content="本地安装npm包后如何在命令行运行 在npm安装包的时候，如果使用全局安装，即npm install  -g，则在安装完成后可以在终端运行作为命令去运行，但是如果是本地安装的包npm install –save-dev ，则无法这样直接运行。那么如何运行本地安装的包呢？首先进入项目目录（即package.json所在目录），然后使用以下命令即可运行：1$ node_modules/.bin/&amp;lt">
+<meta property="og:updated_time" content="2017-05-22T11:24:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JSONP跨域">
-<meta name="twitter:description" content="Asynchronous JavaScript and XML (Ajax) 是Web2.0的关键技术。AJAX与服务器交换数据刷新局部网页,不需重载。  因为浏览器及同源策略的限制，ajax不允许跨域通信。同源是指协议、域名和端口都一致的情况。同源策略保证一个源的动态脚本不能读取或操作其他源的http响应和cookie，使浏览器隔离不同源的内容之间互相操作。">
+<meta name="twitter:title" content="Webpack2.x踩坑与总结">
+<meta name="twitter:description" content="本地安装npm包后如何在命令行运行 在npm安装包的时候，如果使用全局安装，即npm install  -g，则在安装完成后可以在终端运行作为命令去运行，但是如果是本地安装的包npm install –save-dev ，则无法这样直接运行。那么如何运行本地安装的包呢？首先进入项目目录（即package.json所在目录），然后使用以下命令即可运行：1$ node_modules/.bin/&amp;lt">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>JSONP跨域 | Afanail</title>
+<title>Webpack2.x踩坑与总结 | Afanail</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -282,11 +282,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-JSONP跨域" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-webpack-之路" class="article article-type-post" itemscope itemprop="blogPost">
     
     <div class="article-meta">
-        <a href="/2016/07/08/JSONP跨域/" class="article-date">
-      <time datetime="2016-07-07T16:55:40.000Z" itemprop="datePublished">2016-07-08</time>
+        <a href="/2017/02/12/webpack-之路/" class="article-date">
+      <time datetime="2017-02-12T11:13:12.000Z" itemprop="datePublished">2017-02-12</time>
 </a>
 
 
@@ -301,7 +301,7 @@
             
   
     <h1 class="article-title" itemprop="name">
-      JSONP跨域
+      Webpack2.x踩坑与总结
     </h1>
   
 
@@ -312,7 +312,7 @@
 
             
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JSONP跨域/">JSONP跨域</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Webpack/">Webpack</a></li></ul>
     </div>
 
             <div class="clearfix"></div>
@@ -322,20 +322,31 @@
         <div class="article-entry" itemprop="articleBody">
             
             
-            <blockquote>
-<p>Asynchronous JavaScript and XML (Ajax) 是Web2.0的关键技术。AJAX与服务器交换数据刷新局部网页,不需重载。</p>
-</blockquote>
-<p>因为浏览器及同源策略的限制，ajax不允许跨域通信。同源是指协议、域名和端口都一致的情况。同源策略保证一个源的动态脚本不能读取或操作其他源的http响应和cookie，使浏览器隔离不同源的内容之间互相操作。<br><a id="more"></a></p>
-<h3 id="Access-Control-Allow-Origin"><a href="#Access-Control-Allow-Origin" class="headerlink" title="Access-Control-Allow-Origin"></a>Access-Control-Allow-Origin</h3><p>解决跨域问题可以在第三方网站开启HTTP的Access-Control-Allow-Origin参数，当目标页面的response包含Access-Control-Allow-Origin 这个header，而且还包含我们的域名时，浏览器就允许拿到它页面的数据：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Access-Control-Allow-Origin: http://www.1oveit.club</div></pre></td></tr></table></figure></p>
-<p>当值为 * 表示匹配所有，都能用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Access-Control-Allow-Origin: *</div></pre></td></tr></table></figure></p>
-<p>但是此时的主动权不在我们手里。</p>
-<h3 id="JSONP解决跨域"><a href="#JSONP解决跨域" class="headerlink" title="JSONP解决跨域"></a>JSONP解决跨域</h3><p>还可以使用更为主动的方法，使用JSONP解决跨域问题。分为以下几步：<br>我们知道多个不同的script标签中的数据是可以相互访问的，而script的src的本质就是将导入文件中的内容拷贝到当前script标签中，我们拿到百度搜索URL地址：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=ab&amp;cb=jQuery11020672211218553074_1491468814655</div></pre></td></tr></table></figure></p>
-<p>搜索之后的结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">jQuery11020672211218553074_1491468814655(&#123;q:&quot;ab&quot;,p:false,s:[&quot;abs&quot;,&quot;ab胶&quot;,&quot;abc&quot;,&quot;abac形式的成语&quot;,&quot;abcc形式的成语&quot;,&quot;abab式的词语&quot;,&quot;abo&quot;,&quot;abp&quot;,&quot;abstract&quot;,&quot;abs塑料&quot;]&#125;);</div></pre></td></tr></table></figure></p>
-<p>从而可以引出跨域(jsonP)原理：<br>1.src可以拿到非当前域的数据。<br>2.script的src的本质就是将导入文件中的内容拷贝到当前script标签中。<br>3.如果src返回的数据符合 函数名称(参数); 格式, 那么就可以实现跨域。<br><strong>具体例子</strong>：<br>在本地的文件的script准备回调函数say,<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">say</span>(<span class="params">obj</span>) </span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(obj);     </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>通过script的src属性拿到百度要搜索的URL并且拼接<code>?wd=ab&amp;cb=say</code>参数，如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script src=&quot;https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=ab&amp;cb=say&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure></p>
-<p>最后，调用say方法，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">say(&#123;q:&quot;ab&quot;,p:false,s:[&quot;abs&quot;,&quot;ab胶&quot;,&quot;abc&quot;,&quot;abac形式的成语&quot;,&quot;abcc形式的成语&quot;,&quot;abab式的词语&quot;,&quot;abo&quot;,&quot;abp&quot;,&quot;abstract&quot;,&quot;abs塑料&quot;]&#125;);</div></pre></td></tr></table></figure></p>
-<p><strong>具体例子</strong>：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">      //1.使用src，请求数据</div><div class="line">         &lt;script src="http://datainfo.duapp.com/shopdata/getGoods.php?callback=callback"&gt;</div><div class="line">     //2.在本地声明一个方法</div><div class="line">         function callback(args)      &#123;  console.log(args); &#125;</div><div class="line">        //3.要在服务端要处理跨域</div><div class="line">            $res = $_GET['callback'];</div><div class="line">            echo $res."('我是服务的数据')";</div><div class="line">    function callback(args) &#123;</div><div class="line">        console.log(args);</div><div class="line">    &#125;</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;!--</div><div class="line">    如果服务器返回的是js代码，那么浏览器就会直接执行js代码</div><div class="line">    借助浏览器的特性来实现跨域</div><div class="line">--&gt;</div><div class="line">&lt;script src="http://datainfo.duapp.com/shopdata/getGoods.php?call6‘back=callback"&gt;&lt;/script&gt;</div></pre></td></tr></table></figure></p>
-<p>总体的流程大概就是这样子，不过实际开发中要与后台定好接口，希望能够帮到你。</p>
+            <p>本地安装npm包后如何在命令行运行</p>
+<p>在npm安装包的时候，如果使用全局安装，即npm install <packagename> -g，则在安装完成后可以在终端运行作为命令去运行，但是如果是本地安装的包npm install –save-dev <packagename>，则无法这样直接运行。那么如何运行本地安装的包呢？首先进入项目目录（即package.json所在目录），然后使用以下命令即可运行：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ node_modules/.bin/&lt;packageName&gt;</div></pre></td></tr></table></figure></packagename></packagename></p>
+<a id="more"></a>
+<p>除了可以这样在命令行运行外，还可以在文件中运行<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//index.js</span></div><div class="line"><span class="keyword">let</span> webpack = <span class="built_in">require</span>(<span class="string">'webpack'</span>);</div><div class="line">webpack();</div></pre></td></tr></table></figure></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ node index.js</div></pre></td></tr></table></figure>
+<p>webpack1.x升级2.x</p>
+<p>1.module.loaders改成了module.rules<br>旧的loaders被新的rules取代，后者允许配置loader以及其他更多项。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">  <span class="built_in">module</span>: &#123;</div><div class="line">-   loaders: [</div><div class="line">+   rules: [</div><div class="line">      &#123;</div><div class="line">        <span class="attr">test</span>: <span class="regexp">/\.css$/</span>,</div><div class="line">-       loaders: [</div><div class="line">+       use: [</div><div class="line">          &#123;</div><div class="line">            <span class="attr">loader</span>: <span class="string">"style-loader"</span></div><div class="line">          &#125;,</div><div class="line">          &#123;</div><div class="line">            <span class="attr">loader</span>: <span class="string">"css-loader"</span>,</div><div class="line">-           query: &#123;</div><div class="line">+           options: &#123;</div><div class="line">              <span class="attr">modules</span>: <span class="literal">true</span></div><div class="line">            &#125;</div><div class="line">        ]</div><div class="line">      &#125;,</div><div class="line">      &#123;</div><div class="line">        <span class="attr">test</span>: <span class="regexp">/\.jsx$/</span>,</div><div class="line">        <span class="attr">loader</span>: <span class="string">"babel-loader"</span>, <span class="comment">// Do not use "use" here</span></div><div class="line">        options: &#123;</div><div class="line">          <span class="comment">// ...</span></div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line">    ]</div><div class="line">  &#125;</div></pre></td></tr></table></figure></p>
+<p>以上写法中，Rule.loader是Rule.use: [ { loader } ]的简写。</p>
+<p>2.链式调用loaders<br>在webpack1.x中loaders可以链式调用，在2.x中依旧有该特性，使用rule.use配置项，use中设置一个loaders的数组而在1.x中使用!连接各个loader，旧版写法只有在使用旧的module.loaders时有效。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">  <span class="built_in">module</span>: &#123;</div><div class="line">-   loaders: &#123;</div><div class="line">+   rules: &#123;</div><div class="line">      <span class="attr">test</span>: <span class="regexp">/\.less$/</span>,</div><div class="line">-     loader: <span class="string">"style-loader!css-loader!less-loader"</span></div><div class="line">+     use: [</div><div class="line">+       <span class="string">"style-loader"</span>,</div><div class="line">+       <span class="string">"css-loader"</span>,</div><div class="line">+       <span class="string">"less-loader"</span></div><div class="line">+     ]</div><div class="line">    &#125;</div><div class="line">  &#125;</div></pre></td></tr></table></figure></p>
+<p>3.取消在模块中自动添加-loader后缀<br>webpack2.x中不再添加-loader<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>: &#123;</div><div class="line">  <span class="attr">rules</span>: [</div><div class="line">    &#123;</div><div class="line">      <span class="attr">use</span>: [</div><div class="line">       <span class="string">"style"</span>,</div><div class="line">       <span class="string">"style-loader"</span>,</div><div class="line">       <span class="string">"css"</span>,</div><div class="line">       <span class="string">"css-loader"</span>,</div><div class="line">       <span class="string">"less"</span>,</div><div class="line">       <span class="string">"less-loader"</span>,</div><div class="line">      ]</div><div class="line">    &#125;</div><div class="line">  ]</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>根据官方说法，做出这样更改的原因是省略-loader会对新手造成误解，所以去掉这个功能，如果想打开这个旧的功能，可以配置resolveLoader.moduleExtensions，但是并不推荐这么做。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">resolveLoader: &#123;</div><div class="line">   <span class="attr">moduleExtensions</span>: [<span class="string">"-loader"</span>]</div><div class="line"> &#125;</div></pre></td></tr></table></figure></p>
+<p>4.使用options配置loader<br>在webpack1.x中可以通过webpack.config.js的自定义属性来配置loader，这在webpack2.x中无法执行<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123; </div><div class="line">  ...</div><div class="line">  module: &#123; </div><div class="line">    <span class="attr">use</span>: [&#123; </div><div class="line">      <span class="attr">test</span>: <span class="regexp">/\.tsx?$/</span>,</div><div class="line">      <span class="attr">loader</span>: <span class="string">'ts-loader'</span></div><div class="line">    &#125;]</div><div class="line">  &#125;,</div><div class="line">  <span class="comment">// does not work with webpack 2</span></div><div class="line">  ts: &#123; <span class="attr">transpileOnly</span>: <span class="literal">false</span> &#125; </div><div class="line">&#125;</div><div class="line"><span class="comment">//webpack2 use options</span></div><div class="line"><span class="built_in">module</span>.exports = &#123; </div><div class="line">  ...</div><div class="line">  module: &#123; </div><div class="line">    <span class="attr">use</span>: [&#123; </div><div class="line">      <span class="attr">test</span>: <span class="regexp">/\.tsx?$/</span>,</div><div class="line">      <span class="attr">loader</span>: <span class="string">'ts-loader'</span></div><div class="line">      options:  &#123; <span class="attr">transpileOnly</span>: <span class="literal">false</span> &#125;</div><div class="line">    &#125;]</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>webpack插件的使用</p>
+<p>webpack-dev-server1.x升级2.x</p>
+<p>1.在CLI使用的时候，–inline默认开启，无需在输入命令时添加</p>
+<p>2.删除contentBase用proxy代替</p>
+<p>3.减少控制台无用输出，在1.x中，当我们停掉服务器后，控制台会一直输出错误信息，但是在2.x中只会输出[WDS] Disconnected!</p>
+<p>extract-text-webpack-plugin</p>
+<p>在使用webpack将vue_spa打包后，并不会出现css，因为css被打包入build.js，如果从vue组件中抽离出css，需要安装插件extract-text-webpack-plugin，在使用的时候需要配合v2版本的才可以使用（如果使用了webpack2，则对应的插件版本都需要用v2版本）。具体配置如下：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>:&#123;</div><div class="line">  <span class="attr">rules</span>:[</div><div class="line">    &#123;</div><div class="line">      <span class="attr">test</span>: <span class="regexp">/\.vue$/</span>,</div><div class="line">      <span class="attr">loader</span>: <span class="string">'vue'</span>,</div><div class="line">      <span class="attr">options</span>: &#123;</div><div class="line">        <span class="attr">loaders</span>:&#123;</div><div class="line">          <span class="attr">css</span>: extractTextPlugin.extract(&#123;</div><div class="line">            <span class="attr">loader</span>: <span class="string">'css-loader'</span>,</div><div class="line">            <span class="attr">fallbackLoader</span>: <span class="string">'vue-style-loader'</span></div><div class="line">          &#125;)</div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  ]</div><div class="line">&#125;,</div><div class="line"><span class="attr">plugins</span>: [</div><div class="line">  <span class="keyword">new</span> webpack.HotModuleReplacementPlugin(),</div><div class="line">  <span class="keyword">new</span> extractTextPlugin(&#123;</div><div class="line">    <span class="attr">filename</span>:<span class="string">'/style.css'</span>,</div><div class="line">    <span class="attr">allChunks</span>:<span class="literal">true</span></div><div class="line">  &#125;)</div><div class="line">]</div></pre></td></tr></table></figure></p>
+<p>在options中：<br>options.loader: string | object | loader[] (必填项) 这里的 loader(s) 用于将资源转换为css导出模块<br>options.fallbackLoader: string | object | loader[] 当css没有被导出的时候这里的 loader(s) 会被使用 （即当在plugins模块中设置allChunks:false的时候）<br>在plugins中：<br>filename：可以设置被导出的css文件的路径以及名字<br>allChunks：从所有附加块中提取（默认情况下，它只从初始块中提取）<br>html-webpack-plugin<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">plugins: [</div><div class="line">  <span class="keyword">new</span> htmlWwebpackPlugin(&#123;</div><div class="line">    <span class="attr">filename</span>: <span class="string">'assets/admin.html'</span></div><div class="line">  &#125;),</div><div class="line">]</div></pre></td></tr></table></figure></p>
+<p>title：用于生成文档的document<br>filename：要注入的html文件，默认为index.html。可以自定义（例如：assets/admin.html）<br>inject：<br>true | ‘head’ | ‘body’ | false<br>将资源注入所给的template或templateContent，当设置为 true 或者 ‘body’，所有的资源会被注入到body底部。而head则会将js放到headelement<br>favicon: 在输出的html中添加favicon<br>hash: true | false 如果为true，则将一个唯一的webpack编译散列附加到所有包含的脚本和CSS文件。这对缓存清除很有用。<br>cache: true | false 如果为true（默认），尝试仅在更改后才发出文件。<br>是否要更换preset？<br>webpack2.x默认支持es6的模块，所以在编译时候没有必要将它们先转换为CommonJS模块再处理，所以在github中出现了babel-preset-es2015-webpack，但是这个模块我在使用的时候出现了Cannot remove ‘babel-plugin-transform-es2015-modules-commonjs’ from the plugin list.的问题，根据babel-preset-es2015-webpack中的叙述以及issues#14可知，babel-preset-es2015已经支持不转换模块中的import和export，只需要设置.babelrc<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="string">"presets"</span>: [</div><div class="line">        [</div><div class="line">            <span class="string">"es2015"</span>,</div><div class="line">            &#123;</div><div class="line">                <span class="string">"modules"</span>: <span class="literal">false</span></div><div class="line">            &#125;</div><div class="line">        ]</div><div class="line">    ]</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>使用CommonsChunkPlugin将第三方库单独打包</p>
+<p>很多情况下我们会引入第三方库，但是默认情况下，webpack会将第三方库与我们自己写的js一起打包进生成文件中，为了让第三方库与我们自己写的js分开，webpack2.x内置一个插件CommonsChunkPlugin，它可以让webpack在打包的时候将我们自己写的js与第三方库分开，具体用法如下：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">entry:&#123;</div><div class="line">  <span class="attr">app</span>: <span class="string">'./src/main.js'</span>,</div><div class="line">  <span class="attr">vendor</span>: [</div><div class="line">    <span class="string">'lodash'</span>,</div><div class="line">    <span class="string">'axios'</span>,</div><div class="line">    <span class="string">'vue'</span>,</div><div class="line">    <span class="string">'vue-router'</span></div><div class="line">  ]</div><div class="line">&#125;,</div><div class="line"><span class="attr">output</span>: &#123;</div><div class="line">  <span class="attr">path</span>: path.resolve(__dirname + <span class="string">'/dist'</span>),</div><div class="line">  <span class="attr">publicPath</span>: <span class="string">'/dist'</span>,</div><div class="line">  <span class="attr">filename</span>: <span class="string">'[name].js'</span></div><div class="line">&#125;,</div><div class="line"><span class="attr">plugins</span>: [</div><div class="line">    <span class="keyword">new</span> webpack.optimize.CommonsChunkPlugin(&#123;</div><div class="line">      <span class="attr">name</span>:<span class="string">'vendor'</span></div><div class="line">    &#125;)</div><div class="line">]</div></pre></td></tr></table></figure></p>
+<p>这里需要注意一点，这里在在输出的时候需要使用filename: ‘[name].js’，否则会报错。</p>
+<p>原文出处：(Webpack2.x踩坑与总结<br>)[<a href="http://mrzhang123.github.io/2017/02/07/webpack2/?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="external">http://mrzhang123.github.io/2017/02/07/webpack2/?utm_source=tuicool&amp;utm_medium=referral</a>]</p>
 
             
         </div>
@@ -344,13 +355,13 @@
     
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/07/08/JSONP跨域/">JSONP跨域</a></p>
+        <p><span>本文标题:</span><a href="/2017/02/12/webpack-之路/">Webpack2.x踩坑与总结</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Afanail</a></p>
-        <p><span>发布时间:</span>2016-07-08, 00:55:40</p>
-        <p><span>最后更新:</span>2017-05-22, 15:26:04</p>
+        <p><span>发布时间:</span>2017-02-12, 19:13:12</p>
+        <p><span>最后更新:</span>2017-05-22, 19:24:00</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/07/08/JSONP跨域/" title="JSONP跨域">http://www.1oveit.club/2016/07/08/JSONP跨域/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://www.1oveit.club/2016/07/08/JSONP跨域/　　作者: Afanail" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/02/12/webpack-之路/" title="Webpack2.x踩坑与总结">http://www.1oveit.club/2017/02/12/webpack-之路/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.1oveit.club/2017/02/12/webpack-之路/　　作者: Afanail" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -363,15 +374,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/07/22/移动端开发技巧若干/">
-                    移动端开发技巧若干
+                <a href="/2017/05/19/Google-I-O-2017-for-front-end-development/">
+                    Google I/O 2017 for front-end development
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/06/02/nav-Mac安装使用/">
-                    nvm-Mac安装使用
+                <a href="/2016/12/29/javaScript简明教程（全）/">
+                    JavaScript简明教程（全）
                 </a>
             </div>
         
@@ -408,7 +419,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Access-Control-Allow-Origin"><span class="toc-number">1.</span> <span class="toc-text">Access-Control-Allow-Origin</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JSONP解决跨域"><span class="toc-number">2.</span> <span class="toc-text">JSONP解决跨域</span></a></li></ol>
+            
         
     </div>
     <style>
@@ -444,7 +455,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"JSONP跨域　| Afanail　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"Webpack2.x踩坑与总结　| Afanail　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -486,7 +497,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/07/22/移动端开发技巧若干/" title="上一篇: 移动端开发技巧若干">
+            <a href="/2017/05/19/Google-I-O-2017-for-front-end-development/" title="上一篇: Google I/O 2017 for front-end development">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -494,7 +505,7 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/06/02/nav-Mac安装使用/" title="下一篇: nvm-Mac安装使用">
+            <a href="/2016/12/29/javaScript简明教程（全）/" title="下一篇: JavaScript简明教程（全）">
                 <i class="fa fa-angle-right"></i>
             </a>
         

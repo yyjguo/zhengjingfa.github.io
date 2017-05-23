@@ -22,7 +22,7 @@
 <meta property="og:url" content="http://www.1oveit.club/2017/02/12/webpack-之路/index.html">
 <meta property="og:site_name" content="Afanail">
 <meta property="og:description" content="本地安装npm包后如何在命令行运行 在npm安装包的时候，如果使用全局安装，即npm install  -g，则在安装完成后可以在终端运行作为命令去运行，但是如果是本地安装的包npm install –save-dev ，则无法这样直接运行。那么如何运行本地安装的包呢？首先进入项目目录（即package.json所在目录），然后使用以下命令即可运行：1$ node_modules/.bin/&amp;lt">
-<meta property="og:updated_time" content="2017-05-22T11:26:41.000Z">
+<meta property="og:updated_time" content="2017-05-22T11:28:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Webpack2.x踩坑与总结">
 <meta name="twitter:description" content="本地安装npm包后如何在命令行运行 在npm安装包的时候，如果使用全局安装，即npm install  -g，则在安装完成后可以在终端运行作为命令去运行，但是如果是本地安装的包npm install –save-dev ，则无法这样直接运行。那么如何运行本地安装的包呢？首先进入项目目录（即package.json所在目录），然后使用以下命令即可运行：1$ node_modules/.bin/&amp;lt">
@@ -346,7 +346,7 @@
 <p>使用CommonsChunkPlugin将第三方库单独打包</p>
 <p>很多情况下我们会引入第三方库，但是默认情况下，webpack会将第三方库与我们自己写的js一起打包进生成文件中，为了让第三方库与我们自己写的js分开，webpack2.x内置一个插件CommonsChunkPlugin，它可以让webpack在打包的时候将我们自己写的js与第三方库分开，具体用法如下：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">entry:&#123;</div><div class="line">  <span class="attr">app</span>: <span class="string">'./src/main.js'</span>,</div><div class="line">  <span class="attr">vendor</span>: [</div><div class="line">    <span class="string">'lodash'</span>,</div><div class="line">    <span class="string">'axios'</span>,</div><div class="line">    <span class="string">'vue'</span>,</div><div class="line">    <span class="string">'vue-router'</span></div><div class="line">  ]</div><div class="line">&#125;,</div><div class="line"><span class="attr">output</span>: &#123;</div><div class="line">  <span class="attr">path</span>: path.resolve(__dirname + <span class="string">'/dist'</span>),</div><div class="line">  <span class="attr">publicPath</span>: <span class="string">'/dist'</span>,</div><div class="line">  <span class="attr">filename</span>: <span class="string">'[name].js'</span></div><div class="line">&#125;,</div><div class="line"><span class="attr">plugins</span>: [</div><div class="line">    <span class="keyword">new</span> webpack.optimize.CommonsChunkPlugin(&#123;</div><div class="line">      <span class="attr">name</span>:<span class="string">'vendor'</span></div><div class="line">    &#125;)</div><div class="line">]</div></pre></td></tr></table></figure></p>
 <p>这里需要注意一点，这里在在输出的时候需要使用filename: ‘[name].js’，否则会报错。</p>
-<p>原文出处：!(Webpack2.x踩坑与总结<br>)[<a href="http://mrzhang123.github.io/2017/02/07/webpack2/?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="external">http://mrzhang123.github.io/2017/02/07/webpack2/?utm_source=tuicool&amp;utm_medium=referral</a>]</p>
+<p>原文出处：<a href="http://mrzhang123.github.io/2017/02/07/webpack2/?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="external">Webpack2.x踩坑与总结</a></p>
 
             
         </div>
@@ -358,7 +358,7 @@
         <p><span>本文标题:</span><a href="/2017/02/12/webpack-之路/">Webpack2.x踩坑与总结</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Afanail</a></p>
         <p><span>发布时间:</span>2017-02-12, 19:13:12</p>
-        <p><span>最后更新:</span>2017-05-22, 19:26:41</p>
+        <p><span>最后更新:</span>2017-05-22, 19:28:48</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/02/12/webpack-之路/" title="Webpack2.x踩坑与总结">http://www.1oveit.club/2017/02/12/webpack-之路/</a>
             <span class="copy-path" data-clipboard-text="原文: http://www.1oveit.club/2017/02/12/webpack-之路/　　作者: Afanail" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>

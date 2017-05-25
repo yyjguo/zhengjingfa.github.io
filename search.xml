@@ -3,6 +3,28 @@
   
     
     <entry>
+      <title><![CDATA[ES7--大势所趋]]></title>
+      <url>/2017/05/26/ES7-%E5%A4%A7%E5%8A%BF%E6%89%80%E8%B6%8B/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>最快的是，技术的更新；最慢的是，更新的应用。</p>
+</blockquote>
+<p>也许你已经厌烦路JavaScript的回调，虽然快，但是异步。<br>老司机可能会发现JavaScript貌似很在意一个问题，那就是如何解决异步。<br>一开始我们写回调函数callback，总是深深的被包含在花括号中，无法自拔。这种嵌套的结构一来不易于代码的维护，二来容易出错。相信经历过的人都直到。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//伪代码</span></div><div class="line">&#123;&#123;&#123;&#123;callback()&#125;&#125;&#125;&#125;</div></pre></td></tr></table></figure></p>
+<p>直到有一天，承诺（promise）出现了，生成器（generator）出现了。这里的promise，让异步可以以同步的方式实现。教程有很多，这里不细讲了，总之写起来很麻烦。反正我是觉得写起来比生成器麻烦。</p>
+<p>其实JavaScript的生成器很大程度上借鉴了Python的生成器，学过Python的人都知道。但是生成器不是用来解绝异步的，但是生成器却能用来解决异步。生成器更像一种语法糖，把你返回的值存储起来，直到调用才暴露出来，这也是它能解决异步的原因之一。</p>
+<p>现在，你去看很多源码的时候，好奇的发现async和await，这俩货究竟是什么东西啊？<br>紧跟标题，大势所趋的ES7。借用koa中最常见的代码块来看<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">app.use(<span class="keyword">async</span> (ctx, next) =&gt; &#123;</div><div class="line">    <span class="keyword">if</span> (ctx.request.path === <span class="string">'/error'</span>) &#123;</div><div class="line">        ctx.response.body = <span class="string">'ERROR page'</span>;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">await</span> next();</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>这里的async相当于middleware，await的作用是调用下一个middleware。如果之前对回调了解不是很深刻，可能会比较蒙，await通过next（）调用回调，解决了异步。当然，我在这里解释的也不是很清楚，如果有错误，师请指正。</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> ES7 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Google I/O 2017 for front-end development]]></title>
       <url>/2017/05/19/Google-I-O-2017-for-front-end-development/</url>
       <content type="html"><![CDATA[<blockquote>

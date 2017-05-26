@@ -44,13 +44,6 @@
     </url>
 
     <url>
-        <loc>http://www.1oveit.club/tags/%E9%9A%8F%E7%AC%94/</loc>
-        <lastmod>2017-05-22T07:26:04.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://www.1oveit.club/tags/%E5%A8%B1%E4%B9%90/</loc>
         <lastmod>2017-05-22T07:26:04.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -156,13 +149,6 @@
     </url>
 
     <url>
-        <loc>http://www.1oveit.club/tags/updating/</loc>
-        <lastmod>2017-05-22T07:26:04.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://www.1oveit.club/tags/Chrome-DevTools/</loc>
         <lastmod>2017-05-22T07:26:04.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -179,6 +165,20 @@
     <url>
         <loc>http://www.1oveit.club/tags/ES7/</loc>
         <lastmod>2017-05-25T17:04:43.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.1oveit.club/tags/%E9%9A%8F%E7%AC%94/</loc>
+        <lastmod>2017-05-26T16:16:24.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.1oveit.club/tags/updating/</loc>
+        <lastmod>2017-05-26T16:16:24.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

@@ -58,14 +58,14 @@
     </url>
 
     <url>
-        <loc>http://www.1oveit.club/tags/JSONP%E8%B7%A8%E5%9F%9F/</loc>
+        <loc>http://www.1oveit.club/tags/HTML/</loc>
         <lastmod>2017-05-22T07:26:04.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://www.1oveit.club/tags/HTML/</loc>
+        <loc>http://www.1oveit.club/tags/JSONP%E8%B7%A8%E5%9F%9F/</loc>
         <lastmod>2017-05-22T07:26:04.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -100,13 +100,6 @@
     </url>
 
     <url>
-        <loc>http://www.1oveit.club/tags/css/</loc>
-        <lastmod>2017-05-22T07:26:04.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://www.1oveit.club/tags/nvm/</loc>
         <lastmod>2017-05-22T07:26:04.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -128,6 +121,13 @@
     </url>
 
     <url>
+        <loc>http://www.1oveit.club/tags/js/</loc>
+        <lastmod>2017-05-22T07:26:04.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://www.1oveit.club/tags/git/</loc>
         <lastmod>2017-05-22T07:26:04.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -136,13 +136,6 @@
 
     <url>
         <loc>http://www.1oveit.club/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/</loc>
-        <lastmod>2017-05-22T07:26:04.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://www.1oveit.club/tags/js/</loc>
         <lastmod>2017-05-22T07:26:04.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -170,13 +163,6 @@
     </url>
 
     <url>
-        <loc>http://www.1oveit.club/tags/updating/</loc>
-        <lastmod>2017-05-26T16:18:16.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://www.1oveit.club/tags/%E9%9A%8F%E7%AC%94/</loc>
         <lastmod>2017-05-30T00:18:44.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -185,7 +171,28 @@
 
     <url>
         <loc>http://www.1oveit.club/tags/%E9%9A%8F%E7%AC%94/</loc>
-        <lastmod>2017-06-08T04:48:55.000Z</lastmod>
+        <lastmod>2017-06-16T15:01:20.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.1oveit.club/tags/updating/</loc>
+        <lastmod>2017-06-16T15:01:20.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.1oveit.club/tags/css/</loc>
+        <lastmod>2017-06-16T15:04:41.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.1oveit.club/tags/less/</loc>
+        <lastmod>2017-06-16T15:04:41.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

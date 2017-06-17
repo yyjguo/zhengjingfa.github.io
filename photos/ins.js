@@ -82,7 +82,7 @@
 
     /**
      * @name impush-client 
-     * @description 这个项目让我发家致富…
+     * @description …
      * @date 2016-12-1
      */
 

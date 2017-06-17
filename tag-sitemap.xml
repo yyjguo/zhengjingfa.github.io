@@ -30,20 +30,6 @@
     </url>
 
     <url>
-        <loc>http://www.1oveit.club/tags/JavaScript/</loc>
-        <lastmod>2017-05-22T07:26:04.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://www.1oveit.club/tags/%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/</loc>
-        <lastmod>2017-05-22T07:26:04.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://www.1oveit.club/tags/%E5%A8%B1%E4%B9%90/</loc>
         <lastmod>2017-05-22T07:26:04.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -58,7 +44,14 @@
     </url>
 
     <url>
-        <loc>http://www.1oveit.club/tags/HTML/</loc>
+        <loc>http://www.1oveit.club/tags/JavaScript/</loc>
+        <lastmod>2017-05-22T07:26:04.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.1oveit.club/tags/%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/</loc>
         <lastmod>2017-05-22T07:26:04.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -66,6 +59,13 @@
 
     <url>
         <loc>http://www.1oveit.club/tags/JSONP%E8%B7%A8%E5%9F%9F/</loc>
+        <lastmod>2017-05-22T07:26:04.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.1oveit.club/tags/HTML/</loc>
         <lastmod>2017-05-22T07:26:04.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -193,6 +193,13 @@
     <url>
         <loc>http://www.1oveit.club/tags/less/</loc>
         <lastmod>2017-06-16T15:04:41.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.1oveit.club/tags/%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92/</loc>
+        <lastmod>2017-06-17T16:54:11.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

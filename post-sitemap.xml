@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://www.1oveit.club/2017/06/28/%E6%95%99%E4%BD%A0%E5%A6%82%E4%BD%95%E5%B7%A7%E5%A6%99%E8%A7%A3%E5%86%B3%E7%BD%91%E9%A1%B5%E4%B9%B1%E7%A0%81/</loc>
+        <lastmod>2017-06-28T12:14:16.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://www.1oveit.club/2016/01/01/%E4%BD%A0%E5%A5%BD%EF%BC%8C%E4%B8%96%E7%95%8C/</loc>
         <lastmod>2017-06-22T05:06:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -71,7 +79,7 @@
     </url>
 
     <url>
-        <loc>http://www.1oveit.club/2016/07/08/JSONP%E8%B7%A8%E5%9F%9F/</loc>
+        <loc>http://www.1oveit.club/2016/10/18/HTML%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/</loc>
         <lastmod>2017-05-22T07:26:04.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -79,7 +87,7 @@
     </url>
 
     <url>
-        <loc>http://www.1oveit.club/2016/10/18/HTML%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/</loc>
+        <loc>http://www.1oveit.club/2016/07/08/JSONP%E8%B7%A8%E5%9F%9F/</loc>
         <lastmod>2017-05-22T07:26:04.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -119,7 +127,7 @@
     </url>
 
     <url>
-        <loc>http://www.1oveit.club/2016/10/13/top10es/</loc>
+        <loc>http://www.1oveit.club/2016/01/03/%E4%BA%94%E5%88%86%E9%92%9F%E5%AD%A6%E4%BC%9A%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8git/</loc>
         <lastmod>2017-05-22T07:26:04.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -127,7 +135,7 @@
     </url>
 
     <url>
-        <loc>http://www.1oveit.club/2016/01/03/%E4%BA%94%E5%88%86%E9%92%9F%E5%AD%A6%E4%BC%9A%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8git/</loc>
+        <loc>http://www.1oveit.club/2016/10/13/top10es/</loc>
         <lastmod>2017-05-22T07:26:04.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -199,14 +207,6 @@
     </url>
 
     <url>
-        <loc>http://www.1oveit.club/2016/03/18/js-05/</loc>
-        <lastmod>2017-05-13T10:45:13.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://www.1oveit.club/2016/03/05/js-04/</loc>
         <lastmod>2017-05-13T10:45:13.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -215,7 +215,7 @@
     </url>
 
     <url>
-        <loc>http://www.1oveit.club/2016/05/28/js-07/</loc>
+        <loc>http://www.1oveit.club/2016/03/18/js-05/</loc>
         <lastmod>2017-05-13T10:45:13.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -224,6 +224,14 @@
 
     <url>
         <loc>http://www.1oveit.club/2016/04/25/js-06/</loc>
+        <lastmod>2017-05-13T10:45:13.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.1oveit.club/2016/05/28/js-07/</loc>
         <lastmod>2017-05-13T10:45:13.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

@@ -15,16 +15,21 @@
 
 
 
-<meta name="description" content="前端,js,jquery,javascript,html5,开发者,程序猿">
-<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Afanail">
-<meta property="og:url" content="http://www.1oveit.club/archives/2016/page/4/index.html">
+<meta name="description" content="约定俗成不是好的标准，却是近似好的标准。  我们编写好的html文件，在浏览器显示往往会乱码，这就是编码格式的问题。在约定情况下，通常默认utf-8编码格式。但是，有一些有一定历史的公司，比如网易，我们可以看到它的编码格式是简体中文，也就是国标编码2312,简称gb2312。">
+<meta name="keywords" content="编码格式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="教你如何巧妙解决网页乱码">
+<meta property="og:url" content="http://www.1oveit.club/2017/06/28/教你如何巧妙解决网页乱码/index.html">
 <meta property="og:site_name" content="Afanail">
-<meta property="og:description" content="前端,js,jquery,javascript,html5,开发者,程序猿">
+<meta property="og:description" content="约定俗成不是好的标准，却是近似好的标准。  我们编写好的html文件，在浏览器显示往往会乱码，这就是编码格式的问题。在约定情况下，通常默认utf-8编码格式。但是，有一些有一定历史的公司，比如网易，我们可以看到它的编码格式是简体中文，也就是国标编码2312,简称gb2312。">
+<meta property="og:image" content="http://www.1oveit.club/assets/img/网易编码2312.png">
+<meta property="og:image" content="http://www.1oveit.club/assets/img/网易编码繁体.png">
+<meta property="og:image" content="http://www.1oveit.club/assets/img/设置编码格式.png">
+<meta property="og:updated_time" content="2017-06-28T12:14:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Afanail">
-<meta name="twitter:description" content="前端,js,jquery,javascript,html5,开发者,程序猿">
+<meta name="twitter:title" content="教你如何巧妙解决网页乱码">
+<meta name="twitter:description" content="约定俗成不是好的标准，却是近似好的标准。  我们编写好的html文件，在浏览器显示往往会乱码，这就是编码格式的问题。在约定情况下，通常默认utf-8编码格式。但是，有一些有一定历史的公司，比如网易，我们可以看到它的编码格式是简体中文，也就是国标编码2312,简称gb2312。">
+<meta name="twitter:image" content="http://www.1oveit.club/assets/img/网易编码2312.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +61,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Archives: 2016 | Afanail</title>
+<title>教你如何巧妙解决网页乱码 | Afanail</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -66,8 +71,8 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: false,
-        isArchive: true,
+        isPost: true,
+        isArchive: false,
         isTag: false,
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
@@ -245,163 +250,219 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap">
-  
-  
+      <div class="body-wrap"><article id="post-教你如何巧妙解决网页乱码" class="article article-type-post" itemscope itemprop="blogPost">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2016/01/15/01/" class="archive-article-date">
-      <time datetime="2016-01-15T08:36:35.000Z" itemprop="datePublished">01-15</time>
+    <div class="article-meta">
+        <a href="/2017/06/28/教你如何巧妙解决网页乱码/" class="article-date">
+      <time datetime="2017-06-28T11:34:04.000Z" itemprop="datePublished">2017-06-28</time>
 </a>
 
 
-        </div>
-         
+    </div>
+    
+    <div class="article-inner">
+        
+        <input type="hidden" class="isFancy" />
+        
+        
+        <header class="article-header">
+            
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/01/15/01/">JavaScript简明教程（1）</a>
+    <h1 class="article-title" itemprop="name">
+      教你如何巧妙解决网页乱码
     </h1>
   
 
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/JavaScript简明教程/">JavaScript简明教程</a>
-    </div>
+        </header>
+        
+        <div class="article-info article-info-post">
+            
 
-
-          
+            
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/简明教程/">简明教程</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编码格式/">编码格式</a></li></ul>
     </div>
 
+            <div class="clearfix"></div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            
+            <blockquote>
+<p>约定俗成不是好的标准，却是近似好的标准。</p>
+</blockquote>
+<p>我们编写好的html文件，在浏览器显示往往会乱码，这就是编码格式的问题。在约定情况下，通常默认<code>utf-8</code>编码格式。但是，有一些有一定历史的公司，比如网易，我们可以看到它的编码格式是简体中文，也就是国标编码2312,简称<code>gb2312</code>。<br><a id="more"></a><br><img src="/assets/img/网易编码2312.png" alt="网易页面简体中文编码格式"></p>
+<p>如果你这个时候把编码格式设置为其它的呢？相信你会看到一些似懂非懂的文字。我就比较好奇试了一下。</p>
+<p><img src="/assets/img/网易编码繁体.png" alt="网易页面繁体中文编码格式"></p>
+<p>结果不出意料，果然乱码了。从这个小细节，我们引出了一个问题。当前后台没有约定编码格式（可能是新来的傻傻的认为编码格式都是<code>utf-8</code>），这时候编码格式就不一样了。就像上面出现的情况一样。可能你会像我一样去修改html文件的meta标签，设置chartset与后台一样的编码格式，然后再返回给后台，但是你会发现居然没有什么毛线效果，该乱码还是乱码。然后我们百度、谷歌的方法也不一定有用，这个时候你会怀疑是不是遇到了什么天大的难题了。</p>
+<p>其实解决的方法很简单，简单到我们都没有想到。在webstrom下，右下角有个很明显的 <code>utf-8</code> 可选项，点击它，如下图所示。选择你们约定好的编码格式，这个问题也就到此为止了。<br><img src="/assets/img/设置编码格式.png" alt="设置编码格式"></p>
+<p>其实这只是一个很小的细节，但是引发出来的问题还是不少的，比如网页上的某个标签的编码格式与整体的页面不一致该如何设置，在IE6浏览器的环境下又该如何设置，这些可能都是我们会遇到的问题。你都知道怎么解决吗？</p>
+<p>诚然，好的规范需要共同约定，需要共同遵守！</p>
+
+            
+        </div>
+        
+    </div>
     
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2016/01/08/12年怀旧/" class="archive-article-date">
-      <time datetime="2016-01-08T13:27:45.000Z" itemprop="datePublished">01-08</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/01/08/12年怀旧/">12年逗比如我</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/娱乐/">娱乐</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/怀旧/">怀旧</a></li></ul>
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/06/28/教你如何巧妙解决网页乱码/">教你如何巧妙解决网页乱码</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Afanail</a></p>
+        <p><span>发布时间:</span>2017-06-28, 19:34:04</p>
+        <p><span>最后更新:</span>2017-06-28, 20:14:16</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/06/28/教你如何巧妙解决网页乱码/" title="教你如何巧妙解决网页乱码">http://www.1oveit.club/2017/06/28/教你如何巧妙解决网页乱码/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.1oveit.club/2017/06/28/教你如何巧妙解决网页乱码/　　作者: Afanail" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
     </div>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2016/01/03/五分钟学会简单使用git/" class="archive-article-date">
-      <time datetime="2016-01-02T16:00:00.000Z" itemprop="datePublished">01-03</time>
-</a>
 
 
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/01/03/五分钟学会简单使用git/">五分钟学会简单使用git</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/版本控制/">版本控制</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2016/01/01/你好，世界/" class="archive-article-date">
-      <time datetime="2016-01-01T10:23:07.000Z" itemprop="datePublished">01-01</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/01/01/你好，世界/">我的世界，如果少了一个你</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sad-story/">sad story</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/updating/">updating</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2016/page/3/">&laquo; Prev</a><a class="page-number" href="/archives/2016/">1</a><a class="page-number" href="/archives/2016/page/2/">2</a><a class="page-number" href="/archives/2016/page/3/">3</a><span class="page-number current">4</span>
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/06/17/抓住17年的尾巴/">
+                    抓住17年的尾巴
+                </a>
+            </div>
+        
     </nav>
-  
 
+    
+    
+    
+<div style="padding: 0; margin: 20px auto; width: 90%; text-align: center;">
+    <br>
+    <div>哎呦，不行了，要睡觉了，赏我点咖啡钱吧，您的支持将鼓励我继续创作！</div>
+    <br>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+        <div class="btn btn-pay">打赏支持</div>
+    </button>
+    <br>
+    <br>
+    <div id="QR" style="display: none;">
+        
+        <div id="wechat" style="display: inline-block;">
+            <img id="wechat_qr" src="/img/wechat-reward-qr.jpeg" alt="Afanail WeChat Pay"/>
+            <p>微信打赏</p>
+        </div>
+        
+        
+        <br>
+        <br>
+    </div>
+</div>
+
+    
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-2 i,
+        .toc-level-2 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"教你如何巧妙解决网页乱码　| Afanail　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+
+<!--
+<section class="youyan" id="comments">
+    <script>
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = 'http://v2.uyan.cc/code/uyan.js?uid=2133352';
+            (d.head || d.body).appendChild(s);
+        }
+
+    </script>
+    
+    <script> loadComment(); </script>
+
+    <div id="uyan_frame"></div>
+</section>
+<!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2133352"></script>
+<!-- UY END -->
+
+
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2017/06/17/抓住17年的尾巴/" title="下一篇: 抓住17年的尾巴">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/06/28/教你如何巧妙解决网页乱码/">教你如何巧妙解决网页乱码</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/17/抓住17年的尾巴/">抓住17年的尾巴</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/16/less小技巧/">less小技巧</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/08/NBA总决赛G3/">NBA总决赛G3</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/29/愿世间没有.../">愿世间没有。。。</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/26/ES7-大势所趋/">ES7--大势所趋</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/19/Google-I-O-2017-for-front-end-development/">Google I/O 2017 for front-end development</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/12/webpack-之路/">Webpack2.x踩坑与总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/29/javaScript简明教程（全）/">JavaScript简明教程（全）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/11/有趣的ChromeDevTools/">有趣的Chrome DevTools</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/05/css简明教程/">Css简明教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/18/HTML简明教程/">HTML简明教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/13/top10es/">Top 10 ES6 Features</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/13/gulp实行项目模板化/">gulp实现项目模板化</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/05/jQuery-源码分析/">jQuery 源码简单分析</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/22/移动端开发技巧若干/">移动端开发技巧若干</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/08/JSONP跨域/">JSONP跨域</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/02/nav-Mac安装使用/">nvm-Mac安装使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/28/js-07/">JavaScript简明教程（7）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/解决页面抖动/">固定导航，不做抖man</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/25/js-06/">JavaScript简明教程（6）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/18/js-05/">JavaScript简明教程（5）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/05/js-04/">JavaScript简明教程（4）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/18/js-3/">JavaScript简明教程（3）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/08/js原型继承/">可能是最简单的js原型继承</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/01/js-02/">JavaScript简明教程（2）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/15/01/">JavaScript简明教程（1）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/08/12年怀旧/">12年逗比如我</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/03/五分钟学会简单使用git/">五分钟学会简单使用git</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/01/你好，世界/">我的世界，如果少了一个你</a></li></ul>
+
+
+
+
+<script>
+    
+</script>
 </div>
       <footer id="footer">
     <div class="outer">

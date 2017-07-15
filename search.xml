@@ -3,6 +3,34 @@
   
     
     <entry>
+      <title><![CDATA[perl-learning]]></title>
+      <url>/2017/07/15/perl-learning/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>什么是perl？</p>
+</blockquote>
+<p>perl 是一门编程语言。因为工作上的原因需要用到perl，这才对perl有了了解。<br>先来看一下perl的最基本入门程序。</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/perl</span></div><div class="line"><span class="keyword">print</span> <span class="string">"Hello,world!\n"</span></div><div class="line"><span class="comment">=pod</span></div><div class="line">larry 推出了Perl</div><div class="line"> 1 Itermediate Perl</div><div class="line"> 2 Mastering Perl</div><div class="line"> 3 Programming perl</div><div class="line"> 额外练习 《Learning Perl Student Workbook》</div><div class="line">=cut</div></pre></td></tr></table></figure>
+<p>其中 <code>#!/usr/bin/perl</code>，意思为perl脚本的默认存放位置是“/usr/bin/perl”；<br>比较新奇的是perl的多行注释：</p>
+<pre><code>=pod、=cut只能在行首
+以=开头，以cut结尾
+=后面要紧接一个字符，=cut后面可以不用
+</code></pre><p>关于perl的更多知识，入门推荐 <code>Learning Perl</code>,之后按书籍顺序：</p>
+<pre><code>1 Itermediate Perl
+2 Mastering Perl
+3 Programming perl
+</code></pre><p>在我学习perl的过程，我会把学习代码放到仓库(perl-learning)[<a href="https://github.com/zhengjingfa/perl-learning]，敬请指导。" target="_blank" rel="external">https://github.com/zhengjingfa/perl-learning]，敬请指导。</a></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> perl </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[教你如何巧妙解决网页乱码]]></title>
       <url>/2017/06/28/%E6%95%99%E4%BD%A0%E5%A6%82%E4%BD%95%E5%B7%A7%E5%A6%99%E8%A7%A3%E5%86%B3%E7%BD%91%E9%A1%B5%E4%B9%B1%E7%A0%81/</url>
       <content type="html"><![CDATA[<blockquote>
@@ -162,9 +190,9 @@
         
         <tags>
             
-            <tag> 随笔 </tag>
-            
             <tag> Google I/O 2017 </tag>
+            
+            <tag> 随笔 </tag>
             
         </tags>
         

@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="什么是perl？  perl 是一门编程语言。因为工作上的原因需要用到perl，这才对perl有了了解。先来看一下perl的最基本入门程序。 123456789#!/usr/bin/perlprint &quot;Hello,world!\n&quot;=podlarry 推出了Perl 1 Itermediate Perl 2 Mastering Perl 3 Programming perl 额外练习 《Lea">
+<meta name="description" content="什么是perl？  perl 是一门编程语言。因为工作上的原因需要用到perl，这才对perl有了了解。相对JS而言，perl貌似更简单易用。同为脚本语言，perl风靡一时，当下肯定没有JS热门。perl更多的是用在生信等领域，而JS是随着web2.0的兴起而逐渐壮大，你看ES7都快出来了。先来看一下perl的最基本入门程序。">
 <meta name="keywords" content="perl">
 <meta property="og:type" content="article">
 <meta property="og:title" content="perl-learning">
 <meta property="og:url" content="http://www.1oveit.club/2017/07/15/perl-learning/index.html">
 <meta property="og:site_name" content="Afanail">
-<meta property="og:description" content="什么是perl？  perl 是一门编程语言。因为工作上的原因需要用到perl，这才对perl有了了解。先来看一下perl的最基本入门程序。 123456789#!/usr/bin/perlprint &quot;Hello,world!\n&quot;=podlarry 推出了Perl 1 Itermediate Perl 2 Mastering Perl 3 Programming perl 额外练习 《Lea">
-<meta property="og:updated_time" content="2017-07-15T03:39:29.000Z">
+<meta property="og:description" content="什么是perl？  perl 是一门编程语言。因为工作上的原因需要用到perl，这才对perl有了了解。相对JS而言，perl貌似更简单易用。同为脚本语言，perl风靡一时，当下肯定没有JS热门。perl更多的是用在生信等领域，而JS是随着web2.0的兴起而逐渐壮大，你看ES7都快出来了。先来看一下perl的最基本入门程序。">
+<meta property="og:updated_time" content="2017-07-15T03:59:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="perl-learning">
-<meta name="twitter:description" content="什么是perl？  perl 是一门编程语言。因为工作上的原因需要用到perl，这才对perl有了了解。先来看一下perl的最基本入门程序。 123456789#!/usr/bin/perlprint &quot;Hello,world!\n&quot;=podlarry 推出了Perl 1 Itermediate Perl 2 Mastering Perl 3 Programming perl 额外练习 《Lea">
+<meta name="twitter:description" content="什么是perl？  perl 是一门编程语言。因为工作上的原因需要用到perl，这才对perl有了了解。相对JS而言，perl貌似更简单易用。同为脚本语言，perl风靡一时，当下肯定没有JS热门。perl更多的是用在生信等领域，而JS是随着web2.0的兴起而逐渐壮大，你看ES7都快出来了。先来看一下perl的最基本入门程序。">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -289,8 +289,7 @@
             <blockquote>
 <p>什么是perl？</p>
 </blockquote>
-<p>perl 是一门编程语言。因为工作上的原因需要用到perl，这才对perl有了了解。<br>先来看一下perl的最基本入门程序。</p>
-<figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/perl</span></div><div class="line"><span class="keyword">print</span> <span class="string">"Hello,world!\n"</span></div><div class="line"><span class="comment">=pod</span></div><div class="line">larry 推出了Perl</div><div class="line"> 1 Itermediate Perl</div><div class="line"> 2 Mastering Perl</div><div class="line"> 3 Programming perl</div><div class="line"> 额外练习 《Learning Perl Student Workbook》</div><div class="line">=cut</div></pre></td></tr></table></figure>
+<p>perl 是一门编程语言。因为工作上的原因需要用到perl，这才对perl有了了解。<br>相对JS而言，perl貌似更简单易用。同为脚本语言，perl风靡一时，当下肯定没有JS热门。perl更多的是用在生信等领域，而JS是随着web2.0的兴起而逐渐壮大，你看ES7都快出来了。<br>先来看一下perl的最基本入门程序。<br><a id="more"></a><br><figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/perl</span></div><div class="line"><span class="keyword">print</span> <span class="string">"Hello,world!\n"</span></div><div class="line"><span class="comment">=pod</span></div><div class="line">larry 推出了Perl</div><div class="line"> 1 Itermediate Perl</div><div class="line"> 2 Mastering Perl</div><div class="line"> 3 Programming perl</div><div class="line"> 额外练习 《Learning Perl Student Workbook》</div><div class="line">=cut</div></pre></td></tr></table></figure></p>
 <p>其中 <code>#!/usr/bin/perl</code>，意思为perl脚本的默认存放位置是“/usr/bin/perl”；<br>比较新奇的是perl的多行注释：</p>
 <pre><code>=pod、=cut只能在行首
 以=开头，以cut结尾
@@ -299,7 +298,8 @@
 <pre><code>1 Itermediate Perl
 2 Mastering Perl
 3 Programming perl
-</code></pre><p>在我学习perl的过程，我会把学习代码放到仓库(perl-learning)[<a href="https://github.com/zhengjingfa/perl-learning]，敬请指导。" target="_blank" rel="external">https://github.com/zhengjingfa/perl-learning]，敬请指导。</a></p>
+</code></pre><p>让我们再来看一个perl文件，一种叫做 `Here<br><figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/perl</span></div><div class="line"><span class="comment">=pod Heredoc</span></div><div class="line">一种在命令行和程序语言里定义一个字串的方法。</div><div class="line">注意点： 1.必须后接分号；</div><div class="line">2.END可以用任何语言代替，必须保证开始结束标识一致；</div><div class="line">3.开始标识不带引号与带引号的作用一样，会解析转义；</div><div class="line">4.结束标识必须占一行。必须行首开始。</div><div class="line">5.当内容需要内嵌引号的时候，不需要加转义字符，本身对单双引号转义；</div><div class="line">=cut</div><div class="line"></div><div class="line">$a = <span class="number">10</span>;</div><div class="line">$var = &lt;&lt; <span class="string">"eof"</span>;</div><div class="line">这是一个Here文档实例，使用双引号。</div><div class="line">“可以输入双引号”，‘可以输入单引号’；</div><div class="line">可以在这里输入字符串和变量；</div><div class="line">例如： a = $a;</div><div class="line"><span class="keyword">eof</span></div><div class="line"><span class="keyword">print</span> <span class="string">"$var\n"</span>;</div><div class="line"></div><div class="line">$var = &lt;&lt; <span class="string">'dfc'</span>;</div><div class="line">这是一个单引号的例子；</div><div class="line">a = $a;</div><div class="line">dfc</div><div class="line"><span class="keyword">print</span> <span class="string">"$var\n"</span>;</div><div class="line"></div><div class="line"><span class="comment"># perl Heredoc变量可以重复,例如上面的$var;</span></div><div class="line"></div><div class="line"><span class="comment"># perl 用反斜线来转义</span></div><div class="line">$res = <span class="string">"zjf"</span>;</div><div class="line"><span class="keyword">print</span> <span class="string">"$res\n"</span>;</div><div class="line"><span class="keyword">print</span> <span class="string">'$res\n'</span>;</div><div class="line"></div><div class="line"><span class="comment"># perl标识符与其他编程语言一样；</span></div></pre></td></tr></table></figure></p>
+<p>这也是比较新奇的技巧。<br>在我学习perl的过程，我会把学习代码放到仓库<a href="perl-learning">https://github.com/zhengjingfa/perl-learning</a>，欢迎莅临指导。</p>
 
             
         </div>
@@ -311,7 +311,7 @@
         <p><span>本文标题:</span><a href="/2017/07/15/perl-learning/">perl-learning</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Afanail</a></p>
         <p><span>发布时间:</span>2017-07-15, 11:25:22</p>
-        <p><span>最后更新:</span>2017-07-15, 11:39:29</p>
+        <p><span>最后更新:</span>2017-07-15, 11:59:38</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/07/15/perl-learning/" title="perl-learning">http://www.1oveit.club/2017/07/15/perl-learning/</a>
             <span class="copy-path" data-clipboard-text="原文: http://www.1oveit.club/2017/07/15/perl-learning/　　作者: Afanail" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>

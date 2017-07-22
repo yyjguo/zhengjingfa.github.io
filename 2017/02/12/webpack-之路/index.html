@@ -84,7 +84,7 @@
         <!-- Table of Contents -->
         
         <p>本地安装npm包后如何在命令行运行</p>
-<p>在npm安装包的时候，如果使用全局安装，即npm install <packagename> -g，则在安装完成后可以在终端运行作为命令去运行，但是如果是本地安装的包npm install –save-dev <packagename>，则无法这样直接运行。那么如何运行本地安装的包呢？首先进入项目目录（即package.json所在目录），然后使用以下命令即可运行：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ node_modules/.bin/&lt;packageName&gt;</div></pre></td></tr></table></figure></packagename></packagename></p>
+<p>在npm安装包的时候，如果使用全局安装，即npm install <packagename> -g，则在安装完成后可以在终端运行作为命令去运行，但是如果是本地安装的包npm install –save-dev <packagename>，则无法这样直接运行。那么如何运行本地安装的包呢？首先进入项目目录（即package.json所在目录），然后使用以下命令即可运行：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ node_modules/.bin/<span class="xml"><span class="tag">&lt;<span class="name">packageName</span>&gt;</span></span></div></pre></td></tr></table></figure></packagename></packagename></p>
 <a id="more"></a>
 <p>除了可以这样在命令行运行外，还可以在文件中运行<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//index.js</span></div><div class="line"><span class="keyword">let</span> webpack = <span class="built_in">require</span>(<span class="string">'webpack'</span>);</div><div class="line">webpack();</div></pre></td></tr></table></figure></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ node index.js</div></pre></td></tr></table></figure>

@@ -5,10 +5,7 @@
     <entry>
       <title><![CDATA[perl-learning]]></title>
       <url>/2017/07/15/perl-learning/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>什么是perl？</p>
-</blockquote>
-<p>perl 是一门编程语言。因为工作上的原因需要用到perl，这才对perl有了了解。<br>相对JS而言，perl貌似更简单易用。同为脚本语言，perl风靡一时，当下肯定没有JS热门。perl更多的是用在生信等领域，而JS是随着web2.0的兴起而逐渐壮大，你看ES7都快出来了。<br>先来看一下perl的最基本入门程序。<br><a id="more"></a><br><figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/perl</span></div><div class="line"><span class="keyword">print</span> <span class="string">"Hello,world!\n"</span></div><div class="line"><span class="comment">=pod</span></div><div class="line">larry 推出了Perl</div><div class="line"> 1 Itermediate Perl</div><div class="line"> 2 Mastering Perl</div><div class="line"> 3 Programming perl</div><div class="line"> 额外练习 《Learning Perl Student Workbook》</div><div class="line">=cut</div></pre></td></tr></table></figure></p>
+      <content type="html"><![CDATA[<p>perl 是一门编程语言。因为工作上的原因需要用到perl，这才对perl有了了解。相对JS而言，perl貌似更简单易用。同为脚本语言，perl风靡一时，当下肯定没有JS热门。更多的是用在生信等领域，而JS是随着web2.0的兴起而逐渐壮大，你看ES7都快出来了。先来看一下perl的最基本入门程序。<br><a id="more"></a><br><figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/perl</span></div><div class="line"><span class="keyword">print</span> <span class="string">"Hello,world!\n"</span></div><div class="line"><span class="comment">=pod</span></div><div class="line">larry 推出了Perl</div><div class="line"> 1 Itermediate Perl</div><div class="line"> 2 Mastering Perl</div><div class="line"> 3 Programming perl</div><div class="line"> 额外练习 《Learning Perl Student Workbook》</div><div class="line">=cut</div></pre></td></tr></table></figure></p>
 <p>其中 <code>#!/usr/bin/perl</code>，意思为perl脚本的默认存放位置是“/usr/bin/perl”；<br>比较新奇的是perl的多行注释：</p>
 <pre><code>=pod、=cut只能在行首
 以=开头，以cut结尾
@@ -34,9 +31,7 @@
     <entry>
       <title><![CDATA[教你如何巧妙解决网页乱码]]></title>
       <url>/2017/06/28/%E6%95%99%E4%BD%A0%E5%A6%82%E4%BD%95%E5%B7%A7%E5%A6%99%E8%A7%A3%E5%86%B3%E7%BD%91%E9%A1%B5%E4%B9%B1%E7%A0%81/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>约定俗成不是好的标准，却是近似好的标准。</p>
-</blockquote>
+      <content type="html"><![CDATA[<p>约定俗成不是好的标准，却是近似好的标准。</p>
 <p>我们编写好的html文件，在浏览器显示往往会乱码，这就是编码格式的问题。在约定情况下，通常默认<code>utf-8</code>编码格式。但是，有一些有一定历史的公司，比如网易，我们可以看到它的编码格式是简体中文，也就是国标编码2312,简称<code>gb2312</code>。<br><a id="more"></a><br><img src="/assets/img/网易编码gb2312.png" alt="网易页面简体中文编码格式"></p>
 <p>如果你这个时候把编码格式设置为其它的呢？相信你会看到一些似懂非懂的文字。我就比较好奇试了一下。</p>
 <p><img src="/assets/img/网易编码繁体.png" alt="网易页面繁体中文编码格式"></p>
@@ -59,11 +54,11 @@
       <title><![CDATA[抓住17年的尾巴]]></title>
       <url>/2017/06/17/%E6%8A%93%E4%BD%8F17%E5%B9%B4%E7%9A%84%E5%B0%BE%E5%B7%B4/</url>
       <content type="html"><![CDATA[<p> 17年也要结束了，一切来的那么快。年前的计划是否实现了,这显然没有那么重要了。还有半年的时间，切忌不要等到赶着时间去抓17年的尾巴。<br> <a id="more"></a></p>
-<h1 id="new-Date"><a href="#new-Date" class="headerlink" title="new Date"></a>new Date</h1><p> 关于工作，就像标题一样，一切都是新的时间对象。跳槽来到了一家只有我一个前端的公司，所以一切几乎等同于从零开始。对一个东西有很深感情，很多不是因为一见钟情，很多不是因为互相喜欢，而是从一开始到结束，从浅到深，慢慢培养的感情。而我们似乎都急于求成，感情上如此，生活亦是。</p>
-<h1 id="once-super"><a href="#once-super" class="headerlink" title="once super"></a>once super</h1><p> 一个人的团队可以干些什么？这似乎是一道双向的数据绑定题。首先，赋予我们极大的自由，可以运用自己热衷并且擅长的技术，可以调动自己的创造性，极大可能的挖掘自己的潜能。从前端代码规范，前端工程自动化，前端技术选型，似乎可以任君胡作非为一番了。前人栽树，后人乘凉。还是要妥当才好。团队不可能永远一个人，你不是一个人在战斗。你只是暂时一个人代表一个团队在战斗。你会慢慢喜欢上你从无到有的团队的，请坚信这一点。单枪匹马与千军万马孰优孰劣一目了然。</p>
-<h1 id="make-kludeg"><a href="#make-kludeg" class="headerlink" title="make kludeg"></a>make kludeg</h1><p> 然而，一切有想象中的那么自由吗？往往限制自己的就是我们自己。你似乎已经忘记团队的存在了，这才是多么可怕的事情。所以事情没有想的那么容易。但是也没有想象中的那么困难。这个流动性大的环境下，时刻做好准备才是硬道理。你看前端框架更新多快，就知道流动性有多大了。所以真的有必要去重构之前的一些代码吗？还是标注<code>kludeg</code>让接下来的开发者谨慎注意某些复杂的代码片段。有一些10几年的老项目，存在是有它的道理的。新的东西不一定好，旧的东西不一定会被淘汰。往往要看当权者如何折中了。不要为了前端而前端，好像就是这个理。</p>
-<h1 id="web-browser"><a href="#web-browser" class="headerlink" title="web browser"></a>web browser</h1><p> 我曾经是一度的希望，会不会有个大神上的大神，出来一统前端，破解今日百家争艳的局面。更希望哪个web browser能够并购所有browser，IE也行，Chrome也罢。这样就不会有兼容性，就不会有纷呈复杂的前端技术了。现在想想，才知道自己那时候是多么幼稚。也正是因为如此，前端才变得更具挑战性，未来才更加不确定性，更加富有往各种方向发展的可能性。想想垄断，是多么可怕的词。如今的局面，可能都是最好的安排。</p>
-<h1 id="catch-17end"><a href="#catch-17end" class="headerlink" title="catch 17end"></a>catch 17end</h1><p> 不管什么局面，都是时间的积累造就的，没有人能够一蹴而就。生活如此，感情亦是。太快了，反而更需要花时间沉淀。Because，one day, when you review your code and project, you would doubt that how stupid to gulp this.</p>
+<h3 id="new-Date"><a href="#new-Date" class="headerlink" title="new Date"></a>new Date</h3><p> 关于工作，就像标题一样，一切都是新的时间对象。跳槽来到了一家只有我一个前端的公司，所以一切几乎等同于从零开始。对一个东西有很深感情，很多不是因为一见钟情，很多不是因为互相喜欢，而是从一开始到结束，从浅到深，慢慢培养的感情。而我们似乎都急于求成，感情上如此，生活亦是。</p>
+<h3 id="once-super"><a href="#once-super" class="headerlink" title="once super"></a>once super</h3><p> 一个人的团队可以干些什么？这似乎是一道双向的数据绑定题。首先，赋予我们极大的自由，可以运用自己热衷并且擅长的技术，可以调动自己的创造性，极大可能的挖掘自己的潜能。从前端代码规范，前端工程自动化，前端技术选型，似乎可以任君胡作非为一番了。前人栽树，后人乘凉。还是要妥当才好。团队不可能永远一个人，你不是一个人在战斗。你只是暂时一个人代表一个团队在战斗。你会慢慢喜欢上你从无到有的团队的，请坚信这一点。单枪匹马与千军万马孰优孰劣一目了然。</p>
+<h3 id="make-kludeg"><a href="#make-kludeg" class="headerlink" title="make kludeg"></a>make kludeg</h3><p> 然而，一切有想象中的那么自由吗？往往限制自己的就是我们自己。你似乎已经忘记团队的存在了，这才是多么可怕的事情。所以事情没有想的那么容易。但是也没有想象中的那么困难。这个流动性大的环境下，时刻做好准备才是硬道理。你看前端框架更新多快，就知道流动性有多大了。所以真的有必要去重构之前的一些代码吗？还是标注<code>kludeg</code>让接下来的开发者谨慎注意某些复杂的代码片段。有一些10几年的老项目，存在是有它的道理的。新的东西不一定好，旧的东西不一定会被淘汰。往往要看当权者如何折中了。不要为了前端而前端，好像就是这个理。</p>
+<h3 id="web-browser"><a href="#web-browser" class="headerlink" title="web browser"></a>web browser</h3><p> 我曾经是一度的希望，会不会有个大神上的大神，出来一统前端，破解今日百家争艳的局面。更希望哪个web browser能够并购所有browser，IE也行，Chrome也罢。这样就不会有兼容性，就不会有纷呈复杂的前端技术了。现在想想，才知道自己那时候是多么幼稚。也正是因为如此，前端才变得更具挑战性，未来才更加不确定性，更加富有往各种方向发展的可能性。想想垄断，是多么可怕的词。如今的局面，可能都是最好的安排。</p>
+<h3 id="catch-17end"><a href="#catch-17end" class="headerlink" title="catch 17end"></a>catch 17end</h3><p> 不管什么局面，都是时间的积累造就的，没有人能够一蹴而就。生活如此，感情亦是。太快了，反而更需要花时间沉淀。Because，one day, when you review your code and project, you would doubt that how stupid to gulp this.</p>
 <p> 本来今天想早点睡觉的，没想到又快到凌晨1点多了，黑眼圈也是需要时间积累的，大概我的黑眼圈就是这样来的吧。刚好今天是父亲节，好久没有给父亲打电话了。想一想，应该是从来没有给父亲打过真正意义上的电话。父亲实在太辛苦了，一个人要赚钱养8口人的大家庭。我们兄弟姐妹从来与父亲不来电，不谈心事，不谈生活，不谈其它，因为是母亲承担了这些孩子成长上琐碎的事情。我们心里都明白，父亲是知道孩子成长道路上琐碎的事情的，甚至比母亲还上心。可是生活造就了一切，有的人就是默默无闻的付出，得到的也不是掷地有声的回报。但是，这默默无闻付出的背后，你可曾知道这也是无时无刻幸福与满足交织涌向心头，胜过千倍万倍娇弱做作的我爱你！</p>
 ]]></content>
       
@@ -110,10 +105,7 @@
     <entry>
       <title><![CDATA[NBA总决赛G3]]></title>
       <url>/2017/06/08/NBA%E6%80%BB%E5%86%B3%E8%B5%9BG3/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>勇士（3） vs 骑士（0），这会是你想到的结果吗？   </p>
-</blockquote>
-<p>今天的比赛可能是整个系列赛最精彩的一场了。双方教练斗智斗勇，场上球员各显神通。最终勇士队以118-113击败骑士队涉险过关。<br><a id="more"></a><br>回到主场，这是骑士必须拿下的比赛，而勇士也是有备而来，双方球员必须使出浑身解数，争取拿下比赛。前俩场，库里和杜兰特发挥特别出色。克莱汤普森由于身担防守欧文的重责，进攻端发挥有所失常。依靠勇士强大的整体，勇士前俩场刀不血刃的拿下了比赛。  </p>
+      <content type="html"><![CDATA[<p>今天的比赛可能是整个系列赛最精彩的一场了。双方教练斗智斗勇，场上球员各显神通。最终勇士队以118-113击败骑士队涉险过关。<br><a id="more"></a><br>回到主场，这是骑士必须拿下的比赛，而勇士也是有备而来，双方球员必须使出浑身解数，争取拿下比赛。前俩场，库里和杜兰特发挥特别出色。克莱汤普森由于身担防守欧文的重责，进攻端发挥有所失常。依靠勇士强大的整体，勇士前俩场刀不血刃的拿下了比赛。  </p>
 <p>第三场比赛，骑士明显有了针对性的调整，从场上球员的站队以及跑位，可以看到库里明显被夹击了。骑士队的战术执行的很坚决，一方面三分线外夹击库里，一方面协防杜兰特，限制勇士俩大进攻点的发挥。克莱汤普森受益于骑士队的战术，当库里和杜兰特被对方狠狠的盯死的时候，汤普森多出了很多的空位，所以汤普森今天的爆发是意料之中的。  </p>
 <p>再说说今天骑士队的詹姆斯，上半场火力全开，得了27分，14投11中，4篮板3助攻。特别是第一节的詹姆斯，10投9中。几乎一个人对抗整支勇士队。真所谓吕布战群英，精彩绝伦。下半场勇士队立马就走出了调整，多次让杜兰特去防守詹姆斯，可是没想到，欧文这时候站了出来，各种不可思议的突破，各种鬼魅的神仙球。借助欧文神奇的发挥，第三节骑士队终于实现了比分的反超。  </p>
 <p>进入比赛关键的第四节，勇士队先排上替补阵容，保证主力队员的休息时间。这是骑士队必须拿下的比赛，主力球员是要战斗到最后时刻了。比分一直是骑士领先，勇士队替补阵容很好的完成的战术作用。比赛还剩下最后的6分钟左右的时间时候，科尔令旗一挥，勇士队熟悉的<code>死亡五小</code>上阵。最厉害的总是最后出场的，果不其然，勇士队慢慢的缩小了比分。</p>
@@ -133,10 +125,7 @@
     <entry>
       <title><![CDATA[愿世间没有。。。]]></title>
       <url>/2017/05/29/%E6%84%BF%E4%B8%96%E9%97%B4%E6%B2%A1%E6%9C%89.../</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>如果可以，你也可以！！！</p>
-</blockquote>
-<p>活了大概五分之一的人生以上，从来没有一天像今天这样的心情。如果可以，愿世间没有。。。<a id="more"></a></p>
+      <content type="html"><![CDATA[<p>活了大概五分之一的人生以上，从来没有一天像今天这样的心情。如果可以，愿世间没有。。。<a id="more"></a></p>
 <p>我爷爷属牛。原谅我不知道今年多少岁，只是最接近百岁的那一只牛。很多人不理解为什么人会老，为什么人会死。就像人一样，为什么会是人。可能这就是一直以来的不可违背的伦理。这个世界千千万万人，如果有那么一个俩个人，不为人知的一直活在我们不知道的空间里。监视着我们，直到我们快老去，我们快不为人知。那个一直不为人知的一俩个人，会不会出来跟你说：“嘿！欢迎来到不为人知的世界！这个世界无比真挚的欢迎来自人间的你！“。如果存在这样的事情，那么不为人知就显得有一些廉价了。我们都相信这个世界的确有这么一俩个人，谁敢说不是呢？如果可以，愿世间没有这样不为人知的一俩个人！</p>
 <p>记得我在很小的时候，我是什么都不懂。每天跟着爷爷，有糖吃，特别喜欢粘着爷爷。农村的街道很宽很干净很少人，爷爷的自行车很高很稳很响亮。”玲玲玲“，那时候的车玲显得格外悦耳，格外动听。我就坐在车头，是那个白白胖胖的无所畏惧的无敌小小子。那时候的天空很蓝，白云很白，清风很轻，人也格外舒坦。爷爷骑着车，在乡间田园的路上，有小草野花，有流水小船，有深处人家。哼着歌，响着铃铛，喀拉拉，无比轻盈的轮滑，留下一道道岁月的痕迹，让我去追寻，去回忆。如果可以，愿世间没有追寻，没有回忆。</p>
 <p>不知道我是从什么时候开始懂事，可能是体毛初长的时候，也可能是情窦初开的时候。一瞬间，也可能是所有瞬间堆积成的一瞬间，反正在不知不觉的某一刻，我们就开始懂事了。明白了爸妈为什么早出晚回，明白了爷爷奶奶为什么还下地干活。农村的五伏天，天天热辣，天天背朝黄天。没有空调，没有风扇，只有夏天的树，芭蕉做的扇。我喜欢芭蕉扇，喜欢夏天的树，一直一直。爷爷说，夏天是收割的季节，天气要热些好，稻谷才好晒些，最怕这个季节的风台了。咱们农民是靠天靠地吃饭，要感谢有现在的天和地。我有些懂事了，认为爷爷说的对。如果可以，愿世间没有天地，我们可以靠自己。</p>
@@ -158,9 +147,7 @@
     <entry>
       <title><![CDATA[ES7--大势所趋]]></title>
       <url>/2017/05/26/ES7-%E5%A4%A7%E5%8A%BF%E6%89%80%E8%B6%8B/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>最快的是，技术的更新；最慢的是，更新的应用。</p>
-</blockquote>
+      <content type="html"><![CDATA[<p>最快的是，技术的更新；最慢的是，更新的应用。</p>
 <p>也许你已经厌烦JavaScript的回调，虽然快，但是异步。<br>老司机可能会发现JavaScript貌似很在意一个问题，那就是如何解决异步。<br><a id="more"></a><br>一开始我们写回调函数callback，总是深深的被包含在花括号中，无法自拔。这种嵌套的结构一来不易于代码的维护，二来容易出错。相信经历过的人都知道。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//伪代码</span></div><div class="line">&#123;&#123;&#123;&#123;callback()&#125;&#125;&#125;&#125;</div></pre></td></tr></table></figure></p>
 <p>直到有一天，承诺（promise）出现了，生成器（generator）出现了。这里的promise，让异步可以以同步的方式实现。教程有很多，这里不细讲了，总之写起来很麻烦。反正我是觉得写起来比生成器麻烦。</p>
 <p>其实JavaScript的生成器很大程度上借鉴了Python的生成器，学过Python的人都知道。但是生成器不是用来解决异步的，但是生成器却能用来解决异步。生成器更像一种语法糖，把你返回的值存储起来，直到调用才暴露出来，这也是它能解决异步的原因之一。</p>
@@ -180,9 +167,7 @@
     <entry>
       <title><![CDATA[Google I/O 2017 for front-end development]]></title>
       <url>/2017/05/19/Google-I-O-2017-for-front-end-development/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>不知道下一年，世界又会是哪个科技引领潮流。</p>
-</blockquote>
+      <content type="html"><![CDATA[<p>不知道下一年，世界又会是哪个科技引领潮流。</p>
 <h1 id="web-component"><a href="#web-component" class="headerlink" title="web component"></a>web component</h1><p>Twitter和来自印度的Ola，现场展示了<code>modern mobile webApp</code>。虽然组件化的框架<code>polymer</code>从15年开始已经发布，但是polymer框架2.0现在才进入预发布状态。<code>work box</code>的出现很大程度上弥补了<code>server work</code>的不足。so will polymer be a competitor to react? 好吧，welcome back  polymer! React is a JavaScript framwork for rendering HTML! React is not certainly not Web Components.<br><a id="more"></a><br>add webApp to home screen, 然后和native app做对比，从数据流量，媒介，手机流畅度等方面介绍webApp。<code>progressive web app</code>越来越受欢迎。未来web领域可能与VR结合，但是未来一起不可预料，又可以想象。</p>
 <p><code>front-end developers</code> 现在可以让自己的website试用谷歌的 <code>AMP-bind</code> and <code>PWA</code>接口。这无疑给<code>front-end developer</code>多一种新的选择去构建自己的<code>progressive web app</code>。</p>
 <p>看完第一场演讲，深觉印度的IT行业发展之快。感触良多，未来不可预料，又可以想象！</p>
@@ -241,9 +226,7 @@
     <entry>
       <title><![CDATA[JavaScript简明教程（全）]]></title>
       <url>/2016/12/29/javaScript%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B%EF%BC%88%E5%85%A8%EF%BC%89/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>JavaScript与Java没有半毛钱关系，网景公司员工Brendan Eich用了10天时间设计了JavaScript语言。</p>
-</blockquote>
+      <content type="html"><![CDATA[<p>JavaScript与Java没有半毛钱关系，网景公司员工Brendan Eich用了10天时间设计了JavaScript语言。</p>
 <h1 id="JavaScript的范围"><a href="#JavaScript的范围" class="headerlink" title="JavaScript的范围"></a>JavaScript的范围</h1><p><strong>JavaScript的范围：BOM + DOM + ECMAScript</strong></p>
 <h2 id="BOM简单说明"><a href="#BOM简单说明" class="headerlink" title="BOM简单说明"></a>BOM简单说明</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">BOM即Browser Object Mode,浏览器对象模型。</div><div class="line">BOM提供了独立于内容而与浏览器窗口进行交互的对象。</div><div class="line">BOM由一系列相关的对象构成，并且每个对象都提供了很多方法与属性。</div><div class="line">因为BOM主要用于管理窗口与窗口之间的通信，因此其核心对象是window。</div><div class="line">BOM缺乏标准，JavaScript语法的标准化组织是ECMA，DOM的标准化组织是W3C。</div><div class="line">BOM结构体系</div></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -754,12 +737,6 @@ Object本身也是对象,其构造函数为:function Function() { [native code]
 <p>因本人能力有限，教程中难免出现疏忽，对此带来的不便敬请见谅。</p>
 ]]></content>
       
-        <categories>
-            
-            <category> JavaScript简明教程 </category>
-            
-        </categories>
-        
         
         <tags>
             
@@ -774,9 +751,7 @@ Object本身也是对象,其构造函数为:function Function() { [native code]
     <entry>
       <title><![CDATA[有趣的Chrome DevTools]]></title>
       <url>/2016/11/11/%E6%9C%89%E8%B6%A3%E7%9A%84ChromeDevTools/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>Chrome 自带开发者工具很有趣，怎么个有趣法呢？Chrome的JS控制台有很多很多神奇而且有趣的功能。此文仅例举其中几个，一起来看看吧。</p>
-</blockquote>
+      <content type="html"><![CDATA[<p>Chrome 自带开发者工具很有趣，怎么个有趣法呢？Chrome的JS控制台有很多很多神奇而且有趣的功能。此文仅例举其中几个，一起来看看吧。</p>
 <p>我们调试的时候控制台总会有一大堆密密麻麻的代码时，请试着输入 clear() 然后回车，清空所有，回到原始界面。<br><a id="more"></a>    </p>
 <h3 id="jq选择器"><a href="#jq选择器" class="headerlink" title="jq选择器"></a>jq选择器</h3><p>第一个有趣的事情就是获取页面上的DOM元素啦！<br>在控制台里通过jQuery选择器选取DOM元素.</p>
 <p>如 <code>$(&#39;tagName&#39;) $(&#39;.class&#39;) $(&#39;#id&#39;)</code>等选择器。<br>其实是通过document.querySelector(‘’)返回第一个匹配的DOM元素。<br>通过 <code>$$(&#39;tagName&#39;) $$(&#39;.className&#39;)</code>两个<code>$$</code>符号来选择返回的一个相应的DOM数组。瞧：<br><img src="/assets/img/jquery选择器.png" alt="jquery选择器"></p>
@@ -801,9 +776,7 @@ Object本身也是对象,其构造函数为:function Function() { [native code]
     <entry>
       <title><![CDATA[Css简明教程]]></title>
       <url>/2016/11/05/css%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>Css简明教程，简洁明了。</p>
-</blockquote>
+      <content type="html"><![CDATA[<p>Css简明教程，简洁明了。</p>
 <h1 id="CSS基础概念"><a href="#CSS基础概念" class="headerlink" title="CSS基础概念"></a>CSS基础概念</h1><p>1.CSS的作用：修改样式<br><a id="more"></a><br>格式：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;style type=”text/css”&gt;</div><div class="line">          选择器名称&#123;</div><div class="line">属性名称：属性对应的值；</div><div class="line">…</div><div class="line">&#125;</div><div class="line">&lt;<span class="regexp">/style&gt;</span></div></pre></td></tr></table></figure></p>
 <h1 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h1><h2 id="规定文字的属性"><a href="#规定文字的属性" class="headerlink" title="规定文字的属性"></a>规定文字的属性</h2><pre><code> （1）规定文字的样式的属性：
           font-style:normal(正常的，默认) italic（倾斜）
@@ -1056,9 +1029,7 @@ transition-timing-function:告诉系统过渡动画的运动速度
     <entry>
       <title><![CDATA[HTML简明教程]]></title>
       <url>/2016/10/18/HTML%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>简单的概念，简洁明了。</p>
-</blockquote>
+      <content type="html"><![CDATA[<p>简单的概念，简洁明了。</p>
 <h1 id="常识"><a href="#常识" class="headerlink" title="常识"></a>常识</h1><p>1.什么是浏览器？<br>功能：（1）将网页渲染出来让用户查看（2）并让用户与网页交互的一种软件<br>主流浏览器：IE（内核：Trident） 火狐（内核：Gecko） 谷歌（内核：Webkit/Blink） Safari（内核：Webkit） 欧朋（内核：Presto）<br>因为内核不同，所以渲染的网页有所不同<br><a id="more"></a><br>2.什么是服务器？<br>超级计算机，24小时不断电不关机，专门用于存储数据</p>
 <p>3.什么是URL?<br>我们在浏览器的地址栏输入的就是URL，eg：<code>http://127.0.0.1:80/index.html</code><br>http:// URL协议类型<br>127.0.0.1 服务器IP地址<br>:80 服务器的端口号<br>/index.html 需要访问的资源名称</p>
 <h1 id="HTML基础"><a href="#HTML基础" class="headerlink" title="HTML基础"></a>HTML基础</h1><p>1.HTML（超文本标记语言）<br>作用：专门用来描述文本语义的，也就是说告诉浏览器哪些是标题哪些是段落。<br>注意事项：HTML作用只有一个专门给文本添加语义的，不是用来修改文本样式的。<br><code>&lt;h1&gt;</code>标签的作用是告诉浏览器哪些文字是标题，即给指定文字添加标题语义的<br><code>.html</code>是纯文本文件</p>
@@ -1105,12 +1076,6 @@ transition-timing-function:告诉系统过渡动画的运动速度
 <p>19.字符实体<br><code>&amp;nbsp;</code>空格、<code>&amp;lt;</code>小于号、<code>&amp;gt;</code>大于号、<code>&amp;copy;</code>版权符号</p>
 ]]></content>
       
-        <categories>
-            
-            <category> HTML简明教程 </category>
-            
-        </categories>
-        
         
         <tags>
             
@@ -1125,10 +1090,7 @@ transition-timing-function:告诉系统过渡动画的运动速度
     <entry>
       <title><![CDATA[Top 10 ES6 Features]]></title>
       <url>/2016/10/13/top10es/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>Top 10 ES6 Features</p>
-</blockquote>
-<h1 id="Top-10-ES6-Features-Every-Busy-JavaScript-Developer-Must-Know"><a href="#Top-10-ES6-Features-Every-Busy-JavaScript-Developer-Must-Know" class="headerlink" title="Top 10 ES6 Features Every Busy JavaScript Developer Must Know"></a>Top 10 ES6 Features Every Busy JavaScript Developer Must Know</h1><p>Top 10 ES6 Features Every Busy JavaScript Developer Must Know<br> 10 ES6 Features Every Busy JavaScript Software Engineer Must Know<br>38 Replies<br><a id="more"></a><br>This essay will give you a quick introduction to ES6. If you don’t know what is ES6, it’s a new JavaScript implementation. If you’re a busy JavaScript software engineer (and who is not?), then proceed reading to learn the best 10 features of the new generation of the most popular programming language—JavaScript.</p>
+      <content type="html"><![CDATA[<h1 id="Top-10-ES6-Features-Every-Busy-JavaScript-Developer-Must-Know"><a href="#Top-10-ES6-Features-Every-Busy-JavaScript-Developer-Must-Know" class="headerlink" title="Top 10 ES6 Features Every Busy JavaScript Developer Must Know"></a>Top 10 ES6 Features Every Busy JavaScript Developer Must Know</h1><p>Top 10 ES6 Features Every Busy JavaScript Developer Must Know<br> 10 ES6 Features Every Busy JavaScript Software Engineer Must Know<br>38 Replies<br><a id="more"></a><br>This essay will give you a quick introduction to ES6. If you don’t know what is ES6, it’s a new JavaScript implementation. If you’re a busy JavaScript software engineer (and who is not?), then proceed reading to learn the best 10 features of the new generation of the most popular programming language—JavaScript.</p>
 <p>Here’s the list of the top 10 best ES6 features for a busy software engineer (in no particular order):<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">Default Parameters in ES6</div><div class="line">Template Literals in ES6</div><div class="line">Multi-line Strings in ES6</div><div class="line">Destructuring Assignment in ES6</div><div class="line">Enhanced Object Literals in ES6</div><div class="line">Arrow Functions in ES6</div><div class="line">Promises in ES6</div><div class="line">Block-Scoped Constructs Let and Const</div><div class="line">Classes in ES6</div><div class="line">Modules in ES6</div></pre></td></tr></table></figure></p>
 <p>Disclaimer: the list if highly biased and subjective. It is in no way was intended to diminish usefulness of other ES6 features, which didn’t make it to the list simply because I had to limit the number to 10.</p>
 <h1 id="Default-Parameters-in-ES6"><a href="#Default-Parameters-in-ES6" class="headerlink" title="Default Parameters in ES6"></a>Default Parameters in ES6</h1><p>Remember we had to do these statements to define default parameters:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> link = <span class="function"><span class="keyword">function</span> (<span class="params">height, color, url</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> height = height || <span class="number">50</span></div><div class="line">    <span class="keyword">var</span> color = color || <span class="string">'red'</span></div><div class="line">    <span class="keyword">var</span> url = url || <span class="string">'http://azat.co'</span></div><div class="line">    ...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
@@ -1239,9 +1201,7 @@ transition-timing-function:告诉系统过渡动画的运动速度
     <entry>
       <title><![CDATA[jQuery 源码简单分析]]></title>
       <url>/2016/08/05/jQuery-%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>jQuery时下非常流行，简单好用，工作必用。想更深入学习，可以通过研究其源代码。   </p>
-</blockquote>
+      <content type="html"><![CDATA[<p>jQuery时下非常流行，简单好用，工作必用。想更深入学习，可以通过研究其源代码。   </p>
 <h1 id="jQuery是一个闭包（即时函数）"><a href="#jQuery是一个闭包（即时函数）" class="headerlink" title="jQuery是一个闭包（即时函数）"></a>jQuery是一个闭包（即时函数）</h1><pre><code>(function( window, undefined ) {})
 </code></pre><p>让我们来看一看jQuery源代码的基本信息<br><a id="more"></a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"> <span class="comment">/*!</span></div><div class="line">* jQuery JavaScript Library v2.0.0 版本信息</div><div class="line">* http://jquery.com/ 官方网站</div><div class="line">*</div><div class="line">* Includes Sizzle.js 复杂选择器文件名称</div><div class="line">* http://sizzlejs.com/  复杂选择器文件网站</div><div class="line">*</div><div class="line">* Copyright 2005, 2013 jQuery Foundation, Inc. and other contributors  版权信息</div><div class="line">* Released under the MIT license 开源协议</div><div class="line">* http://jquery.org/license</div><div class="line">*</div><div class="line">* Date: 2013-04-18 更新时间</div><div class="line">*/</div></pre></td></tr></table></figure></p>
 <p>这说明jQuery有多个版本,现在我们分析的是2.0.0版本，在之前的版本版本需要兼容IE678,里面有大量的兼容性处理。从2.0.0版本入手开始研究,从上往下解读注释</p>
@@ -1278,12 +1238,6 @@ transition-timing-function:告诉系统过渡动画的运动速度
 <p>上面分析的很简单，如果想要深入了解可以到GitHub网站等，希望对您有帮助</p>
 ]]></content>
       
-        <categories>
-            
-            <category> jQuery </category>
-            
-        </categories>
-        
         
         <tags>
             
@@ -1298,9 +1252,7 @@ transition-timing-function:告诉系统过渡动画的运动速度
     <entry>
       <title><![CDATA[移动端开发技巧若干]]></title>
       <url>/2016/07/22/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7%E8%8B%A5%E5%B9%B2/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>一些工作中的技巧。</p>
-</blockquote>
+      <content type="html"><![CDATA[<p>一些工作中的技巧。</p>
 <h1 id="viewport"><a href="#viewport" class="headerlink" title="viewport"></a>viewport</h1><p>在做移动端时，要考虑各种各样的问题，这种情况下，如何优雅的设置meta标签，显得尤为重要。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;meta charset=<span class="string">"utf-8"</span>&gt;</div><div class="line">&lt;meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport"&gt;</div><div class="line">&lt;meta name="viewport" content="width=640,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" /&gt;</div><div class="line">&lt;meta content="telephone=no" name="format-detection"&gt;</div><div class="line">&lt;meta content="email=no" name="format-detection"&gt;</div></pre></td></tr></table></figure></p>
 <a id="more"></a>
 <p>1、<code>&lt;meta charset=&quot;utf-8&quot;&gt;</code>，设置编码格式为<code>utf-8</code>。</p>
@@ -1337,9 +1289,7 @@ transition-timing-function:告诉系统过渡动画的运动速度
     <entry>
       <title><![CDATA[JSONP跨域]]></title>
       <url>/2016/07/08/JSONP%E8%B7%A8%E5%9F%9F/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>Asynchronous JavaScript and XML (Ajax) 是Web2.0的关键技术。AJAX与服务器交换数据刷新局部网页,不需重载。</p>
-</blockquote>
+      <content type="html"><![CDATA[<p>Asynchronous JavaScript and XML (Ajax) 是Web2.0的关键技术。AJAX与服务器交换数据刷新局部网页,不需重载。</p>
 <p>因为浏览器及同源策略的限制，ajax不允许跨域通信。同源是指协议、域名和端口都一致的情况。同源策略保证一个源的动态脚本不能读取或操作其他源的http响应和cookie，使浏览器隔离不同源的内容之间互相操作。<br><a id="more"></a></p>
 <h3 id="Access-Control-Allow-Origin"><a href="#Access-Control-Allow-Origin" class="headerlink" title="Access-Control-Allow-Origin"></a>Access-Control-Allow-Origin</h3><p>解决跨域问题可以在第三方网站开启HTTP的Access-Control-Allow-Origin参数，当目标页面的response包含Access-Control-Allow-Origin 这个header，而且还包含我们的域名时，浏览器就允许拿到它页面的数据：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Access-Control-Allow-Origin: http://www.1oveit.club</div></pre></td></tr></table></figure></p>
 <p>当值为 * 表示匹配所有，都能用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Access-Control-Allow-Origin: *</div></pre></td></tr></table></figure></p>
@@ -1365,9 +1315,7 @@ transition-timing-function:告诉系统过渡动画的运动速度
     <entry>
       <title><![CDATA[nvm-Mac安装使用]]></title>
       <url>/2016/06/02/nav-Mac%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>node更新太快了，版本差异各异，这时候有必要安装node版本管理工具nvm了。</p>
-</blockquote>
+      <content type="html"><![CDATA[<p>node更新太快了，版本差异各异，这时候有必要安装node版本管理工具nvm了。</p>
 <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>使用homebrew安装会出现莫名其妙的问题，这里推荐使用curl方式来安装：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | bash</div></pre></td></tr></table></figure></p>
 <a id="more"></a>
 <p>此时nvm安装在~/.nvm下，紧接着配置环境变量。</p>
@@ -1396,9 +1344,7 @@ transition-timing-function:告诉系统过渡动画的运动速度
     <entry>
       <title><![CDATA[JavaScript简明教程（7）]]></title>
       <url>/2016/05/28/js-07/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>很高兴你能看到这里，希望对你学习JavaScript有帮助。这是最后一章节，主要讲有关JavaScript的设计模式。</p>
-</blockquote>
+      <content type="html"><![CDATA[<p>很高兴你能看到这里，希望对你学习JavaScript有帮助。这是最后一章节，主要讲有关JavaScript的设计模式。</p>
 <h1 id="函数属性缓存"><a href="#函数属性缓存" class="headerlink" title="函数属性缓存"></a>函数属性缓存</h1><p>思路说明</p>
 <pre><code>01 函数是对象，因此可以在函数上面添加属性和方法
 02 如果某个函数需要接受参数，可能会反复计算且在函数内部需要进行耗时的大量的逻辑处理才能得到结果
@@ -1490,12 +1436,6 @@ transition-timing-function:告诉系统过渡动画的运动速度
 <p><strong>模型</strong><br>01 订阅者也称为<code>观察者</code><br>02 被观察的对象称为<code>发布者</code>或者是主题<br>03 当发生一个重要事件的时候，发布者将会通知所有订阅者并且经常以事件的形式来传递消息。<br>示例代码<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//01 提取成公共的发行者对象</span></div><div class="line">    <span class="keyword">var</span> publisher = &#123;</div><div class="line">        <span class="attr">users</span>:&#123;</div><div class="line">            <span class="attr">default</span>:[]</div><div class="line">        &#125;,   <span class="comment">//所有的订阅者对象</span></div><div class="line">        addUser:<span class="function"><span class="keyword">function</span> (<span class="params">fn,type</span>) </span>&#123;</div><div class="line">            <span class="comment">//对订阅的类型进行判断</span></div><div class="line">            <span class="keyword">var</span> type = type || <span class="string">"default"</span>;</div><div class="line">            <span class="comment">//如果是新的订阅类型,那么我们需要做初始化的处理</span></div><div class="line">            <span class="keyword">if</span> (<span class="keyword">this</span>.users[type] == <span class="literal">undefined</span>)</div><div class="line">            &#123;</div><div class="line">                <span class="keyword">this</span>.users[type] = [];</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">this</span>.users[type].push(fn);</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">removeUser</span>:<span class="function"><span class="keyword">function</span> (<span class="params">fn,type</span>) </span>&#123;</div><div class="line">            <span class="keyword">this</span>.tool(type,<span class="string">"removerUser"</span>,fn);</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">publish</span>:<span class="function"><span class="keyword">function</span> (<span class="params">type</span>) </span>&#123;</div><div class="line">            <span class="keyword">this</span>.tool(type,<span class="string">"publish"</span>);</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">tool</span>:<span class="function"><span class="keyword">function</span> (<span class="params">type,funcType,fn</span>) </span>&#123;</div><div class="line">            <span class="keyword">var</span> type = type || <span class="string">"default"</span>;</div><div class="line">            <span class="keyword">var</span> users = <span class="keyword">this</span>.users[type];</div><div class="line">            <span class="keyword">if</span> (users == <span class="literal">undefined</span>)</div><div class="line">            &#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">"当前没有任何订阅者"</span>);</div><div class="line">                <span class="keyword">return</span>;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; users.length; i++) &#123;</div><div class="line">                <span class="keyword">if</span> (funcType == <span class="string">'publish'</span>)</div><div class="line">                &#123;</div><div class="line">                    users[i]()</div><div class="line">                &#125;<span class="keyword">else</span></div><div class="line">                &#123;</div><div class="line">                    <span class="keyword">if</span> (users[i] == fn)</div><div class="line">                    &#123;</div><div class="line">                        users.splice(i, <span class="number">1</span>);</div><div class="line">                        <span class="keyword">break</span>;</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">    <span class="comment">//02 提供一个工具函数,能够利用发行者对象的模板来快速创建新的发布者</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">makePaper</span>(<span class="params">o</span>) </span>&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> publisher) &#123;</div><div class="line">            <span class="keyword">if</span> (publisher.hasOwnProperty(i) &amp;&amp; <span class="keyword">typeof</span> publisher[i] == <span class="string">'function'</span>)</div><div class="line">            &#123;</div><div class="line">                o[i] = publisher[i];</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        o.users = &#123;<span class="attr">default</span>:[]&#125;;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//03 创建发布者</span></div><div class="line">    <span class="keyword">var</span> paper1 = &#123;</div><div class="line">        <span class="attr">day</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">this</span>.publish();</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">month</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">this</span>.publish(<span class="string">"month"</span>)</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">year</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">this</span>.publish(<span class="string">"year"</span>)</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">    <span class="comment">//把某个对象编程一个发布者</span></div><div class="line">    makePaper(paper1);</div><div class="line">    <span class="comment">//04 创建订阅者(当发布者发布消息的时候,订阅者能够收到信息--自动调用订阅者的方法)</span></div><div class="line">    <span class="keyword">var</span> obj = &#123;</div><div class="line">        <span class="attr">lookDayNews</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">"obj - 查看最新的日报信息"</span>);</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">lookImageNews</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">"obj - 查看图片信息"</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">    <span class="comment">//05 设置订阅</span></div><div class="line">    paper1.addUser(obj.lookDayNews);</div><div class="line">    paper1.addUser(obj.lookImageNews,<span class="string">'month'</span>);</div><div class="line">    paper1.day();</div><div class="line">    paper1.month();</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
 ]]></content>
       
-        <categories>
-            
-            <category> JavaScript简明教程 </category>
-            
-        </categories>
-        
         
         <tags>
             
@@ -1510,9 +1450,7 @@ transition-timing-function:告诉系统过渡动画的运动速度
     <entry>
       <title><![CDATA[固定导航，不做抖man]]></title>
       <url>/2016/05/11/%E8%A7%A3%E5%86%B3%E9%A1%B5%E9%9D%A2%E6%8A%96%E5%8A%A8/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>如何hold住导航？</p>
-</blockquote>
+      <content type="html"><![CDATA[<p>如何hold住导航？</p>
 <h1 id="页面结构"><a href="#页面结构" class="headerlink" title="页面结构"></a>页面结构</h1><p>假设一个网页由Header,Nav,Main三部分构成。<br><a id="more"></a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Header(Logo, other information)</div><div class="line"></div><div class="line">----------------------------------------------</div><div class="line"></div><div class="line">Nav(Nav,menu,links)</div><div class="line"></div><div class="line">----------------------------------------------</div><div class="line"></div><div class="line">Main(Container, Content)</div><div class="line"></div><div class="line">-----------------------------------------------</div></pre></td></tr></table></figure></p>
 <h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><p>根据需求，当大于Header的高度时，固定住导航。当我们滚动滚轮时候，此时 Header 会被 Nav 所遮住，再往下面滚动时Nav会固定在顶部。最常规的解决方法,让Header固定定位，Nav上边距为Header的高度：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">Header</span>：<span class="selector-tag">position</span>: <span class="selector-tag">fixed</span></div><div class="line"></div><div class="line"><span class="selector-tag">Nav</span>: <span class="selector-tag">margin-top</span>: <span class="selector-tag">A</span><span class="selector-class">.height</span></div></pre></td></tr></table></figure></p>
 <p>设置滚动事件：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (scrollTop &gt; Header.height) &#123;</div><div class="line">    <span class="attr">Nav</span>: position: fixed</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="attr">Nav</span>: position: initial</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
@@ -1541,9 +1479,7 @@ transition-timing-function:告诉系统过渡动画的运动速度
     <entry>
       <title><![CDATA[JavaScript简明教程（6）]]></title>
       <url>/2016/04/25/js-06/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>闭包是学习JavaScript的难点之一，因JavaScript是单线程，故回调使用频繁，本章节主要讲了闭包以及回调。</p>
-</blockquote>
+      <content type="html"><![CDATA[<p>闭包是学习JavaScript的难点之一，因JavaScript是单线程，故回调使用频繁，本章节主要讲了闭包以及回调。</p>
 <h1 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h1><p><strong>闭包简单说明</strong></p>
 <pre><code>闭:关闭,封闭
 包:包住,包裹
@@ -1644,12 +1580,6 @@ transition-timing-function:告诉系统过渡动画的运动速度
 <p>代码说明：<br>slice:<code>返回一个新的数组，包含从 start 到 end （不包括该元素）的 arrayObject 中的元素</code></p>
 ]]></content>
       
-        <categories>
-            
-            <category> JavaScript简明教程 </category>
-            
-        </categories>
-        
         
         <tags>
             
@@ -1664,9 +1594,7 @@ transition-timing-function:告诉系统过渡动画的运动速度
     <entry>
       <title><![CDATA[JavaScript简明教程（5）]]></title>
       <url>/2016/03/18/js-05/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>JavaScript中有严格模式和非严格模式两种运行环境,本章节主要讲严格模式及非严格模式下函数和变量的区别,最后简单讲诉了JavaScript作用域。</p>
-</blockquote>
+      <content type="html"><![CDATA[<p>JavaScript中有严格模式和非严格模式两种运行环境,本章节主要讲严格模式及非严格模式下函数和变量的区别,最后简单讲诉了JavaScript作用域。</p>
 <h1 id="变量和函数"><a href="#变量和函数" class="headerlink" title="变量和函数"></a>变量和函数</h1><p><strong>私有变量和函数</strong></p>
 <pre><code>定义在构造函数内部而被this对象的变量,在外部无法访问到的变量和函数
 </code></pre><a id="more"></a>
@@ -1746,12 +1674,6 @@ transition-timing-function:告诉系统过渡动画的运动速度
 03 重复上面的步骤,直到0级作用域,如果还是找不到那么就返回undefined(报错)
 </code></pre>]]></content>
       
-        <categories>
-            
-            <category> JavaScript简明教程 </category>
-            
-        </categories>
-        
         
         <tags>
             
@@ -1766,9 +1688,7 @@ transition-timing-function:告诉系统过渡动画的运动速度
     <entry>
       <title><![CDATA[JavaScript简明教程（4）]]></title>
       <url>/2016/03/05/js-04/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>本章节主要讲解了原型链及相关方法。</p>
-</blockquote>
+      <content type="html"><![CDATA[<p>本章节主要讲解了原型链及相关方法。</p>
 <h1 id="原型链及相关属性方法简单说明"><a href="#原型链及相关属性方法简单说明" class="headerlink" title="原型链及相关属性方法简单说明"></a>原型链及相关属性方法简单说明</h1><h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><p><strong>代码示例</strong><br><a id="more"></a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    <span class="comment">//01 提供Person构造函数</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name,age</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.name = name;</div><div class="line">        <span class="keyword">this</span>.age = age;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//02 设置Person的原型对象</span></div><div class="line">    Person.prototype.showName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//03 创建Student构造函数</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Student</span>(<span class="params">number</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.numer = number</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//04 设置Student的原型对象</span></div><div class="line">    Student.prototype = <span class="keyword">new</span> Person();</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
 <p><strong>原型链图示例</strong><br><img src="/assets/img/Snip20170213_10.png" alt="原型"></p>
 <h2 id="Object对象"><a href="#Object对象" class="headerlink" title="Object对象"></a>Object对象</h2><p><strong>Object构造函数</strong><br>01 使用Object构造函数创建字符串对象<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//01 创建字符串对象</span></div><div class="line"><span class="keyword">var</span> str1 = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"测试字符串"</span>);</div><div class="line"><span class="keyword">var</span> str2 = <span class="keyword">new</span> <span class="built_in">Object</span>(<span class="string">"测试字符串"</span>);</div><div class="line"><span class="keyword">var</span> str3 = str1;</div><div class="line"><span class="comment">//注意:对象比较相等(需要引用[地址]相等)</span></div><div class="line"><span class="built_in">console</span>.log(str1 == str2);      <span class="comment">//false</span></div><div class="line"><span class="built_in">console</span>.log(str1 === str2);     <span class="comment">//false</span></div><div class="line"><span class="built_in">console</span>.log(str1 === str3);     <span class="comment">//true</span></div></pre></td></tr></table></figure></p>
@@ -1859,12 +1779,6 @@ Object本身也是对象,其构造函数为:function Function() { [native code]
 <p>总结<br>01 提供构造函数，在构造函数内部设置实例化属性<br>02 把常用的操作提取成对象的实例方法，写在原型对象身上<br>03 提供init方法，用于初始化数据<br>04 注意：如果切断了原型对象那么需要修正内部的构造器属性指向</p>
 ]]></content>
       
-        <categories>
-            
-            <category> JavaScript简明教程 </category>
-            
-        </categories>
-        
         
         <tags>
             
@@ -1879,9 +1793,7 @@ Object本身也是对象,其构造函数为:function Function() { [native code]
     <entry>
       <title><![CDATA[JavaScript简明教程（3）]]></title>
       <url>/2016/02/18/js-3/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>关于继承，通俗说子继父业。在JavaScript中，Object是所有对象的父级|父类型|超类型：js中所有的对象都直接或间接的继承自Object。</p>
-</blockquote>
+      <content type="html"><![CDATA[<p>关于继承，通俗说子继父业。在JavaScript中，Object是所有对象的父级|父类型|超类型：js中所有的对象都直接或间接的继承自Object。</p>
 <h1 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h1><h2 id="相关方法"><a href="#相关方法" class="headerlink" title="相关方法"></a>相关方法</h2><p>在讲继承之前，我们必须先了解一些相关的方法。</p>
 <h3 id="hasOwnProperty和in属性操作"><a href="#hasOwnProperty和in属性操作" class="headerlink" title="hasOwnProperty和in属性操作"></a>hasOwnProperty和in属性操作</h3><p><strong>in关键字</strong><br>作用：用来检查对象中是否存在某个属性(不区分实例属性和原型属性)。语法：“属性名” in 对象。代码示例:<br><a id="more"></a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    <span class="comment">//01 提供一个构造函数</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.name = name;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//02 设置构造函数的原型对象的属性</span></div><div class="line">    Person.prototype.sayHello = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"hello"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//03 创建对象</span></div><div class="line">    <span class="keyword">var</span> p1 = <span class="keyword">new</span> Person();</div><div class="line">    <span class="comment">//04 使用in关键字判断对象中是否存在以下属性:name age sayHello</span></div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"age"</span> <span class="keyword">in</span> p1);       <span class="comment">//false</span></div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"name"</span> <span class="keyword">in</span> p1);      <span class="comment">//true</span></div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"sayHello"</span> <span class="keyword">in</span> p1);  <span class="comment">//true</span></div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure></p>
 <p><strong>对象的hasOwnProperty方法</strong><br>作用：用来检查对象中是否存在指定的属性(只检查实例属性)<br>语法：对象.hasOwnProperty(“属性名”)<br>代码示例<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    <span class="comment">//01 提供一个构造函数</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.name = name;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//02 设置构造函数的原型对象的属性</span></div><div class="line">    Person.prototype.sayHello = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"hello"</span>);</div><div class="line">    &#125;</div><div class="line">    Person.prototype.des = <span class="string">"默认的描述信息"</span>;</div><div class="line">    <span class="comment">//03 创建对象</span></div><div class="line">    <span class="keyword">var</span> p1 = <span class="keyword">new</span> Person();</div><div class="line">    <span class="comment">//04 使用hasOwnProperty方法判断该属性是否是对象的实例属性</span></div><div class="line">    <span class="built_in">console</span>.log(p1.hasOwnProperty(<span class="string">"age"</span>));       <span class="comment">//false</span></div><div class="line">    <span class="built_in">console</span>.log(p1.hasOwnProperty(<span class="string">"name"</span>));      <span class="comment">//true</span></div><div class="line">    <span class="built_in">console</span>.log(p1.hasOwnProperty(<span class="string">"sayHello"</span>));  <span class="comment">//false</span></div><div class="line">    <span class="built_in">console</span>.log(p1.hasOwnProperty(<span class="string">"des"</span>));       <span class="comment">//false</span></div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure></p>
@@ -1922,12 +1834,6 @@ Object本身也是对象,其构造函数为:function Function() { [native code]
 <p>[2] 相等问题<br>基本类型值判断相等=&gt;值相等<br>引用类型值判断相等=&gt;值相等且引用相等<br>对象是引用类型，因此在判断相等的时候有诸多的注意点和容易出错的地方<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">ex</div><div class="line">    <span class="keyword">var</span> str1 = <span class="string">'这是一个字符串'</span>;           <span class="comment">//基本数据类型</span></div><div class="line">    <span class="keyword">var</span> str2 = <span class="built_in">String</span>(<span class="string">'这是一个字符串'</span>);   <span class="comment">//基本数据类型</span></div><div class="line">    <span class="built_in">console</span>.log(str1 == str2);        <span class="comment">//true 相等</span></div><div class="line">    <span class="keyword">var</span> str3 = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">'这是一个字符串'</span>);  <span class="comment">//引用类型-对象</span></div><div class="line">    <span class="built_in">console</span>.log(str1 == str3);    <span class="comment">//true    //值相等</span></div><div class="line">    <span class="built_in">console</span>.log(str2 == str3);    <span class="comment">//true    //值相等</span></div><div class="line">    <span class="built_in">console</span>.log(str1 === str3); <span class="comment">//false //值相等,但是引用不相等</span></div><div class="line">    <span class="built_in">console</span>.log(str2 === str3); <span class="comment">//false //值相等,但是引用不相等</span></div><div class="line">    <span class="comment">//判断下面的变量是否相等</span></div><div class="line">    <span class="keyword">var</span> num1 = <span class="number">10</span>;                  <span class="comment">//基本数据类型</span></div><div class="line">    <span class="keyword">var</span> num2 = <span class="keyword">new</span> <span class="built_in">Number</span>(<span class="number">10</span>);      <span class="comment">//对象</span></div><div class="line">    <span class="built_in">console</span>.log(num1 == num2);      <span class="comment">//true</span></div><div class="line">    <span class="built_in">console</span>.log(num1 ===  num2);    <span class="comment">//false</span></div><div class="line">    <span class="keyword">var</span> bool1 = <span class="literal">true</span>;</div><div class="line">    <span class="keyword">var</span> bool2 = <span class="keyword">new</span> <span class="built_in">Boolean</span>(<span class="literal">true</span>);</div><div class="line">    <span class="built_in">console</span>.log(bool1 == bool2);    <span class="comment">//true</span></div><div class="line">    <span class="built_in">console</span>.log(bool1 === bool2);   <span class="comment">//false</span></div></pre></td></tr></table></figure></p>
 ]]></content>
       
-        <categories>
-            
-            <category> JavaScript简明教程 </category>
-            
-        </categories>
-        
         
         <tags>
             
@@ -1942,9 +1848,7 @@ Object本身也是对象,其构造函数为:function Function() { [native code]
     <entry>
       <title><![CDATA[可能是最简单的js原型继承]]></title>
       <url>/2016/02/08/js%E5%8E%9F%E5%9E%8B%E7%BB%A7%E6%89%BF/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>JavaScript是一门奇妙的弱类型语言，原型继承与其它语言的类继承有所区别，下面通过一个简单的例子展示js的原型继承。</p>
-</blockquote>
+      <content type="html"><![CDATA[<p>JavaScript是一门奇妙的弱类型语言，原型继承与其它语言的类继承有所区别，下面通过一个简单的例子展示js的原型继承。</p>
 <h2 id="你有对象吗？"><a href="#你有对象吗？" class="headerlink" title="你有对象吗？"></a>你有对象吗？</h2><p>你有对象吗？没有，赶紧就new一个吧！<br>首先，创建构造函数Parent<br>然后，new出一个Parent的实例对象child<br>此时，构造函数Parent拥有以下属性aString、aNumber、anObject,构造函数Parent的原型对象有aFunction方法。<br><a id="more"></a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Parent</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.aString = <span class="string">'string'</span>;</div><div class="line">    <span class="keyword">this</span>.aNumber = <span class="string">'number'</span>;</div><div class="line">    <span class="keyword">this</span>.anObject = <span class="string">'object'</span></div><div class="line">&#125;</div><div class="line">Parent.prototype = &#123;</div><div class="line">    <span class="attr">constructor</span>: Parent,</div><div class="line">    <span class="attr">aFunction</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        alert(<span class="string">'i am function'</span>);</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
 <p>然后，new出一个Parent的实例对象child<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> child = <span class="keyword">new</span> Parent();</div></pre></td></tr></table></figure></p>
 <p>简单的原型继承图如下：<br><img src="/assets/img/js原型.png" alt="js原型"></p>
@@ -1966,9 +1870,7 @@ Object本身也是对象,其构造函数为:function Function() { [native code]
     <entry>
       <title><![CDATA[JavaScript简明教程（2）]]></title>
       <url>/2016/02/01/js-02/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>面向对象方法被人谈论了二十多年了，直到今天，我们还一直在谈对象。</p>
-</blockquote>
+      <content type="html"><![CDATA[<p>面向对象方法被人谈论了二十多年了，直到今天，我们还一直在谈对象。</p>
 <h1 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h1><h2 id="面向层过程和面向对象编程"><a href="#面向层过程和面向对象编程" class="headerlink" title="面向层过程和面向对象编程"></a>面向层过程和面向对象编程</h2><p>01 面向对象编程和面向过程编程是一种编程思想,和具体的语言关系不大。<br>02 面向过程编程和面向对象编程的主要区别<br><a id="more"></a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">面向过程编程:</div><div class="line">     关注点在于解决问题需要的每一个详细的步骤</div><div class="line">     示例:</div><div class="line">         自己洗衣服的过程</div><div class="line">         ① 收集需要洗的脏衣服</div><div class="line">         ② 准备洗衣粉、洗衣液等</div><div class="line">         ③ 把衣服放到一个盆里</div><div class="line">         ④ 接水</div><div class="line">         ⑤ 把洗衣粉放到盆里</div><div class="line">         ⑥ 摩擦,摩擦,不断的摩擦</div><div class="line">         ⑦ 把洗好的衣服用清水冲洗干净</div><div class="line">         ⑧ 尽量把把洗好的衣服的水分拧干</div><div class="line">         ⑨ 晾晒</div><div class="line"> 面向对象编程:</div><div class="line">     关注点在于解决问题需要的对象身上</div><div class="line">     示例:</div><div class="line">         使用洗衣机洗衣服的过程</div><div class="line">         ① 收集需要洗的脏衣服</div><div class="line">         ② 找到合适的洗衣机</div><div class="line">         ③ 设定洗衣服和烘干的程序</div></pre></td></tr></table></figure></p>
 <p>03 面向过程和面向对象他们的区别就类似于自己洗衣服和使用洗衣机洗衣服|自己做饭吃和去餐馆吃饭</p>
 <h2 id="面向对象编程的相关概念"><a href="#面向对象编程的相关概念" class="headerlink" title="面向对象编程的相关概念"></a>面向对象编程的相关概念</h2><p>01 对象<br>    什么是对象? 所有的一切都是对象,在开发中有一项重要的工作就是对象的划分。一般来说,我们所指的对象是某个具体的事物,而非泛泛的类别。<br>02 对象的特征(静态描述信息)<br>    所谓特征就是一些特定的描述信息<br>    如:学生(性别、年龄、班级、专业、籍贯、家庭住址)<br>    如:汽车(颜色、车牌、品牌、价格等)<br>03 对象的行为(动态特性)<br>    如:人(吃饭、睡觉、玩游戏、奔跑、运动等)<br>    如:狗(吃、睡、咬人、叫、流口水)<br>04 js中的对象<br>    键-值对(key-value)的集合。<br>05 现实生活中的对象和js对象的对应关系<br>    静态的描述信息 - js对象中的属性(属性就是定义在对象内部的变量)<br>    动态的行为特征 - js对象中的方法(方法就是定义在对象内部的函数)<br>06 代码示例：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">    <span class="keyword">var</span> zhangsan = &#123;</div><div class="line">            <span class="attr">name</span>:<span class="string">"张三"</span>,</div><div class="line">            <span class="attr">sex</span>:<span class="string">"男"</span>,</div><div class="line">            <span class="attr">age</span>:<span class="number">18</span>,</div><div class="line">            <span class="attr">address</span>:<span class="string">"天上人间1号公馆"</span>,</div><div class="line">            <span class="attr">eat</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">'能吃'</span>);</div><div class="line">            &#125;,</div><div class="line">            <span class="attr">sleep</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">"能睡"</span>);</div><div class="line">            &#125;,</div><div class="line">            <span class="attr">say</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">"能说话"</span>);</div><div class="line">            &#125;,</div><div class="line">            <span class="attr">run</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">"能运动"</span>);</div><div class="line">            &#125;,</div><div class="line">            <span class="attr">song</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">"能唱歌"</span>);</div><div class="line">            &#125;</div><div class="line">        &#125;;</div><div class="line">        <span class="comment">//打印对象的属性并调用相关的方法</span></div><div class="line"><span class="built_in">console</span>.log(zhangsan.name,zhangsan.age,zhangsan.address);</div><div class="line">        zhangsan.say();</div><div class="line">        zhangsan.sleep();</div></pre></td></tr></table></figure></p>
@@ -2012,12 +1914,6 @@ Object本身也是对象,其构造函数为:function Function() { [native code]
 <p><code>__proto__</code>属性说明：<code>__proto__</code>是一个非标准属性,即ECMAScript中并不包含该属性,这只是某些浏览器为了方便开发人员开发和调试而提供的一个属性,不具备通用性。建议:在调试的时候可以使用该属性,但不能出现在正式的代码中。</p>
 ]]></content>
       
-        <categories>
-            
-            <category> JavaScript简明教程 </category>
-            
-        </categories>
-        
         
         <tags>
             
@@ -2032,9 +1928,7 @@ Object本身也是对象,其构造函数为:function Function() { [native code]
     <entry>
       <title><![CDATA[JavaScript简明教程（1）]]></title>
       <url>/2016/01/15/01/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>JavaScript与Java没有半毛钱关系，网景公司员工Brendan Eich用了10天时间设计了JavaScript语言。</p>
-</blockquote>
+      <content type="html"><![CDATA[<p>JavaScript与Java没有半毛钱关系，网景公司员工Brendan Eich用了10天时间设计了JavaScript语言。</p>
 <h1 id="JavaScript的范围"><a href="#JavaScript的范围" class="headerlink" title="JavaScript的范围"></a>JavaScript的范围</h1><p><strong>JavaScript的范围：BOM + DOM + ECMAScript</strong></p>
 <h2 id="BOM简单说明"><a href="#BOM简单说明" class="headerlink" title="BOM简单说明"></a>BOM简单说明</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">BOM即Browser Object Mode,浏览器对象模型。</div><div class="line">BOM提供了独立于内容而与浏览器窗口进行交互的对象。</div><div class="line">BOM由一系列相关的对象构成，并且每个对象都提供了很多方法与属性。</div><div class="line">因为BOM主要用于管理窗口与窗口之间的通信，因此其核心对象是window。</div><div class="line">BOM缺乏标准，JavaScript语法的标准化组织是ECMA，DOM的标准化组织是W3C。</div><div class="line">BOM结构体系</div></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -2098,12 +1992,6 @@ Object本身也是对象,其构造函数为:function Function() { [native code]
 <p><strong>代码示例</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//0 获取页面中指定的标签,并设置其样式</span></div><div class="line">    <span class="keyword">var</span> divID = <span class="built_in">document</span>.getElementById(<span class="string">"divId"</span>);</div><div class="line">    divID.style.backgroundColor = <span class="string">"pink"</span>;</div><div class="line">    divID.style.height = <span class="string">"40px"</span>;</div><div class="line">    divID.style.width = <span class="string">"200px"</span>;</div><div class="line">    <span class="comment">//01 创建新的标签</span></div><div class="line">    <span class="keyword">var</span> div = <span class="built_in">document</span>.createElement(<span class="string">"div"</span>);</div><div class="line">    <span class="comment">//02 设置标签的样式</span></div><div class="line">    div.style.backgroundColor = <span class="string">"red"</span>;</div><div class="line">    div.style.height = <span class="string">"100px"</span>;</div><div class="line">    div.style.width = <span class="string">"300px"</span>;</div><div class="line">    div.style.fontSize = <span class="string">"20"</span>;</div><div class="line">    <span class="comment">//03 设置标签的内容</span></div><div class="line">    div.innerText = <span class="string">"这是一个自己创建的标签"</span>;</div><div class="line">    <span class="comment">//04 把标签插入到页面中</span></div><div class="line">    <span class="built_in">document</span>.body.appendChild(div);</div></pre></td></tr></table></figure></p>
 ]]></content>
       
-        <categories>
-            
-            <category> JavaScript简明教程 </category>
-            
-        </categories>
-        
         
         <tags>
             
@@ -2118,9 +2006,7 @@ Object本身也是对象,其构造函数为:function Function() { [native code]
     <entry>
       <title><![CDATA[12年逗比如我]]></title>
       <url>/2016/01/08/12%E5%B9%B4%E6%80%80%E6%97%A7/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>12年写的乱七八遭，拿出来怀旧，权当笑话，笑笑更开心！</p>
-</blockquote>
+      <content type="html"><![CDATA[<p>12年写的乱七八遭，拿出来怀旧，权当笑话，笑笑更开心！</p>
 <h2 id="一周大一秀"><a href="#一周大一秀" class="headerlink" title="一周大一秀"></a>一周大一秀</h2><p>欢迎收听一周大一秀，观众朋友们大家好。好学生就是我，我就是曾大贤。欢迎收听本节目，请大家用热烈的掌声欢迎我们今天的主角出场。他就是人见人爱，花见花开，俗称一朵海棠压梨花的帅哥。没错，你猜对了，好学生就是我，我就是曾大贤。接下来请大家千万把耳屎勾干净了，洗耳恭听嘛，哈哈。<br><a id="more"></a><br>大学就是围墙啊，在外面的人都想跳进来，在里面的人都想跳出去。曾哥我真的是深深的有感触啊！此事从五百年前说起，曾哥在一个夜黑风高的晚上，血腥的风放肆嘲笑满街的横尸遍野。曾哥右持AK_47，左携一篮子地雷，嘴叼雪茄【此音乐响起上海滩】，在千军万马中杀了出来。就这样，千军万马来相见，曾哥突破了大学这道围墙，杀进了大学【此时音乐响起天空之城】。进了大学这道墙，曾哥欣喜若狂，因为按照传说，就可以不费吹灰之力拥有一切，以后开宝马，住洋房，娶洋妞都不用愁了。以为到了世外桃源，曾哥很高兴地把AK_47丢进了河里，把一篮子地雷也扔了进去【此时音乐响起乌鸦的惨叫声】，只留下嘴刁着的那根雪茄，用来扮酷讨女孩子欢心。</p>
 <p>故事到这里，相信大家都能猜到后果了，很遗憾广告时间到了，请大家不要走开，广告之后更精彩【好敌真好，广州好敌】。欢迎大家继续收听一周大一秀，好学生就是我，我就是曾大贤。曾大贤接下来何去何从，精彩不容错过。<br>曾大贤被传说给传说了，接下来的日子里，他就只能做这些事了，哎【MUSIC阿里路亚】</p>
 <p>摸黑起床，叫兽整队，准备抗战。有的时候还没来得及刷牙洗脸，就匆匆忙忙赶去与英语口语决一死战。战罢方休，一个馒头一个大饼是战利品。军纪如律令，又赶忙去找营地，生怕触犯律令，有时不得不一边啃着个窝窝头一边找赶上军队去扎营。<br>糊糊涂涂的坐在营里，听叫兽讲那些讲那些似懂非懂的军事理论知识，时间很快到了中午。战友总在催，不走快点，就要吃剩饭，呜呜，排队打饭订餐，弄得曾哥连吃饭的心情都没有了。好不容易吃完了午饭，曾哥本想舒舒服服睡上一觉，怎知社团活动来风急。曾哥可怜的午休时间那，就这么被无情的摧残了。</p>
@@ -2147,9 +2033,7 @@ Object本身也是对象,其构造函数为:function Function() { [native code]
     <entry>
       <title><![CDATA[五分钟学会简单使用git]]></title>
       <url>/2016/01/03/%E4%BA%94%E5%88%86%E9%92%9F%E5%AD%A6%E4%BC%9A%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8git/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>五分钟，简单入门。学会之后可以愉快的管理你的文件啦。</p>
-</blockquote>
+      <content type="html"><![CDATA[<p>五分钟，简单入门。学会之后可以愉快的管理你的文件啦。</p>
 <h2 id="简单使用"><a href="#简单使用" class="headerlink" title="简单使用"></a>简单使用</h2><pre><code>git 其实很简单，有多简单呢？
     1. git init 初始化一个仓库；
     2. git add . 添加文件到暂存区；
@@ -2195,9 +2079,7 @@ Object本身也是对象,其构造函数为:function Function() { [native code]
     <entry>
       <title><![CDATA[我的世界，如果少了一个你]]></title>
       <url>/2016/01/01/%E4%BD%A0%E5%A5%BD%EF%BC%8C%E4%B8%96%E7%95%8C/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>如果说人的一生都有规律可以追寻，那是不是可以按照规律活下去，我的世界从此也就不会少一个你。</p>
-</blockquote>
+      <content type="html"><![CDATA[<p>如果说人的一生都有规律可以追寻，那是不是可以按照规律活下去，我的世界从此也就不会少一个你。</p>
 <h1 id="这一天生日"><a href="#这一天生日" class="headerlink" title="这一天生日"></a>这一天生日</h1><p>在遥远的海洋上，夕阳无限好。摇摇曳曳，余光随着波浪，尽情摇摆。海面像往常一样平静。这是这座小城第824年历史的纪念日，历史悠久，耐人探索。吃完晚饭六点多，一家人来到海边散步。女儿已经5岁了，扎着小尾辫子。一手牵着妈妈，一手牵着爸爸，唱着上课老师教的歌曲。忽然，不知道那里逃出来的狗，灰棕灰，气势汹汹.这可不得了，这冲着人去咬。猝不及防，小女孩被狗咬伤了。没想到，意外总是这么意外。今天是小女孩的五岁生日。<br><a id="more"></a></p>
 <h2 id="恶狗来袭"><a href="#恶狗来袭" class="headerlink" title="恶狗来袭"></a>恶狗来袭</h2><p>就这样，小女孩的生日那天是在医院度过的。小女孩的爸爸–冯孔，在一家国企上班，刚到而立之年。小女孩的妈妈–翁玲，是一名教师。而这个小女孩，叫冯孔玲。刚才那狗，明显是冲着小女孩去的。冯孔和翁玲明显疏忽了。只见那狗一个纵身飞跃，咬着小女孩的大腿不放。这可得了，冯孔先是一愣，眼眉一紧，使出吃奶力气撩开那狗。可是那狗也是凶残，一个转身，又一个飞跃，獠牙再现，冯孔也中招了。在医院，翁玲余惊未去。要不是刚才在路上恰巧有消防队路过，恐怕今天是在劫难逃。翁玲陷入了深深的沉思，想起了7年前发生的事情。</p>
 <p>时光回到十年前。</p>

@@ -67,6 +67,10 @@
             '<a href="http://s.jiathis.com/qrcode.php?url='  + encodedUrl + '&title='+sTitle+'" class="article-share-wechat" target="_blank" title="微信"></a>',
             '<a href="http://connect.qq.com/widget/shareqq/index.html?url=' + encodedUrl + '&title='+sTitle+'&source='+sTitle+'" class="article-share-qq" target="_blank" title="QQ"></a>',
             '<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url='  + encodedUrl + '&title='+sTitle+'&pics='+sPic+'&summary='+sTitle+'" class="article-share-qqzone" target="_blank" title="QQ空间"></a>',
+            '<br/><a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
           '</div>',
         '</div>'
       ].join('');

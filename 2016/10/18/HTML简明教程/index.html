@@ -17,8 +17,10 @@
 <meta name="twitter:title" content="HTML简明教程">
 <meta name="twitter:description" content="简单的概念，简洁明了。 常识1.什么是浏览器？功能：（1）将网页渲染出来让用户查看（2）并让用户与网页交互的一种软件主流浏览器：IE（内核：Trident） 火狐（内核：Gecko） 谷歌（内核：Webkit/Blink） Safari（内核：Webkit） 欧朋（内核：Presto）因为内核不同，所以渲染的网页有所不同">
   
+    <link rel="alternate" href="/atom.xml" title="Afanail" type="application/atom+xml">
   
-    <link rel="icon" href="/afanail.png">
+  
+    <link rel="icon" href="/favicon.png">
   
   
     
@@ -38,6 +40,8 @@
     <div id="header-inner" class="inner">
       <nav id="sub-nav">
         
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
         <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
       </nav>
       <div id="search-form-wrap">
@@ -50,7 +54,7 @@
         
           <a class="main-nav-link" href="/archives">归档</a>
         
-          <a class="main-nav-link" href="/photos">相册</a>
+          <a class="main-nav-link" href="/about">关于</a>
         
       </nav>
       
@@ -65,7 +69,12 @@
 </header>
       <div class="outer">
         <section id="main"><article id="post-HTML简明教程" class="article article-type-post" itemscope itemprop="blogPost">
-
+  <div class="article-meta">
+    <a href="/2016/10/18/HTML简明教程/" class="article-date">
+  <time datetime="2016-10-18T15:45:46.000Z" itemprop="datePublished">2016-10-18</time>
+</a>
+    
+  </div>
   <div class="article-inner">
     
     
@@ -131,7 +140,7 @@
 
       
     </div>
-    <footer class="article-footer" style="display: none;">
+    <footer class="article-footer">
       <a data-url="http://www.afanail.com/2016/10/18/HTML简明教程/" data-id="cj5qnhfth000gjsyp8q0b6hxk" class="article-share-link">分享</a>
       
       
@@ -215,8 +224,6 @@
     
        
       
-           <div id="uyan_frame"></div>
-    
       
   </div>
  
@@ -252,6 +259,12 @@
     
 
   
+    
+  
+    <!--微信公众号二维码-->
+
+
+  
 </aside>
 
       </div>
@@ -259,7 +272,8 @@
   
   <div class="outer">
     <div id="footer-left">
-      &copy; 2016 - 2017 Afanail
+      &copy; 2014 - 2017 Afanail&nbsp;|&nbsp;
+      主题 <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
     </div>
      <div id="footer-right">
       联系方式&nbsp;|&nbsp;zjfapk@163.com
@@ -268,52 +282,15 @@
 </footer>
  <script src="/jquery/jquery.min.js"></script>
     </div>
-    <div class="intrude-less">
-    <header id="header" class="inner">
-        <a href="/" class="profilepic">
-            <img src="undefined" class=" zoomIn">
-        </a>
-        <hgroup>
-            <h1 class="header-author"><a href="/">Afanail</a></h1>
-        </hgroup>
-
-      
-
-      
-
-
-      
-
-        <div id="switch-area" class="switch-area">
-            <div class="switch-wrap">
-                <section class="switch-part switch-part1">
-                    <nav class="header-menu">
-                        <ul>
-                          
-                            <li><a href="/">首页</a></li>
-                          
-                            <li><a href="/archives">归档</a></li>
-                          
-                            <li><a href="/photos">相册</a></li>
-                          
-                        </ul>
-                    </nav>
-                    <nav class="header-nav">
-                        <ul class="social">
-                          
-                        </ul>
-                    </nav>
-                </section>
-
-              
-
-              
-
-              
-            </div>
-        </div>
-    </header>
-</div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
     <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
 <script>
 // Elevator script included on the page, already.
@@ -327,11 +304,23 @@ window.onload = function() {
 </script>
       
 
+  
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "e2fb4051c49842688ce669e634bc983f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+    
+
+  
 
 
 
 
- <script  type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2133352"></script>
 
 
 
@@ -371,6 +360,7 @@ window.onload = function() {
 
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
   <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
 
 <script src="/js/script.js"></script>
 <script src="/js/elevator.js"></script>

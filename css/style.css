@@ -1205,8 +1205,7 @@ a.article-title:hover {
 }
 @media screen and (max-width: 479px) {
   #footer-right {
-    float: left;
-    margin-top: 5px;
+    float: right;
     font-size: 0.85em;
   }
 }

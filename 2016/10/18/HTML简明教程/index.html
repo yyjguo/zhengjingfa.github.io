@@ -17,8 +17,6 @@
 <meta name="twitter:title" content="HTML简明教程">
 <meta name="twitter:description" content="简单的概念，简洁明了。 常识1.什么是浏览器？功能：（1）将网页渲染出来让用户查看（2）并让用户与网页交互的一种软件主流浏览器：IE（内核：Trident） 火狐（内核：Gecko） 谷歌（内核：Webkit/Blink） Safari（内核：Webkit） 欧朋（内核：Presto）因为内核不同，所以渲染的网页有所不同">
   
-    <link rel="alternate" href="/atom.xml" title="Afanail" type="application/atom+xml">
-  
   
     <link rel="icon" href="/favicon.png">
   
@@ -40,9 +38,7 @@
     <div id="header-inner" class="inner">
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Søk"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.afanail.com"></form>
@@ -98,7 +94,7 @@
 <h1 id="HTML基础"><a href="#HTML基础" class="headerlink" title="HTML基础"></a>HTML基础</h1><p>1.HTML（超文本标记语言）<br>作用：专门用来描述文本语义的，也就是说告诉浏览器哪些是标题哪些是段落。<br>注意事项：HTML作用只有一个专门给文本添加语义的，不是用来修改文本样式的。<br><code>&lt;h1&gt;</code>标签的作用是告诉浏览器哪些文字是标题，即给指定文字添加标题语义的<br><code>.html</code>是纯文本文件</p>
 <p>2.乱码问题：（1）基本上都保存为UTF-8:<code>&lt;meta charset=”UTF-8”&gt;</code><br>（2）保存网页的字符集和网页中指定的字符集设置为一致</p>
 <p>3.DTD文档声明：不是HTML标签，必须在第一行，不区分大小<br><code>&lt;!DOCTYPE html&gt;</code>：HTML5的DTD文档声明是上下兼容的</p>
-<h1 id="HTML标签"><a href="#HTML标签" class="headerlink" title="HTML标签"></a>HTML标签</h1><p>1.标签分类：<br>（1）    双标签<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;<span class="xml"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span> &lt;title&gt;<span class="xml"><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span> &lt;body&gt;<span class="xml"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span>……</div></pre></td></tr></table></figure></p>
+<h1 id="HTML标签"><a href="#HTML标签" class="headerlink" title="HTML标签"></a>HTML标签</h1><p>1.标签分类：<br>（1）    双标签<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;&lt;/html&gt; &lt;title&gt;&lt;/title&gt; &lt;body&gt;&lt;/body&gt;……</div></pre></td></tr></table></figure></p>
 <pre><code>单标签  `&lt;meta&gt; &lt;br&gt;……`
 </code></pre><p>（2）    兄弟关系 <code>&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;</code><br>嵌套关系 <code>&lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;</code></p>
 <p>2.<code>&lt;hn&gt;</code>标签：<code>&lt;h1&gt;~&lt;h6&gt;</code><br>  注意点：<br>（1）H标签是用来给文本添加标题语义的<br>（2）被H系列标签包裹的内容会独占一行<br>（3）在企业开发中一般情况下一个界面只能出现一个H1标签</p>
@@ -129,9 +125,9 @@
 <p><strong>细线表格制作方式</strong>：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;table bgcolor="black" cellspacing="1px" &gt;</div><div class="line">                   &lt;tr bgcolor="white" &gt;</div><div class="line">                      &lt;td&gt;1.1&lt;/td&gt;</div><div class="line">                      &lt;td&gt;1.2&lt;/td&gt;</div><div class="line">                   &lt;/tr&gt;</div><div class="line">                   &lt;tr  bgcolor="white" &gt;</div><div class="line">                      &lt;td&gt;2.1&lt;/td&gt;</div><div class="line">                      &lt;td&gt;2.2&lt;/td&gt;</div><div class="line">                   &lt;/tr&gt;</div></pre></td></tr></table></figure></p>
 <p>表格完整格式：（仅作了解）<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;table&gt;</div><div class="line">    &lt;caption&gt;&lt;/caption&gt;</div><div class="line">    &lt;thead&gt;</div><div class="line">        &lt;tr&gt;</div><div class="line">            &lt;th&gt;&lt;/th&gt;</div><div class="line">        &lt;/tr&gt;</div><div class="line">    &lt;/thead&gt;</div><div class="line">    &lt;tbody&gt;</div><div class="line">        &lt;tr&gt;</div><div class="line">            &lt;td&gt;&lt;/td&gt;</div><div class="line">        &lt;/tr&gt;</div><div class="line">    &lt;/tbody&gt;</div><div class="line">    &lt;tfoot&gt;</div><div class="line">        &lt;tr&gt;</div><div class="line">            &lt;td&gt;&lt;/td&gt;</div><div class="line">        &lt;/tr&gt;</div><div class="line">    &lt;/tfoot&gt;</div><div class="line">&lt;/table&gt;</div></pre></td></tr></table></figure></p>
 <p>13.表单标签：<br>（1）作用：表单是专门用来收集用户信息的<br>表单标签比较特殊，在浏览器中有自己默认的外观和功能。<br>（2）格式： <code>&lt;from&gt;&lt;表单元素&gt;&lt;/from&gt;</code><br>（3）常见表单元素：<br>      input标签（默认有边框）：它有一个type属性，这个属性有很多类型的取值，取值的不同决定了input标签的功能和外观，除了按钮类型的input标签以外，其他标签都可以通过value属性来指定将来提交到服务器的值<br>    《1》<code>&lt;input type=”text”&gt;</code>明文输入框<br>    《2》<code>&lt;input type=”password”&gt;</code>暗文输入框<br>    《3》<code>&lt;input type=”radio”&gt;</code>单选框<br>注意点：默认单选框不会互斥，要想选框互斥，要给每个单选框标签设置一个name属性，并且属性值必须相同。要想让单选框默认选中其中一个，那么就给他添加一个checked属性<br>    《4》<code>&lt;input type=”checkbox”&gt;</code>多选框<br>注意点：默认可以选择多个，要想让单选框默认选中其中一个，那么就给他添加一个checked属性<br>    《5》 按钮<br>    普通按钮：<code>&lt;input type=”button”value=”按钮”&gt;</code>，通过value属性给按钮添加标题<br>    图片按钮：<code>&lt;input type=”img”src=””&gt;</code>，作用与普通按钮一样<br>    重置按钮：<code>&lt;input type=”reset”&gt;</code>，用于清空表单填写的内容<br>     注意点：默认按钮标题是重置，可以通过value属性修改按钮标题<br>    提交按钮：<code>&lt;input type=”submit”&gt;</code>，将表单中填写好的内容提交到远程服务器<br>注意点：要想把表单中填写的内容提交给远程服务器中，需要做到以下两点：<code>&lt;form action=”网址”&gt;&lt;/form&gt;</code>；给需要提交的表单元素都添加name属性<br>    《6》隐藏域：<code>&lt;input type=”hidden”&gt;</code>配合提交按钮将一些数据默默的提交到远程服务器<br>    <code>label</code>标签：默认情况下，文字与输入框是没有关联关系的，也就是说点击文字输入框不会聚焦，如果想聚焦，需要这样：<br>方法一：<code>&lt;label  for=”一样”&gt;文字:&lt;/label&gt;&lt;input type=”” id=”一样”&gt;</code><br>方法二：<code>&lt;labrl&gt;文字：&lt;input type=””&gt;&lt;/label&gt;</code>局限性是不能交叉绑定</p>
-<p>14.datalist标签：给输入框绑定待选项（了解）<br>格式：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;input type=<span class="string">"text"</span> list=<span class="string">"cities"</span>&gt;</div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">datalist</span> <span class="attr">id</span>=<span class="string">”cities”</span>&gt;</span></span></div><div class="line"><span class="tag">&lt;<span class="name">option</span>&gt;</span>待选项内容<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">option</span>&gt;</span>待选项内容<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">option</span>&gt;</span>待选项内容<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">datalist</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>14.datalist标签：给输入框绑定待选项（了解）<br>格式：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;input type=<span class="string">"text"</span> list=<span class="string">"cities"</span>&gt;</div><div class="line">&lt;datalist id=”cities”&gt;</div><div class="line">&lt;option&gt;待选项内容&lt;/option&gt;</div><div class="line">&lt;option&gt;待选项内容&lt;/option&gt;</div><div class="line">&lt;option&gt;待选项内容&lt;/option&gt;</div><div class="line">&lt;/datalist&gt;</div></pre></td></tr></table></figure></p>
 <p>select标签：用于定义下拉列表<br>格式：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;select&gt;</div><div class="line">&lt;option&gt;列表数据&lt;/option&gt;</div><div class="line">&lt;option&gt;列表数据&lt;/option&gt;</div><div class="line">&lt;option&gt;列表数据&lt;/option&gt;</div><div class="line">&lt;/select&gt;</div></pre></td></tr></table></figure></p>
-<p>注意点：下拉列表不能输入内容，但是可以选择内容。也可以设置默认值：<code>&lt;option selected=&quot;selected&quot;&gt;列表数据&lt;/option&gt;</code><br>给下拉列表分类：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;optgroup label=<span class="string">"分组名称"</span>&gt;</div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">option</span>&gt;</span>列表数据<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span></div><div class="line">&lt;<span class="regexp">/optgroup&gt;</span></div></pre></td></tr></table></figure></p>
+<p>注意点：下拉列表不能输入内容，但是可以选择内容。也可以设置默认值：<code>&lt;option selected=&quot;selected&quot;&gt;列表数据&lt;/option&gt;</code><br>给下拉列表分类：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;optgroup label=<span class="string">"分组名称"</span>&gt;</div><div class="line">&lt;option&gt;列表数据&lt;/option&gt;</div><div class="line">&lt;<span class="regexp">/optgroup&gt;</span></div></pre></td></tr></table></figure></p>
 <p>textarea标签：默认情况下可以无限换行，有默认的宽度和高度，默认情况下输入框是可以手动拉伸的<br>格式：<br><code>&lt;textarea&gt;内容&lt;/textarea&gt;</code><br>可以通过这样给文本添加列数和行数：<code>&lt;textarea cols=”” rows=””&gt;内容&lt;/textarea&gt;</code>fieldset标签：给表单添加边框<br>legend标签：可以给边框指定一个标题</p>
 <p>15.video标签：<br>（1）作用： 播放视频<br>（2）格式： 第一种格式：<code>&lt;video src=””&gt;&lt;/video&gt;</code>第二种格式：<code>&lt;video&gt;&lt;source src=”” type=”video/webm/ogg/mp4”&gt;&lt;/suorce&gt;&lt;/video&gt;</code>由于视频数据非常的重要，所以五大浏览器厂商都不愿意支持别人的视频格式，所以导致了没有一种视频格式是所有浏览器都支持的，这个时候w3c为了解决这个问题，所以有了第二种格式<br>（3）常用属性：width/height<br>autoplay:用来告诉video标签是否需要自动播放视频<br>                controls: 用来告诉video标签是否需要显示控制条<br>                poster：用来告诉video标签视频没有播放之前显示的占用图片<br>                loop：一般用于做广告视频，用于告诉video标签播放结束后是否需要循环播放<br>preload：预加载视频，与autoplay相冲，如果设置了autoplay属性那么preload就会失效<br>muted静音：</p>
 <p>16.audio标签：<br>（1）作用：播放音频<br>（2）格式：第一种格式：<code>&lt;audio src=””&gt;&lt;/audio&gt;</code>           第二种格式：<code>&lt;audio&gt;&lt;source src=”audio/mp3”&gt;&lt;/source&gt;&lt;/audio&gt;</code><br>（3）常用属性：width/height<br>autoplay:用来告诉audio标签是否需要自动播放视频<br>                controls: 用来告诉audio标签是否需要显示控制条<br>                loop：用于告诉audio o标签播放结束后是否需要循环播放<br>preload：加载音频，与autoplay相冲，如果设置了autoplay属性那么preload就会失效<br>muted静音：</p>
@@ -141,7 +137,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2016/10/18/HTML简明教程/" data-id="cj5qnhfth000gjsyp8q0b6hxk" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2016/10/18/HTML简明教程/" data-id="cj62a0i5e00052typ1v6qojnh" class="article-share-link">Share</a>
       
       
       
@@ -196,7 +192,7 @@
 <nav id="article-nav">
   
     <a href="/2016/11/05/css简明教程/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">上一篇</strong>
+      <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
           Css简明教程
@@ -206,7 +202,7 @@
   
   
     <a href="/2016/10/13/top10es/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">下一篇</strong>
+      <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">Top 10 ES6 Features</div>
     </a>
   
@@ -273,10 +269,10 @@
   <div class="outer">
     <div id="footer-left">
       &copy; 2014 - 2017 Afanail&nbsp;|&nbsp;
-      主题 <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+      Theme by <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
     </div>
      <div id="footer-right">
-      联系方式&nbsp;|&nbsp;zjfapk@163.com
+      Contact&nbsp;|&nbsp;zjfapk@163.com
     </div>
   </div>
 </footer>

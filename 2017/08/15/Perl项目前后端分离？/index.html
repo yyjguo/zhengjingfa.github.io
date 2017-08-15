@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Perl项目前后端分离？ | Afanail</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="昨天逛StackOverflow，发现ruby项目也能实现前后端分离。那么Perl项目应该也可以实现前后端分离吧？当然这只是我个人的猜想，毕竟才看完Perl语言入门这本书。intermediate perl 也才看了几章，上代码仓库perl-learning。Perl的正则表达式无比强大，用过的人都知道好。这几天一直在改一些小需求，发现Perl与angular有一些相似之处。Perl项目我看见最早">
+<meta name="keywords" content="Perl,angular">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Perl项目前后端分离？">
+<meta property="og:url" content="http://www.afanail.com/2017/08/15/Perl项目前后端分离？/index.html">
+<meta property="og:site_name" content="Afanail">
+<meta property="og:description" content="昨天逛StackOverflow，发现ruby项目也能实现前后端分离。那么Perl项目应该也可以实现前后端分离吧？当然这只是我个人的猜想，毕竟才看完Perl语言入门这本书。intermediate perl 也才看了几章，上代码仓库perl-learning。Perl的正则表达式无比强大，用过的人都知道好。这几天一直在改一些小需求，发现Perl与angular有一些相似之处。Perl项目我看见最早">
+<meta property="og:updated_time" content="2017-08-15T12:13:30.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Perl项目前后端分离？">
+<meta name="twitter:description" content="昨天逛StackOverflow，发现ruby项目也能实现前后端分离。那么Perl项目应该也可以实现前后端分离吧？当然这只是我个人的猜想，毕竟才看完Perl语言入门这本书。intermediate perl 也才看了几章，上代码仓库perl-learning。Perl的正则表达式无比强大，用过的人都知道好。这几天一直在改一些小需求，发现Perl与angular有一些相似之处。Perl项目我看见最早">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.afanail.com"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Afanail</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Perl项目前后端分离？" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/08/15/Perl项目前后端分离？/" class="article-date">
+  <time datetime="2017-08-15T12:12:55.000Z" itemprop="datePublished">2017-08-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Perl项目前后端分离？
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p>昨天逛StackOverflow，发现ruby项目也能实现前后端分离。那么Perl项目应该也可以实现前后端分离吧？当然这只是我个人的猜想，毕竟才看完Perl语言入门这本书。intermediate perl 也才看了几章，上代码仓库<a href="https://github.com/zhengjingfa/perl-learning" target="_blank" rel="external">perl-learning</a>。<br>Perl的正则表达式无比强大，用过的人都知道好。这几天一直在改一些小需求，发现Perl与angular有一些相似之处。Perl项目我看见最早的代码标注时间是2004年，真是有年份的代码。在小规模的项目里，Perl显然很容易上手。但是在比较大的项目，上手Perl就相对新手来说比较不友好了。为什么呢？先看一份最简单的Perl文件，只是作为说明用途，不能用于生产环境。<br><figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">require</span> <span class="string">"common.pl"</span>;</div><div class="line"><span class="keyword">require</span> <span class="string">"base.pl"</span>;</div><div class="line"><span class="comment">#...</span></div><div class="line"><span class="keyword">use</span> Socket;</div><div class="line"><span class="keyword">use</span> MD5;</div><div class="line"><span class="comment">#...</span></div><div class="line"><span class="comment"># 调用common.pl文件里写好的HTMLHEADER方法，生成HTML头部</span></div><div class="line">&amp;HTMLHEADER();</div><div class="line"></div><div class="line"><span class="keyword">print</span> qq! </div><div class="line">&lt;script&gt;</div><div class="line"> function demo()&#123;</div><div class="line">   console.log(<span class="string">'this is a test demo'</span>);</div><div class="line"> &#125;</div><div class="line"> demo();</div><div class="line">&lt;<span class="regexp">/script&gt;!</span></div><div class="line">     </div><div class="line"></div><div class="line"></div><div class="line">print qq`</div><div class="line">&lt;h1&gt;this is test head title&lt;/h1&gt;</div><div class="line"><span class="string">`;</span></div><div class="line">$sql = "select * from table";</div><div class="line"># 调用连接数据库函数</div><div class="line">&amp;db_connect();</div><div class="line">$db-&gt;ct_execute($sql);</div><div class="line">while($db-&gt;ct_results($restype) == CS_SUCCEED) &#123;</div><div class="line">	if ($restype==CS_ROW_RESULT)	&#123;</div><div class="line">		while(@row = $db-&gt;ct_fetch)	&#123;</div><div class="line">				if ($row[1] eq "0") &#123;</div><div class="line">        	print qq`&lt;<span class="keyword">link</span> href=<span class="string">"demo.css"</span> rel=<span class="string">"stylesheet"</span> type=<span class="string">"text/css"</span> /&gt;<span class="string">`;	</span></div><div class="line">        &#125;</div><div class="line">        elsif ($row[1] eq "1") &#123;</div><div class="line">        	print qq`&lt;<span class="keyword">link</span> href=<span class="string">"test.css"</span> rel=<span class="string">"stylesheet"</span> type=<span class="string">"text/css"</span> /&gt;<span class="string">`;</span></div><div class="line">        &#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">#...</div><div class="line"># 调用common.pl文件里写好的HTMLHEADER方法，生成HTML尾部</div><div class="line">&amp;FOOTER();</div></pre></td></tr></table></figure></p>
+<p>我们再来看一下一份最简单的angular文件，只作说明，不能用于生产环境。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!doctype html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span> <span class="attr">ng-app</span>=<span class="string">"app"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span></span></div><div class="line">        <span class="attr">content</span>=<span class="string">"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"</span>&gt;</div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 指令 属性方式 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">app-head-bar</span> <span class="attr">text</span>=<span class="string">"公司职位"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">app-company</span> <span class="attr">com</span>=<span class="string">"company"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">app-position-class</span> <span class="attr">com</span>=<span class="string">"company"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"vendor/angular/angular.min.js"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>把Perl的函数当成angular的指令，触类旁通。回归主题，再来说为什么Perl大项目对新手不友好。因为Perl可以内嵌太多语言了，html css js sql 等等，刚一接触肯定比较晕。所以从开始写Perl需求的时候，就一直在想能不能像ruby项目那样去实现前后端分离，让Perl程序少掺杂一些前端语言。所以还需要深入学习后台，站在更远的视野去看待问题。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.afanail.com/2017/08/15/Perl项目前后端分离？/" data-id="cj6djumc1000f5qypvmxowtcw" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Perl/">Perl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angular/">angular</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+ <script src="/jquery/jquery.min.js"></script>
+  <div id="random_posts">
+    <h2>推荐文章</h2>
+    <div class="random_posts_ul">
+      <script>
+          var random_count =4
+          var site = {BASE_URI:'/'};
+          function load_random_posts(obj) {
+              var arr=site.posts;
+              if (!obj) return;
+              // var count = $(obj).attr('data-count') || 6;
+              for (var i, tmp, n = arr.length; n; i = Math.floor(Math.random() * n), tmp = arr[--n], arr[n] = arr[i], arr[i] = tmp);
+              arr = arr.slice(0, random_count);
+              var html = '<ul>';
+            
+              for(var j=0;j<arr.length;j++){
+                var item=arr[j];
+                html += '<li><strong>' + 
+                item.date + ':&nbsp;&nbsp;<a href="' + (site.BASE_URI+item.uri) + '">' + 
+                (item.title || item.uri) + '</a></strong>';
+                if(item.excerpt){
+                  html +='<div class="post-excerpt">'+item.excerpt+'</div>';
+                }
+                html +='</li>';
+                
+              }
+              $(obj).html(html + '</ul>');
+          }
+          $('.random_posts_ul').each(function () {
+              var c = this;
+              if (!site.posts || !site.posts.length){
+                  $.getJSON(site.BASE_URI + 'js/posts.js',function(json){site.posts = json;load_random_posts(c)});
+              } 
+               else{
+                load_random_posts(c);
+              }
+          });
+      </script>
+    </div>
+  </div>
+
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/07/30/前端工程自动化/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">前端工程自动化</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+       
+      
+      
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title recent-posts">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/15/Perl项目前后端分离？/">Perl项目前后端分离？</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/30/前端工程自动化/">前端工程自动化</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/22/IE7-hack-respond/">IE7-hack-respond</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/15/perl-learning/">perl-learning</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/教你如何巧妙解决网页乱码/">教你如何巧妙解决网页乱码</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+
+  
+    
+  
+    <!--微信公众号二维码-->
+
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2016 - 2017 Afanail&nbsp;
+    </div>
+     <div id="footer-right">
+      联系方式&nbsp;|&nbsp;zjfapk@163.com
+    </div>
+  </div>
+</footer>
+ <script src="/jquery/jquery.min.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+  
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "e2fb4051c49842688ce669e634bc983f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+    
+
+  
+
+
+
+
+
+
+
+<!-- author:forvoid begin -->
+<!-- author:forvoid begin -->
+
+<!-- author:forvoid end -->
+
+<!-- author:forvoid end -->
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/mathjax/MathJax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ <script src="/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/elevator.js"></script>
+  </div>
+</body>
+</html>

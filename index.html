@@ -65,6 +65,51 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Perl项目前后端分离？" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/08/15/Perl项目前后端分离？/" class="article-date">
+  <time datetime="2017-08-15T12:12:55.000Z" itemprop="datePublished">2017-08-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/15/Perl项目前后端分离？/">Perl项目前后端分离？</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p>昨天逛StackOverflow，发现ruby项目也能实现前后端分离。那么Perl项目应该也可以实现前后端分离吧？当然这只是我个人的猜想，毕竟才看完Perl语言入门这本书。intermediate perl 也才看了几章，上代码仓库<a href="https://github.com/zhengjingfa/perl-learning" target="_blank" rel="external">perl-learning</a>。<br>Perl的正则表达式无比强大，用过的人都知道好。这几天一直在改一些小需求，发现Perl与angular有一些相似之处。Perl项目我看见最早的代码标注时间是2004年，真是有年份的代码。在小规模的项目里，Perl显然很容易上手。但是在比较大的项目，上手Perl就相对新手来说比较不友好了。为什么呢？先看一份最简单的Perl文件，只是作为说明用途，不能用于生产环境。<br><figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">require</span> <span class="string">"common.pl"</span>;</div><div class="line"><span class="keyword">require</span> <span class="string">"base.pl"</span>;</div><div class="line"><span class="comment">#...</span></div><div class="line"><span class="keyword">use</span> Socket;</div><div class="line"><span class="keyword">use</span> MD5;</div><div class="line"><span class="comment">#...</span></div><div class="line"><span class="comment"># 调用common.pl文件里写好的HTMLHEADER方法，生成HTML头部</span></div><div class="line">&amp;HTMLHEADER();</div><div class="line"></div><div class="line"><span class="keyword">print</span> qq! </div><div class="line">&lt;script&gt;</div><div class="line"> function demo()&#123;</div><div class="line">   console.log(<span class="string">'this is a test demo'</span>);</div><div class="line"> &#125;</div><div class="line"> demo();</div><div class="line">&lt;<span class="regexp">/script&gt;!</span></div><div class="line">     </div><div class="line"></div><div class="line"></div><div class="line">print qq`</div><div class="line">&lt;h1&gt;this is test head title&lt;/h1&gt;</div><div class="line"><span class="string">`;</span></div><div class="line">$sql = "select * from table";</div><div class="line"># 调用连接数据库函数</div><div class="line">&amp;db_connect();</div><div class="line">$db-&gt;ct_execute($sql);</div><div class="line">while($db-&gt;ct_results($restype) == CS_SUCCEED) &#123;</div><div class="line">	if ($restype==CS_ROW_RESULT)	&#123;</div><div class="line">		while(@row = $db-&gt;ct_fetch)	&#123;</div><div class="line">				if ($row[1] eq "0") &#123;</div><div class="line">        	print qq`&lt;<span class="keyword">link</span> href=<span class="string">"demo.css"</span> rel=<span class="string">"stylesheet"</span> type=<span class="string">"text/css"</span> /&gt;<span class="string">`;	</span></div><div class="line">        &#125;</div><div class="line">        elsif ($row[1] eq "1") &#123;</div><div class="line">        	print qq`&lt;<span class="keyword">link</span> href=<span class="string">"test.css"</span> rel=<span class="string">"stylesheet"</span> type=<span class="string">"text/css"</span> /&gt;<span class="string">`;</span></div><div class="line">        &#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">#...</div><div class="line"># 调用common.pl文件里写好的HTMLHEADER方法，生成HTML尾部</div><div class="line">&amp;FOOTER();</div></pre></td></tr></table></figure></p>
+<p>我们再来看一下一份最简单的angular文件，只作说明，不能用于生产环境。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!doctype html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span> <span class="attr">ng-app</span>=<span class="string">"app"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span></span></div><div class="line">        <span class="attr">content</span>=<span class="string">"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"</span>&gt;</div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 指令 属性方式 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">app-head-bar</span> <span class="attr">text</span>=<span class="string">"公司职位"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">app-company</span> <span class="attr">com</span>=<span class="string">"company"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">app-position-class</span> <span class="attr">com</span>=<span class="string">"company"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"vendor/angular/angular.min.js"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>把Perl的函数当成angular的指令，触类旁通。回归主题，再来说为什么Perl大项目对新手不友好。因为Perl可以内嵌太多语言了，html css js sql 等等，刚一接触肯定比较晕。所以从开始写Perl需求的时候，就一直在想能不能像ruby项目那样去实现前后端分离，让Perl程序少掺杂一些前端语言。所以还需要深入学习后台，站在更远的视野去看待问题。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.afanail.com/2017/08/15/Perl项目前后端分离？/" data-id="cj6djumc1000f5qypvmxowtcw" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Perl/">Perl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angular/">angular</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
     <article id="post-前端工程自动化" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/07/30/前端工程自动化/" class="article-date">
@@ -96,7 +141,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/07/30/前端工程自动化/" data-id="cj6djeoyr001qqpypcd68e4tu" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2017/07/30/前端工程自动化/" data-id="cj6djumcz001m5qypajmrj0ge" class="article-share-link">分享</a>
       
       
       
@@ -141,7 +186,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/07/22/IE7-hack-respond/" data-id="cj6djeoxb0009qpyptgifxkyg" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2017/07/22/IE7-hack-respond/" data-id="cj6djumbx000b5qyponc1dnvx" class="article-share-link">分享</a>
       
       
       
@@ -186,7 +231,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/07/15/perl-learning/" data-id="cj6djeoya001cqpypbq6ivrhp" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2017/07/15/perl-learning/" data-id="cj6djumcs001d5qypka81vrt6" class="article-share-link">分享</a>
       
       
       
@@ -232,7 +277,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/06/28/教你如何巧妙解决网页乱码/" data-id="cj6djeoyt001sqpyp1pu15tql" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2017/06/28/教你如何巧妙解决网页乱码/" data-id="cj6djumda001w5qypg5kparn8" class="article-share-link">分享</a>
       
       
       
@@ -277,7 +322,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/06/17/抓住17年的尾巴/" data-id="cj6djeoyk001iqpyph60bwla1" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2017/06/17/抓住17年的尾巴/" data-id="cj6djumd9001u5qypjjqft7vd" class="article-share-link">分享</a>
       
       
       
@@ -323,7 +368,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/06/16/less小技巧/" data-id="cj6djeoy20015qpypn610xajk" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2017/06/16/less小技巧/" data-id="cj6djumcr001a5qyp0iez5xve" class="article-share-link">分享</a>
       
       
       
@@ -368,7 +413,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/06/08/NBA总决赛G3/" data-id="cj6djeoxl000kqpypagn5hi3a" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2017/06/08/NBA总决赛G3/" data-id="cj6djumc3000h5qyp4e5d2mtg" class="article-share-link">分享</a>
       
       
       
@@ -413,7 +458,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/05/29/愿世间没有.../" data-id="cj6djeoyl001kqpyp4r02cvhm" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2017/05/29/愿世间没有.../" data-id="cj6djumdb001z5qypoxdubmc3" class="article-share-link">分享</a>
       
       
       
@@ -459,57 +504,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/05/26/ES7-大势所趋/" data-id="cj6djeox00004qpypf5iaofi5" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2017/05/26/ES7-大势所趋/" data-id="cj6djumbw00095qypl10fm5eo" class="article-share-link">分享</a>
       
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES7/">ES7</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
- 
-
-
-  
-    <article id="post-Google-I-O-2017-for-front-end-development" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/05/19/Google-I-O-2017-for-front-end-development/" class="article-date">
-  <time datetime="2017-05-18T17:41:15.000Z" itemprop="datePublished">2017-05-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/19/Google-I-O-2017-for-front-end-development/">Google I/O 2017 for front-end development</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>不知道下一年，世界又会是哪个科技引领潮流。</p>
-<h1 id="web-component"><a href="#web-component" class="headerlink" title="web component"></a>web component</h1><p>Twitter和来自印度的Ola，现场展示了<code>modern mobile webApp</code>。虽然组件化的框架<code>polymer</code>从15年开始已经发布，但是polymer框架2.0现在才进入预发布状态。<code>work box</code>的出现很大程度上弥补了<code>server work</code>的不足。so will polymer be a competitor to react? 好吧，welcome back  polymer! React is a JavaScript framwork for rendering HTML! React is not certainly not Web Components.<br>
-        
-          <p class="article-more-link">
-            <a href="/2017/05/19/Google-I-O-2017-for-front-end-development/#more">继续阅读全文 »</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/05/19/Google-I-O-2017-for-front-end-development/" data-id="cj6djeox60007qpyp8198li7f" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Google-I-O-2017/">Google I/O 2017</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
 
     </footer>
   </div>
@@ -567,7 +566,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title tagcloud">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/随笔/" style="font-size: 14px;">-随笔</a> <a href="/tags/Chrome-DevTools/" style="font-size: 14px;">Chrome DevTools</a> <a href="/tags/ES7/" style="font-size: 14px;">ES7</a> <a href="/tags/Google-I-O-2017/" style="font-size: 14px;">Google I/O 2017</a> <a href="/tags/HTML/" style="font-size: 14px;">HTML</a> <a href="/tags/IE-兼容性/" style="font-size: 14px;">IE 兼容性</a> <a href="/tags/JSONP跨域/" style="font-size: 14px;">JSONP跨域</a> <a href="/tags/JavaScript/" style="font-size: 22.25px;">JavaScript</a> <a href="/tags/Webpack/" style="font-size: 14px;">Webpack</a> <a href="/tags/auto/" style="font-size: 14px;">auto</a> <a href="/tags/css/" style="font-size: 19.5px;">css</a> <a href="/tags/front-end/" style="font-size: 14px;">front-end</a> <a href="/tags/git/" style="font-size: 14px;">git</a> <a href="/tags/gulp/" style="font-size: 14px;">gulp</a> <a href="/tags/jQuery/" style="font-size: 14px;">jQuery</a> <a href="/tags/javascript/" style="font-size: 16.75px;">javascript</a> <a href="/tags/js/" style="font-size: 16.75px;">js</a> <a href="/tags/js实现响应式/" style="font-size: 14px;">js实现响应式</a> <a href="/tags/less/" style="font-size: 14px;">less</a> <a href="/tags/node/" style="font-size: 14px;">node</a> <a href="/tags/nvm/" style="font-size: 14px;">nvm</a> <a href="/tags/perl/" style="font-size: 14px;">perl</a> <a href="/tags/sad-story/" style="font-size: 14px;">sad story</a> <a href="/tags/updating/" style="font-size: 14px;">updating</a> <a href="/tags/原型继承机制/" style="font-size: 14px;">原型继承机制</a> <a href="/tags/娱乐/" style="font-size: 14px;">娱乐</a> <a href="/tags/工作计划/" style="font-size: 14px;">工作计划</a> <a href="/tags/开发技巧/" style="font-size: 14px;">开发技巧</a> <a href="/tags/怀旧/" style="font-size: 14px;">怀旧</a> <a href="/tags/源码分析/" style="font-size: 14px;">源码分析</a> <a href="/tags/版本控制/" style="font-size: 14px;">版本控制</a> <a href="/tags/版本管理工具/" style="font-size: 14px;">版本管理工具</a> <a href="/tags/移动端/" style="font-size: 14px;">移动端</a> <a href="/tags/简明教程/" style="font-size: 25px;">简明教程</a> <a href="/tags/编码格式/" style="font-size: 14px;">编码格式</a> <a href="/tags/随笔/" style="font-size: 16.75px;">随笔</a>
+      <a href="/tags/随笔/" style="font-size: 14px;">-随笔</a> <a href="/tags/Chrome-DevTools/" style="font-size: 14px;">Chrome DevTools</a> <a href="/tags/ES7/" style="font-size: 14px;">ES7</a> <a href="/tags/Google-I-O-2017/" style="font-size: 14px;">Google I/O 2017</a> <a href="/tags/HTML/" style="font-size: 14px;">HTML</a> <a href="/tags/IE-兼容性/" style="font-size: 14px;">IE 兼容性</a> <a href="/tags/JSONP跨域/" style="font-size: 14px;">JSONP跨域</a> <a href="/tags/JavaScript/" style="font-size: 22.25px;">JavaScript</a> <a href="/tags/Perl/" style="font-size: 14px;">Perl</a> <a href="/tags/Webpack/" style="font-size: 14px;">Webpack</a> <a href="/tags/angular/" style="font-size: 14px;">angular</a> <a href="/tags/auto/" style="font-size: 14px;">auto</a> <a href="/tags/css/" style="font-size: 19.5px;">css</a> <a href="/tags/front-end/" style="font-size: 14px;">front-end</a> <a href="/tags/git/" style="font-size: 14px;">git</a> <a href="/tags/gulp/" style="font-size: 14px;">gulp</a> <a href="/tags/jQuery/" style="font-size: 14px;">jQuery</a> <a href="/tags/javascript/" style="font-size: 16.75px;">javascript</a> <a href="/tags/js/" style="font-size: 16.75px;">js</a> <a href="/tags/js实现响应式/" style="font-size: 14px;">js实现响应式</a> <a href="/tags/less/" style="font-size: 14px;">less</a> <a href="/tags/node/" style="font-size: 14px;">node</a> <a href="/tags/nvm/" style="font-size: 14px;">nvm</a> <a href="/tags/perl/" style="font-size: 14px;">perl</a> <a href="/tags/sad-story/" style="font-size: 14px;">sad story</a> <a href="/tags/updating/" style="font-size: 14px;">updating</a> <a href="/tags/原型继承机制/" style="font-size: 14px;">原型继承机制</a> <a href="/tags/娱乐/" style="font-size: 14px;">娱乐</a> <a href="/tags/工作计划/" style="font-size: 14px;">工作计划</a> <a href="/tags/开发技巧/" style="font-size: 14px;">开发技巧</a> <a href="/tags/怀旧/" style="font-size: 14px;">怀旧</a> <a href="/tags/源码分析/" style="font-size: 14px;">源码分析</a> <a href="/tags/版本控制/" style="font-size: 14px;">版本控制</a> <a href="/tags/版本管理工具/" style="font-size: 14px;">版本管理工具</a> <a href="/tags/移动端/" style="font-size: 14px;">移动端</a> <a href="/tags/简明教程/" style="font-size: 25px;">简明教程</a> <a href="/tags/编码格式/" style="font-size: 14px;">编码格式</a> <a href="/tags/随笔/" style="font-size: 16.75px;">随笔</a>
     </div>
   </div>
 
@@ -577,6 +576,10 @@
     <h3 class="widget-title recent-posts">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/08/15/Perl项目前后端分离？/">Perl项目前后端分离？</a>
+          </li>
         
           <li>
             <a href="/2017/07/30/前端工程自动化/">前端工程自动化</a>
@@ -594,10 +597,6 @@
             <a href="/2017/06/28/教你如何巧妙解决网页乱码/">教你如何巧妙解决网页乱码</a>
           </li>
         
-          <li>
-            <a href="/2017/06/17/抓住17年的尾巴/">抓住17年的尾巴</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -607,7 +606,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title archive">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">4</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 

@@ -205,14 +205,14 @@
     </url>
 
     <url>
-        <loc>http://www.afanail.com/tags/%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/</loc>
+        <loc>http://www.afanail.com/tags/JavaScript/</loc>
         <lastmod>2017-07-22T03:54:59.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://www.afanail.com/tags/JavaScript/</loc>
+        <loc>http://www.afanail.com/tags/%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/</loc>
         <lastmod>2017-07-22T03:54:59.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -249,6 +249,20 @@
     <url>
         <loc>http://www.afanail.com/tags/auto/</loc>
         <lastmod>2017-07-30T12:10:05.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.afanail.com/tags/Perl/</loc>
+        <lastmod>2017-08-15T12:13:30.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.afanail.com/tags/angular/</loc>
+        <lastmod>2017-08-15T12:13:30.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

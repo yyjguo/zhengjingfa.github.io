@@ -5,18 +5,18 @@
   
   <title>0到1实现简单的jQuery城市选择控件 | Afanail</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="好久没有写博客了，最近忙着学习后端的相关知识。感觉数据库相关知识还给了大学老师。SQL虽然简单，但是越到后面越难，特别是你要考虑性能之类的。要写好SQL语句也是有一定的难度的。上一次说分享一下如何封装jQuery插件，因为最近在写后台的代码。所以抽时间来总结一下，巩固一下基础知识。所以，这是非常简单的jQuery插件。 静态页面很多后端的同事问我，如何快速的入前端的门槛。我给他们的建议是写淘宝京东">
+  <meta name="description" content="好久没有写博客了，最近忙着学习后端的相关知识。感觉数据库相关知识还给了大学老师。SQL虽然简单，但是越到后面越难，特别是你要考虑性能之类的。要写好SQL语句也是有一定的难度的。上一次说分享一下如何封装jQuery插件，因为最近在写后台的代码。所以抽时间来总结一下，巩固一下基础知识。所以，这是非常简单的jQuery插件。">
 <meta name="keywords" content="jQuery插件">
 <meta property="og:type" content="article">
 <meta property="og:title" content="0到1实现简单的jQuery城市选择控件">
 <meta property="og:url" content="http://www.afanail.com/2017/09/30/0到1实现简单的jQuery城市选择控件/index.html">
 <meta property="og:site_name" content="Afanail">
-<meta property="og:description" content="好久没有写博客了，最近忙着学习后端的相关知识。感觉数据库相关知识还给了大学老师。SQL虽然简单，但是越到后面越难，特别是你要考虑性能之类的。要写好SQL语句也是有一定的难度的。上一次说分享一下如何封装jQuery插件，因为最近在写后台的代码。所以抽时间来总结一下，巩固一下基础知识。所以，这是非常简单的jQuery插件。 静态页面很多后端的同事问我，如何快速的入前端的门槛。我给他们的建议是写淘宝京东">
+<meta property="og:description" content="好久没有写博客了，最近忙着学习后端的相关知识。感觉数据库相关知识还给了大学老师。SQL虽然简单，但是越到后面越难，特别是你要考虑性能之类的。要写好SQL语句也是有一定的难度的。上一次说分享一下如何封装jQuery插件，因为最近在写后台的代码。所以抽时间来总结一下，巩固一下基础知识。所以，这是非常简单的jQuery插件。">
 <meta property="og:image" content="http://www.afanail.com/assets/img/">
-<meta property="og:updated_time" content="2017-10-01T01:34:36.000Z">
+<meta property="og:updated_time" content="2017-10-04T11:06:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="0到1实现简单的jQuery城市选择控件">
-<meta name="twitter:description" content="好久没有写博客了，最近忙着学习后端的相关知识。感觉数据库相关知识还给了大学老师。SQL虽然简单，但是越到后面越难，特别是你要考虑性能之类的。要写好SQL语句也是有一定的难度的。上一次说分享一下如何封装jQuery插件，因为最近在写后台的代码。所以抽时间来总结一下，巩固一下基础知识。所以，这是非常简单的jQuery插件。 静态页面很多后端的同事问我，如何快速的入前端的门槛。我给他们的建议是写淘宝京东">
+<meta name="twitter:description" content="好久没有写博客了，最近忙着学习后端的相关知识。感觉数据库相关知识还给了大学老师。SQL虽然简单，但是越到后面越难，特别是你要考虑性能之类的。要写好SQL语句也是有一定的难度的。上一次说分享一下如何封装jQuery插件，因为最近在写后台的代码。所以抽时间来总结一下，巩固一下基础知识。所以，这是非常简单的jQuery插件。">
 <meta name="twitter:image" content="http://www.afanail.com/assets/img/">
   
   
@@ -40,7 +40,7 @@
     <div id="header-inner" class="inner">
       <nav id="sub-nav">
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.afanail.com"></form>
@@ -90,7 +90,7 @@
       
         <!-- Table of Contents -->
         
-        <p>好久没有写博客了，最近忙着学习后端的相关知识。感觉数据库相关知识还给了大学老师。SQL虽然简单，但是越到后面越难，特别是你要考虑性能之类的。要写好SQL语句也是有一定的难度的。上一次说分享一下如何封装jQuery插件，因为最近在写后台的代码。所以抽时间来总结一下，巩固一下基础知识。所以，这是非常简单的jQuery插件。</p>
+        <p>好久没有写博客了，最近忙着学习后端的相关知识。感觉数据库相关知识还给了大学老师。SQL虽然简单，但是越到后面越难，特别是你要考虑性能之类的。要写好SQL语句也是有一定的难度的。上一次说分享一下如何封装jQuery插件，因为最近在写后台的代码。所以抽时间来总结一下，巩固一下基础知识。所以，这是非常简单的jQuery插件。<a id="more"></a></p>
 <h1 id="静态页面"><a href="#静态页面" class="headerlink" title="静态页面"></a>静态页面</h1><p>很多后端的同事问我，如何快速的入前端的门槛。我给他们的建议是写淘宝京东的页面。多写静态页面，写着写着就入门了。凡事开头难，中间难，最后难。不过今天这个确实比想象的简单。首先看一下完成的效果图。</p>
 <p><img src="/assets/img/" alt="城市选择"></p>
 <h1 id="插件特性"><a href="#插件特性" class="headerlink" title="插件特性"></a>插件特性</h1><p>1.单例<br>2.支持搜索(借用了阿里的API)<br>3.搜索框函数节流<br>4.兼容IE7+</p>
@@ -103,7 +103,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/09/30/0到1实现简单的jQuery城市选择控件/" data-id="cj8cxbxi7000o7vypr278l5jz" class="article-share-link">Share</a>
+      <a data-url="http://www.afanail.com/2017/09/30/0到1实现简单的jQuery城市选择控件/" data-id="cj8cxbxi7000o7vypr278l5jz" class="article-share-link">分享</a>
       
       
       
@@ -115,7 +115,7 @@
     
  <script src="/jquery/jquery.min.js"></script>
   <div id="random_posts">
-    <h2>Recommended Posts</h2>
+    <h2>推荐文章</h2>
     <div class="random_posts_ul">
       <script>
           var random_count =4
@@ -158,7 +158,7 @@
 <nav id="article-nav">
   
     <a href="/2017/10/01/Perl相关/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
+      <strong class="article-nav-caption">上一篇</strong>
       <div class="article-nav-title">
         
           perl-learning
@@ -168,7 +168,7 @@
   
   
     <a href="/2017/08/15/Perl项目前后端分离？/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">下一篇</strong>
       <div class="article-nav-title">Perl项目前后端分离？</div>
     </a>
   
@@ -203,7 +203,7 @@
     
       <div class="widget" id="toc-widget-fixed">
       
-        <strong class="toc-title">Content</strong>
+        <strong class="toc-title">文章目录</strong>
         <div class="toc-widget-list">
               <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#静态页面"><span class="toc-number">1.</span> <span class="toc-text">静态页面</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#插件特性"><span class="toc-number">2.</span> <span class="toc-text">插件特性</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#插件使用"><span class="toc-number">3.</span> <span class="toc-text">插件使用</span></a></li></ol>
           </div>
@@ -237,7 +237,7 @@
       &copy; 2016 - 2017 Afanail&nbsp;
     </div>
      <div id="footer-right">
-      Contact&nbsp;|&nbsp;zjfapk@163.com
+      联系方式&nbsp;|&nbsp;zjfapk@163.com
     </div>
   </div>
 </footer>

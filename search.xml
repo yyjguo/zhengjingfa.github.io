@@ -5,8 +5,7 @@
     <entry>
       <title><![CDATA[Sybase相关]]></title>
       <url>/2017/10/21/sql/</url>
-      <content type="html"><![CDATA[<p>select <em> from publishers;<br>select </em><br>from publishers;</p>
-<p>– DDL数据定义：创建和定义数据库中的对象，表 关键字 视图 规则 默认值 存储过程 触发器 临时表<br>– Create Table<br>– Create View<br>– Drop Table<br>– Drop View</p>
+      <content type="html"><![CDATA[<p>– DDL数据定义：创建和定义数据库中的对象，表 关键字 视图 规则 默认值 存储过程 触发器 临时表<br>– Create Table<br>– Create View<br>– Drop Table<br>– Drop View</p>
 <p>–DML数据操作语言，操作数据库中的对象和数据<br>– select<br>– delete<br>– insert<br>– execute 执行存储过程<br>– update</p>
 <p>–DCL数据控制语句，赋予用于访问数据库对象的权限，系统管理员具有使用DCL命令的最高权限，有权使用所有数据库对象。<br>– grant    授权<br>– revoke   回收权限</p>
 <a id="more"></a>
@@ -137,7 +136,7 @@
         
         <tags>
             
-            <tag> sql </tag>
+            <tag> sql sybase </tag>
             
         </tags>
         

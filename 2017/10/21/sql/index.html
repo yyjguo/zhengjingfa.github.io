@@ -3,18 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Afanail</title>
+  <title>Sybase相关 | Afanail</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端,js,jquery,javascript,html5,开发者,程序猿">
-<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Afanail">
-<meta property="og:url" content="http://www.afanail.com/index.html">
+  <meta name="description" content="select  from publishers;select from publishers; – DDL数据定义：创建和定义数据库中的对象，表 关键字 视图 规则 默认值 存储过程 触发器 临时表– Create Table– Create View– Drop Table– Drop View –DML数据操作语言，操作数据库中的对象和数据– select– delete– insert– e">
+<meta name="keywords" content="sql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sybase相关">
+<meta property="og:url" content="http://www.afanail.com/2017/10/21/sql/index.html">
 <meta property="og:site_name" content="Afanail">
-<meta property="og:description" content="前端,js,jquery,javascript,html5,开发者,程序猿">
+<meta property="og:description" content="select  from publishers;select from publishers; – DDL数据定义：创建和定义数据库中的对象，表 关键字 视图 规则 默认值 存储过程 触发器 临时表– Create Table– Create View– Drop Table– Drop View –DML数据操作语言，操作数据库中的对象和数据– select– delete– insert– e">
+<meta property="og:updated_time" content="2017-12-09T11:21:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Afanail">
-<meta name="twitter:description" content="前端,js,jquery,javascript,html5,开发者,程序猿">
+<meta name="twitter:title" content="Sybase相关">
+<meta name="twitter:description" content="select  from publishers;select from publishers; – DDL数据定义：创建和定义数据库中的对象，表 关键字 视图 规则 默认值 存储过程 触发器 临时表– Create Table– Create View– Drop Table– Drop View –DML数据操作语言，操作数据库中的对象和数据– select– delete– insert– e">
   
   
     <link rel="icon" href="/favicon.png">
@@ -63,9 +64,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-sql" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-sql" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/10/21/sql/" class="article-date">
   <time datetime="2017-10-21T03:14:20.000Z" itemprop="datePublished">2017-10-21</time>
@@ -78,8 +77,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/21/sql/">Sybase相关</a>
+    <h1 class="article-title" itemprop="name">
+      Sybase相关
     </h1>
   
 
@@ -228,468 +227,89 @@
     </footer>
   </div>
   
-</article>
- 
-
-
-  
-    <article id="post-Perl相关" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/10/01/Perl相关/" class="article-date">
-  <time datetime="2017-10-01T03:25:22.000Z" itemprop="datePublished">2017-10-01</time>
-</a>
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/01/Perl相关/">perl-learning</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!-- Table of Contents -->
-        
-        <p>因为工作大部分时间从前端转到Perl后台，这里记录的是工作中遇到的问题及本人的一些想法。<br>Perl在做机票报表方面确实有得天独厚的优势，本文一切基于Perl 5.18。</p>
-
-      
+ <script src="/jquery/jquery.min.js"></script>
+  <div id="random_posts">
+    <h2>推荐文章</h2>
+    <div class="random_posts_ul">
+      <script>
+          var random_count =4
+          var site = {BASE_URI:'/'};
+          function load_random_posts(obj) {
+              var arr=site.posts;
+              if (!obj) return;
+              // var count = $(obj).attr('data-count') || 6;
+              for (var i, tmp, n = arr.length; n; i = Math.floor(Math.random() * n), tmp = arr[--n], arr[n] = arr[i], arr[i] = tmp);
+              arr = arr.slice(0, random_count);
+              var html = '<ul>';
+            
+              for(var j=0;j<arr.length;j++){
+                var item=arr[j];
+                html += '<li><strong>' + 
+                item.date + ':&nbsp;&nbsp;<a href="' + (site.BASE_URI+item.uri) + '">' + 
+                (item.title || item.uri) + '</a></strong>';
+                if(item.excerpt){
+                  html +='<div class="post-excerpt">'+item.excerpt+'</div>';
+                }
+                html +='</li>';
+                
+              }
+              $(obj).html(html + '</ul>');
+          }
+          $('.random_posts_ul').each(function () {
+              var c = this;
+              if (!site.posts || !site.posts.length){
+                  $.getJSON(site.BASE_URI + 'js/posts.js',function(json){site.posts = json;load_random_posts(c)});
+              } 
+               else{
+                load_random_posts(c);
+              }
+          });
+      </script>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/10/01/Perl相关/" data-id="cj8cxbxhz000e7vyp146v44ig" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/perl汇总/">perl汇总</a></li></ul>
-
-    </footer>
   </div>
+
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/10/01/Perl相关/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">perl-learning</div>
+    </a>
+  
+</nav>
+
   
 </article>
  
-
-
-  
-    <article id="post-0到1实现简单的jQuery城市选择控件" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/30/0到1实现简单的jQuery城市选择控件/" class="article-date">
-  <time datetime="2017-09-30T11:19:47.000Z" itemprop="datePublished">2017-09-30</time>
-</a>
+     
+  <div class="comments" id="comments">
     
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+       
+      
+      
   </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/30/0到1实现简单的jQuery城市选择控件/">0到1实现简单的jQuery城市选择控件</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>好久没有写博客了，最近忙着学习后端的相关知识。感觉数据库相关知识还给了大学老师。SQL虽然简单，但是越到后面越难，特别是你要考虑性能之类的。要写好SQL语句也是有一定的难度的。上一次说分享一下如何封装jQuery插件，因为最近在写后台的代码。所以抽时间来总结一下，巩固一下基础知识。所以，这是非常简单的jQuery插件。
-        
-          <p class="article-more-link">
-            <a href="/2017/09/30/0到1实现简单的jQuery城市选择控件/#more">继续阅读全文 »</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/09/30/0到1实现简单的jQuery城市选择控件/" data-id="cj8cxbxi7000o7vypr278l5jz" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery插件/">jQuery插件</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
  
-
-
-  
-    <article id="post-Perl项目前后端分离？" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/08/15/Perl项目前后端分离？/" class="article-date">
-  <time datetime="2017-08-15T12:12:55.000Z" itemprop="datePublished">2017-08-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/15/Perl项目前后端分离？/">Perl项目前后端分离？</a>
-    </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>昨天逛StackOverflow，发现ruby项目也能实现前后端分离。那么Perl项目应该也可以实现前后端分离吧？当然这只是我个人的猜想，毕竟才看完Perl语言入门这本书。intermediate perl 也才看了几章，上代码仓库<a href="https://github.com/zhengjingfa/perl-learning" target="_blank" rel="external">perl-learning</a>。
-        
-          <p class="article-more-link">
-            <a href="/2017/08/15/Perl项目前后端分离？/#more">继续阅读全文 »</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/08/15/Perl项目前后端分离？/" data-id="cj8cxbxib000s7vyp1658ougs" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Perl/">Perl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angular/">angular</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
- 
-
-
-  
-    <article id="post-前端工程自动化" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/07/30/前端工程自动化/" class="article-date">
-  <time datetime="2017-07-30T09:17:54.000Z" itemprop="datePublished">2017-07-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/30/前端工程自动化/">前端工程自动化</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>因为我是自动化方向出身的，对自动化算是有一些认识，前端领域虽然发展飞快，但是应用普及速度却不尽人意，前阵子腾讯开源了<a href="https://github.com/Tencent/ncnn" target="_blank" rel="external">ncnn</a>,这是要实现自动化编程的节奏啊！但是现在国内好多对前端的看法还是停留在美工的层面，这科技差距就像北上广深和大西北，令人唏嘘！其实做软件开发的无所谓前后端，眼界也不能局限于某一个领域。回到话题，为什么要前端自动化？因为前端重要啊！在这个颜控的社会，前端好比外貌，后端好比内在。这也是为什么前端在现在大部分公司大概占技术团队三分之一席位的事实。
-        
-          <p class="article-more-link">
-            <a href="/2017/07/30/前端工程自动化/#more">继续阅读全文 »</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/07/30/前端工程自动化/" data-id="cj8cxbxj6001v7vyp3l3n2j0z" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/auto/">auto</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/front-end/">front-end</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
- 
-
-
-  
-    <article id="post-IE7-hack-respond" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/07/22/IE7-hack-respond/" class="article-date">
-  <time datetime="2017-07-22T11:51:28.000Z" itemprop="datePublished">2017-07-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/22/IE7-hack-respond/">IE7-hack-respond</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近收到了几笔打赏，先谢谢这些不知名的小伙伴，然后我关闭打赏功能啦，写博客是为了记录个人的学习工作生活，并没有什么其他用途，哈哈。<br>现在兼容IE系列的应该很少见了，不过如果客户有需求，还是要考虑兼容的，相比前几年要兼容IE6，最近一俩年所接手的项目需求都是兼容IE9+，所以没有办法体会到前人对兼容各种浏览器所做出的努力与付出。首先来说一下项目的需求，要求兼容IE7，并且实现响应式，而且大屏幕和小屏幕的功能不尽相同，大屏幕是pc端尺寸，小屏幕规定在270px~600px之间。
-        
-          <p class="article-more-link">
-            <a href="/2017/07/22/IE7-hack-respond/#more">继续阅读全文 »</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/07/22/IE7-hack-respond/" data-id="cj8cxbxhu00097vypi8w0amk9" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IE-兼容性/">IE 兼容性</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js实现响应式/">js实现响应式</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
- 
-
-
-  
-    <article id="post-perl-learning" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/07/15/perl-learning/" class="article-date">
-  <time datetime="2017-07-15T03:25:22.000Z" itemprop="datePublished">2017-07-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/15/perl-learning/">perl-learning</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>perl 是一门编程语言。因为工作上的原因需要用到perl，这才对perl有了了解。相对JS而言，perl貌似更简单易用。同为脚本语言，perl风靡一时，当下肯定没有JS热门。更多的是用在生信等领域，而JS是随着web2.0的兴起而逐渐壮大，你看ES7都快出来了。先来看一下perl的最基本入门程序。<br>
-        
-          <p class="article-more-link">
-            <a href="/2017/07/15/perl-learning/#more">继续阅读全文 »</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/07/15/perl-learning/" data-id="cj8cxbxje00277vypqhcs2um7" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/perl/">perl</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
- 
-
-
-  
-    <article id="post-教你如何巧妙解决网页乱码" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/28/教你如何巧妙解决网页乱码/" class="article-date">
-  <time datetime="2017-06-28T11:34:04.000Z" itemprop="datePublished">2017-06-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/28/教你如何巧妙解决网页乱码/">教你如何巧妙解决网页乱码</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>约定俗成不是好的标准，却是近似好的标准。</p>
-<p>我们编写好的html文件，在浏览器显示往往会乱码，这就是编码格式的问题。在约定情况下，通常默认<code>utf-8</code>编码格式。但是，有一些有一定历史的公司，比如网易，我们可以看到它的编码格式是简体中文，也就是国标编码2312,简称<code>gb2312</code>。<br>
-        
-          <p class="article-more-link">
-            <a href="/2017/06/28/教你如何巧妙解决网页乱码/#more">继续阅读全文 »</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/06/28/教你如何巧妙解决网页乱码/" data-id="cj8cxbxjb00227vypqgpbh9jj" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编码格式/">编码格式</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
- 
-
-
-  
-    <article id="post-抓住17年的尾巴" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/17/抓住17年的尾巴/" class="article-date">
-  <time datetime="2017-06-17T15:44:23.000Z" itemprop="datePublished">2017-06-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/17/抓住17年的尾巴/">抓住17年的尾巴</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p> 17年也要结束了，一切来的那么快。年前的计划是否实现了,这显然没有那么重要了。还有半年的时间，切忌不要等到赶着时间去抓17年的尾巴。<br>
-        
-          <p class="article-more-link">
-            <a href="/2017/06/17/抓住17年的尾巴/#more">继续阅读全文 »</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/06/17/抓住17年的尾巴/" data-id="cj8cxbxj2001s7vypm8dkiud0" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工作计划/">工作计划</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
- 
-
-
-  
-    <article id="post-less小技巧" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/16/less小技巧/" class="article-date">
-  <time datetime="2017-06-16T14:23:03.000Z" itemprop="datePublished">2017-06-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/16/less小技巧/">less小技巧</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>后端转前端，或者UI转前端，往往会写不好css，有没有一种可以像写函数式编程那样对方法来编写css，答案是有的，比如less、sass、stylus等。</p>
-<h1 id="什么是less？"><a href="#什么是less？" class="headerlink" title="什么是less？"></a>什么是less？</h1><p>  这里不多说，请看中文网介绍<a href="http://lesscss.cn/" target="_blank" rel="external">less中文网</a>。<br>
-        
-          <p class="article-more-link">
-            <a href="/2017/06/16/less小技巧/#more">继续阅读全文 »</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/06/16/less小技巧/" data-id="cj8cxbxiq001e7vypurh0hqdz" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/less/">less</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
- 
-
-
-  
-
-
-  <nav id="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">下一页&raquo;</a>
-  </nav>
 </section>
            
     <aside id="sidebar">
   
     
-  <div class="widget-wrap">
-     
-        <h3 class="follow-title ">Follow me</h3>
-     
-    <div class="widget follow">
-      
-              <a class="github" aria-hidden="true" href="https://github.com/giscafer" target="_blank" title="Github"></a>
-      
-      
-            <a class="weibo" aria-hidden="true"  href="http://weibo.com/laohoubin" target="_blank" title="微博"></a>
-      
-      
-              <a class="zhihu" aria-hidden="true"  href="http://www.zhihu.com/people/giscafer" target="_blank" title="知乎"></a>
-      
-      
-            <a class="email" aria-hidden="true"  href="mailto:youemail@outlook.com" target="_blank" title="邮箱"></a>
-      
-    </div>
-  </div>
-
 
   
     
   
     
-  <div class="widget-wrap">
-    <h3 class="widget-title categories">分类</h3>
-    <div class="widget" id="categories">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Css简明教程/">Css简明教程</a><span class="category-list-count">1</span></li></ul>
-    </div>
-  </div>
-
 
   
     
-  <div class="widget-wrap">
-    <h3 class="widget-title tagcloud">标签云</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/随笔/" style="font-size: 14px;">-随笔</a> <a href="/tags/Chrome-DevTools/" style="font-size: 14px;">Chrome DevTools</a> <a href="/tags/ES7/" style="font-size: 14px;">ES7</a> <a href="/tags/Google-I-O-2017/" style="font-size: 14px;">Google I/O 2017</a> <a href="/tags/HTML/" style="font-size: 14px;">HTML</a> <a href="/tags/IE-兼容性/" style="font-size: 14px;">IE 兼容性</a> <a href="/tags/JSONP跨域/" style="font-size: 14px;">JSONP跨域</a> <a href="/tags/JavaScript/" style="font-size: 22.25px;">JavaScript</a> <a href="/tags/Perl/" style="font-size: 14px;">Perl</a> <a href="/tags/Webpack/" style="font-size: 14px;">Webpack</a> <a href="/tags/angular/" style="font-size: 14px;">angular</a> <a href="/tags/auto/" style="font-size: 14px;">auto</a> <a href="/tags/css/" style="font-size: 19.5px;">css</a> <a href="/tags/front-end/" style="font-size: 14px;">front-end</a> <a href="/tags/git/" style="font-size: 14px;">git</a> <a href="/tags/gulp/" style="font-size: 14px;">gulp</a> <a href="/tags/jQuery/" style="font-size: 14px;">jQuery</a> <a href="/tags/jQuery插件/" style="font-size: 14px;">jQuery插件</a> <a href="/tags/javascript/" style="font-size: 16.75px;">javascript</a> <a href="/tags/js/" style="font-size: 16.75px;">js</a> <a href="/tags/js实现响应式/" style="font-size: 14px;">js实现响应式</a> <a href="/tags/less/" style="font-size: 14px;">less</a> <a href="/tags/node/" style="font-size: 14px;">node</a> <a href="/tags/nvm/" style="font-size: 14px;">nvm</a> <a href="/tags/perl/" style="font-size: 14px;">perl</a> <a href="/tags/perl汇总/" style="font-size: 14px;">perl汇总</a> <a href="/tags/sad-story/" style="font-size: 14px;">sad story</a> <a href="/tags/sql/" style="font-size: 14px;">sql</a> <a href="/tags/updating/" style="font-size: 14px;">updating</a> <a href="/tags/原型继承机制/" style="font-size: 14px;">原型继承机制</a> <a href="/tags/娱乐/" style="font-size: 14px;">娱乐</a> <a href="/tags/工作计划/" style="font-size: 14px;">工作计划</a> <a href="/tags/开发技巧/" style="font-size: 14px;">开发技巧</a> <a href="/tags/怀旧/" style="font-size: 14px;">怀旧</a> <a href="/tags/源码分析/" style="font-size: 14px;">源码分析</a> <a href="/tags/版本控制/" style="font-size: 14px;">版本控制</a> <a href="/tags/版本管理工具/" style="font-size: 14px;">版本管理工具</a> <a href="/tags/移动端/" style="font-size: 14px;">移动端</a> <a href="/tags/简明教程/" style="font-size: 25px;">简明教程</a> <a href="/tags/编码格式/" style="font-size: 14px;">编码格式</a> <a href="/tags/随笔/" style="font-size: 16.75px;">随笔</a>
-    </div>
-  </div>
-
   
     
   <div class="widget-wrap">
@@ -723,33 +343,9 @@
 
   
     
-  <div class="widget-wrap">
-    <h3 class="widget-title archive">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">4</span></li></ul>
-    </div>
-  </div>
-
 
   
     
-<div class="widget-wrap">
-    <h3 class="widget-title">Links</h3>
-    <div class="widget">
-        <ul>
-            
-            <li>
-                <a href="http://blog.giscafer.com">giscafer&#39;s blog</a>
-            </li>
-            
-            <li>
-                <a href="http://www.gis520.com">GIS520社区</a>
-            </li>
-            
-        </ul>
-    </div>
-</div>
-
   
     <!--微信公众号二维码-->
 

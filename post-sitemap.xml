@@ -7,8 +7,16 @@
     </url>
 
     <url>
+        <loc>http://www.afanail.com/2017/10/21/sql/</loc>
+        <lastmod>2017-12-09T11:21:15.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://www.afanail.com/2017/10/01/Perl%E7%9B%B8%E5%85%B3/</loc>
-        <lastmod>2017-10-12T13:03:33.000Z</lastmod>
+        <lastmod>2017-10-12T15:40:36.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

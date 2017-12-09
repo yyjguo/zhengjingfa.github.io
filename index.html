@@ -87,135 +87,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <!-- Table of Contents -->
-        
         <p>select <em> from publishers;<br>select </em><br>from publishers;</p>
 <p>– DDL数据定义：创建和定义数据库中的对象，表 关键字 视图 规则 默认值 存储过程 触发器 临时表<br>– Create Table<br>– Create View<br>– Drop Table<br>– Drop View</p>
 <p>–DML数据操作语言，操作数据库中的对象和数据<br>– select<br>– delete<br>– insert<br>– execute 执行存储过程<br>– update</p>
 <p>–DCL数据控制语句，赋予用于访问数据库对象的权限，系统管理员具有使用DCL命令的最高权限，有权使用所有数据库对象。<br>– grant    授权<br>– revoke   回收权限</p>
-<p>– 打开一个数据库<br>– use database_name;<br>– select select_list from database_name where search_conditions group by aggregates_free_expression having search_condition order by column_name</p>
-<p>select pub_name,state from publishers;</p>
-<p>select distinct staste from authors;</p>
-<p>select pub_name ,”的ID号是”,pub_id from publishers;</p>
-<p>select au_id,au_lname,au_fname from authors where state=”UT”;</p>
-<p>select title,price<em>total_sales from titles where price</em>total_sales&gt;75000 order by title desc;<br>– default asc</p>
-<p>select au_id,au_fname,au_lname from authors where state in(“CA”,”WA”,”MD”);</p>
-<p>select au_id,au_fname,au_lname from authors where staste not in(“CA”);</p>
-<p>– sql 的四个通配符为，必须在引号内，like, not like</p>
-<p>– % 匹配0到多个字符的字符串<br>– _ 匹配单个字符<br>– [] 匹配给定范围内的任一个字符<br>– [^] 匹配不含在给定范围的单个字符</p>
-<p>select pub_name from authors pub_name like “B%Y”;</p>
-<p>select au_fname from authors where au_fname like “__i%”;</p>
-<p>–查询某一范围内的信息<br>select title from title where price<15 or="" price="">20;</15></p>
-<p>select title from titles where price not between 15 and 20;</p>
-<p>–union 子句，将俩个以上的查询结果合并成一个单一的结果。将不同的集组合成为一个单一的结果返回给客户机程序。每一个select语句所得到的数据类型必须是相同的。</p>
-<p>select title from titles where price*total_sales&gt;1000;</p>
-<p>select pub_name from publishers;</p>
-<p>select au_lname from authors where au_lname like “D%”;</p>
-<p>– title pub_name au_lname 类型相同，可以使用union子句将这三个结果集合组成一个单一的结果集。</p>
-<p>select title from titles where price*total_sales&gt;10000<br>union<br>select pub_name from<br>publishers<br>union<br>select au_lname from<br>authors where<br>au_lname like “D%”;</p>
-<p>– union列标题以第一个查询结果为准</p>
-<p>– 使用多表查询，表名和视图名可以是俩个或者俩个以上（最多可达16个）。</p>
-<p>–（相等连接）<br>select au_fname,au_lname,pub_name from authors,publishers  where authors.city=publishers.city;</p>
-<p>select t.title,a.au_lname,a.au_fname from authors a,titles t,titleauthor ta<br>where a.au_id=ta.au_id<br>and ta.title_id=t.title_id<br>and t.price&gt;20;</p>
-<p>– insert 向表中输入数据</p>
-<p>insert into table_name(column_name1,column_name2)   values (values1,values2);</p>
-<p>– 列的个数必须与values子句中的个数相同；值的数据类型必须和列的数据类型相对应，values子句中的顺序必须和表中的顺序保持一致。</p>
-<p>insert publishers(pub_id,pub_name,city,staste) values(“9999”,”QUE Cororation”,”Indianapolis”,”IN”);<br>– 允许省略列的清单，values子句中值的顺序必须和表中列的顺序保持一致，个数一致，数据类型相同。否则Sybase拒绝插入数据。<br>insert stores values(“9999”,”The QUE Bookstop”,”1701 MCP Avenue”,”Indianaplis”,”IN”,”USA”,”37012”,”net120”);</p>
-<p>– update修改表中的数据，修改表中一列或者多列的值,如果省略where子句，将修改表中的所有行</p>
-<p>update table_name set column_name=expression<br>where expression;</p>
-<p>–当对表 修改失败时，不会得到Sybase给出的信息，因为这不是一个错误，如果想要知道数据是否被修改，比较简单的方法是使用查询语句查看<br>update authors set au_lname=”flagstaff” where au_id=”238-95-7766”;</p>
-<p>–delete 语句用来从表中删除数据。要小心，它将数据从表中永久删除。需要从备份中恢复。</p>
-<p>delete from table_name where search_condition;</p>
-<p>delete publishers where pub_id=”9999”;</p>
-<p>– 文法规定 {}必须至少选其中的一个选项。[]可选可不选<br>–标识符1-30个字符组成，第一字符可以是字母（A-Z，a-z) 或@ #其他字符可以是字母 数字 或符合 $ # _,@表示一个局部变量，列名和索引名必须是唯一的。</p>
-<p>– 存储过程可以在远程的SQL服务器上运行，其运行结果可显示在调用该过程的终端上。</p>
-<p>declare @var int<br>exec gateway…gyroyalty;</p>
-<p>– 数据类型用来说明表列 存储过程参数及局部变量的数据特征，即数据的长度 存储格式等。</p>
-<p>– 在存储过程使用参数之前，必须先定义参数的数据类型和数据的长度。</p>
-<p>– 在存储过程中使用参数之前，必须先定义参数的数据类型和数据的长度。</p>
-<p>– 数值型 整型、浮点型、货币型<br>– 字符型数据类型 char(n)为定长字符型。输入的字符数据必须用单引号或者双引号括起来。输入数据的超长部分被截断，不足部分系统自动用空格补足。<br>– varcha(n)为可变长度的字符型。n为字节数，其值为1-255之间，n表示该类型数据的最大长度。其存储长度为输入的数据值的实际长度，超长部分将被截断，空字符串 “ “作为空格存储。</p>
-<p>– nchar(n)多字节字符集<br>– nvarchar</p>
-<p>– text 文本型，只能用于说明表的列类型，不能用于局部变量或存储过程参数。允许空值，可用于表示可变长度的列。</p>
-<p>– datetime 显示当前服务器的名称为<br>– select getdate()</p>
-<p>– binary(n) 二进制型，长度为n字节，n必须在1——255之间。必须在输入的第一个二进制值前面加0X。<br>– varbinary(n) 变长二进制型，存储数据慢，所占空间小</p>
-<p>– bit timestamp image<br>– bit only 0 and 1,logic and not null and not index. not 1 defalut 1<br>– timestamp 数据类型，向表中插入一行数据时，timestamp类型的列值自动进行计数，不能手动输入timestamp列的值，该值varbinary（8）格式进行存储，且在表中是唯一的。<br>– image 为图像型。只能用来说明表的列类型，但不能用于局部变量和存储过程中的参数。允许空值。</p>
-<p>– 2.用户定义的数据类型：用户定义的数据类型是在系统数据类型的基础上定义的，实际上是对常用系统数据类型的重新定义。目的：使用户可以用名字来存取经常使用的类型和长度信息。</p>
-<p>– sp_addtype typename,systype[(length)][,nulltype]</p>
-<p>sp_addtype dbname1,”char(20)”,”not null”;</p>
-<p>sp_addtype dbname2,”varchar(10)”,”null”;<br>– 用户数据类型被成功定义，就会自动加入到系统表中，使我们可以像使用系统数据类型一样使用它。</p>
-<p>– sp_help 显示用户定义的数据类型。</p>
-<p>– sp_droptype dbname1 删除用户自定义类型dbname1;</p>
-<p>– sybase 局部变量用户自定义的变量，全局变量是Sybase定义的变量</p>
-<p>– 局部变量 declare定义局部变量,不能与Sybase的全局变量同名，其数据类型可以是系统数据类型，也可以是用户定义的类型。但不能是text和image类型。刚定义的局部变量在未赋值之前其值为null（空）。使用select语句可以对局部变量进行赋值<br>– declare @variale_name datatype<br>– select @variable_name=expression [,@variable_name=expression]…[from…][where…];该语句只能给局部变量赋值，且不显示结果。</p>
-<p>declare @var1 int,@var2 money<br>select @val1=-68,@var2=97.564;</p>
-<p>– 局部变量只能在定义他的批处理 存储过程或触发器中使用，否则无效。</p>
-<p>– 以下几种情况使用局部变量：<br>  – 1 在while循环语句中，用于循环计数<br>  – 2 在if_else语句中，用于条件判断<br>  – 3 向存储过程传递参数或者接收从存储过程中返回的信息。<br>  – 4 向客户应用程序返回标准信息的同时，返回不同的客户信息。</p>
-<p>– 全局变量<br>    – Sybase定义的变量。全局变量以@@开始，如@@error<br>    – 全局变量只能出现在常量出现的地方。</p>
-<p>– 函数： 系统函数 统计函数 字符串函数 数学函数 日期函数 数据类型转换函数 文本和图像函数</p>
-<p>declare @i1 int,@isum int<br>select @i1=1,@isum=0<br>while @i1&lt;=1000<br>begin<br>    select @isum=@isum+@i1<br>    select @i1=@i1+1<br>    if @i1&gt;1000<br>    select @isum<br>end</p>
-<p>sp_helpdb mydatabase;<br>– 一个实体对应一张表，实体的一个属性就是表中的一列，实体的一个实例就是表中的一行，实体间的关系表现为表的关联。表是关系型数据库的最基本的概念，是数据存储和加工的场所。</p>
-<p>– 关键字 primary key 主键 表中的一个列或者多个列组成。主键能唯一的识别表中的每一行。不能为空，外键描述一个表与其他表的关系<br>–       foreign key 外键 能表示另一个表的主键。实际上外键本身是主键的拷贝。</p>
-<p>– system tables 文件夹中</p>
-<p>– 数据库的完整性就是数据的正确性和一致性，它反映了现实世界中实体的本来面貌。完整性分为数据完整性和参照完整性。</p>
-<p>– 一个表满足数据的完整性，是说该表的任一行数据都是实体的一个合法的实例，而且这种合法性的验证不涉及系统中的其他表的数据。</p>
-<p>– 参照完整性：表与表之间的关系而言的。俩个表的数据是一致的协调的，俩个表的主关键字外关键字也是一致协调的。教师表中教师ID一定在教师表中存在，对教师表中的某个教师ID进行修改删除时，若这个教师ID在教师课程表中存在，则不允许修改删除，或要求同时修改删除教师课程表中的教师ID，否则这俩个表中的一致性就受到了破坏，也就不难报障俩表的参照完整性。Sybase提供了一系列手段来报障完整性，如数据类型，规则，默认值，唯一索引和触发器等。</p>
-<p>– 数据库的组成，在Sybase数据库中，含有表（tables）视图（views）索引（indexs)规则（rules）默认值（defaults)用户定义数据类型（user-defined datatype)存储过程（stored procedures)触发器（triggers)等数据库对象。</p>
-<p>– 表是Sybase的核心，别的对象均是围绕表而创建的，他们从不同的角度扩充了表的功能。</p>
-<p>– 表由行和列组成，它要满足关系型数据库的最基本要求：表中的所有属性（列）都是不可再分的基本数据项。</p>
-<p>– database device、 dump device</p>
-<p>– 使用SQL命令创建数据库设备<br>disk init   /<em>初始化命令</em>/<br>name=”mydev2”,/<em> database device logic name</em>/<br>physname=”e:\device\mydev2.dat”,/<em>database device physical name</em>/<br>vdevno=2,/<em> database device number</em>/<br>size=1024/<em> 2MB block 1block=2kb</em>/<br>go</p>
-<p>– 临时表名不应该超过13个字符包括#，因为SQL server另给临时表名加一个内部的数字后缀。</p>
-<p>– 临时表的优点是，在临时数据库tempdb上执行操作时不记录日志，能提高系统性能。临时表通常用来保存中间结果。只有在创建它的会话中才可能访问临时表。在当前会话期结束时临时表会被自动删除，用户可以使用drop Table命令删除临时表。所有用户均可以创建临时表。用户定义的数据类型不能用于临时表，除非该数据类型已经tempdb中存在。</p>
-<p>create table #temptable<br>(task char(30)),<br>start datetime,<br>stop datetime,<br>notes varchar(200)<br>go</p>
-<p>– sybase 不允许从一个已存在的表中删除列，我们可以采用其他的方法。</p>
-<p>create table newtab(au_id id not null,au_lname varchar(40) not null)<br>go<br>insert into newtab(au_id,au_lname) values(select au_id,au_lname from authors)<br>go<br>drop table authors<br>go<br>sp_rename newtab,authors<br>go</p>
-<p>– 只有表的所有者才能删除表，删除表的权限不能转让。不能删除一个正在使用的表，但是可以删除另一个数据库中的表。不能删除系统表。</p>
-<p>–1 sales table<br>use mydatabase<br>create table sales<br>(stor_id char(4) not null,<br>ord_num varchar(20) not null,<br>date datetime not null)<br>go<br>–2 salesdetail table<br>use mydatabase<br>create table salesdetail<br>(stor_id char(4) not null,<br>ord_num varchar(20) not null,<br>title_id tid not null,<br>qty smallint not null,<br>discount float not null)<br>go<br>–3 titleauthor table<br>use mydatabase<br>create table titleauthor<br>(au_id id not null,<br>title_id tid not null,<br>au_ord tinyint null,<br>royaltyper int null<br>)<br>go<br>–4 titles table<br>use mydatabase<br>create table titles(<br>title_id tid not null,<br>title varchar(80) not null,<br>type char(12) not null,<br>pub_id char(4) null,<br>price money null,<br>advance money null,<br>total_sales int null,<br>notes varchar(200) null,<br>pubdate datetime not null,<br>contract bit not null<br>)<br>go<br>–5 stores table<br>use mydatabase<br>create table stores<br>(stor_id char(4) not null,<br>stor_name varchar(40) null,<br>stor_address varchar(40) null,<br>city varchar(20) null,<br>state char(2) null,<br>country varchar(12) null,<br>postalcode char(10) null,<br>payterms varchar(12) null<br>)<br>go<br>–6 discount table<br>use mydatabase<br>create table discount<br>(<br>discounttype varchar(40) not null,<br>stor_id char(4) null,<br>lowqty smallint null,<br>highqty smallint null,<br>discount float not null<br>)<br>go</p>
-<p>– au_pjx table<br>use mydatabase<br>create table au_pix<br>(<br>au_id char(11) not null,<br>pic image null,<br>format_type char(11) null,<br>bytesize int null,<br>pixwidth_hor char(14) null,<br>pixwidth_vert char(14) null<br>)<br>go<br>–8 blurbs table<br>use mydatabase<br>create table blurbs(<br>au_id id not null,<br>copy text null<br>)<br>go</p>
-<p>– 表的分割：用来解决在表上执行多个并行insert事务时引发的页面竞争问题。<br>– 分割表将产生附加的页链，每个页链都有自己的最后一页。这样并发插入操作可获得多个最后一页，从而减少了页竞争而提高了插入性能。Sybase可以将一个表中的数据分割到多个物理设备上，保证在这些设备上均匀分布数据。段可以将数据库对象存放到不同的物理设备上，通过数据分割同样可以将数据均匀分布在多个物理设备上。</p>
-<p>– 分割表可在俩种情况下进行<br>    – 1在同一个数据库设备上分割表<br>    – 2在多个数据库设备上分割表</p>
-<p>–单索引建在一个列上，复合索引创建在多个列上，这些列必须属于同一个表。</p>
-<pre><code>-- 1 唯一索引：唯一索引是指不能有俩行相同索引值的索引（包括null）
--- 2 簇式索引：数据在表中的物理存储顺序与索引顺序一致。创建簇式索引的表就是排了序的表。当创建一个簇式索引时，非簇式索引就会被自动创建。
--- 3 非簇式索引：数据行的物理存储顺序与索引顺序不同。一个非簇式索引是一个额外的表。其中包含索引列和一个指针。索引列按索引值的排序，指针则指向数据的实际物理行，一个表中多达249个非簇式索引。
-</code></pre><p>–使用簇式索引的数据的查找比使用非簇式索引的数据的查找速度要快。默认会自动生成一个非簇式索引</p>
-<p>–四类组合型索引：惟一的簇式索引、惟一的非簇式索引、非惟一的簇式索引、非惟一的非簇式索引</p>
-<p>use mydatabase<br>create unique clustered index pubinx<br>on publishers(pub_id)<br>with fillfactor=90<br>go</p>
-<p>– 经常使用规则定义表列数据的有效范围，在没有提供某列的值时，插入默认值到数据库中的表列中。</p>
-<p>create defalut datedefault<br>as getdate()<br>go</p>
-<p>– create rule 语句不能和其他的SQL语句写在同一个批处理中。<br>Create view stateview2<br>as select au_id,au_lname from<br>authors where state=”CA”;</p>
-<p>select * from stateview2 go</p>
-<p>create view pubview<br>as<br>    select *<br>    from publishers<br>    where city=”Boston”<br>go</p>
-<p>create view typegroup<br>as<br>    select type,count(*)<br>    from titles<br>    group by type<br>go</p>
-<p>– 只能在那些不含有结果数据或函数结果的视图的列上执行insert update delete操作</p>
-<p>– 存储过程是SQL语句和流程控制语句的集合。有俩种存储过程：系统存储过程和用户定义的存储过程。系统存储过程以sp_开始。</p>
-<p>– 创建存储过程<br>Create procedure pro_publishers<br>as<br>select *<br>from<br>publishers<br>go<br>pro_publishers<br>go</p>
-<p>– 使用一个输入参数查找特定作者<br>create procedure pro_authorInfo<br>@psauthorID char(11)<br>as<br>select <em><br>from authors<br>where au_id=@psauthorID<br>return 0<br>go<br>pro_authorInfo “172-32-1176”;<br>– 在参数中赋予默认值<br>Create procedure pro_newauthorInfo<br>@psauthorID char(11)=”172-32-1176”<br>as<br>select </em> from authors<br>where au_id=@psauthorID<br>return 0<br>go</p>
-<p>– 使用输出参数output，创建一个能进行俩个数学运算的存储过程。<br>– 1 up_DoMath<br>create procedure up_DoMath<br>@psOperator varchar(12),<br>@pnFirstNumber int,<br>@pnSecondNumber int,<br>@rnResult int output /<em>存放俩数运算结果</em>/<br>as<br>print “compute right now.”<br>if @psOperator=”Multiply”<br>    begin<br>        select @rnResult=@pnFirstNumber<em>@pnSecondNumber<br>        return 0<br>    end<br>else if @psOperator=”ADD”<br>    begin<br>        select<br>        @rnResult=@pnFirstNumber+@pnSecondNumber<br>        return 0<br>    end<br>else if @psOperator=”Subtract”<br>    begin<br>        select<br>        @rnResult=@pnFirstNumber-@pnSecondNumber<br>        return 0<br>    end<br>else if @psOperatoro=”Divide”<br>    begin<br>        select<br>        @rnResult=@pnFirstNumber/@pnSecondNumber<br>        return 0<br>    end<br>else<br>    begin<br>    /</em> error info*/<br>    select @rnResult=0<br>    return -99<br>    end<br>return 0<br>go</p>
-<p>– 2 procedure up_Multiply<br>create procedure up_Multiply<br>@pnFirstNumber int,<br>@pnSecondNumber int<br>as<br>declare @nRC int,<br>        @nMathResult int<br>print “compute now”<br>exec up_DoMath “Multiply”,@pnFirstNumber,@pnSecondNumber,<br>@nMathResult output<br>select @nMathResult<br>return 0<br>go</p>
-<p>– 可以从以下几种调用程序中来执行存储过程：<br>    – 一个存储过程<br>    – 一个批命令<br>    – 一个触发器<br>    – 一段client-library DB-Library程序<br>    – 写入一个客户、服务器开发工具中的任意程序</p>
-<p>– 如果调用执行另一过程的存储过程，被调用过程就能存取调用过程所创建的对象，过程嵌套限制为16层。超过16层的嵌套就会导致事务失败。系统失败状态-1~-99之间，用户可以在范围之外定义自己的返回状态值</p>
-<p>– 触发器 trigger 是一种特殊的存储过程。在对表进行插入 删除 修改操作时，它起作用。触发器通过维持不同表中逻辑上相关数据的一致性，保证数据的参照完整性。参照完整性是指主键值与相应的外键值必须完全匹配。</p>
-<p>– 触发器的主要优点是：当数据变化时，他们能够自动响应，而不管是录入数据还是应用程序的影响。它专用一个数据的更新操作。对于这样的SQL语句，触发器执行一次（在数据更新语句完成后立即被触发）。触发器和触发它的语句被当作一个事务处理，事务可以在触发器中回退。</p>
-<p>– 主表从表。外键值。</p>
-<p>– 外键对主键经常是多对一的关系。</p>
-<p>– 触发器的工作<br>    – 参照完整性触发器保证外键的值与主键的值一致，当数据更新影响一个键列时，触发器通过临时触发器检查表比较新的列值与相应键的值。编写触发器时，被比较的数据存放在临时触发器检查表中。</p>
-<p>– 编写触发器，用到俩个特殊的表，deleted和inserted表。这是俩个临时表。这俩个表用来检查一些数据更新的影响并为触发器动作设置条件。不能直接改变触发器检查表中的数据，但是能够使用select语句来检测insert update delete操作带来的影响。<br>– 创建触发器 修改触发器 删除触发器 条件插入触发器的具体使用。</p>
-<p>Create trigger trigger_name on table_name for{insert,update,delete}<br>as sql_statement;</p>
-<p>– table_name 为激活触发器的表名，该表有时被称为触发表。触发器只能在当前数据库中创建。<br>– SQL_statement 为激活触发器后要执行的一段程序，触发条件是insert update 和 delete，如果要执行多个SQL语句组成，则必须用begin和end语句括起来。</p>
-<p>create trigger newtri_author on dbo.authors for insert,update,delete as<br>print “正在对authors表进行数据处理”<br>go </p>
-<p>– 一个表最多可有3个触发器：insert触发器 update触发器和delete触发器。也可以建立一个触发器，用在insert update delete这3个操作上，此时只能建立一个，后建立的触发器将覆盖先建立的触发器。</p>
-<p>– updated 语句执行期间，被修改的行从触发器表拷贝到deleted表中。</p>
-<p>– 下面介绍创建触发器 修改触发器 删除触发器 和条件插入触发器的具体使用。</p>
-<p>– authors 表进行insert操作的语句如下：<br>insert authors values(“333-22-111”,”zhang”,”xiamei”,”408 286-2428”,”22Cle”,,”san”,”ca”,”usa”,”95123”)<br>go</p>
-<p>– 执行该语句，触发器被触发，显示“正在对authors表进行数据处理”的信息。</p>
-<p>– 因为创建的是insert update delete触发器，当对表进行update delete操作时，也会触发tri_author触发器。</p>
-<p>– 触发器特别有用，因为他们能强制施加参照完整性，保证数据在表中的合法性。<br>// 下午和小莫不能那样说，应该说这种写法和特别，别具风格。<br>– 数据在输入表之前已合法化。在titleauthor表上创建insert触发器。sql语句为：<br>Create trigger tri_insert<br>on titleauthor for insert<br>as<br>if(select count(<em>) from authors,inserted where authors.au_id=inserted.au_id)!=@@rowcount<br>    begin<br>        rollback transaction    /</em>回滚事务*/<br>        print “au_id 号在authors表中不存在.”<br>    end<br>else<br>    print “已成功，因为au_id在表中存在。”<br>go</p>
-<p>– 因为主键是行及其他表外键的唯一标识，所以修改主键要格外小心。一般来说最好禁止对主键的修改。但是如果只是想在某些情况下禁止修改，那么可以使用update触发器。</p>
-<p>– 禁止在周末修改authors表的au_id列<br>create trigger tri_update_auid<br>on authors<br>for update<br>as<br>/<em> 如果修改au_id列，并且是在周末修改的，则回退事务，显示信息。</em>/<br>if update(au_id) and datename(dw,getdate()) in (“saturday”,”sunday”)<br>    begin<br>        rollback transaction<br>        print “对不起，不允许在周末修改authors表的主键！”<br>    end<br>go</p>
-<p>– if update 子句检查对指定列的插入或修改操作。<br>create trigger trigger_name for<br>{insert,update} as<br>if update(column_name)<br>[{and|or} update(column_name)}]…<br>sql statement.</p>
-<p>– 因为已经在创建触发器的 on 子句中指定了表名，所以if update子句中不需要在列名前使用表名。</p>
-
+        
+          <p class="article-more-link">
+            <a href="/2017/10/21/sql/#more">继续阅读全文 »</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">

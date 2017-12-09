@@ -9,6 +9,7 @@
 <p>– DDL数据定义：创建和定义数据库中的对象，表 关键字 视图 规则 默认值 存储过程 触发器 临时表<br>– Create Table<br>– Create View<br>– Drop Table<br>– Drop View</p>
 <p>–DML数据操作语言，操作数据库中的对象和数据<br>– select<br>– delete<br>– insert<br>– execute 执行存储过程<br>– update</p>
 <p>–DCL数据控制语句，赋予用于访问数据库对象的权限，系统管理员具有使用DCL命令的最高权限，有权使用所有数据库对象。<br>– grant    授权<br>– revoke   回收权限</p>
+<a id="more"></a>
 <p>– 打开一个数据库<br>– use database_name;<br>– select select_list from database_name where search_conditions group by aggregates_free_expression having search_condition order by column_name</p>
 <p>select pub_name,state from publishers;</p>
 <p>select distinct staste from authors;</p>

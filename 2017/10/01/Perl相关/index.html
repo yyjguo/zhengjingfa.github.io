@@ -5,17 +5,17 @@
   
   <title>perl-learning | Afanail</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="因为工作大部分时间从前端转到Perl后台，这里记录的是工作中遇到的问题及本人的一些想法。Perl在做机票报表方面确实有得天独厚的优势，本文一切基于Perl 5.18。">
-<meta name="keywords" content="perl汇总">
+  <meta name="description" content="因为工作大部分时间从前端转到Perl后台，这里记录的是工作中遇到的问题及本人的一些想法。Perl在做机票报表方面确实有得天独厚的优势，本文一切基于Perl 5.18。Perl连接数据库1234567891011use Sybase::CTlib; # 使用 Sybase::CTlib包$db = &amp;amp;connect_database(); #连接数据库$sql =&quot; select rtrim">
+<meta name="keywords" content="perl CGI 编程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="perl-learning">
 <meta property="og:url" content="http://www.afanail.com/2017/10/01/Perl相关/index.html">
 <meta property="og:site_name" content="Afanail">
-<meta property="og:description" content="因为工作大部分时间从前端转到Perl后台，这里记录的是工作中遇到的问题及本人的一些想法。Perl在做机票报表方面确实有得天独厚的优势，本文一切基于Perl 5.18。">
-<meta property="og:updated_time" content="2017-10-12T15:40:36.000Z">
+<meta property="og:description" content="因为工作大部分时间从前端转到Perl后台，这里记录的是工作中遇到的问题及本人的一些想法。Perl在做机票报表方面确实有得天独厚的优势，本文一切基于Perl 5.18。Perl连接数据库1234567891011use Sybase::CTlib; # 使用 Sybase::CTlib包$db = &amp;amp;connect_database(); #连接数据库$sql =&quot; select rtrim">
+<meta property="og:updated_time" content="2017-12-29T11:45:36.458Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="perl-learning">
-<meta name="twitter:description" content="因为工作大部分时间从前端转到Perl后台，这里记录的是工作中遇到的问题及本人的一些想法。Perl在做机票报表方面确实有得天独厚的优势，本文一切基于Perl 5.18。">
+<meta name="twitter:description" content="因为工作大部分时间从前端转到Perl后台，这里记录的是工作中遇到的问题及本人的一些想法。Perl在做机票报表方面确实有得天独厚的优势，本文一切基于Perl 5.18。Perl连接数据库1234567891011use Sybase::CTlib; # 使用 Sybase::CTlib包$db = &amp;amp;connect_database(); #连接数据库$sql =&quot; select rtrim">
   
   
     <link rel="icon" href="/favicon.png">
@@ -38,7 +38,7 @@
     <div id="header-inner" class="inner">
       <nav id="sub-nav">
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.afanail.com"></form>
@@ -88,16 +88,18 @@
       
         <!-- Table of Contents -->
         
-        <p>因为工作大部分时间从前端转到Perl后台，这里记录的是工作中遇到的问题及本人的一些想法。<br>Perl在做机票报表方面确实有得天独厚的优势，本文一切基于Perl 5.18。</p>
+        <p>因为工作大部分时间从前端转到Perl后台，这里记录的是工作中遇到的问题及本人的一些想法。<br>Perl在做机票报表方面确实有得天独厚的优势，本文一切基于Perl 5.18。<br>Perl连接数据库<br><figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">use</span> Sybase::CTlib; <span class="comment"># 使用 Sybase::CTlib包</span></div><div class="line">$db = &amp;connect_database(); <span class="comment">#连接数据库</span></div><div class="line">$sql =<span class="string">" select rtrim(name) from ctninfo..sysobjects where type='U' "</span>; <span class="comment">#编写SQL语句</span></div><div class="line">$db-&gt;ct_execute($sql);	   <span class="comment"># 执行      		</span></div><div class="line"><span class="keyword">while</span>($db-&gt;ct_results($restype) == CS_SUCCEED) &#123;</div><div class="line">	<span class="keyword">if</span>($restype==CS_ROW_RESULT) &#123;</div><div class="line">		<span class="keyword">while</span>(@row = $db-&gt;ct_fetch) &#123;</div><div class="line">			$table_name&#123;$row[<span class="number">0</span>]&#125;=<span class="number">1</span>; <span class="comment">#取出数据</span></div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 去重 </span></div><div class="line"><span class="keyword">my</span> @array=(<span class="number">1</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">1</span>); <span class="keyword">my</span> %count;</div><div class="line">@array=<span class="keyword">grep</span> &#123; ++$count&#123; $_ &#125; &lt; <span class="number">2</span>&#125; @arry;</div><div class="line"></div><div class="line"><span class="comment"># scalar 函数返回数组的长度</span></div><div class="line"><span class="keyword">for</span>(<span class="keyword">my</span> $i=<span class="number">0</span>;$i&lt;<span class="keyword">scalar</span>(@array);$i++)&#123;</div><div class="line">   <span class="comment"># $array[$i]... to do everything</span></div><div class="line">&#125;</div><div class="line"><span class="comment"># scalar 函数同时返回标量上下文</span></div><div class="line"><span class="keyword">my</span> $num=<span class="string">'13'</span>; <span class="keyword">my</span> $len;</div><div class="line">$len=<span class="keyword">scalar</span>($num); <span class="comment"># 13</span></div></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/10/01/Perl相关/" data-id="cj8cxbxhz000e7vyp146v44ig" class="article-share-link">Share</a>
+      <a data-url="http://www.afanail.com/2017/10/01/Perl相关/" data-id="cjbrur57q000ktcyp1lly9wo1" class="article-share-link">分享</a>
       
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/perl汇总/">perl汇总</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/perl-CGI-编程/">perl CGI 编程</a></li></ul>
 
     </footer>
   </div>
@@ -105,7 +107,7 @@
     
  <script src="/jquery/jquery.min.js"></script>
   <div id="random_posts">
-    <h2>Recommended Posts</h2>
+    <h2>推荐文章</h2>
     <div class="random_posts_ul">
       <script>
           var random_count =4
@@ -148,7 +150,7 @@
 <nav id="article-nav">
   
     <a href="/2017/10/21/sql/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
+      <strong class="article-nav-caption">上一篇</strong>
       <div class="article-nav-title">
         
           Sybase SQL Server相关
@@ -158,7 +160,7 @@
   
   
     <a href="/2017/09/30/0到1实现简单的jQuery城市选择控件/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">下一篇</strong>
       <div class="article-nav-title">0到1实现简单的jQuery城市选择控件</div>
     </a>
   
@@ -197,9 +199,21 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title recent-posts">Recent Posts</h3>
+    <h3 class="widget-title recent-posts">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/12/29/关于Java核心技术/">Java核心技术</a>
+          </li>
+        
+          <li>
+            <a href="/2017/12/18/webpack/">JavaScript简明教程（1）</a>
+          </li>
+        
+          <li>
+            <a href="/2017/12/05/ES6/">ES6 ES7</a>
+          </li>
         
           <li>
             <a href="/2017/11/09/dataStructor/">数据结构与算法</a>
@@ -207,18 +221,6 @@
         
           <li>
             <a href="/2017/10/21/sql/">Sybase SQL Server相关</a>
-          </li>
-        
-          <li>
-            <a href="/2017/10/01/Perl相关/">perl-learning</a>
-          </li>
-        
-          <li>
-            <a href="/2017/09/30/0到1实现简单的jQuery城市选择控件/">0到1实现简单的jQuery城市选择控件</a>
-          </li>
-        
-          <li>
-            <a href="/2017/08/15/Perl项目前后端分离？/">Perl项目前后端分离？</a>
           </li>
         
       </ul>
@@ -245,7 +247,7 @@
       &copy; 2016 - 2017 Afanail&nbsp;
     </div>
      <div id="footer-right">
-      Contact&nbsp;|&nbsp;zjfapk@163.com
+      联系方式&nbsp;|&nbsp;zjfapk@163.com
     </div>
   </div>
 </footer>

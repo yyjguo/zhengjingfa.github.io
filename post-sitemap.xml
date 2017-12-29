@@ -7,8 +7,32 @@
     </url>
 
     <url>
-        <loc>http://www.afanail.com/2017/11/09/dataStructor/</loc>
-        <lastmod>2017-12-09T11:54:29.000Z</lastmod>
+        <loc>http://www.afanail.com/2017/10/01/Perl%E7%9B%B8%E5%85%B3/</loc>
+        <lastmod>2017-12-29T11:45:36.458Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.afanail.com/2017/12/18/webpack/</loc>
+        <lastmod>2017-12-29T11:40:11.914Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.afanail.com/2017/12/29/%E5%85%B3%E4%BA%8EJava%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/</loc>
+        <lastmod>2017-12-29T11:30:00.247Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.afanail.com/2017/12/05/ES6/</loc>
+        <lastmod>2017-12-17T10:17:53.112Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -16,15 +40,15 @@
 
     <url>
         <loc>http://www.afanail.com/2017/10/21/sql/</loc>
-        <lastmod>2017-12-09T11:44:44.000Z</lastmod>
+        <lastmod>2017-12-10T01:40:27.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>http://www.afanail.com/2017/10/01/Perl%E7%9B%B8%E5%85%B3/</loc>
-        <lastmod>2017-10-12T15:40:36.000Z</lastmod>
+        <loc>http://www.afanail.com/2017/11/09/dataStructor/</loc>
+        <lastmod>2017-12-09T11:54:29.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

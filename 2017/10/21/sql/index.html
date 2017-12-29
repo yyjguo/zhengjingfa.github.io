@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://www.afanail.com/2017/10/21/sql/index.html">
 <meta property="og:site_name" content="Afanail">
 <meta property="og:description" content="– DDL数据定义：创建和定义数据库中的对象，表 关键字 视图 规则 默认值 存储过程 触发器 临时表1234Create TableCreate ViewDrop TableDrop View –DML数据操作语言，操作数据库中的对象和数据12345selectdeleteinsertexecute 执行存储过程update –DCL数据控制语句，赋予用于访问数据库对象的权限，系统管理员具有使用">
-<meta property="og:updated_time" content="2017-12-09T11:44:44.000Z">
+<meta property="og:updated_time" content="2017-12-10T01:40:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sybase SQL Server相关">
 <meta name="twitter:description" content="– DDL数据定义：创建和定义数据库中的对象，表 关键字 视图 规则 默认值 存储过程 触发器 临时表1234Create TableCreate ViewDrop TableDrop View –DML数据操作语言，操作数据库中的对象和数据12345selectdeleteinsertexecute 执行存储过程update –DCL数据控制语句，赋予用于访问数据库对象的权限，系统管理员具有使用">
@@ -38,7 +38,7 @@
     <div id="header-inner" class="inner">
       <nav id="sub-nav">
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.afanail.com"></form>
@@ -213,13 +213,26 @@ select @val1=-68,@var2=97.564;
 <p>– 因为创建的是insert update delete触发器，当对表进行update delete操作时，也会触发tri_author触发器。</p>
 <p>– 触发器特别有用，因为他们能强制施加参照完整性，保证数据在表中的合法性。<br>// 下午和小莫不能那样说，应该说这种写法和特别，别具风格。<br>– 数据在输入表之前已合法化。在titleauthor表上创建insert触发器。sql语句为：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">Create</span> <span class="keyword">trigger</span> tri_insert </div><div class="line"><span class="keyword">on</span> titleauthor <span class="keyword">for</span> <span class="keyword">insert</span> </div><div class="line"><span class="keyword">as</span></div><div class="line"><span class="keyword">if</span>(<span class="keyword">select</span> <span class="keyword">count</span>(*) <span class="keyword">from</span> <span class="keyword">authors</span>,inserted <span class="keyword">where</span> authors.au_id=inserted.au_id)!=@@rowcount</div><div class="line">    <span class="keyword">begin</span></div><div class="line">        <span class="keyword">rollback</span> <span class="keyword">transaction</span>    <span class="comment">/*回滚事务*/</span></div><div class="line">        print <span class="string">"au_id 号在authors表中不存在."</span></div><div class="line">    <span class="keyword">end</span></div><div class="line"><span class="keyword">else</span> </div><div class="line">    print <span class="string">"已成功，因为au_id在表中存在。"</span></div><div class="line"><span class="keyword">go</span></div></pre></td></tr></table></figure></p>
 <p>– 因为主键是行及其他表外键的唯一标识，所以修改主键要格外小心。一般来说最好禁止对主键的修改。但是如果只是想在某些情况下禁止修改，那么可以使用update触发器。</p>
-<p>– 禁止在周末修改authors表的au_id列<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">create</span> <span class="keyword">trigger</span> tri_update_auid</div><div class="line"><span class="keyword">on</span> <span class="keyword">authors</span></div><div class="line"><span class="keyword">for</span> <span class="keyword">update</span></div><div class="line"><span class="keyword">as</span></div><div class="line"><span class="comment">/* 如果修改au_id列，并且是在周末修改的，则回退事务，显示信息。*/</span></div><div class="line"><span class="keyword">if</span> <span class="keyword">update</span>(au_id) <span class="keyword">and</span> <span class="keyword">datename</span>(dw,<span class="keyword">getdate</span>()) <span class="keyword">in</span> (<span class="string">"saturday"</span>,<span class="string">"sunday"</span>)</div><div class="line">    <span class="keyword">begin</span> </div><div class="line">        <span class="keyword">rollback</span> <span class="keyword">transaction</span></div><div class="line">        print <span class="string">"对不起，不允许在周末修改authors表的主键！"</span></div><div class="line">    <span class="keyword">end</span></div><div class="line"><span class="keyword">go</span></div><div class="line"></div><div class="line"><span class="comment">-- if update 子句检查对指定列的插入或修改操作。</span></div><div class="line"><span class="keyword">create</span> <span class="keyword">trigger</span> trigger_name <span class="keyword">for</span></div><div class="line">&#123;<span class="keyword">insert</span>,<span class="keyword">update</span>&#125; <span class="keyword">as</span></div><div class="line"><span class="keyword">if</span> <span class="keyword">update</span>(column_name)</div><div class="line">[&#123;<span class="keyword">and</span>|<span class="keyword">or</span>&#125; <span class="keyword">update</span>(column_name)&#125;]...</div><div class="line"><span class="keyword">sql</span> statement.</div></pre></td></tr></table></figure></p>
-<p>– 因为已经在创建触发器的 on 子句中指定了表名，所以if update子句中不需要在列名前使用表名。</p>
+<p>– 禁止在周末修改authors表的au_id列<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">create</span> <span class="keyword">trigger</span> tri_update_auid</div><div class="line"><span class="keyword">on</span> <span class="keyword">authors</span></div><div class="line"><span class="keyword">for</span> <span class="keyword">update</span></div><div class="line"><span class="keyword">as</span></div><div class="line"><span class="comment">/* 如果修改au_id列，并且是在周末修改的，则回退事务，显示信息。*/</span></div><div class="line"><span class="keyword">if</span> <span class="keyword">update</span>(au_id) <span class="keyword">and</span> <span class="keyword">datename</span>(dw,<span class="keyword">getdate</span>()) <span class="keyword">in</span> (<span class="string">"saturday"</span>,<span class="string">"sunday"</span>)</div><div class="line">    <span class="keyword">begin</span> </div><div class="line">        <span class="keyword">rollback</span> <span class="keyword">transaction</span></div><div class="line">        print <span class="string">"对不起，不允许在周末修改authors表的主键！"</span></div><div class="line">    <span class="keyword">end</span></div><div class="line"><span class="keyword">go</span></div><div class="line"></div><div class="line"><span class="comment">-- if update 子句检查对指定列的插入或修改操作。</span></div><div class="line"><span class="keyword">create</span> <span class="keyword">trigger</span> trigger_name <span class="keyword">for</span></div><div class="line">&#123;<span class="keyword">insert</span>,<span class="keyword">update</span>&#125; <span class="keyword">as</span></div><div class="line"><span class="keyword">if</span> <span class="keyword">update</span>(column_name)</div><div class="line">[&#123;<span class="keyword">and</span>|<span class="keyword">or</span>&#125; <span class="keyword">update</span>(column_name)&#125;]...</div><div class="line"><span class="keyword">sql</span> statement.</div><div class="line"></div><div class="line"><span class="comment">-- 因为已经在创建触发器的 on 子句中指定了表名，所以if update子句中不需要在列名前使用表名。</span></div></pre></td></tr></table></figure></p>
+<p>2– 外键的update触发器</p>
+<pre><code>某些原因要修改外键，允许在外键上创建update触发器。那么外键上的update触发器要根据主表检查所有的修改并且当他们与主键不匹配时回退他们。触发器检查俩种可能失败的原因是：1.所修改的外键在自身的表中不存在。2.外键在主表中不存在。
+</code></pre><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"> <span class="comment">-- 给titleauthor表中的au_id列创建update触发器</span></div><div class="line"> <span class="keyword">Create</span> <span class="keyword">trigger</span> tri_update_titleauthor</div><div class="line"> <span class="keyword">on</span> titleauthor</div><div class="line"> <span class="keyword">for</span> <span class="keyword">update</span></div><div class="line"> <span class="keyword">as</span></div><div class="line">    <span class="keyword">declare</span> @<span class="keyword">row</span> <span class="built_in">int</span> <span class="comment">/*存储修改的行数*/</span></div><div class="line">    <span class="keyword">select</span> @<span class="keyword">row</span>=@@RowCount</div><div class="line">    <span class="keyword">if</span> <span class="keyword">update</span>(au_id)</div><div class="line">    <span class="keyword">begin</span></div><div class="line">      <span class="keyword">if</span> (<span class="keyword">select</span> <span class="keyword">distinct</span> inserted.au_id <span class="keyword">from</span> inserted) <span class="keyword">is</span> <span class="literal">null</span></div><div class="line">        <span class="keyword">begin</span></div><div class="line">          <span class="keyword">rollback</span> <span class="keyword">transaction</span></div><div class="line">          print <span class="string">"对不起，这个au_id在titleauthor表中不存在。"</span></div><div class="line">        <span class="keyword">end</span></div><div class="line">      <span class="keyword">else</span></div><div class="line">        <span class="keyword">if</span>(<span class="keyword">select</span> <span class="keyword">count</span>(*) <span class="keyword">from</span> <span class="keyword">authors</span>,inserted <span class="keyword">where</span> authors.au_id=insetted.au_id)!=@<span class="keyword">row</span></div><div class="line">          beign</div><div class="line">            <span class="keyword">rollback</span> <span class="keyword">transaction</span></div><div class="line">            print<span class="string">"对不起，这个au_id在authors主表中不存在。"</span></div><div class="line">          <span class="keyword">end</span></div><div class="line">      <span class="keyword">else</span></div><div class="line">        print<span class="string">"修改titleauthor表成功。"</span></div><div class="line">    <span class="keyword">end</span></div><div class="line"><span class="keyword">go</span></div></pre></td></tr></table></figure>
+<p>– 游标及其使用</p>
+<pre><code>-- sybase提供了一种称为游标的对象，可以通过游标实现对结果集的按行操作。
+-- 游标是一种使用户可以逐行读取select结果集的方法。每个游标都与一个select语句向联系。
+游标由俩个位置组成：游标结果集和游标位置。
+</code></pre><p>– 在一个应用程序中可以使用俩种类型的游标，服务器端游标和客户端游标。</p>
+<pre><code>-- 服务器端游标：是由数据库管理并且容易被客户应用程序开发人员所访问的游标。select语句执行的结果不返回客户端缓冲区中，直到进行游标读取fetch操作时才将相应的一行或几行数据返回客户端。
+--客户端游标：是指游标结果集均返回给客户端应用程序缓冲区中。游标从客户端缓冲区中读取数据。在客户端缓冲区中的数据不能及时反映数据库数据的变化。如果应用程序要修改游标当前位置的行，而该行的数据已被其他用户修改（游标打开后修改），则操作失败。
+服务器端游标具有客户端游标的全部性能而不需要额外开销或限制。因此在Sybase10或者更高的版本中使用服务器端游标。
+</code></pre><p>– 使用游标需要经过说明游标、打开游标、从游标中读取数据、使用游标修改数据、关闭游标及释放游标的步骤。</p>
+<p>– 封锁是事务T向系统发送请求，对某个数据库对象加锁。加锁后，事务T就对此数据库有了一定的控制能力，其他事务必须等到事务T释放它的锁之后，才能更新此数据库对象。因此封锁机制可以使多个事务“串行化”。但这些加锁过程并不是由程序员在程序中显示规定的，而是由SQL server的事务管理机制根据事务的结构自动完成的（除holdlock）。</p>
+<p>– 有俩种类型的锁，表锁和区间锁。它们锁定的数据比单个数据页的数据多。当用户发出一个不含where子句的update操作请求时，此时出现表锁，使用户可以更新表的每一行。<br>– 当Sybase需要创建一个数据库区间（8页数据）以响应用户的查询时，就会出现区间锁。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/10/21/sql/" data-id="cjaz92d0a0000mnypy6yextor" class="article-share-link">Share</a>
+      <a data-url="http://www.afanail.com/2017/10/21/sql/" data-id="cjbrur596001vtcyp783ntaw2" class="article-share-link">分享</a>
       
       
       
@@ -231,7 +244,7 @@ select @val1=-68,@var2=97.564;
     
  <script src="/jquery/jquery.min.js"></script>
   <div id="random_posts">
-    <h2>Recommended Posts</h2>
+    <h2>推荐文章</h2>
     <div class="random_posts_ul">
       <script>
           var random_count =4
@@ -274,7 +287,7 @@ select @val1=-68,@var2=97.564;
 <nav id="article-nav">
   
     <a href="/2017/11/09/dataStructor/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
+      <strong class="article-nav-caption">上一篇</strong>
       <div class="article-nav-title">
         
           数据结构与算法
@@ -284,7 +297,7 @@ select @val1=-68,@var2=97.564;
   
   
     <a href="/2017/10/01/Perl相关/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">下一篇</strong>
       <div class="article-nav-title">perl-learning</div>
     </a>
   
@@ -323,9 +336,21 @@ select @val1=-68,@var2=97.564;
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title recent-posts">Recent Posts</h3>
+    <h3 class="widget-title recent-posts">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/12/29/关于Java核心技术/">Java核心技术</a>
+          </li>
+        
+          <li>
+            <a href="/2017/12/18/webpack/">JavaScript简明教程（1）</a>
+          </li>
+        
+          <li>
+            <a href="/2017/12/05/ES6/">ES6 ES7</a>
+          </li>
         
           <li>
             <a href="/2017/11/09/dataStructor/">数据结构与算法</a>
@@ -333,18 +358,6 @@ select @val1=-68,@var2=97.564;
         
           <li>
             <a href="/2017/10/21/sql/">Sybase SQL Server相关</a>
-          </li>
-        
-          <li>
-            <a href="/2017/10/01/Perl相关/">perl-learning</a>
-          </li>
-        
-          <li>
-            <a href="/2017/09/30/0到1实现简单的jQuery城市选择控件/">0到1实现简单的jQuery城市选择控件</a>
-          </li>
-        
-          <li>
-            <a href="/2017/08/15/Perl项目前后端分离？/">Perl项目前后端分离？</a>
           </li>
         
       </ul>
@@ -371,7 +384,7 @@ select @val1=-68,@var2=97.564;
       &copy; 2016 - 2017 Afanail&nbsp;
     </div>
      <div id="footer-right">
-      Contact&nbsp;|&nbsp;zjfapk@163.com
+      联系方式&nbsp;|&nbsp;zjfapk@163.com
     </div>
   </div>
 </footer>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>JavaScript简明教程（1） | Afanail</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="webpack是一个现代 JavaScript 应用程序的模块打包器(module bundler). 当webpack处理应用程序时,它会递归地构建一个依赖关系图(dependency grapy),其中包含应用程序需要的每个模块.然后将这些模块打包成一个或多个bundle.它是高度可配置的.">
+<meta name="keywords" content="webpack,模块打包">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript简明教程（1）">
+<meta property="og:url" content="http://www.afanail.com/2017/12/18/webpack/index.html">
+<meta property="og:site_name" content="Afanail">
+<meta property="og:description" content="webpack是一个现代 JavaScript 应用程序的模块打包器(module bundler). 当webpack处理应用程序时,它会递归地构建一个依赖关系图(dependency grapy),其中包含应用程序需要的每个模块.然后将这些模块打包成一个或多个bundle.它是高度可配置的.">
+<meta property="og:updated_time" content="2017-12-29T11:40:11.914Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript简明教程（1）">
+<meta name="twitter:description" content="webpack是一个现代 JavaScript 应用程序的模块打包器(module bundler). 当webpack处理应用程序时,它会递归地构建一个依赖关系图(dependency grapy),其中包含应用程序需要的每个模块.然后将这些模块打包成一个或多个bundle.它是高度可配置的.">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.afanail.com"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Afanail</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-webpack" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/12/18/webpack/" class="article-date">
+  <time datetime="2017-12-18T03:16:32.000Z" itemprop="datePublished">2017-12-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JavaScript简明教程（1）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p>webpack是一个现代 <code>JavaScript</code> 应用程序的模块打包器(module bundler). 当webpack处理应用程序时,它会递归地构建一个依赖关系图(dependency grapy),其中包含应用程序需要的每个模块.然后将这些模块打包成一个或多个bundle.它是高度可配置的.<br><a id="more"></a><br>四个核心概念:</p>
+<pre><code>入口(entry)
+输出(output)
+loader
+插件(plugins)
+</code></pre><h2 id="入口-entry"><a href="#入口-entry" class="headerlink" title="入口(entry)"></a>入口(entry)</h2><p><em>入口起点(entry point)</em>指示webpack应该使用哪个模块,来作为构建内部依赖图的开始.进入入口起点后,webpack会找出哪些模块和库是入口起点(直接和间接)依赖的.每个依赖项随即被处理,最后输出到称之为bundles的文件夹中.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// webpack.config.js</span></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">    <span class="attr">entry</span>: <span class="string">'./path/to/my/entry/file.js'</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>多页应用程序<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 告诉webpack需要三个独立分离的依赖图</span></div><div class="line"><span class="keyword">const</span> config = &#123;</div><div class="line">    <span class="attr">entry</span>: &#123;</div><div class="line">        <span class="attr">pageOne</span>: <span class="string">'./src/pageOne/index.js'</span>,</div><div class="line">        <span class="attr">pageTwo</span>: <span class="string">'./src/pageTwo/index.js'</span>,</div><div class="line">        <span class="attr">pageThree</span>: <span class="string">'./src/pageThree/index.js'</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>使用CommonsChunkPlugin为每个页面间的应用程序共享代码创建bundle.由于入口起点增多,多页面应用能复用入口起点之间的大量代码/模块,从而可以极大地从这些技术中受益.</p>
+<h2 id="出口-output"><a href="#出口-output" class="headerlink" title="出口(output)"></a>出口(output)</h2><p><em>output</em>属性告诉webpack在哪里输出它所创建的bundles,以及如何命名这些文件.在配置中指定一个output字段,来配置这些处理过程:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// webpack.config.js</span></div><div class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">    <span class="attr">entry</span>: <span class="string">'./path/to/my/entry/file.js'</span>,</div><div class="line">    <span class="attr">output</span>: &#123;</div><div class="line">        <span class="attr">path</span>: path.resolve(__dirname,<span class="string">'dist'</span>),</div><div class="line">        <span class="attr">filename</span>: <span class="string">'my-first-webpack.bundle.js'</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果创建了多个单独的”chunk”文件(例如,使用多个入口起点或使用像CommonsChunkPlugin 这样的插件),则应该使用占位符来确保每个文件具有唯一名称<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">entry</span>:&#123;</div><div class="line">        <span class="attr">app</span>: <span class="string">'./src/app.js'</span>,</div><div class="line">        <span class="attr">search</span>: <span class="string">'./src/search.js'</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">output</span>: &#123;</div><div class="line">        <span class="attr">filename</span>: <span class="string">'[name].js'</span>,</div><div class="line">        <span class="attr">path</span>: __dirname + <span class="string">'dist'</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 写入到硬盘: ./dist/app.js  ./dist/search.js</span></div></pre></td></tr></table></figure></p>
+<h2 id="loader"><a href="#loader" class="headerlink" title="loader"></a>loader</h2><p><em>loader</em>让webpack能够去处理那些非<code>JavaScript</code>文件(webpack自身只理解<code>JavaScript</code>).loader可以将所有类型的文件转换为webpack能够处理的有效模块,然后你就可以利用webpack的打包能力,对他们进行处理.本质上,webpack loader将所有类型的文件,转换为应用程序的依赖图可以直接引用的模块.<br>在更高的层面上,webpack的配置中 loader 有俩个目标.</p>
+<pre><code>1 识别出应该被对应的 loader 进行转换的那些文件(使用 test 属性)
+2 转换这些文件,从而使其能够被添加到依赖图中(并且最终添加到bundle中 use 属性)
+</code></pre><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</div><div class="line"><span class="keyword">const</span> config = &#123;</div><div class="line">    <span class="attr">entry</span>: <span class="string">'./path/to/my/entry/file.js'</span>,</div><div class="line">    <span class="attr">output</span>: &#123;</div><div class="line">        <span class="attr">path</span>: path.resolve(__dirname,<span class="string">'dist'</span>),</div><div class="line">        <span class="attr">filename</span>: <span class="string">'my-first-webpack.bundle.js'</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">module</span>: &#123;</div><div class="line">        <span class="attr">rules</span>: [</div><div class="line">            &#123;<span class="attr">test</span>:<span class="regexp">/\.txt$/</span>,<span class="attr">use</span>:<span class="string">'raw-loader'</span>&#125;</div><div class="line">        ]</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"><span class="built_in">module</span>.exports = config;</div></pre></td></tr></table></figure>
+<p>loader 用于对模块的源码进行转换. loader可以使你在 import 或加载模块时预处理文件.loader类似于其他构建工具的任务 task ,比如 gulp. 并提供了处理前端构建步骤的强大方法.loader可以将文件从不同的语言转换为 JavaScript,或将内联图像转换为dataURL. loader甚至允许你直接在 JavaScript 模块中 import CSS文件. 例如,使用 loader 告诉webpack 加载CSS文件,或者将 TypeScript 转换为 JavaScript. 为此,首先安装相应的loader.<br><code>npm install --save-dev css-loader
+npm install --save-dev ts-loader</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">    <span class="attr">module</span>: &#123;</div><div class="line">        <span class="attr">rules</span>: [</div><div class="line">            &#123; <span class="attr">test</span>: <span class="regexp">/\.css$/</span>, <span class="attr">use</span>: <span class="string">'css-loader'</span> &#125;,</div><div class="line">            &#123; <span class="attr">test</span>: <span class="regexp">/\.ts$/</span>,<span class="attr">use</span>: <span class="string">'ts-loader'</span> &#125;</div><div class="line">        ]</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>还可以 import 语句或任何等效于 import的方法中指定loader.使用!将资源中的loader分开.分开的每个部分都相对于当前目录解析.<br><code>import Styles from &#39;style-loader!css-loader?modules!./styles.css&#39;;</code><br>尽可能使用module.rules,因为这样可以减少源码中的代码量,并且可以在出错时,更快的调试和定位loader中的问题.<br>loader特性:</p>
+<pre><code>1 loader支持链式传递.能够对资源使用流水线(pipeline).一组链式的loader将按照先后顺序进行编译.loader链式中的第一个loader返回值返回给下一个loader.在最后一个loader,返回webpack所预期的JavaScript.
+2 loader可以是同步的,也可以是异步的.
+3 loader 运行在Node.js中,并且能够执行任何可能的操作.
+4 loader接收查询参数.用于对loader传递配置
+5 loader 也能够使用 options 对象进行配置
+6 除了使用 package.json 常见的 main 属性,还可以将普通的 npm 模块导出为loader,做法是在 package.json 里定义一个 loader 字段.
+7 插件为 loader 带来更多的特性
+8 loader 能够产生额外的任意文件
+</code></pre><p>loader 通过预处理函数,为JavaScript生态系统提供了更多的能力.用户现在可以更加灵活的引入细粒度逻辑,例如压缩,打包等</p>
+<p>解析loader<br>loader将从模块路径解析(npm install node_modules)<br>loader模块需要导出一个函数,并且使用Node.js兼容的JavaScript编写.通常使用npm进行管理.按照约定,loader通常将被命名为xxx-loader(json-loader).</p>
+<h2 id="插件-plugins"><a href="#插件-plugins" class="headerlink" title="插件(plugins)"></a>插件(plugins)</h2><p>loader将被用于转换某些类型的模块,而插件则可以用于执行范围更广的任务.插件的范围包括,从打包优化和压缩,一直到重新定义环境中的变量.插件接口的功能及其强大,可以用来处理各种各样的任务.<br>想要使用一个插件,你只需要require()它,然后把它添加到plugins数组中.多数插件可以通过option选项自定义,你也可以在一个配置文件中因为不同的目的而多次使用同一个插件,这时需要通过使用 new 操作符来创建它的一个实例.<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> HtmlWebpackPlugin = <span class="built_in">require</span>(<span class="string">'html-webpack-plugin'</span>); <span class="comment">// 通过 npm 安装</span></div><div class="line"><span class="keyword">const</span> webpack = <span class="built_in">require</span>(<span class="string">'webpack'</span>); <span class="comment">// 用于访问内置插件</span></div><div class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</div><div class="line"><span class="keyword">const</span> config = &#123;</div><div class="line">    <span class="attr">entry</span>: <span class="string">'./path/to/my/entry/file.js'</span>,</div><div class="line">    <span class="attr">output</span>: &#123;</div><div class="line">        <span class="attr">path</span>: path.resolve(__dirname,<span class="string">'dist'</span>),</div><div class="line">        <span class="attr">filename</span>: <span class="string">'my-first-webpack.bundle.js'</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">module</span>: &#123;</div><div class="line">        <span class="attr">rules</span>: [</div><div class="line">            &#123;<span class="attr">test</span>: <span class="regexp">/\.txt$/</span>, <span class="attr">use</span>: <span class="string">'raw-loader'</span>&#125;</div><div class="line">        ]</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">plugins</span>: [</div><div class="line">        <span class="keyword">new</span> webpack.optimize.UglifyJsplugin(),</div><div class="line">        <span class="keyword">new</span> HtmlWebpackPlugin(&#123;<span class="attr">template</span>:<span class="string">'./src/index.html'</span>&#125;)</div><div class="line">    ]</div><div class="line">&#125;</div><div class="line"><span class="built_in">module</span>.exports = config;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.afanail.com/2017/12/18/webpack/" data-id="cjbrur58r001qtcypvxcyme2j" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack/">webpack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/模块打包/">模块打包</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+ <script src="/jquery/jquery.min.js"></script>
+  <div id="random_posts">
+    <h2>推荐文章</h2>
+    <div class="random_posts_ul">
+      <script>
+          var random_count =4
+          var site = {BASE_URI:'/'};
+          function load_random_posts(obj) {
+              var arr=site.posts;
+              if (!obj) return;
+              // var count = $(obj).attr('data-count') || 6;
+              for (var i, tmp, n = arr.length; n; i = Math.floor(Math.random() * n), tmp = arr[--n], arr[n] = arr[i], arr[i] = tmp);
+              arr = arr.slice(0, random_count);
+              var html = '<ul>';
+            
+              for(var j=0;j<arr.length;j++){
+                var item=arr[j];
+                html += '<li><strong>' + 
+                item.date + ':&nbsp;&nbsp;<a href="' + (site.BASE_URI+item.uri) + '">' + 
+                (item.title || item.uri) + '</a></strong>';
+                if(item.excerpt){
+                  html +='<div class="post-excerpt">'+item.excerpt+'</div>';
+                }
+                html +='</li>';
+                
+              }
+              $(obj).html(html + '</ul>');
+          }
+          $('.random_posts_ul').each(function () {
+              var c = this;
+              if (!site.posts || !site.posts.length){
+                  $.getJSON(site.BASE_URI + 'js/posts.js',function(json){site.posts = json;load_random_posts(c)});
+              } 
+               else{
+                load_random_posts(c);
+              }
+          });
+      </script>
+    </div>
+  </div>
+
+    
+<nav id="article-nav">
+  
+    <a href="/2017/12/29/关于Java核心技术/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          Java核心技术
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/12/05/ES6/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">ES6 ES7</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+       
+      
+      
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+    <div class="widget-wrap">
+    
+      <div class="widget" id="toc-widget-fixed">
+      
+        <strong class="toc-title">文章目录</strong>
+        <div class="toc-widget-list">
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#入口-entry"><span class="toc-number">1.</span> <span class="toc-text">入口(entry)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#出口-output"><span class="toc-number">2.</span> <span class="toc-text">出口(output)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#loader"><span class="toc-number">3.</span> <span class="toc-text">loader</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#插件-plugins"><span class="toc-number">4.</span> <span class="toc-text">插件(plugins)</span></a></li></ol>
+          </div>
+      </div>
+    </div>
+
+  
+    
+
+  
+    
+  
+    
+  
+    
+
+  
+    
+  
+    <!--微信公众号二维码-->
+
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2016 - 2017 Afanail&nbsp;
+    </div>
+     <div id="footer-right">
+      联系方式&nbsp;|&nbsp;zjfapk@163.com
+    </div>
+  </div>
+</footer>
+ <script src="/jquery/jquery.min.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+  
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "e2fb4051c49842688ce669e634bc983f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+    
+
+  
+
+
+
+
+
+
+
+<!-- author:forvoid begin -->
+<!-- author:forvoid begin -->
+
+<!-- author:forvoid end -->
+
+<!-- author:forvoid end -->
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/mathjax/MathJax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ <script src="/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/elevator.js"></script>
+  </div>
+</body>
+</html>

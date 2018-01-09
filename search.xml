@@ -100,11 +100,20 @@ Object:所有类的超类   枚举类
 6 使用多态,而非类型信息
 7 不要过多的使用反射(反射机制使得人们可以通过在运行时查看域和方法,让人们编写出更具有通用性的程序,这种功能对于编写系统程序来说极其实用,但是通常不适于编写应用程序.反射是很脆弱的,即编译器很难帮助人们发现程序中的错误,因此只有在运行时才会发现错误并导致异常)
 </code></pre><p><em>反射</em> 编写动态操纵Java代码的程序.<br>反射库(reflection library)提供了一个非常丰富且精心设计的工具集,以便编写能够动态操纵Java代码的程序.它是Java组件的体系结构.特别是在设计或运行中添加新类时,能够快速的应用开发工具动态的查询新添加类的能力.</p>
-<p><em>接口 lambda表达式与内部类</em></p>
+<p>能够分析类能力的程序称为反射(reflective).反射机制的功能极其强大.</p>
+<pre><code>反射机制可以用来:
+在运行时分析类的能力
+在运行时查看对象,比如编写一个toString方法供所有类使用.
+实现通用的数组操作代码
+利用Method对象,这个对象很像C++中的函数指针
+</code></pre><p>反射是一种功能强大且复杂的机制,使用它的主要人员是工具构造者,而不是应用程序员.</p>
+<p><em>Class类</em><br>在程序运行期间,Java运行时系统始终为所有的对象维护一个被称为运行时的类型标识.这个信息跟踪着每个对象所属的类,虚拟机利用运行时类型信息选择相应的方法执行.保存这些信息的类被称为Class,Object类中的getClass()方法将会返回一个Class类型的实例.</p>
+<p>在java.lang.reflect包中有三个类Field Method 和 Constructor分别用于描述类的域 方法和构造器.这三个类都有一个叫做getName的方法,用来返回项目的名称<br><em>接口 lambda表达式与内部类</em></p>
 <pre><code>接口               内部类
 接口示例             代理
 lambada表达式
-</code></pre>]]></content>
+</code></pre><p>在Java程序设计中,接口不是类,而是对类的一组需求描述,这些类需要遵从接口描述的统一格式进行定义.<br>例子: Arrays类中的sort方法承诺可以对对象数组进行排序,但要求满足下列前提:对象所属的类必须实现了Comparable接口.下面是Comparable接口的代码<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 任何实现Comparable接口的类都需要包含compareTo方法,并且这个方法的参数必须是一个Object对象,返回一个整型数值.</span></div><div class="line"><span class="comment">// 接口中的所有方法自动属于public,在接口声明中不用提供关键字public</span></div><div class="line">    <span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Comparable</span></span>&#123;</div><div class="line">        <span class="function"><span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(Object other)</span></span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// Java SE 5.0中,Comparable接口已经改进为泛型类型</span></div><div class="line">    <span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Comparable</span>&lt;<span class="title">T</span>&gt;</span>&#123;</div><div class="line">        <span class="function"><span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(T other)</span></span>;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//接口中还可以定义常量,重要的是知道接口不能提供哪些功能,接口绝对不能有实例域.接口没有实例,Java SE8 可以在接口中提供简单的方法,但是不能引用实例域.</span></div></pre></td></tr></table></figure></p>
+]]></content>
       
         
         <tags>

@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://www.afanail.com/2017/12/29/关于Java核心技术/index.html">
 <meta property="og:site_name" content="Afanail">
 <meta property="og:description" content="每天Java后台都来问我一些简单的样式问题和一些js不为人轻易发现的问题。那我也要问他们一些简单的Java问题。哈哈哈。">
-<meta property="og:updated_time" content="2018-01-09T12:07:58.190Z">
+<meta property="og:updated_time" content="2018-01-14T05:00:36.156Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java核心技术摘要">
 <meta name="twitter:description" content="每天Java后台都来问我一些简单的样式问题和一些js不为人轻易发现的问题。那我也要问他们一些简单的Java问题。哈哈哈。">
@@ -38,7 +38,7 @@
     <div id="header-inner" class="inner">
       <nav id="sub-nav">
         
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.afanail.com"></form>
@@ -197,11 +197,29 @@ Object:所有类的超类   枚举类
 lambada表达式
 </code></pre><p>在Java程序设计中,接口不是类,而是对类的一组需求描述,这些类需要遵从接口描述的统一格式进行定义.<br>例子: Arrays类中的sort方法承诺可以对对象数组进行排序,但要求满足下列前提:对象所属的类必须实现了Comparable接口.下面是Comparable接口的代码<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 任何实现Comparable接口的类都需要包含compareTo方法,并且这个方法的参数必须是一个Object对象,返回一个整型数值.</span></div><div class="line"><span class="comment">// 接口中的所有方法自动属于public,在接口声明中不用提供关键字public</span></div><div class="line">    <span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Comparable</span></span>&#123;</div><div class="line">        <span class="function"><span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(Object other)</span></span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// Java SE 5.0中,Comparable接口已经改进为泛型类型</span></div><div class="line">    <span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Comparable</span>&lt;<span class="title">T</span>&gt;</span>&#123;</div><div class="line">        <span class="function"><span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(T other)</span></span>;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//接口中还可以定义常量,重要的是知道接口不能提供哪些功能,接口绝对不能有实例域.接口没有实例,Java SE8 可以在接口中提供简单的方法,但是不能引用实例域.</span></div></pre></td></tr></table></figure></p>
 <p>提供实例域和方法实现的任务应该由实现接口的那个类来完成.为了让类实现一个接口,通常需要下面俩个步骤:<br>1 将类声明为实现给定的接口<br>2 对接口中的所有方法进行定义<br>要将类声明为实现某个接口,需要使用关键字implenments:<code>class Employee implements Comparable</code>  , 以下是compareTo方法的实现:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//实现接口时,必须把方法声明为public,否则编译器将认为这个方法的访问属性为包可见性,即类的默认访问属性.</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(Object otherObject)</span></span>&#123;</div><div class="line">        Employee other = (Employee) otherObject;</div><div class="line">        <span class="keyword">return</span> Double.compare(salary,other.salary);</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
-
+<p>回调是一种常见的程序设计模式,在这种模式中,可以指出某个特定事件发生时应该采取的动作.<br>在标准类库中采用的是面向对象方法,它将某个类的对象传递给定时器,然后,定时器调用这个对象的方法,由于对象可以携带一些附加的信息,所以传递一个对象比传递一个函数灵活得多.<br>定时器需要知道调用哪一个方法,并要求传递的对象所属所属的类实现了java.awt.event包中ActionListener接口,下面是这个接口:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">ActionListener</span></span></div><div class="line">&#123;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">actionPerformed</span><span class="params">(ActionEvent event)</span></span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>假设希望每隔10秒打印一条信息,”At the one,the time is …”,然后响一声,就应该定义一个实现ActionListener接口的类,然后将需要执行的语句放在actionPerformed方法中.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">TimePrinter</span> <span class="keyword">implements</span> <span class="title">ActionListener</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">actionPerformed</span><span class="params">(ActionEvent event)</span></span>&#123;</div><div class="line">        System.out.println(<span class="string">"At the one, the time is "</span>+ <span class="keyword">new</span> Date());</div><div class="line">        Toolkit.getDefaultToolkit().beep();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>接下来,构造这个类的第一个对象,并将它传递给Timer构造器<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ActionListener listener = <span class="keyword">new</span> TimePrinter();</div><div class="line">Timer t =<span class="keyword">new</span> Timer(<span class="number">1000</span>,listener)</div></pre></td></tr></table></figure></p>
+<p>最好,启动定时器<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">t.start()</div></pre></td></tr></table></figure></p>
+<p><em>lambda</em>表达式</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> lambda;</div><div class="line"><span class="keyword">import</span> java.util;</div><div class="line"><span class="keyword">import</span> javax.swing.*;</div><div class="line"><span class="keyword">import</span> javax.swing.Timer;</div><div class="line"></div><div class="line"><span class="keyword">public</span>  <span class="class"><span class="keyword">class</span> <span class="title">lambdaTest</span></span></div><div class="line">&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</div><div class="line">        String[] planets = <span class="keyword">new</span> String[] &#123;<span class="string">"Mercury"</span>,<span class="string">"Venus"</span>,<span class="string">"Earth"</span>,<span class="string">"Mars"</span>,<span class="string">"Jupiter"</span>,<span class="string">"Saturn"</span>,<span class="string">"Urans"</span>,<span class="string">"Neptune"</span>&#125;;</div><div class="line">        System.out.prinln(Arrays.toString(planets));</div><div class="line">        System.out.ptinln(<span class="string">"Sorted in dictionary order:"</span>);</div><div class="line">        Arrays.sort(planets);</div><div class="line">        System.out.printlnn(Arrays.toString(planets));</div><div class="line">        System.out.println(<span class="string">"Sorted by length:"</span>);</div><div class="line">        Arrays.sort(planets,(first,second)-&gt;first.length()-second.length());</div><div class="line">        System.out.println(Arrays.toString(planets));</div><div class="line">        Timer t = <span class="keyword">new</span> Timer(<span class="number">1000</span>,event-&gt;System.out.println(<span class="string">"The time is"</span>+<span class="keyword">new</span> Date()));</div><div class="line">        t.start();</div><div class="line"></div><div class="line">        JOptionPane.showMessageDialog(<span class="keyword">null</span>,<span class="string">"Quit program?"</span>);</div><div class="line">        System.exit(<span class="number">0</span>);</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>最好把lambda表达式看作是一个函数,而不是一个对象,另外要接受lambda表达式可以传递到函数式接口.</p>
+<p><em>内部类</em><br>内部类(inner Class)是定义在另一个类中的类.使用内部类的主要原因有三点:</p>
+<pre><code>内部类方法可以访问该类定义所在作用域中的数据,包括私有数据.
+内部类可以对同一个包中的其他类隐藏起来
+当想要定义一个回调函数且不想编写大量代码时,使用匿名内部类比较便捷.
+</code></pre><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 俩个参数: 发布通告和开关铃声的标志</span></div><div class="line"><span class="comment">// TimerPrinter 对象是由TalkingClock类的方法构造</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TalkingClock</span></span>&#123;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> interval;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span> beep;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">TalkingClock</span><span class="params">(<span class="keyword">int</span> interval,<span class="keyword">boolean</span> beep)</span></span>&#123;...&#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">start</span><span class="params">()</span></span>&#123;...&#125;</div><div class="line">    <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TimePrinter</span> <span class="keyword">implements</span> <span class="title">ActionListener</span></span>&#123;</div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">actionPerformed</span><span class="params">(ActionEvent event)</span></span>&#123;</div><div class="line">            System.out.println(<span class="string">"At the tone,the time is"</span> + <span class="keyword">new</span> Date());</div><div class="line">            <span class="keyword">if</span> (beep) Toolkit.getDefaultToolkit().beep();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 内部类既可以访问自身的数据域,也可以访问创建它的外围类对象的数据域.\</span></div></pre></td></tr></table></figure>
+<p>只有内部类可以是私有类,而常规类只可以具有包可见性,或公有可见性.</p>
+<p>前6章代理和反射看的比较费劲</p>
+<p><em>异常 断言和日志</em></p>
+<pre><code>处理错误            使用断言
+捕获异常            记录日志
+使用异常机制的技巧    调试技巧
+</code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/12/29/关于Java核心技术/" data-id="cjbrur598001ytcyp55s6y8te" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2017/12/29/关于Java核心技术/" data-id="cjbrur598001ytcyp55s6y8te" class="article-share-link">Share</a>
       
       
       
@@ -213,7 +231,7 @@ lambada表达式
     
  <script src="/jquery/jquery.min.js"></script>
   <div id="random_posts">
-    <h2>推荐文章</h2>
+    <h2>Recommended Posts</h2>
     <div class="random_posts_ul">
       <script>
           var random_count =4
@@ -257,7 +275,7 @@ lambada表达式
   
   
     <a href="/2017/12/18/webpack/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">下一篇</strong>
+      <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">webpack</div>
     </a>
   
@@ -296,7 +314,7 @@ lambada表达式
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title recent-posts">最新文章</h3>
+    <h3 class="widget-title recent-posts">Recent Posts</h3>
     <div class="widget">
       <ul>
         
@@ -344,7 +362,7 @@ lambada表达式
       &copy; 2016 - 2018 Afanail&nbsp;
     </div>
      <div id="footer-right">
-      联系方式&nbsp;|&nbsp;zjfapk@163.com
+      Contact&nbsp;|&nbsp;zjfapk@163.com
     </div>
   </div>
 </footer>

@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://www.afanail.com/2017/12/29/关于Java核心技术/index.html">
 <meta property="og:site_name" content="Afanail">
 <meta property="og:description" content="每天Java后台都来问我一些简单的样式问题和一些js不为人轻易发现的问题。那我也要问他们一些简单的Java问题。哈哈哈。">
-<meta property="og:updated_time" content="2018-01-14T05:00:36.156Z">
+<meta property="og:updated_time" content="2018-01-20T08:48:07.062Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java核心技术摘要">
 <meta name="twitter:description" content="每天Java后台都来问我一些简单的样式问题和一些js不为人轻易发现的问题。那我也要问他们一些简单的Java问题。哈哈哈。">
@@ -38,7 +38,7 @@
     <div id="header-inner" class="inner">
       <nav id="sub-nav">
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.afanail.com"></form>
@@ -215,11 +215,21 @@ lambada表达式
 <pre><code>处理错误            使用断言
 捕获异常            记录日志
 使用异常机制的技巧    调试技巧
-</code></pre>
+</code></pre><p>在Java程序设计中,异常对象都是派生于Throwable类的一个实例.所有的异常都是由Throwable继承而来的,但是下一层立即分解为俩个分支:Error和Exception</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> pair3;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Pair</span>&lt;<span class="title">T</span>&gt;</span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">private</span> T first;</div><div class="line">    <span class="keyword">private</span> T second;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Pair</span><span class="params">()</span> </span>&#123; first = <span class="keyword">null</span>; second = <span class="keyword">null</span> &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Pair</span><span class="params">(T first, T second)</span></span>&#123; <span class="keyword">this</span>.first = first; <span class="keyword">this</span>.second = second &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> T <span class="title">getFirst</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> first; &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> T <span class="title">getSecond</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> second; &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setFrist</span><span class="params">(T newValue)</span> </span>&#123; first = newValue; &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setSecond</span><span class="params">(T newValue)</span> </span>&#123; second = newValue; &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> pair3;</div><div class="line"><span class="keyword">import</span> java.time.*;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Employee</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">private</span> String name;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">double</span> salary;</div><div class="line">    <span class="keyword">private</span> LocalDate hireDay;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(String name, <span class="keyword">double</span> salary, <span class="keyword">int</span> year, <span class="keyword">int</span> month, <span class="keyword">int</span> day)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">this</span>.name = name;</div><div class="line">        <span class="keyword">this</span>.salary = salary;</div><div class="line">        hireDay = LocalDate.of(year, month, day);</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> name;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getSalary</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> salary;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> LocalDate <span class="title">getHireDay</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> hireDay;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">raiseSalary</span><span class="params">(<span class="keyword">double</span> byPercent)</span></span>&#123;</div><div class="line">        <span class="keyword">double</span> raise = salary * byPercent / <span class="number">100</span>;</div><div class="line">        salary += raise;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> pair3;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Manager</span> <span class="keyword">extends</span> <span class="title">Employee</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">double</span> bonus;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Manager</span><span class="params">(String name,<span class="keyword">double</span> salary, <span class="keyword">int</span> year, <span class="keyword">int</span> month, <span class="keyword">int</span> day)</span></span>&#123;</div><div class="line">        <span class="keyword">super</span>(name,salary,year,month,day);</div><div class="line">        bonus = <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getSalary</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">double</span> baseSalary = <span class="keyword">super</span>.getSalary();</div><div class="line">        <span class="keyword">return</span> baseSalary + bonus;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setBonus</span><span class="params">(<span class="keyword">double</span> b)</span></span>&#123;</div><div class="line">        bonus = b;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getBonus</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> bonus;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> pair3;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PairTest3</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</div><div class="line">        Manager ceo = <span class="keyword">new</span> Manager(<span class="string">"Gus Greedy"</span>,<span class="number">800000</span>,<span class="number">2003</span>,<span class="number">12</span>,<span class="number">15</span>);</div><div class="line">        Manager cfo = <span class="keyword">new</span> Manager(<span class="string">"Sid Sneaky"</span>, <span class="number">600000</span>,<span class="number">2003</span>,<span class="number">12</span>,<span class="number">15</span>);</div><div class="line">        Pair&lt;Manager&gt; buddies = <span class="keyword">new</span> Pair&lt;&gt;(ceo, cfo);</div><div class="line">        printBuddies(buddies);</div><div class="line">        ceo.setBonus(<span class="number">1000000</span>);</div><div class="line">        cfo.setBonus(<span class="number">500000</span>);</div><div class="line">        Manager[] mangers = &#123; ceo, cfo&#125;;</div><div class="line">         </div><div class="line">        Pair&lt;Employee&gt; result = <span class="keyword">new</span> Pair&lt;&gt;();</div><div class="line">        minmaxBonus(managers, result);</div><div class="line">        System.out.println(<span class="string">"first: "</span>+ result.getFirst().getName() + <span class="string">",second: "</span>+ result.getSecond().getName());</div><div class="line">        maxminBonus(managers,result);</div><div class="line">        System.out.prinln(<span class="string">"first:"</span> + result.getFirst().getName()+<span class="string">",second:"</span>+result.getSecond().getName());</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printBuddies</span><span class="params">(Pair&lt;? extends Employee&gt; p)</span></span>&#123;</div><div class="line">        <span class="comment">// 子类限定可以读取对象</span></div><div class="line">        Employee first = p.getFirst();</div><div class="line">        Employee second = p.getSecond();</div><div class="line">        System.out.println(first.getName() + <span class="string">" add "</span> + second.getName() + <span class="string">" are buddies. "</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">minmaxBonus</span><span class="params">(Manger[] a,Pair&lt;? <span class="keyword">super</span> Manager&gt; result)</span></span>&#123;</div><div class="line">        <span class="comment">// 父类限定可以设置对象</span></div><div class="line">        <span class="keyword">if</span> (a.length == <span class="number">0</span>) <span class="keyword">return</span>;</div><div class="line">        Manager min = a[<span class="number">0</span>];</div><div class="line">        Manager max = a[<span class="number">0</span>];</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt; a.length; i++)&#123;</div><div class="line">            <span class="keyword">if</span>(min.getBonus() &gt; a[i].getBonus()) min = a[i];</div><div class="line">            <span class="keyword">if</span>(max.getBonus()&lt;a[i].getBonus()) max = a[i];</div><div class="line">        &#125;</div><div class="line">        result.setFirst(min);</div><div class="line">        result.setSecond(max);</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">maxminBonus</span><span class="params">(Manager[] a, Pair&lt;? <span class="keyword">super</span> Manager&gt; result)</span></span></div><div class="line">    &#123;</div><div class="line">        minmaxBonus(a,result);</div><div class="line">        PairAlg.swapHelper(result);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">PairAlg</span></span></div><div class="line">&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">hasNulls</span><span class="params">(Pair&lt;?&gt; p)</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> p.getFirst() == <span class="keyword">null</span> || p.getSecond() == <span class="keyword">null</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(Pair&lt;?&gt; p)</span> </span>&#123; swapHelper(P); &#125;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function"><span class="keyword">void</span> <span class="title">swapHelper</span><span class="params">(Pair&lt;T&gt; p)</span></span>&#123;</div><div class="line">        T t=p.getFirst();</div><div class="line">        p.setFirst(p.getSecond());</div><div class="line">        p.setSecond(t);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><em>集合</em></p>
+<pre><code>Java集合框架        视图与包装器
+具体的集合           算法
+映射                遗留的集合
+</code></pre><p>容器和组件是”组合(composite)”模式<br>带滚动条的面板是”装饰器(decorator)”模式<br>布局管理器是”策略(strategy)”墨菲</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/12/29/关于Java核心技术/" data-id="cjbrur598001ytcyp55s6y8te" class="article-share-link">Share</a>
+      <a data-url="http://www.afanail.com/2017/12/29/关于Java核心技术/" data-id="cjbrur598001ytcyp55s6y8te" class="article-share-link">分享</a>
       
       
       
@@ -231,7 +241,7 @@ lambada表达式
     
  <script src="/jquery/jquery.min.js"></script>
   <div id="random_posts">
-    <h2>Recommended Posts</h2>
+    <h2>推荐文章</h2>
     <div class="random_posts_ul">
       <script>
           var random_count =4
@@ -273,9 +283,18 @@ lambada表达式
     
 <nav id="article-nav">
   
+    <a href="/2018/01/25/lookbook/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          书单
+        
+      </div>
+    </a>
+  
   
     <a href="/2017/12/18/webpack/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">下一篇</strong>
       <div class="article-nav-title">webpack</div>
     </a>
   
@@ -314,9 +333,13 @@ lambada表达式
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title recent-posts">Recent Posts</h3>
+    <h3 class="widget-title recent-posts">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/01/25/lookbook/">书单</a>
+          </li>
         
           <li>
             <a href="/2017/12/29/关于Java核心技术/">Java核心技术摘要</a>
@@ -332,10 +355,6 @@ lambada表达式
         
           <li>
             <a href="/2017/11/09/dataStructor/">数据结构与算法</a>
-          </li>
-        
-          <li>
-            <a href="/2017/10/21/sql/">Sybase SQL Server相关</a>
           </li>
         
       </ul>
@@ -362,7 +381,7 @@ lambada表达式
       &copy; 2016 - 2018 Afanail&nbsp;
     </div>
      <div id="footer-right">
-      Contact&nbsp;|&nbsp;zjfapk@163.com
+      联系方式&nbsp;|&nbsp;zjfapk@163.com
     </div>
   </div>
 </footer>

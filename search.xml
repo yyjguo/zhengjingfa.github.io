@@ -3,6 +3,254 @@
   
     
     <entry>
+      <title><![CDATA[书单]]></title>
+      <url>/2018/01/25/lookbook/</url>
+      <content type="html"><![CDATA[<pre>
+以下是对一些读过的书和一些买后随便翻了翻的书的个人感觉。
+都是java web开发的程序员可能接触的书，其他的如设计/手机开发/其他语言的书就不写了，因为自己只做过java web开发，那些书没什么资格评判。
+因为不是每本书都翻开确定一下再写的，可能有张冠李戴或记忆错误的情况，如发现了请指正。
+如有好书我这里没列举到的，请补充。此书单将持续完善。
+</pre>
+<a id="more"></a>
+ <pre>
+
+js书籍：
+
+《Javascript权威指南》犀牛书
+厚，唯一的顶尖著作，上册的每个章节都将一个知识点深入挖掘讲透，必看。下册API无关紧要。
+
+《Javascript高级程序设计》
+厚，与犀牛书有很大重叠，但感觉各个方面都不如犀牛书。可以看犀牛书之后随便翻翻这本书，有的地方可做补充。
+
+《Javascript精粹》蝴蝶书
+薄，让人喜欢javascript的一本书。
+
+《Javascript DOM编程艺术》
+薄，最佳入门书没有之一，对新手来说，前两本太厚让人望而生畏心生恐惧，这本书是优选，豆瓣评分高达8.7。
+
+
+css书籍：
+
+首先入门还是w3school的教程。大部分作为非美工的程序员就够用了。
+看过几本不错的书但忘了名字，待补充。
+
+《精通CSS高级WEB标准解决方案》
+《CSS设计指南》
+入门之后可以用来提高。
+
+《CSS禅意花园》
+非新手向，更适合已经熟悉之后寻找灵感和……欣赏艺术。
+
+
+html的书籍：
+……w3school的教程足够了，讲js和css的书里都会讲。
+
+
+前端性能：
+
+《构建高性能web站点》
+《高性能网站建设指南》
+类似的两本薄书，都看过之后会觉得自己无敌了，不想看书YSlow的军规其实也够了，重要的是要知其所以然。
+
+
+rest:
+
+《REST实战》
+厚书，没看呢，老外的很多理论书籍过于想当然和自我神化，不接地气让人不喜，讲到后面敏捷的地方还会议论。
+
+《图解HTTP》
+倒是http协议的理解至关重要，有语义的东西不用白不用，method啦，状态码啦，但不要宗教般地抠，比如put和post谁增谁改啥的。
+这本书萌萌哒。
+
+
+前端框架：
+
+《锋利的jquery》
+其实就是jqueryAPI的加强版，觉得jqueryAPI足够的话就不用看这本了。
+
+《jquery技术内幕》
+与《struts2技术内幕》《spring技术内幕》一系列的好书，讲源码的。这三本书都值得一看。但注意“源码无用论”和“源码神圣论”都不可取。
+
+《深入浅出extjs》
+可能是extjs唯一的一本可读的书。非常不喜欢这个框架的思想。html和css都丧失了权力一切由它来托管了，未免权力欲过于旺盛。
+真正要用ext的话，官方demo和api是最好的选择，尤其是demo。
+
+《用AngularJS开发下一代web应用》
+《单页web应用 Javascript从前端到后端》
+《Backbone.js实战》
+mv*框架大热以来较热的几个框架，对这几个框架都只有摸索，感觉angularJs风险略大，有点像extjs的想当然，一切都要在它内部来，如果能解决当然省时省力，如果不能解决就糟了。但问题是千变万化的。backbone较轻量，功能弱，风险低，功能弱与风险低从来都是共同出现。
+另外还有requireJs，也应该研究研究，这些前端架构级框架都不熟。本能地觉得不切实际，但还是该研究研究再下结论。
+传统开发中使用的前端技术，毫无疑问jquery是枪王之王。
+
+《Bootstrap用户手册》
+《深入理解Bootstrap》
+前者超薄，完全不需要，看Bootstrap官网即可（版本更新时中文官网可能跟最新版本对不上，推荐英文官网）。后者是好书，讲应用也讲源码。
+基于Bootstrap的前端CSS框架Metronic超酷，页面常用的组件里面都有，其实就是个最佳实践的大整合大杂烩，里面没有的自己找Bootstrap插件就好。
+Bootstrap的伟大在于作为一个脚手架，给各种js组件提供平台，只要都是bootstrap版的插件，整合起来样式一致性一般没什么问题。
+
+
+java基础书籍：
+
+《scjp考试指南》
+无数次被人求推荐书籍，无数次说出这本书之后被鄙视：“我不是为了考证”。但这本书真不是只能用来考证。
+对j2se的讲解，既简约又精当，知识足够，又不会把人吓走的书，当然是入门的不二之选。
+
+《Thinking in Java》
+java界的顶级图书，每个章节都深入讲一个点，可以通读一遍，然后按需再翻具体章节强化。跟《Javascript权威指南》读法是一样的。
+但初学者不适合读这本书，已经无数人说过了。但从别的语言转java的人可以直接读这本书。
+
+《Core Java》
+评价很高，个人不喜欢，就像《Javascript高级程序设计》被《Javascript权威指南》全面压制一样，《Core Java》也活在《Thinking in Java》的阴影之下。
+
+《Java解惑》
+好玩的书，让你喜欢“有趣的”java。
+
+《深入理解Java虚拟机》
+《深入java虚拟机》
+知其然又知其所以然，java虚拟机的内部原理，理解了没坏处。
+
+《Effective Java》
+最喜欢的书之一，箴言式的规谏，作者的经验之谈，告诉你怎样写出优雅的代码。
+
+
+java web基础书籍：
+
+《scwcd考试指南》
+《Head First JSP & Servlet》
+《scwcd考试指南》与《scjp考试指南》一系列，但质量不高。相比之下scwcd的官方推荐教材《Head First JSP & Servlet》（该系列中文版都译为深入浅出xxx）更好。
+这两本书都是将jsp的标签讲的很透，但如果使用jstl和el，两本书讲的都稍嫌不足，需要另查资料。
+
+
+java性能书籍：
+《java程序性能优化》
+《java性能优化权威指南》
+《web性能测试实战》
+《零成本实现web性能测试——基于Apache Jmeter》
+《Java并发编程实战》
+经验型书籍，没什么好说。
+因为我也就是粗粗看过。但知道都是好书。
+
+
+java框架书籍：
+
+《struts2技术内幕》
+《spring技术内幕》
+《Spring3.x企业应用开发实战》
+都来自iteye博主的手笔，第1本和第3本尤为推荐。《strut2技术内幕》的哲学思辨之美让我惊为天人，《Spring3.x企业应用开发实战》的实用和接地气也让人爱不释手，国内的程序员高手写的书比起国外的官方/经典著作，更适合中国人阅读。不要崇洋媚外。当然想看第一手资料那还是国外的好。
+
+《Hibernate实战》
+Hibernate作者Gavin King的作品，够权威吧。但个人也不喜欢Hibernate，这么多年都没能用纯熟，类似对Extjs的不喜欢一样，前者尝试解决O/R的不匹配，后者尝试解决O/DOM的不匹配，一切以OO为目标，强力扭转乾坤，这属于逆天行事，当然做的都很出色。但感觉像逆练《九阴真经》练出绝世武功，走错的路，居然成绩斐然，让人赞叹你的强大，但不是说你成绩斐然就不是错而是对了。
+
+Mybatis的好书籍没发现过，而且已经有中文文档了。
+
+《深入浅出Hibernate》
+《spring2.0技术手册》
+两本经典的好书，有一点点古老了，前者用来Hibernate入门的话还是不二之选，另外满江红的中文文档都非常棒。
+
+至于java的优秀类库基本都是开源的，到官网找demo/文档/API足矣。类库一般较小较轻，英文文档硬看也能看下来。框架较重，中文讲原理的书看了提纲挈领，否则容易陷入迷雾不能自拔。
+类库和框架的区别是什么？答：控制反转。
+
+至于一些java技术就不赘述了，SpringSide本身就是个大目录，沿着它给打开的窗户们一样样探究吧。
+
+
+设计模式书籍：
+
+《Head First设计模式》
+《设计模式之禅》
+《java与模式》
+《设计模式java中的应用》
+……
+设计模式的书没有特别好的也没有特别糟的，不同作者其实也没有什么发挥的余地，都是讲那些东西，所以都很像。
+设计模式的要点是通读，都理解了，在脑海中留存，以后写程序适当的时候设计模式自然会蹦出来。
+个人感觉最好用的，工厂单例原型迭代这些最简单的不说了，门面调停者这些偏架构的也不说了，最好用的是：适配器，策略，模板，另外组合、访问者、装饰器等各有各的用。桥接一直没有很好的理解。享元轻易用不上。代理spring的aop几近完美不用自己玩。解释器用的机会也不多。别的看情况使用。
+
+《反模式》
+介绍的是一些理论上不合理、但非常普及、能解决某些问题的“反模式”。
+把“反模式”一锤子打死也不对，但不是非用不可的情况还是轻易不要用。
+
+
+架构思想书籍：
+
+《企业应用架构模式》
+Martin Fowler的不朽著作，也是其人最好的一本书，十几年前的书，牛到了其中的种种思想，现在看来都是理所当然了，可见其影响力和普及程度。
+
+《Expert One-on-One J2EE Development without EJB》
+《J2EE设计开发编程指南》
+java界的巨人，Spring作者Rod Johnson的封王之作，这两本书同时期出现的spring彻底改变了java世界的格局，用老爵爷的语气说，将他妈的EJB从王座上拉了下来。
+“水，善利万物而不争，处众人之所恶，故几于道。”——《道德经》中的这句话，个人感觉可以用来赞颂Spring的伟大。
+唯一的顶级框架，java界的万王之王。
+个人非常崇拜的SpringSide正是以Spring为核心，提供的最佳实践的展示。功德无量。
+
+《J2EE核心模式》
+更早的书了，有空可以读读，不是特别必要。
+
+《大型网站技术架构》
+《软件架构设计》
+国人的书籍，讲的是“架构”而不是“框架”了，前一本强烈推荐，淘宝系的书籍都很不错。
+
+
+数据库书籍：
+
+数据库的思想，行列含义，各种范式什么的，好理解。
+oracle,mysql,sql server...等主流数据库，书籍都太多了，而且没有特别出彩的（怎么出彩？）或者特别差劲的，随意挑选就可以。不买书网上查资料其实也没问题。
+当然这指的是开发人员使用的数据库技术，更深的DBA技术我不了解，如果以后接触到再补充。
+
+《Sql反模式》
+为领域建模之后，画E-R图，然后建表，是自然而然的事，不需要书籍。
+反模式的议论见上文，SQL中也有一些反模式，这本书做了介绍。
+
+
+编程基础书籍：
+
+《java数据结构和算法》等数据结构、算法书籍
+《编译原理》
+《算法导论》
+《计算机程序的构造和解释》
+《编程珠玑》
+《代码大全》
+等等……
+不用一本本说了，基础的东西几十年也不会过时，认真读了受用无穷。
+可惜太过深入，书太厚，节奏太快，一直没能细读，有时间读书也读更“高层”的书去了，太可惜了。
+
+
+网络安全书籍：
+
+《白帽子讲web安全》
+《Web前端黑客技术揭秘》
+中国人写的安全书籍，做网站的必看，尤其是仇恨值高的。
+
+
+软件工程类：
+
+《人月神话》
+70年代出的书到现在依然畅销，永垂不朽的名作，程序员必读。
+
+《构建之法》
+接地气的著作，软件开发的全景图，不是高高在上的指导，而是娓娓道来手把手来教。
+
+《敏捷软件开发 原则，模式与实践》
+个人看过的敏捷类书籍中相对不错的。个人认为敏捷开发宣言背下来，敏捷的价值观记下来，按实际情况灵活运用就是了。有些敏捷爱好者的宗教式狂热特别吓人，简直走火入魔，不可取。
+
+《高效程序员的45个习惯：敏捷开发修炼之道》
+这45个习惯，无论敏捷与否，都是应该具备的，应该说是“优雅的”“职业的”行为。
+很明显，有些公司的工作不“敏捷”，但不代表程序员不能从这本书中受益。
+
+《代码整洁之道》
+《重构——改善既有代码的设计》
+职业程序员有义务写好自己的代码，写给接手代码的人，更是写给半年后的自己。
+最基本的职业道德，不需要多说。
+</pre>]]></content>
+      
+        
+        <tags>
+            
+            <tag> -- 书单 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Java核心技术摘要]]></title>
       <url>/2017/12/29/%E5%85%B3%E4%BA%8EJava%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/</url>
       <content type="html"><![CDATA[<p>每天Java后台都来问我一些简单的样式问题和一些js不为人轻易发现的问题。那我也要问他们一些简单的Java问题。哈哈哈。<a id="more"></a></p>
@@ -132,7 +380,17 @@ lambada表达式
 <pre><code>处理错误            使用断言
 捕获异常            记录日志
 使用异常机制的技巧    调试技巧
-</code></pre>]]></content>
+</code></pre><p>在Java程序设计中,异常对象都是派生于Throwable类的一个实例.所有的异常都是由Throwable继承而来的,但是下一层立即分解为俩个分支:Error和Exception</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> pair3;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Pair</span>&lt;<span class="title">T</span>&gt;</span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">private</span> T first;</div><div class="line">    <span class="keyword">private</span> T second;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Pair</span><span class="params">()</span> </span>&#123; first = <span class="keyword">null</span>; second = <span class="keyword">null</span> &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Pair</span><span class="params">(T first, T second)</span></span>&#123; <span class="keyword">this</span>.first = first; <span class="keyword">this</span>.second = second &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> T <span class="title">getFirst</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> first; &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> T <span class="title">getSecond</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> second; &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setFrist</span><span class="params">(T newValue)</span> </span>&#123; first = newValue; &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setSecond</span><span class="params">(T newValue)</span> </span>&#123; second = newValue; &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> pair3;</div><div class="line"><span class="keyword">import</span> java.time.*;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Employee</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">private</span> String name;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">double</span> salary;</div><div class="line">    <span class="keyword">private</span> LocalDate hireDay;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(String name, <span class="keyword">double</span> salary, <span class="keyword">int</span> year, <span class="keyword">int</span> month, <span class="keyword">int</span> day)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">this</span>.name = name;</div><div class="line">        <span class="keyword">this</span>.salary = salary;</div><div class="line">        hireDay = LocalDate.of(year, month, day);</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> name;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getSalary</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> salary;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> LocalDate <span class="title">getHireDay</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> hireDay;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">raiseSalary</span><span class="params">(<span class="keyword">double</span> byPercent)</span></span>&#123;</div><div class="line">        <span class="keyword">double</span> raise = salary * byPercent / <span class="number">100</span>;</div><div class="line">        salary += raise;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> pair3;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Manager</span> <span class="keyword">extends</span> <span class="title">Employee</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">double</span> bonus;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Manager</span><span class="params">(String name,<span class="keyword">double</span> salary, <span class="keyword">int</span> year, <span class="keyword">int</span> month, <span class="keyword">int</span> day)</span></span>&#123;</div><div class="line">        <span class="keyword">super</span>(name,salary,year,month,day);</div><div class="line">        bonus = <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getSalary</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">double</span> baseSalary = <span class="keyword">super</span>.getSalary();</div><div class="line">        <span class="keyword">return</span> baseSalary + bonus;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setBonus</span><span class="params">(<span class="keyword">double</span> b)</span></span>&#123;</div><div class="line">        bonus = b;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getBonus</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> bonus;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> pair3;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PairTest3</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</div><div class="line">        Manager ceo = <span class="keyword">new</span> Manager(<span class="string">"Gus Greedy"</span>,<span class="number">800000</span>,<span class="number">2003</span>,<span class="number">12</span>,<span class="number">15</span>);</div><div class="line">        Manager cfo = <span class="keyword">new</span> Manager(<span class="string">"Sid Sneaky"</span>, <span class="number">600000</span>,<span class="number">2003</span>,<span class="number">12</span>,<span class="number">15</span>);</div><div class="line">        Pair&lt;Manager&gt; buddies = <span class="keyword">new</span> Pair&lt;&gt;(ceo, cfo);</div><div class="line">        printBuddies(buddies);</div><div class="line">        ceo.setBonus(<span class="number">1000000</span>);</div><div class="line">        cfo.setBonus(<span class="number">500000</span>);</div><div class="line">        Manager[] mangers = &#123; ceo, cfo&#125;;</div><div class="line">         </div><div class="line">        Pair&lt;Employee&gt; result = <span class="keyword">new</span> Pair&lt;&gt;();</div><div class="line">        minmaxBonus(managers, result);</div><div class="line">        System.out.println(<span class="string">"first: "</span>+ result.getFirst().getName() + <span class="string">",second: "</span>+ result.getSecond().getName());</div><div class="line">        maxminBonus(managers,result);</div><div class="line">        System.out.prinln(<span class="string">"first:"</span> + result.getFirst().getName()+<span class="string">",second:"</span>+result.getSecond().getName());</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printBuddies</span><span class="params">(Pair&lt;? extends Employee&gt; p)</span></span>&#123;</div><div class="line">        <span class="comment">// 子类限定可以读取对象</span></div><div class="line">        Employee first = p.getFirst();</div><div class="line">        Employee second = p.getSecond();</div><div class="line">        System.out.println(first.getName() + <span class="string">" add "</span> + second.getName() + <span class="string">" are buddies. "</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">minmaxBonus</span><span class="params">(Manger[] a,Pair&lt;? <span class="keyword">super</span> Manager&gt; result)</span></span>&#123;</div><div class="line">        <span class="comment">// 父类限定可以设置对象</span></div><div class="line">        <span class="keyword">if</span> (a.length == <span class="number">0</span>) <span class="keyword">return</span>;</div><div class="line">        Manager min = a[<span class="number">0</span>];</div><div class="line">        Manager max = a[<span class="number">0</span>];</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt; a.length; i++)&#123;</div><div class="line">            <span class="keyword">if</span>(min.getBonus() &gt; a[i].getBonus()) min = a[i];</div><div class="line">            <span class="keyword">if</span>(max.getBonus()&lt;a[i].getBonus()) max = a[i];</div><div class="line">        &#125;</div><div class="line">        result.setFirst(min);</div><div class="line">        result.setSecond(max);</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">maxminBonus</span><span class="params">(Manager[] a, Pair&lt;? <span class="keyword">super</span> Manager&gt; result)</span></span></div><div class="line">    &#123;</div><div class="line">        minmaxBonus(a,result);</div><div class="line">        PairAlg.swapHelper(result);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">PairAlg</span></span></div><div class="line">&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">hasNulls</span><span class="params">(Pair&lt;?&gt; p)</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> p.getFirst() == <span class="keyword">null</span> || p.getSecond() == <span class="keyword">null</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(Pair&lt;?&gt; p)</span> </span>&#123; swapHelper(P); &#125;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function"><span class="keyword">void</span> <span class="title">swapHelper</span><span class="params">(Pair&lt;T&gt; p)</span></span>&#123;</div><div class="line">        T t=p.getFirst();</div><div class="line">        p.setFirst(p.getSecond());</div><div class="line">        p.setSecond(t);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><em>集合</em></p>
+<pre><code>Java集合框架        视图与包装器
+具体的集合           算法
+映射                遗留的集合
+</code></pre><p>容器和组件是”组合(composite)”模式<br>带滚动条的面板是”装饰器(decorator)”模式<br>布局管理器是”策略(strategy)”墨菲</p>
+]]></content>
       
         
         <tags>

@@ -311,14 +311,7 @@
 
     <url>
         <loc>http://www.afanail.com/tags/ES6/</loc>
-        <lastmod>2017-12-29T11:51:48.659Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://www.afanail.com/tags/Java/</loc>
-        <lastmod>2018-01-20T08:48:07.062Z</lastmod>
+        <lastmod>2018-01-01T05:26:56.776Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -326,6 +319,20 @@
     <url>
         <loc>http://www.afanail.com/tags/%E4%B9%A6%E5%8D%95/</loc>
         <lastmod>2018-01-25T11:02:55.058Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.afanail.com/tags/Thinking-in-Java/</loc>
+        <lastmod>2018-02-26T13:40:48.905Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.afanail.com/tags/Java/</loc>
+        <lastmod>2018-03-09T14:21:27.119Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

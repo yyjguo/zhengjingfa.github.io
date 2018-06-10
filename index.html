@@ -37,7 +37,7 @@
     <div id="header-inner" class="inner">
       <nav id="sub-nav">
         
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.afanail.com"></form>
@@ -64,6 +64,198 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-React项目总结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/06/11/React项目总结/" class="article-date">
+  <time datetime="2018-06-10T16:14:05.000Z" itemprop="datePublished">2018-06-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/11/React项目总结/">React项目总结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h1 id="安装node"><a href="#安装node" class="headerlink" title="安装node"></a>安装node</h1><h3 id="官网地址"><a href="#官网地址" class="headerlink" title="官网地址:"></a>官网地址:</h3><p><a href="https://nodejs.org/en/" target="_blank" rel="external">https://nodejs.org/en/</a></p>
+<h3 id="注"><a href="#注" class="headerlink" title="注:"></a>注:</h3><h4 id="mac自由安装"><a href="#mac自由安装" class="headerlink" title="mac自由安装"></a>mac自由安装</h4><h4 id="windows建议下载6-x-7-x版本有可能会出现node-sass不兼容的情况"><a href="#windows建议下载6-x-7-x版本有可能会出现node-sass不兼容的情况" class="headerlink" title="windows建议下载6.x(7.x版本有可能会出现node-sass不兼容的情况)"></a>windows建议下载6.x(7.x版本有可能会出现node-sass不兼容的情况)</h4><h4 id="远程服务器-ubuntu-可使用git命令下载-省去上传这一步"><a href="#远程服务器-ubuntu-可使用git命令下载-省去上传这一步" class="headerlink" title="远程服务器(ubuntu)可使用git命令下载(省去上传这一步)"></a>远程服务器(ubuntu)可使用git命令下载(省去上传这一步)</h4><ul>
+<li>sudo git clone <a href="https://github.com/nodejs/node.git" target="_blank" rel="external">https://github.com/nodejs/node.git</a></li>
+<li>sudo chmod -R 755 node</li>
+<li>cd node</li>
+<li>sudo ./configure</li>
+<li>sudo make</li>
+<li>sudo make install</li>
+</ul>
+<h1 id="node版本管理"><a href="#node版本管理" class="headerlink" title="node版本管理"></a>node版本管理</h1><h4 id="可使用n或nvm-参考http-taobaofed-org-blog-2015-11-17-nvm-or-n"><a href="#可使用n或nvm-参考http-taobaofed-org-blog-2015-11-17-nvm-or-n" class="headerlink" title="可使用n或nvm(参考http://taobaofed.org/blog/2015/11/17/nvm-or-n/)"></a>可使用n或nvm(参考<a href="http://taobaofed.org/blog/2015/11/17/nvm-or-n/" target="_blank" rel="external">http://taobaofed.org/blog/2015/11/17/nvm-or-n/</a>)</h4><p>感觉n的体验比nvm好,切换后各种编辑器,IDE不需要修改node地址</p>
+<h1 id="npm代理"><a href="#npm代理" class="headerlink" title="npm代理"></a>npm代理</h1><p>参考<a href="http://note.youdao.com/noteshare?id=b32c531a012cce6e03712fe5e32b5dc0" target="_blank" rel="external">http://note.youdao.com/noteshare?id=b32c531a012cce6e03712fe5e32b5dc0</a>并确认已使用私有仓库</p>
+<h1 id="项目初始化-以webstorm为例"><a href="#项目初始化-以webstorm为例" class="headerlink" title="项目初始化(以webstorm为例)"></a>项目初始化(以webstorm为例)</h1><h4 id="项目check下来后执行npm-install"><a href="#项目check下来后执行npm-install" class="headerlink" title="项目check下来后执行npm install"></a>项目check下来后执行npm install</h4><h4 id="项目导入到webstorm后如果识别”import”等语法出错-preferences设置选择jsx"><a href="#项目导入到webstorm后如果识别”import”等语法出错-preferences设置选择jsx" class="headerlink" title="项目导入到webstorm后如果识别”import”等语法出错,preferences设置选择jsx"></a>项目导入到webstorm后如果识别”import”等语法出错,preferences设置选择jsx</h4><p><img src="http://img.xmiles.cn/frontend_service/youdao/QQ20170227-163306.png" alt="image"></p>
+<h4 id="启动配置"><a href="#启动配置" class="headerlink" title="启动配置"></a>启动配置</h4><p><img src="http://img.xmiles.cn/frontend_service/youdao/FDE53EED-D8F3-412B-9C85-29BCE7182A5E.png" alt="image"></p>
+<h4 id="标注1说明"><a href="#标注1说明" class="headerlink" title="标注1说明:"></a>标注1说明:</h4><h4 id="使用babel-node而不是node的原因是本地不需要打包node的服务端模块-babel-node可运行”import”等node暂不支持的语法"><a href="#使用babel-node而不是node的原因是本地不需要打包node的服务端模块-babel-node可运行”import”等node暂不支持的语法" class="headerlink" title="使用babel-node而不是node的原因是本地不需要打包node的服务端模块,babel-node可运行”import”等node暂不支持的语法"></a>使用babel-node而不是node的原因是本地不需要打包node的服务端模块,babel-node可运行”import”等node暂不支持的语法</h4><h4 id="mac可选择node-modules-babel-cli-bin-下的babel-node-js"><a href="#mac可选择node-modules-babel-cli-bin-下的babel-node-js" class="headerlink" title="mac可选择node_modules/babel-cli/bin/下的babel-node.js"></a>mac可选择node_modules/babel-cli/bin/下的babel-node.js</h4><h4 id="windows请选择node-modules-bin-下的babel-node-cmd"><a href="#windows请选择node-modules-bin-下的babel-node-cmd" class="headerlink" title="windows请选择node_modules/.bin/下的babel-node.cmd"></a>windows请选择node_modules/.bin/下的babel-node.cmd</h4><h4 id="标注2说明如图"><a href="#标注2说明如图" class="headerlink" title="标注2说明如图:"></a>标注2说明如图:</h4><p><img src="http://img.xmiles.cn/frontend_service/youdao/QQ20170227-163056.png" alt="image"></p>
+<h4 id="环境变量说明-环境变量都可以通过process-env-XXX获取-想要知道环境变量哪里使用过也可以这样去查找"><a href="#环境变量说明-环境变量都可以通过process-env-XXX获取-想要知道环境变量哪里使用过也可以这样去查找" class="headerlink" title="环境变量说明(环境变量都可以通过process.env.XXX获取,想要知道环境变量哪里使用过也可以这样去查找):"></a>环境变量说明(环境变量都可以通过process.env.XXX获取,想要知道环境变量哪里使用过也可以这样去查找):</h4><ul>
+<li>NODE_ENV—–express默认需要的运行模式参数,可选development/production</li>
+<li>PORT———-监听端口</li>
+<li>SERV_ENV—–服务器环境,可选test/official</li>
+<li>IS_LOCAL——是否本地启动</li>
+<li>VNAME——–webpack打包的view name</li>
+<li>VDEPLOY——webpack打包时是否为部署(压缩)模式</li>
+<li>VCLEAN——-webpack打包时是否清理文件夹</li>
+<li>VEXTRACT—–webpack打包时是否提取样式文件</li>
+</ul>
+<h4 id="本地启动"><a href="#本地启动" class="headerlink" title="本地启动"></a>本地启动</h4><p><img src="http://img.xmiles.cn/frontend_service/youdao/QQ20170227-165311.png" alt="image"></p>
+<h4 id="控制台分两段输出"><a href="#控制台分两段输出" class="headerlink" title="控制台分两段输出"></a>控制台分两段输出</h4><p>第一段</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123; NODE_ENV: &apos;development&apos;, IS_LOCAL: &apos;1&apos;, SERV_ENV: &apos;test&apos; &#125;</div></pre></td></tr></table></figure>
+<p>最后输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">webpack: Compiled successfully.</div></pre></td></tr></table></figure>
+<p>启动成功!</p>
+<h1 id="app-服务端-部分代码解释"><a href="#app-服务端-部分代码解释" class="headerlink" title="app(服务端)部分代码解释"></a>app(服务端)部分代码解释</h1><h2 id="app-js"><a href="#app-js" class="headerlink" title="app.js"></a>app.js</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import babelRegister from &apos;babel-register&apos;;</div></pre></td></tr></table></figure>
+<p>服务端渲染时识别”import”等语法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">//匹配服务端渲染不需要读取的文件</div><div class="line">const extensions = [&apos;.css&apos;, &apos;.less&apos;, &apos;.scss&apos;, &apos;sass&apos;, &apos;jpg&apos;, &apos;png&apos;],</div><div class="line">    app = express();</div><div class="line">for (let item of extensions) &#123;</div><div class="line">    require.extensions[item] = () =&gt; &#123;</div><div class="line">        return false;</div><div class="line">    &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>服务端渲染时对react组件中引用的上述格式的文件忽略, 如果有其他需要忽略的格式出现,请在此处添加</p>
+<h2 id="controllers-interface目录"><a href="#controllers-interface目录" class="headerlink" title="controllers/interface目录"></a>controllers/interface目录</h2><p>对访问地址上的参数service,appid,funid做处理</p>
+<h2 id="controllers-request-base-request-base-js"><a href="#controllers-request-base-request-base-js" class="headerlink" title="controllers/request/base/request_base.js"></a>controllers/request/base/request_base.js</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">execute(config) &#123;</div><div class="line">    let serverRequest = new ServerRequest(this.nodeRequest);</div><div class="line"></div><div class="line">    if (config) &#123;</div><div class="line">        serverRequest.recreatePostData(config.sendData);</div><div class="line">        serverRequest.funid = config.funId;</div><div class="line">        serverRequest.finish = config.finish;</div><div class="line">        if (config.service) &#123;</div><div class="line">            serverRequest.service = config.service;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    this.doRequest(serverRequest);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>node转发请求到tomcat的通用实现流程,如果有特殊需求,可基于RequestBase类扩展</p>
+<h2 id="controllers-template-helper目录"><a href="#controllers-template-helper目录" class="headerlink" title="controllers/template_helper目录"></a>controllers/template_helper目录</h2><p>旧的纯粹使用art-template的模板方法,用react做服务端渲染的请无视这个文件夹</p>
+<h1 id="views-视图层-部分代码解释"><a href="#views-视图层-部分代码解释" class="headerlink" title="views(视图层)部分代码解释"></a>views(视图层)部分代码解释</h1><h2 id="cfg文件夹"><a href="#cfg文件夹" class="headerlink" title="cfg文件夹"></a>cfg文件夹</h2><ul>
+<li>结构与其他项目webpack配置结构一样,同样是在location新增/修改页面入口</li>
+<li>node-env模块获取参数对应本文档上述的”环境变量说明”</li>
+<li>配合webpack.config实现了react热更新</li>
+</ul>
+<h2 id="common-footer-html"><a href="#common-footer-html" class="headerlink" title="common/footer.html"></a>common/footer.html</h2><ul>
+<li>withPlatformFunctions这个参数对应链接上的wpf,指定是否下发jsbridge代码,如果项目在app内打开不需要jsbridge或者是外部(比如微信)打开,这个时候可以指定链接上的wpf参数为0(不下发),默认下发.</li>
+</ul>
+<h2 id="common-components"><a href="#common-components" class="headerlink" title="common/components"></a>common/components</h2><p>写本文档的时候只写了两个顶层公共组件Toast和Loading<br>(以Toast组件为例作简要使用说明)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line">import &apos;./styles/toast.scss&apos;;</div><div class="line">import React from &apos;react&apos;;</div><div class="line">import storeActions from &apos;../modules/store-actions&apos;;</div><div class="line">let toastTimeout = null;</div><div class="line">/**</div><div class="line"> *  渲染Toast</div><div class="line"> */</div><div class="line">export default class Toast extends React.Component &#123;</div><div class="line">    constructor(props) &#123;</div><div class="line">        super(props);</div><div class="line">        this.state = &#123;</div><div class="line">            show: 0</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    toast = (toastText, toastState = 1) =&gt; &#123;</div><div class="line">        //立即隐藏toast</div><div class="line">        if(toastState !== 1) &#123;</div><div class="line">            toastTimeout &amp;&amp; window.clearTimeout(toastTimeout);</div><div class="line">            this.setState(&#123;</div><div class="line">                show: 0</div><div class="line">            &#125;);</div><div class="line">            return;</div><div class="line">        &#125;</div><div class="line">        if(!toastText) &#123;</div><div class="line">            return;</div><div class="line">        &#125;</div><div class="line">        this.setState(&#123;</div><div class="line">            toastText: toastText,</div><div class="line">            show: 1</div><div class="line">        &#125;);</div><div class="line">        //如果toast状态为展示中,清除倒计时并重新执行</div><div class="line">        toastTimeout &amp;&amp; window.clearTimeout(toastTimeout);</div><div class="line">        toastTimeout = setTimeout(() =&gt; &#123;</div><div class="line">            this.setState(&#123;</div><div class="line">                show: 0</div><div class="line">            &#125;);</div><div class="line">        &#125;, 3000);</div><div class="line">    &#125;</div><div class="line">    componentDidMount() &#123;</div><div class="line">        storeActions.toast.add(this.toast);</div><div class="line">    &#125;</div><div class="line">    render() &#123;</div><div class="line">        return (</div><div class="line">            &lt;div className=&#123;`toast_container$&#123;this.state.show === 1 ? &apos;&apos; : &apos; setnone&apos;&#125;`&#125;&gt;</div><div class="line">                &lt;div className=&quot;toast_tips&quot;&gt;&#123;this.state.toastText&#125;&lt;/div&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">        );</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>结合storeActions模块</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">import signals from &apos;signals&apos;;</div><div class="line">/**</div><div class="line"> * 全局事件系统</div><div class="line"> */</div><div class="line">const Signal = signals.Signal;</div><div class="line">const storeActions = &#123;</div><div class="line">    toast: new Signal(),</div><div class="line">    loading: new Signal(),</div><div class="line">    overlay: new Signal()</div><div class="line">&#125;;</div><div class="line"></div><div class="line">export default storeActions;</div></pre></td></tr></table></figure>
+<h4 id="Toast组件使用方法"><a href="#Toast组件使用方法" class="headerlink" title="Toast组件使用方法:"></a>Toast组件使用方法:</h4><ol>
+<li>在程序的适当位置引入(譬如App)</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">import Toast from &apos;./**/common/components/toast&apos;;</div><div class="line">......</div><div class="line">render() &#123;</div><div class="line">    ......</div><div class="line">    &lt;Toast /&gt;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ol>
+<li>在需要使用toast的模块/组件内引入storeActions<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">import storeActions from &apos;./**/common/modules/store-actions&apos;;</div><div class="line">......</div><div class="line">storeActions.toast.dispatch(&apos;hello&apos;);</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="注-1"><a href="#注-1" class="headerlink" title="注:"></a>注:</h4><p>当程序需要实现一些跨组件通信的需求的时候,可参考实现.(有调研过Redux,觉得暂时对于我们的应用还不是很必要,会增加程序复杂度)</p>
+<h2 id="projectXXX-index-jsx"><a href="#projectXXX-index-jsx" class="headerlink" title="projectXXX/index.jsx"></a>projectXXX/index.jsx</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">ReactDOM.render(</div><div class="line">    &lt;AppContainer&gt;</div><div class="line">        &lt;App data=&#123;initialState&#125;/&gt;</div><div class="line">    &lt;/AppContainer&gt;,</div><div class="line">    document.getElementById(&apos;react-html-container&apos;)</div><div class="line">);</div><div class="line">if (module.hot) &#123;</div><div class="line">    module.hot.accept(&apos;./components/app&apos;, () =&gt; &#123;</div><div class="line">        require(&apos;./components/app&apos;);</div><div class="line">        ReactDOM.render(</div><div class="line">            &lt;AppContainer&gt;</div><div class="line">                &lt;App data=&#123;initialState&#125;/&gt;</div><div class="line">            &lt;/AppContainer&gt;,</div><div class="line">            document.getElementById(&apos;react-html-container&apos;)</div><div class="line">        );</div><div class="line">    &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="实现热更新"><a href="#实现热更新" class="headerlink" title="实现热更新"></a>实现热更新</h4><p>修改components/app下的无论是同步import还是异步require.ensure的模块,浏览器会在不刷新页面的前提下实现更新(由于样式文件被提取后热更新会失败,开发时统一设置不提取,即本文档提到的VEXTRACT环境变量)</p>
+<h4 id="无论服务端还是客户端渲染-顶层组件-App-都带有一个data的props"><a href="#无论服务端还是客户端渲染-顶层组件-App-都带有一个data的props" class="headerlink" title="无论服务端还是客户端渲染,顶层组件(App)都带有一个data的props"></a>无论服务端还是客户端渲染,顶层组件(App)都带有一个data的props</h4><p><img src="http://img.xmiles.cn/frontend_service/youdao/QQ20170306-103923@2x.png" alt="image"></p>
+<p>为了方便,在模块App中将其放置到一个可供其他模块访问的对象中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//把静态数据写到storeStatics</div><div class="line">Object.assign(storeStatics, &#123;</div><div class="line">    phead: props.data.phead,</div><div class="line">    browser: props.data.browser</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>特别说明一下browser对象下面的isapp元素,它的值是从链接上获取的,当我们在服务端渲染UI需要判断是否在app内的时候就可以用它去判断.为了避免误会,如果链接上不带isapp这个参数,browser对象中的isapp为undefined</p>
+<h4 id="http-s-切换"><a href="#http-s-切换" class="headerlink" title="http(s)切换"></a>http(s)切换</h4><p>为了frontend_service使用不同协议都能正常访问,服务层requestBase类会使用不同的协议向tomcat发送请求,而在view层中,写页面时则需要对资源访问地址做一些处理</p>
+<ul>
+<li>对服务器下发的外链资源,统一接入utils.getFormatImg方法处理</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">getFormatImg(src, param = &apos;0&apos;) &#123;</div><div class="line">    const browser = storeStatics.browser;</div><div class="line">    if (!src || typeof src !== &apos;string&apos;) &#123;</div><div class="line">        return &apos;&apos;;</div><div class="line">    &#125;</div><div class="line">    //远程服务器图片删除protocol</div><div class="line">    if (src.indexOf(&apos;https://&apos;) === 0) &#123;</div><div class="line">        src = src.slice(6, src.length);</div><div class="line">    &#125; else if (src.indexOf(&apos;http://&apos;) === 0) &#123;</div><div class="line">        src = src.slice(5, src.length);</div><div class="line">    &#125;</div><div class="line">    if (!src.includes(&apos;imageView2&apos;) &amp;&amp; !src.includes(&apos;.gif&apos;)) &#123;</div><div class="line">        if (browser.isSupportWebp) &#123;</div><div class="line">            src += &apos;?imageView2/&apos; + param + &apos;/format/webp&apos;;</div><div class="line">        &#125; else if (src.includes(&apos;.png&apos;) || src.includes(&apos;.tmp&apos;)) &#123;</div><div class="line">            src += &apos;?imageView2/&apos; + param + &apos;/format/png&apos;;</div><div class="line">        &#125; else &#123;</div><div class="line">            src += &apos;?imageView2/&apos; + param + &apos;/format/jpg&apos;;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return src;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>对自行上传的七牛资源,粘贴时请去除协议<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;img src=&quot;//img.xmiles.cn/xxxxxxx.png&quot; /&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p>可参考<a href="http://www.ruanyifeng.com/blog/2015/12/a-mocha-tutorial-of-examples.html" target="_blank" rel="external">http://www.ruanyifeng.com/blog/2015/12/a-mocha-tutorial-of-examples.html</a></p>
+<h4 id="全局安装mocha"><a href="#全局安装mocha" class="headerlink" title="全局安装mocha"></a>全局安装mocha</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm i mocha -g</div></pre></td></tr></table></figure>
+<h4 id="webstorm集成mocha"><a href="#webstorm集成mocha" class="headerlink" title="webstorm集成mocha"></a>webstorm集成mocha</h4><p><img src="http://img.xmiles.cn/frontend_service/youdao/QQ20170228-172211.png" alt="image"><br>这只是其中一种配置方法,也可以使用babel-node</p>
+<h4 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mocha &apos;./app/test/**/*.@(js|jsx)&apos; --recursive --compilers js:babel-register --colors --bail -t 20000</div></pre></td></tr></table></figure>
+<ul>
+<li>‘./app/test/<em>*/</em>.test.@(js|jsx)’ –recursive—-测试app/test目录下全部.test.js(jsx)</li>
+<li>–compilers js:babel-register————–babel-register编译</li>
+<li>–bail————————————-第一个测试用例失败后终止测试</li>
+<li>-t 20000———————————主要用于异步测试的timeout控制,单位为ms</li>
+</ul>
+<h4 id="测试命令-参考根目录下的build-sh文件"><a href="#测试命令-参考根目录下的build-sh文件" class="headerlink" title="测试命令(参考根目录下的build.sh文件)"></a>测试命令(参考根目录下的build.sh文件)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//windows下用set</div><div class="line">export IS_LOCAL=1&amp;&amp;export NODE_ENV=production&amp;&amp;export SERV_ENV=official&amp;&amp;npm test</div></pre></td></tr></table></figure>
+<h1 id="部署流程"><a href="#部署流程" class="headerlink" title="部署流程"></a>部署流程</h1><p>(参考根目录下的build.sh,build.gradle文件以及jenkins配置)</p>
+<h1 id="其他说明"><a href="#其他说明" class="headerlink" title="其他说明"></a>其他说明</h1><h3 id="babelrc"><a href="#babelrc" class="headerlink" title=".babelrc"></a>.babelrc</h3><p>所有经过babel编译这一步都会用到,谨慎修改,比如app目录和views目录的打包都用到</p>
+<h3 id="eslintrc"><a href="#eslintrc" class="headerlink" title=".eslintrc"></a>.eslintrc</h3><p>js语法检测</p>
+<h3 id="npmrc"><a href="#npmrc" class="headerlink" title=".npmrc"></a>.npmrc</h3><p>对一些github上即使设置了代理下载仍然很慢的资源使用国内地址</p>
+<h3 id="pass-xx-passwd"><a href="#pass-xx-passwd" class="headerlink" title="pass_xx.passwd"></a>pass_xx.passwd</h3><p>服务器账户密码,用文件而不是直接使用字符串是因为当密码有特殊字符时不知道怎么处理才能登陆上去</p>
+<h3 id="start-config-js"><a href="#start-config-js" class="headerlink" title="start.config.js"></a>start.config.js</h3><p>pm2 启动文件</p>
+<h4 id="启动命令"><a href="#启动命令" class="headerlink" title="启动命令"></a>启动命令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//windows下用set</div><div class="line">export START_PORT=13333&amp;&amp;pm2 start start.config.js --env dev</div></pre></td></tr></table></figure>
+<p>其中–env dev指定环境变量,启动正式服务器时不需要这个参数</p>
+<h2 id="logs"><a href="#logs" class="headerlink" title="logs"></a>logs</h2><p>pm2的log暂时还没有很好的利用起来,只是做一些线上调试的时候使用</p>
+<h2 id="附"><a href="#附" class="headerlink" title="附"></a>附</h2><ul>
+<li>webstorm激活服务器</li>
+</ul>
+<ol>
+<li><a href="http://idea.ibdyr.com" target="_blank" rel="external">http://idea.ibdyr.com</a></li>
+<li><a href="http://idea.iteblog.com/key.php" target="_blank" rel="external">http://idea.iteblog.com/key.php</a></li>
+</ol>
+<ul>
+<li>webstorm增加模板提高效率<br><img src="http://img.xmiles.cn/frontend_service/youdao/QQ20170309-102024.png" alt="image"></li>
+<li>一些好用的npm模块</li>
+</ul>
+<ol>
+<li><a href="https://www.npmjs.com/package/npm-check" target="_blank" rel="external">npm-check</a></li>
+<li><a href="https://github.com/remy/nodemon" target="_blank" rel="external">nodemon</a></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.afanail.com/2018/06/11/React项目总结/" data-id="cji91a7to000mnlypb60f93eg" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="thinking-Java" class="article article-type-thinking" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/26/Java/" class="article-date">
+  <time datetime="2018-02-26T13:30:21.000Z" itemprop="datePublished">2018-02-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/26/Java/">Java</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p>要想创建一个接口，需要使用interface关键字来替代Class关键字。就像类一样，可以在interface关键字前面添加public关键字，如果不添加此关键字，则它只具有包访问权限，这样它只能在同一个包内可用。接口也可以包含域，但是这些域隐式的是static和final。<br>要让一个类遵循某个特定的接口（或者一组接口），需要使用implements关键字，它表示：interface只是它的外貌，但是我现在要声明它是如何工作的。一旦实现了某个接口，其实现就变成了一个普通的目标，就可以按照常规的方式扩展它。接口中的方法是public的。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.afanail.com/2018/02/26/Java/" data-id="cji91a7ti000fnlypf34bq23j" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Thinking-in-Java/">-- Thinking in Java</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
   
     <article id="post-lookbook" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -101,7 +293,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2018/01/25/lookbook/" data-id="cjcue3zks0000yhyp6crsoi0w" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2018/01/25/lookbook/" data-id="cji91a7uu001jnlyp6q96uwfk" class="article-share-link">Share</a>
       
       
       
@@ -146,7 +338,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/12/29/关于Java核心技术/" data-id="cjbrur598001ytcyp55s6y8te" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2017/12/29/关于Java核心技术/" data-id="cji91a7vb0022nlypn9ou2xm9" class="article-share-link">Share</a>
       
       
       
@@ -191,7 +383,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/12/18/webpack/" data-id="cjbrur58r001qtcypvxcyme2j" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2017/12/18/webpack/" data-id="cji91a7va0020nlyputv0g6r2" class="article-share-link">Share</a>
       
       
       
@@ -237,7 +429,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/12/05/ES6/" data-id="cjbrur57g000btcypiilc9oh3" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2017/12/05/ES6/" data-id="cji91a7tb0008nlyp4ikhocl3" class="article-share-link">Share</a>
       
       
       
@@ -282,7 +474,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/11/09/dataStructor/" data-id="cjbrur57w000qtcyp4w29sd5k" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2017/11/09/dataStructor/" data-id="cji91a7ty000tnlypcwcaofh5" class="article-share-link">Share</a>
       
       
       
@@ -329,7 +521,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/10/21/sql/" data-id="cjbrur596001vtcyp783ntaw2" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2017/10/21/sql/" data-id="cji91a7ve0025nlypr88vn49v" class="article-share-link">Share</a>
       
       
       
@@ -374,7 +566,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/10/01/Perl相关/" data-id="cjbrur57q000ktcyp1lly9wo1" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2017/10/01/Perl相关/" data-id="cji91a7tk000inlyprxpqhmjs" class="article-share-link">Share</a>
       
       
       
@@ -419,7 +611,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/09/30/0到1实现简单的jQuery城市选择控件/" data-id="cjbrur57c0009tcyp4tgzoggt" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2017/09/30/0到1实现简单的jQuery城市选择控件/" data-id="cji91a7sv0003nlypc9zzaeav" class="article-share-link">Share</a>
       
       
       
@@ -433,100 +625,10 @@
 
 
   
-    <article id="post-Perl项目前后端分离？" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/08/15/Perl项目前后端分离？/" class="article-date">
-  <time datetime="2017-08-15T12:12:55.000Z" itemprop="datePublished">2017-08-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/15/Perl项目前后端分离？/">Perl项目前后端分离？</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>昨天逛StackOverflow，发现ruby项目也能实现前后端分离。那么Perl项目应该也可以实现前后端分离吧？当然这只是我个人的猜想，毕竟才看完Perl语言入门这本书。intermediate perl 也才看了几章，上代码仓库<a href="https://github.com/zhengjingfa/perl-learning" target="_blank" rel="external">perl-learning</a>。
-        
-          <p class="article-more-link">
-            <a href="/2017/08/15/Perl项目前后端分离？/#more">继续阅读全文 »</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/08/15/Perl项目前后端分离？/" data-id="cjbrur57t000otcypzep1zp65" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Perl/">Perl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angular/">angular</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
- 
-
-
-  
-    <article id="post-前端工程自动化" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/07/30/前端工程自动化/" class="article-date">
-  <time datetime="2017-07-30T09:17:54.000Z" itemprop="datePublished">2017-07-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/30/前端工程自动化/">前端工程自动化</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>因为我是自动化方向出身的，对自动化算是有一些认识，前端领域虽然发展飞快，但是应用普及速度却不尽人意，前阵子腾讯开源了<a href="https://github.com/Tencent/ncnn" target="_blank" rel="external">ncnn</a>,这是要实现自动化编程的节奏啊！但是现在国内好多对前端的看法还是停留在美工的层面，这科技差距就像北上广深和大西北，令人唏嘘！其实做软件开发的无所谓前后端，眼界也不能局限于某一个领域。回到话题，为什么要前端自动化？因为前端重要啊！在这个颜控的社会，前端好比外貌，后端好比内在。这也是为什么前端在现在大部分公司大概占技术团队三分之一席位的事实。
-        
-          <p class="article-more-link">
-            <a href="/2017/07/30/前端工程自动化/#more">继续阅读全文 »</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/07/30/前端工程自动化/" data-id="cjbrur59d0027tcypjvwz1dkv" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/auto/">auto</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/front-end/">front-end</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
- 
-
-
-  
 
 
   <nav id="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">下一页&raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next&raquo;</a>
   </nav>
 </section>
            
@@ -559,7 +661,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title categories">分类</h3>
+    <h3 class="widget-title categories">Categories</h3>
     <div class="widget" id="categories">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Css简明教程/">Css简明教程</a><span class="category-list-count">1</span></li></ul>
     </div>
@@ -569,18 +671,26 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title tagcloud">标签云</h3>
+    <h3 class="widget-title tagcloud">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Java/" style="font-size: 14px;">-- Java</a> <a href="/tags/书单/" style="font-size: 14px;">-- 书单</a> <a href="/tags/随笔/" style="font-size: 14px;">-随笔</a> <a href="/tags/Chrome-DevTools/" style="font-size: 14px;">Chrome DevTools</a> <a href="/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/tags/ES7/" style="font-size: 14px;">ES7</a> <a href="/tags/Google-I-O-2017/" style="font-size: 14px;">Google I/O 2017</a> <a href="/tags/HTML/" style="font-size: 14px;">HTML</a> <a href="/tags/IE-兼容性/" style="font-size: 14px;">IE 兼容性</a> <a href="/tags/JSONP跨域/" style="font-size: 14px;">JSONP跨域</a> <a href="/tags/JavaScript/" style="font-size: 22.25px;">JavaScript</a> <a href="/tags/Perl/" style="font-size: 14px;">Perl</a> <a href="/tags/Webpack/" style="font-size: 14px;">Webpack</a> <a href="/tags/angular/" style="font-size: 14px;">angular</a> <a href="/tags/auto/" style="font-size: 14px;">auto</a> <a href="/tags/css/" style="font-size: 19.5px;">css</a> <a href="/tags/front-end/" style="font-size: 14px;">front-end</a> <a href="/tags/git/" style="font-size: 14px;">git</a> <a href="/tags/gulp/" style="font-size: 14px;">gulp</a> <a href="/tags/jQuery/" style="font-size: 14px;">jQuery</a> <a href="/tags/jQuery插件/" style="font-size: 14px;">jQuery插件</a> <a href="/tags/javascript/" style="font-size: 16.75px;">javascript</a> <a href="/tags/js/" style="font-size: 16.75px;">js</a> <a href="/tags/js实现响应式/" style="font-size: 14px;">js实现响应式</a> <a href="/tags/less/" style="font-size: 14px;">less</a> <a href="/tags/node/" style="font-size: 14px;">node</a> <a href="/tags/nvm/" style="font-size: 14px;">nvm</a> <a href="/tags/perl/" style="font-size: 14px;">perl</a> <a href="/tags/perl-CGI-编程/" style="font-size: 14px;">perl CGI 编程</a> <a href="/tags/sad-story/" style="font-size: 14px;">sad story</a> <a href="/tags/sql-sybase/" style="font-size: 14px;">sql sybase</a> <a href="/tags/updating/" style="font-size: 14px;">updating</a> <a href="/tags/webpack/" style="font-size: 14px;">webpack</a> <a href="/tags/原型继承机制/" style="font-size: 14px;">原型继承机制</a> <a href="/tags/娱乐/" style="font-size: 14px;">娱乐</a> <a href="/tags/工作计划/" style="font-size: 14px;">工作计划</a> <a href="/tags/开发技巧/" style="font-size: 14px;">开发技巧</a> <a href="/tags/怀旧/" style="font-size: 14px;">怀旧</a> <a href="/tags/数据结构与算法-C-C/" style="font-size: 14px;">数据结构与算法 C++/C</a> <a href="/tags/模块打包/" style="font-size: 14px;">模块打包</a> <a href="/tags/源码分析/" style="font-size: 14px;">源码分析</a> <a href="/tags/版本控制/" style="font-size: 14px;">版本控制</a> <a href="/tags/版本管理工具/" style="font-size: 14px;">版本管理工具</a> <a href="/tags/移动端/" style="font-size: 14px;">移动端</a> <a href="/tags/简明教程/" style="font-size: 25px;">简明教程</a> <a href="/tags/编码格式/" style="font-size: 14px;">编码格式</a> <a href="/tags/随笔/" style="font-size: 16.75px;">随笔</a>
+      <a href="/tags/Java/" style="font-size: 14px;">-- Java</a> <a href="/tags/Thinking-in-Java/" style="font-size: 14px;">-- Thinking in Java</a> <a href="/tags/书单/" style="font-size: 14px;">-- 书单</a> <a href="/tags/随笔/" style="font-size: 14px;">-随笔</a> <a href="/tags/Chrome-DevTools/" style="font-size: 14px;">Chrome DevTools</a> <a href="/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/tags/ES7/" style="font-size: 14px;">ES7</a> <a href="/tags/Google-I-O-2017/" style="font-size: 14px;">Google I/O 2017</a> <a href="/tags/HTML/" style="font-size: 14px;">HTML</a> <a href="/tags/IE-兼容性/" style="font-size: 14px;">IE 兼容性</a> <a href="/tags/JSONP跨域/" style="font-size: 14px;">JSONP跨域</a> <a href="/tags/JavaScript/" style="font-size: 22.25px;">JavaScript</a> <a href="/tags/Perl/" style="font-size: 14px;">Perl</a> <a href="/tags/Webpack/" style="font-size: 14px;">Webpack</a> <a href="/tags/angular/" style="font-size: 14px;">angular</a> <a href="/tags/auto/" style="font-size: 14px;">auto</a> <a href="/tags/css/" style="font-size: 19.5px;">css</a> <a href="/tags/front-end/" style="font-size: 14px;">front-end</a> <a href="/tags/git/" style="font-size: 14px;">git</a> <a href="/tags/gulp/" style="font-size: 14px;">gulp</a> <a href="/tags/jQuery/" style="font-size: 14px;">jQuery</a> <a href="/tags/jQuery插件/" style="font-size: 14px;">jQuery插件</a> <a href="/tags/javascript/" style="font-size: 16.75px;">javascript</a> <a href="/tags/js/" style="font-size: 16.75px;">js</a> <a href="/tags/js实现响应式/" style="font-size: 14px;">js实现响应式</a> <a href="/tags/less/" style="font-size: 14px;">less</a> <a href="/tags/node/" style="font-size: 14px;">node</a> <a href="/tags/nvm/" style="font-size: 14px;">nvm</a> <a href="/tags/perl/" style="font-size: 14px;">perl</a> <a href="/tags/perl-CGI-编程/" style="font-size: 14px;">perl CGI 编程</a> <a href="/tags/sad-story/" style="font-size: 14px;">sad story</a> <a href="/tags/sql-sybase/" style="font-size: 14px;">sql sybase</a> <a href="/tags/updating/" style="font-size: 14px;">updating</a> <a href="/tags/webpack/" style="font-size: 14px;">webpack</a> <a href="/tags/原型继承机制/" style="font-size: 14px;">原型继承机制</a> <a href="/tags/娱乐/" style="font-size: 14px;">娱乐</a> <a href="/tags/工作计划/" style="font-size: 14px;">工作计划</a> <a href="/tags/开发技巧/" style="font-size: 14px;">开发技巧</a> <a href="/tags/怀旧/" style="font-size: 14px;">怀旧</a> <a href="/tags/数据结构与算法-C-C/" style="font-size: 14px;">数据结构与算法 C++/C</a> <a href="/tags/模块打包/" style="font-size: 14px;">模块打包</a> <a href="/tags/源码分析/" style="font-size: 14px;">源码分析</a> <a href="/tags/版本控制/" style="font-size: 14px;">版本控制</a> <a href="/tags/版本管理工具/" style="font-size: 14px;">版本管理工具</a> <a href="/tags/移动端/" style="font-size: 14px;">移动端</a> <a href="/tags/简明教程/" style="font-size: 25px;">简明教程</a> <a href="/tags/编码格式/" style="font-size: 14px;">编码格式</a> <a href="/tags/随笔/" style="font-size: 16.75px;">随笔</a>
     </div>
   </div>
 
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title recent-posts">最新文章</h3>
+    <h3 class="widget-title recent-posts">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/06/11/React项目总结/">React项目总结</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/26/Java/">Java</a>
+          </li>
         
           <li>
             <a href="/2018/01/25/lookbook/">书单</a>
@@ -594,14 +704,6 @@
             <a href="/2017/12/18/webpack/">webpack</a>
           </li>
         
-          <li>
-            <a href="/2017/12/05/ES6/">ES6 ES7</a>
-          </li>
-        
-          <li>
-            <a href="/2017/11/09/dataStructor/">数据结构与算法</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -609,9 +711,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title archive">归档</h3>
+    <h3 class="widget-title archive">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">4</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 
@@ -650,7 +752,7 @@
       &copy; 2016 - 2018 Afanail&nbsp;
     </div>
      <div id="footer-right">
-      联系方式&nbsp;|&nbsp;zjfapk@163.com
+      Contact&nbsp;|&nbsp;zjfapk@163.com
     </div>
   </div>
 </footer>

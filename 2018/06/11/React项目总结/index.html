@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>React项目总结 | Afanail</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="安装node官网地址:https://nodejs.org/en/ 注:mac自由安装windows建议下载6.x(7.x版本有可能会出现node-sass不兼容的情况)远程服务器(ubuntu)可使用git命令下载(省去上传这一步) sudo git clone https://github.com/nodejs/node.git sudo chmod -R 755 node cd node s">
+<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React项目总结">
+<meta property="og:url" content="http://www.afanail.com/2018/06/11/React项目总结/index.html">
+<meta property="og:site_name" content="Afanail">
+<meta property="og:description" content="安装node官网地址:https://nodejs.org/en/ 注:mac自由安装windows建议下载6.x(7.x版本有可能会出现node-sass不兼容的情况)远程服务器(ubuntu)可使用git命令下载(省去上传这一步) sudo git clone https://github.com/nodejs/node.git sudo chmod -R 755 node cd node s">
+<meta property="og:image" content="http://img.xmiles.cn/frontend_service/youdao/QQ20170227-163306.png">
+<meta property="og:image" content="http://img.xmiles.cn/frontend_service/youdao/FDE53EED-D8F3-412B-9C85-29BCE7182A5E.png">
+<meta property="og:image" content="http://img.xmiles.cn/frontend_service/youdao/QQ20170227-163056.png">
+<meta property="og:image" content="http://img.xmiles.cn/frontend_service/youdao/QQ20170227-165311.png">
+<meta property="og:image" content="http://img.xmiles.cn/frontend_service/youdao/QQ20170306-103923@2x.png">
+<meta property="og:image" content="http://img.xmiles.cn/frontend_service/youdao/QQ20170228-172211.png">
+<meta property="og:image" content="http://img.xmiles.cn/frontend_service/youdao/QQ20170309-102024.png">
+<meta property="og:updated_time" content="2018-06-10T16:18:45.927Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React项目总结">
+<meta name="twitter:description" content="安装node官网地址:https://nodejs.org/en/ 注:mac自由安装windows建议下载6.x(7.x版本有可能会出现node-sass不兼容的情况)远程服务器(ubuntu)可使用git命令下载(省去上传这一步) sudo git clone https://github.com/nodejs/node.git sudo chmod -R 755 node cd node s">
+<meta name="twitter:image" content="http://img.xmiles.cn/frontend_service/youdao/QQ20170227-163306.png">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.afanail.com"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Afanail</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-React项目总结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/06/11/React项目总结/" class="article-date">
+  <time datetime="2018-06-10T16:14:05.000Z" itemprop="datePublished">2018-06-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      React项目总结
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h1 id="安装node"><a href="#安装node" class="headerlink" title="安装node"></a>安装node</h1><h3 id="官网地址"><a href="#官网地址" class="headerlink" title="官网地址:"></a>官网地址:</h3><p><a href="https://nodejs.org/en/" target="_blank" rel="external">https://nodejs.org/en/</a></p>
+<h3 id="注"><a href="#注" class="headerlink" title="注:"></a>注:</h3><h4 id="mac自由安装"><a href="#mac自由安装" class="headerlink" title="mac自由安装"></a>mac自由安装</h4><h4 id="windows建议下载6-x-7-x版本有可能会出现node-sass不兼容的情况"><a href="#windows建议下载6-x-7-x版本有可能会出现node-sass不兼容的情况" class="headerlink" title="windows建议下载6.x(7.x版本有可能会出现node-sass不兼容的情况)"></a>windows建议下载6.x(7.x版本有可能会出现node-sass不兼容的情况)</h4><h4 id="远程服务器-ubuntu-可使用git命令下载-省去上传这一步"><a href="#远程服务器-ubuntu-可使用git命令下载-省去上传这一步" class="headerlink" title="远程服务器(ubuntu)可使用git命令下载(省去上传这一步)"></a>远程服务器(ubuntu)可使用git命令下载(省去上传这一步)</h4><ul>
+<li>sudo git clone <a href="https://github.com/nodejs/node.git" target="_blank" rel="external">https://github.com/nodejs/node.git</a></li>
+<li>sudo chmod -R 755 node</li>
+<li>cd node</li>
+<li>sudo ./configure</li>
+<li>sudo make</li>
+<li>sudo make install</li>
+</ul>
+<h1 id="node版本管理"><a href="#node版本管理" class="headerlink" title="node版本管理"></a>node版本管理</h1><h4 id="可使用n或nvm-参考http-taobaofed-org-blog-2015-11-17-nvm-or-n"><a href="#可使用n或nvm-参考http-taobaofed-org-blog-2015-11-17-nvm-or-n" class="headerlink" title="可使用n或nvm(参考http://taobaofed.org/blog/2015/11/17/nvm-or-n/)"></a>可使用n或nvm(参考<a href="http://taobaofed.org/blog/2015/11/17/nvm-or-n/" target="_blank" rel="external">http://taobaofed.org/blog/2015/11/17/nvm-or-n/</a>)</h4><p>感觉n的体验比nvm好,切换后各种编辑器,IDE不需要修改node地址</p>
+<h1 id="npm代理"><a href="#npm代理" class="headerlink" title="npm代理"></a>npm代理</h1><p>参考<a href="http://note.youdao.com/noteshare?id=b32c531a012cce6e03712fe5e32b5dc0" target="_blank" rel="external">http://note.youdao.com/noteshare?id=b32c531a012cce6e03712fe5e32b5dc0</a>并确认已使用私有仓库</p>
+<h1 id="项目初始化-以webstorm为例"><a href="#项目初始化-以webstorm为例" class="headerlink" title="项目初始化(以webstorm为例)"></a>项目初始化(以webstorm为例)</h1><h4 id="项目check下来后执行npm-install"><a href="#项目check下来后执行npm-install" class="headerlink" title="项目check下来后执行npm install"></a>项目check下来后执行npm install</h4><h4 id="项目导入到webstorm后如果识别”import”等语法出错-preferences设置选择jsx"><a href="#项目导入到webstorm后如果识别”import”等语法出错-preferences设置选择jsx" class="headerlink" title="项目导入到webstorm后如果识别”import”等语法出错,preferences设置选择jsx"></a>项目导入到webstorm后如果识别”import”等语法出错,preferences设置选择jsx</h4><p><img src="http://img.xmiles.cn/frontend_service/youdao/QQ20170227-163306.png" alt="image"></p>
+<h4 id="启动配置"><a href="#启动配置" class="headerlink" title="启动配置"></a>启动配置</h4><p><img src="http://img.xmiles.cn/frontend_service/youdao/FDE53EED-D8F3-412B-9C85-29BCE7182A5E.png" alt="image"></p>
+<h4 id="标注1说明"><a href="#标注1说明" class="headerlink" title="标注1说明:"></a>标注1说明:</h4><h4 id="使用babel-node而不是node的原因是本地不需要打包node的服务端模块-babel-node可运行”import”等node暂不支持的语法"><a href="#使用babel-node而不是node的原因是本地不需要打包node的服务端模块-babel-node可运行”import”等node暂不支持的语法" class="headerlink" title="使用babel-node而不是node的原因是本地不需要打包node的服务端模块,babel-node可运行”import”等node暂不支持的语法"></a>使用babel-node而不是node的原因是本地不需要打包node的服务端模块,babel-node可运行”import”等node暂不支持的语法</h4><h4 id="mac可选择node-modules-babel-cli-bin-下的babel-node-js"><a href="#mac可选择node-modules-babel-cli-bin-下的babel-node-js" class="headerlink" title="mac可选择node_modules/babel-cli/bin/下的babel-node.js"></a>mac可选择node_modules/babel-cli/bin/下的babel-node.js</h4><h4 id="windows请选择node-modules-bin-下的babel-node-cmd"><a href="#windows请选择node-modules-bin-下的babel-node-cmd" class="headerlink" title="windows请选择node_modules/.bin/下的babel-node.cmd"></a>windows请选择node_modules/.bin/下的babel-node.cmd</h4><h4 id="标注2说明如图"><a href="#标注2说明如图" class="headerlink" title="标注2说明如图:"></a>标注2说明如图:</h4><p><img src="http://img.xmiles.cn/frontend_service/youdao/QQ20170227-163056.png" alt="image"></p>
+<h4 id="环境变量说明-环境变量都可以通过process-env-XXX获取-想要知道环境变量哪里使用过也可以这样去查找"><a href="#环境变量说明-环境变量都可以通过process-env-XXX获取-想要知道环境变量哪里使用过也可以这样去查找" class="headerlink" title="环境变量说明(环境变量都可以通过process.env.XXX获取,想要知道环境变量哪里使用过也可以这样去查找):"></a>环境变量说明(环境变量都可以通过process.env.XXX获取,想要知道环境变量哪里使用过也可以这样去查找):</h4><ul>
+<li>NODE_ENV—–express默认需要的运行模式参数,可选development/production</li>
+<li>PORT———-监听端口</li>
+<li>SERV_ENV—–服务器环境,可选test/official</li>
+<li>IS_LOCAL——是否本地启动</li>
+<li>VNAME——–webpack打包的view name</li>
+<li>VDEPLOY——webpack打包时是否为部署(压缩)模式</li>
+<li>VCLEAN——-webpack打包时是否清理文件夹</li>
+<li>VEXTRACT—–webpack打包时是否提取样式文件</li>
+</ul>
+<h4 id="本地启动"><a href="#本地启动" class="headerlink" title="本地启动"></a>本地启动</h4><p><img src="http://img.xmiles.cn/frontend_service/youdao/QQ20170227-165311.png" alt="image"></p>
+<h4 id="控制台分两段输出"><a href="#控制台分两段输出" class="headerlink" title="控制台分两段输出"></a>控制台分两段输出</h4><p>第一段</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123; NODE_ENV: &apos;development&apos;, IS_LOCAL: &apos;1&apos;, SERV_ENV: &apos;test&apos; &#125;</div></pre></td></tr></table></figure>
+<p>最后输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">webpack: Compiled successfully.</div></pre></td></tr></table></figure>
+<p>启动成功!</p>
+<h1 id="app-服务端-部分代码解释"><a href="#app-服务端-部分代码解释" class="headerlink" title="app(服务端)部分代码解释"></a>app(服务端)部分代码解释</h1><h2 id="app-js"><a href="#app-js" class="headerlink" title="app.js"></a>app.js</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import babelRegister from &apos;babel-register&apos;;</div></pre></td></tr></table></figure>
+<p>服务端渲染时识别”import”等语法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">//匹配服务端渲染不需要读取的文件</div><div class="line">const extensions = [&apos;.css&apos;, &apos;.less&apos;, &apos;.scss&apos;, &apos;sass&apos;, &apos;jpg&apos;, &apos;png&apos;],</div><div class="line">    app = express();</div><div class="line">for (let item of extensions) &#123;</div><div class="line">    require.extensions[item] = () =&gt; &#123;</div><div class="line">        return false;</div><div class="line">    &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>服务端渲染时对react组件中引用的上述格式的文件忽略, 如果有其他需要忽略的格式出现,请在此处添加</p>
+<h2 id="controllers-interface目录"><a href="#controllers-interface目录" class="headerlink" title="controllers/interface目录"></a>controllers/interface目录</h2><p>对访问地址上的参数service,appid,funid做处理</p>
+<h2 id="controllers-request-base-request-base-js"><a href="#controllers-request-base-request-base-js" class="headerlink" title="controllers/request/base/request_base.js"></a>controllers/request/base/request_base.js</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">execute(config) &#123;</div><div class="line">    let serverRequest = new ServerRequest(this.nodeRequest);</div><div class="line"></div><div class="line">    if (config) &#123;</div><div class="line">        serverRequest.recreatePostData(config.sendData);</div><div class="line">        serverRequest.funid = config.funId;</div><div class="line">        serverRequest.finish = config.finish;</div><div class="line">        if (config.service) &#123;</div><div class="line">            serverRequest.service = config.service;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    this.doRequest(serverRequest);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>node转发请求到tomcat的通用实现流程,如果有特殊需求,可基于RequestBase类扩展</p>
+<h2 id="controllers-template-helper目录"><a href="#controllers-template-helper目录" class="headerlink" title="controllers/template_helper目录"></a>controllers/template_helper目录</h2><p>旧的纯粹使用art-template的模板方法,用react做服务端渲染的请无视这个文件夹</p>
+<h1 id="views-视图层-部分代码解释"><a href="#views-视图层-部分代码解释" class="headerlink" title="views(视图层)部分代码解释"></a>views(视图层)部分代码解释</h1><h2 id="cfg文件夹"><a href="#cfg文件夹" class="headerlink" title="cfg文件夹"></a>cfg文件夹</h2><ul>
+<li>结构与其他项目webpack配置结构一样,同样是在location新增/修改页面入口</li>
+<li>node-env模块获取参数对应本文档上述的”环境变量说明”</li>
+<li>配合webpack.config实现了react热更新</li>
+</ul>
+<h2 id="common-footer-html"><a href="#common-footer-html" class="headerlink" title="common/footer.html"></a>common/footer.html</h2><ul>
+<li>withPlatformFunctions这个参数对应链接上的wpf,指定是否下发jsbridge代码,如果项目在app内打开不需要jsbridge或者是外部(比如微信)打开,这个时候可以指定链接上的wpf参数为0(不下发),默认下发.</li>
+</ul>
+<h2 id="common-components"><a href="#common-components" class="headerlink" title="common/components"></a>common/components</h2><p>写本文档的时候只写了两个顶层公共组件Toast和Loading<br>(以Toast组件为例作简要使用说明)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line">import &apos;./styles/toast.scss&apos;;</div><div class="line">import React from &apos;react&apos;;</div><div class="line">import storeActions from &apos;../modules/store-actions&apos;;</div><div class="line">let toastTimeout = null;</div><div class="line">/**</div><div class="line"> *  渲染Toast</div><div class="line"> */</div><div class="line">export default class Toast extends React.Component &#123;</div><div class="line">    constructor(props) &#123;</div><div class="line">        super(props);</div><div class="line">        this.state = &#123;</div><div class="line">            show: 0</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    toast = (toastText, toastState = 1) =&gt; &#123;</div><div class="line">        //立即隐藏toast</div><div class="line">        if(toastState !== 1) &#123;</div><div class="line">            toastTimeout &amp;&amp; window.clearTimeout(toastTimeout);</div><div class="line">            this.setState(&#123;</div><div class="line">                show: 0</div><div class="line">            &#125;);</div><div class="line">            return;</div><div class="line">        &#125;</div><div class="line">        if(!toastText) &#123;</div><div class="line">            return;</div><div class="line">        &#125;</div><div class="line">        this.setState(&#123;</div><div class="line">            toastText: toastText,</div><div class="line">            show: 1</div><div class="line">        &#125;);</div><div class="line">        //如果toast状态为展示中,清除倒计时并重新执行</div><div class="line">        toastTimeout &amp;&amp; window.clearTimeout(toastTimeout);</div><div class="line">        toastTimeout = setTimeout(() =&gt; &#123;</div><div class="line">            this.setState(&#123;</div><div class="line">                show: 0</div><div class="line">            &#125;);</div><div class="line">        &#125;, 3000);</div><div class="line">    &#125;</div><div class="line">    componentDidMount() &#123;</div><div class="line">        storeActions.toast.add(this.toast);</div><div class="line">    &#125;</div><div class="line">    render() &#123;</div><div class="line">        return (</div><div class="line">            &lt;div className=&#123;`toast_container$&#123;this.state.show === 1 ? &apos;&apos; : &apos; setnone&apos;&#125;`&#125;&gt;</div><div class="line">                &lt;div className=&quot;toast_tips&quot;&gt;&#123;this.state.toastText&#125;&lt;/div&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">        );</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>结合storeActions模块</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">import signals from &apos;signals&apos;;</div><div class="line">/**</div><div class="line"> * 全局事件系统</div><div class="line"> */</div><div class="line">const Signal = signals.Signal;</div><div class="line">const storeActions = &#123;</div><div class="line">    toast: new Signal(),</div><div class="line">    loading: new Signal(),</div><div class="line">    overlay: new Signal()</div><div class="line">&#125;;</div><div class="line"></div><div class="line">export default storeActions;</div></pre></td></tr></table></figure>
+<h4 id="Toast组件使用方法"><a href="#Toast组件使用方法" class="headerlink" title="Toast组件使用方法:"></a>Toast组件使用方法:</h4><ol>
+<li>在程序的适当位置引入(譬如App)</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">import Toast from &apos;./**/common/components/toast&apos;;</div><div class="line">......</div><div class="line">render() &#123;</div><div class="line">    ......</div><div class="line">    &lt;Toast /&gt;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ol>
+<li>在需要使用toast的模块/组件内引入storeActions<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">import storeActions from &apos;./**/common/modules/store-actions&apos;;</div><div class="line">......</div><div class="line">storeActions.toast.dispatch(&apos;hello&apos;);</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="注-1"><a href="#注-1" class="headerlink" title="注:"></a>注:</h4><p>当程序需要实现一些跨组件通信的需求的时候,可参考实现.(有调研过Redux,觉得暂时对于我们的应用还不是很必要,会增加程序复杂度)</p>
+<h2 id="projectXXX-index-jsx"><a href="#projectXXX-index-jsx" class="headerlink" title="projectXXX/index.jsx"></a>projectXXX/index.jsx</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">ReactDOM.render(</div><div class="line">    &lt;AppContainer&gt;</div><div class="line">        &lt;App data=&#123;initialState&#125;/&gt;</div><div class="line">    &lt;/AppContainer&gt;,</div><div class="line">    document.getElementById(&apos;react-html-container&apos;)</div><div class="line">);</div><div class="line">if (module.hot) &#123;</div><div class="line">    module.hot.accept(&apos;./components/app&apos;, () =&gt; &#123;</div><div class="line">        require(&apos;./components/app&apos;);</div><div class="line">        ReactDOM.render(</div><div class="line">            &lt;AppContainer&gt;</div><div class="line">                &lt;App data=&#123;initialState&#125;/&gt;</div><div class="line">            &lt;/AppContainer&gt;,</div><div class="line">            document.getElementById(&apos;react-html-container&apos;)</div><div class="line">        );</div><div class="line">    &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="实现热更新"><a href="#实现热更新" class="headerlink" title="实现热更新"></a>实现热更新</h4><p>修改components/app下的无论是同步import还是异步require.ensure的模块,浏览器会在不刷新页面的前提下实现更新(由于样式文件被提取后热更新会失败,开发时统一设置不提取,即本文档提到的VEXTRACT环境变量)</p>
+<h4 id="无论服务端还是客户端渲染-顶层组件-App-都带有一个data的props"><a href="#无论服务端还是客户端渲染-顶层组件-App-都带有一个data的props" class="headerlink" title="无论服务端还是客户端渲染,顶层组件(App)都带有一个data的props"></a>无论服务端还是客户端渲染,顶层组件(App)都带有一个data的props</h4><p><img src="http://img.xmiles.cn/frontend_service/youdao/QQ20170306-103923@2x.png" alt="image"></p>
+<p>为了方便,在模块App中将其放置到一个可供其他模块访问的对象中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//把静态数据写到storeStatics</div><div class="line">Object.assign(storeStatics, &#123;</div><div class="line">    phead: props.data.phead,</div><div class="line">    browser: props.data.browser</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>特别说明一下browser对象下面的isapp元素,它的值是从链接上获取的,当我们在服务端渲染UI需要判断是否在app内的时候就可以用它去判断.为了避免误会,如果链接上不带isapp这个参数,browser对象中的isapp为undefined</p>
+<h4 id="http-s-切换"><a href="#http-s-切换" class="headerlink" title="http(s)切换"></a>http(s)切换</h4><p>为了frontend_service使用不同协议都能正常访问,服务层requestBase类会使用不同的协议向tomcat发送请求,而在view层中,写页面时则需要对资源访问地址做一些处理</p>
+<ul>
+<li>对服务器下发的外链资源,统一接入utils.getFormatImg方法处理</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">getFormatImg(src, param = &apos;0&apos;) &#123;</div><div class="line">    const browser = storeStatics.browser;</div><div class="line">    if (!src || typeof src !== &apos;string&apos;) &#123;</div><div class="line">        return &apos;&apos;;</div><div class="line">    &#125;</div><div class="line">    //远程服务器图片删除protocol</div><div class="line">    if (src.indexOf(&apos;https://&apos;) === 0) &#123;</div><div class="line">        src = src.slice(6, src.length);</div><div class="line">    &#125; else if (src.indexOf(&apos;http://&apos;) === 0) &#123;</div><div class="line">        src = src.slice(5, src.length);</div><div class="line">    &#125;</div><div class="line">    if (!src.includes(&apos;imageView2&apos;) &amp;&amp; !src.includes(&apos;.gif&apos;)) &#123;</div><div class="line">        if (browser.isSupportWebp) &#123;</div><div class="line">            src += &apos;?imageView2/&apos; + param + &apos;/format/webp&apos;;</div><div class="line">        &#125; else if (src.includes(&apos;.png&apos;) || src.includes(&apos;.tmp&apos;)) &#123;</div><div class="line">            src += &apos;?imageView2/&apos; + param + &apos;/format/png&apos;;</div><div class="line">        &#125; else &#123;</div><div class="line">            src += &apos;?imageView2/&apos; + param + &apos;/format/jpg&apos;;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return src;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>对自行上传的七牛资源,粘贴时请去除协议<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;img src=&quot;//img.xmiles.cn/xxxxxxx.png&quot; /&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p>可参考<a href="http://www.ruanyifeng.com/blog/2015/12/a-mocha-tutorial-of-examples.html" target="_blank" rel="external">http://www.ruanyifeng.com/blog/2015/12/a-mocha-tutorial-of-examples.html</a></p>
+<h4 id="全局安装mocha"><a href="#全局安装mocha" class="headerlink" title="全局安装mocha"></a>全局安装mocha</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm i mocha -g</div></pre></td></tr></table></figure>
+<h4 id="webstorm集成mocha"><a href="#webstorm集成mocha" class="headerlink" title="webstorm集成mocha"></a>webstorm集成mocha</h4><p><img src="http://img.xmiles.cn/frontend_service/youdao/QQ20170228-172211.png" alt="image"><br>这只是其中一种配置方法,也可以使用babel-node</p>
+<h4 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mocha &apos;./app/test/**/*.@(js|jsx)&apos; --recursive --compilers js:babel-register --colors --bail -t 20000</div></pre></td></tr></table></figure>
+<ul>
+<li>‘./app/test/<em>*/</em>.test.@(js|jsx)’ –recursive—-测试app/test目录下全部.test.js(jsx)</li>
+<li>–compilers js:babel-register————–babel-register编译</li>
+<li>–bail————————————-第一个测试用例失败后终止测试</li>
+<li>-t 20000———————————主要用于异步测试的timeout控制,单位为ms</li>
+</ul>
+<h4 id="测试命令-参考根目录下的build-sh文件"><a href="#测试命令-参考根目录下的build-sh文件" class="headerlink" title="测试命令(参考根目录下的build.sh文件)"></a>测试命令(参考根目录下的build.sh文件)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//windows下用set</div><div class="line">export IS_LOCAL=1&amp;&amp;export NODE_ENV=production&amp;&amp;export SERV_ENV=official&amp;&amp;npm test</div></pre></td></tr></table></figure>
+<h1 id="部署流程"><a href="#部署流程" class="headerlink" title="部署流程"></a>部署流程</h1><p>(参考根目录下的build.sh,build.gradle文件以及jenkins配置)</p>
+<h1 id="其他说明"><a href="#其他说明" class="headerlink" title="其他说明"></a>其他说明</h1><h3 id="babelrc"><a href="#babelrc" class="headerlink" title=".babelrc"></a>.babelrc</h3><p>所有经过babel编译这一步都会用到,谨慎修改,比如app目录和views目录的打包都用到</p>
+<h3 id="eslintrc"><a href="#eslintrc" class="headerlink" title=".eslintrc"></a>.eslintrc</h3><p>js语法检测</p>
+<h3 id="npmrc"><a href="#npmrc" class="headerlink" title=".npmrc"></a>.npmrc</h3><p>对一些github上即使设置了代理下载仍然很慢的资源使用国内地址</p>
+<h3 id="pass-xx-passwd"><a href="#pass-xx-passwd" class="headerlink" title="pass_xx.passwd"></a>pass_xx.passwd</h3><p>服务器账户密码,用文件而不是直接使用字符串是因为当密码有特殊字符时不知道怎么处理才能登陆上去</p>
+<h3 id="start-config-js"><a href="#start-config-js" class="headerlink" title="start.config.js"></a>start.config.js</h3><p>pm2 启动文件</p>
+<h4 id="启动命令"><a href="#启动命令" class="headerlink" title="启动命令"></a>启动命令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//windows下用set</div><div class="line">export START_PORT=13333&amp;&amp;pm2 start start.config.js --env dev</div></pre></td></tr></table></figure>
+<p>其中–env dev指定环境变量,启动正式服务器时不需要这个参数</p>
+<h2 id="logs"><a href="#logs" class="headerlink" title="logs"></a>logs</h2><p>pm2的log暂时还没有很好的利用起来,只是做一些线上调试的时候使用</p>
+<h2 id="附"><a href="#附" class="headerlink" title="附"></a>附</h2><ul>
+<li>webstorm激活服务器</li>
+</ul>
+<ol>
+<li><a href="http://idea.ibdyr.com" target="_blank" rel="external">http://idea.ibdyr.com</a></li>
+<li><a href="http://idea.iteblog.com/key.php" target="_blank" rel="external">http://idea.iteblog.com/key.php</a></li>
+</ol>
+<ul>
+<li>webstorm增加模板提高效率<br><img src="http://img.xmiles.cn/frontend_service/youdao/QQ20170309-102024.png" alt="image"></li>
+<li>一些好用的npm模块</li>
+</ul>
+<ol>
+<li><a href="https://www.npmjs.com/package/npm-check" target="_blank" rel="external">npm-check</a></li>
+<li><a href="https://github.com/remy/nodemon" target="_blank" rel="external">nodemon</a></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.afanail.com/2018/06/11/React项目总结/" data-id="cji91a7to000mnlypb60f93eg" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+ <script src="/jquery/jquery.min.js"></script>
+  <div id="random_posts">
+    <h2>Recommended Posts</h2>
+    <div class="random_posts_ul">
+      <script>
+          var random_count =4
+          var site = {BASE_URI:'/'};
+          function load_random_posts(obj) {
+              var arr=site.posts;
+              if (!obj) return;
+              // var count = $(obj).attr('data-count') || 6;
+              for (var i, tmp, n = arr.length; n; i = Math.floor(Math.random() * n), tmp = arr[--n], arr[n] = arr[i], arr[i] = tmp);
+              arr = arr.slice(0, random_count);
+              var html = '<ul>';
+            
+              for(var j=0;j<arr.length;j++){
+                var item=arr[j];
+                html += '<li><strong>' + 
+                item.date + ':&nbsp;&nbsp;<a href="' + (site.BASE_URI+item.uri) + '">' + 
+                (item.title || item.uri) + '</a></strong>';
+                if(item.excerpt){
+                  html +='<div class="post-excerpt">'+item.excerpt+'</div>';
+                }
+                html +='</li>';
+                
+              }
+              $(obj).html(html + '</ul>');
+          }
+          $('.random_posts_ul').each(function () {
+              var c = this;
+              if (!site.posts || !site.posts.length){
+                  $.getJSON(site.BASE_URI + 'js/posts.js',function(json){site.posts = json;load_random_posts(c)});
+              } 
+               else{
+                load_random_posts(c);
+              }
+          });
+      </script>
+    </div>
+  </div>
+
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/02/26/Java/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Java</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+       
+      
+      
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+    <div class="widget-wrap">
+    
+      <div class="widget" id="toc-widget-fixed">
+      
+        <strong class="toc-title">Content</strong>
+        <div class="toc-widget-list">
+              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#安装node"><span class="toc-number">1.</span> <span class="toc-text">安装node</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#官网地址"><span class="toc-number">1.0.1.</span> <span class="toc-text">官网地址:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注"><span class="toc-number">1.0.2.</span> <span class="toc-text">注:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#mac自由安装"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">mac自由安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#windows建议下载6-x-7-x版本有可能会出现node-sass不兼容的情况"><span class="toc-number">1.0.2.2.</span> <span class="toc-text">windows建议下载6.x(7.x版本有可能会出现node-sass不兼容的情况)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#远程服务器-ubuntu-可使用git命令下载-省去上传这一步"><span class="toc-number">1.0.2.3.</span> <span class="toc-text">远程服务器(ubuntu)可使用git命令下载(省去上传这一步)</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#node版本管理"><span class="toc-number">2.</span> <span class="toc-text">node版本管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#可使用n或nvm-参考http-taobaofed-org-blog-2015-11-17-nvm-or-n"><span class="toc-number">2.0.0.1.</span> <span class="toc-text">可使用n或nvm(参考http://taobaofed.org/blog/2015/11/17/nvm-or-n/)</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#npm代理"><span class="toc-number">3.</span> <span class="toc-text">npm代理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#项目初始化-以webstorm为例"><span class="toc-number">4.</span> <span class="toc-text">项目初始化(以webstorm为例)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#项目check下来后执行npm-install"><span class="toc-number">4.0.0.1.</span> <span class="toc-text">项目check下来后执行npm install</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#项目导入到webstorm后如果识别”import”等语法出错-preferences设置选择jsx"><span class="toc-number">4.0.0.2.</span> <span class="toc-text">项目导入到webstorm后如果识别”import”等语法出错,preferences设置选择jsx</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#启动配置"><span class="toc-number">4.0.0.3.</span> <span class="toc-text">启动配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#标注1说明"><span class="toc-number">4.0.0.4.</span> <span class="toc-text">标注1说明:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#使用babel-node而不是node的原因是本地不需要打包node的服务端模块-babel-node可运行”import”等node暂不支持的语法"><span class="toc-number">4.0.0.5.</span> <span class="toc-text">使用babel-node而不是node的原因是本地不需要打包node的服务端模块,babel-node可运行”import”等node暂不支持的语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mac可选择node-modules-babel-cli-bin-下的babel-node-js"><span class="toc-number">4.0.0.6.</span> <span class="toc-text">mac可选择node_modules/babel-cli/bin/下的babel-node.js</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#windows请选择node-modules-bin-下的babel-node-cmd"><span class="toc-number">4.0.0.7.</span> <span class="toc-text">windows请选择node_modules/.bin/下的babel-node.cmd</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#标注2说明如图"><span class="toc-number">4.0.0.8.</span> <span class="toc-text">标注2说明如图:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#环境变量说明-环境变量都可以通过process-env-XXX获取-想要知道环境变量哪里使用过也可以这样去查找"><span class="toc-number">4.0.0.9.</span> <span class="toc-text">环境变量说明(环境变量都可以通过process.env.XXX获取,想要知道环境变量哪里使用过也可以这样去查找):</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#本地启动"><span class="toc-number">4.0.0.10.</span> <span class="toc-text">本地启动</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#控制台分两段输出"><span class="toc-number">4.0.0.11.</span> <span class="toc-text">控制台分两段输出</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#app-服务端-部分代码解释"><span class="toc-number">5.</span> <span class="toc-text">app(服务端)部分代码解释</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#app-js"><span class="toc-number">5.1.</span> <span class="toc-text">app.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#controllers-interface目录"><span class="toc-number">5.2.</span> <span class="toc-text">controllers/interface目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#controllers-request-base-request-base-js"><span class="toc-number">5.3.</span> <span class="toc-text">controllers/request/base/request_base.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#controllers-template-helper目录"><span class="toc-number">5.4.</span> <span class="toc-text">controllers/template_helper目录</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#views-视图层-部分代码解释"><span class="toc-number">6.</span> <span class="toc-text">views(视图层)部分代码解释</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#cfg文件夹"><span class="toc-number">6.1.</span> <span class="toc-text">cfg文件夹</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#common-footer-html"><span class="toc-number">6.2.</span> <span class="toc-text">common/footer.html</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#common-components"><span class="toc-number">6.3.</span> <span class="toc-text">common/components</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Toast组件使用方法"><span class="toc-number">6.3.0.1.</span> <span class="toc-text">Toast组件使用方法:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#注-1"><span class="toc-number">6.3.0.2.</span> <span class="toc-text">注:</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#projectXXX-index-jsx"><span class="toc-number">6.4.</span> <span class="toc-text">projectXXX/index.jsx</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#实现热更新"><span class="toc-number">6.4.0.1.</span> <span class="toc-text">实现热更新</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#无论服务端还是客户端渲染-顶层组件-App-都带有一个data的props"><span class="toc-number">6.4.0.2.</span> <span class="toc-text">无论服务端还是客户端渲染,顶层组件(App)都带有一个data的props</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#http-s-切换"><span class="toc-number">6.4.0.3.</span> <span class="toc-text">http(s)切换</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#测试"><span class="toc-number">7.</span> <span class="toc-text">测试</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#全局安装mocha"><span class="toc-number">7.0.0.1.</span> <span class="toc-text">全局安装mocha</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#webstorm集成mocha"><span class="toc-number">7.0.0.2.</span> <span class="toc-text">webstorm集成mocha</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#参数说明"><span class="toc-number">7.0.0.3.</span> <span class="toc-text">参数说明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#测试命令-参考根目录下的build-sh文件"><span class="toc-number">7.0.0.4.</span> <span class="toc-text">测试命令(参考根目录下的build.sh文件)</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#部署流程"><span class="toc-number">8.</span> <span class="toc-text">部署流程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#其他说明"><span class="toc-number">9.</span> <span class="toc-text">其他说明</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#babelrc"><span class="toc-number">9.0.1.</span> <span class="toc-text">.babelrc</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#eslintrc"><span class="toc-number">9.0.2.</span> <span class="toc-text">.eslintrc</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#npmrc"><span class="toc-number">9.0.3.</span> <span class="toc-text">.npmrc</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pass-xx-passwd"><span class="toc-number">9.0.4.</span> <span class="toc-text">pass_xx.passwd</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#start-config-js"><span class="toc-number">9.0.5.</span> <span class="toc-text">start.config.js</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#启动命令"><span class="toc-number">9.0.5.1.</span> <span class="toc-text">启动命令</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#logs"><span class="toc-number">9.1.</span> <span class="toc-text">logs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#附"><span class="toc-number">9.2.</span> <span class="toc-text">附</span></a></li></ol></li></ol>
+          </div>
+      </div>
+    </div>
+
+  
+    
+
+  
+    
+  
+    
+  
+    
+
+  
+    
+  
+    <!--微信公众号二维码-->
+
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2016 - 2018 Afanail&nbsp;
+    </div>
+     <div id="footer-right">
+      Contact&nbsp;|&nbsp;zjfapk@163.com
+    </div>
+  </div>
+</footer>
+ <script src="/jquery/jquery.min.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+  
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "e2fb4051c49842688ce669e634bc983f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+    
+
+  
+
+
+
+
+
+
+
+<!-- author:forvoid begin -->
+<!-- author:forvoid begin -->
+
+<!-- author:forvoid end -->
+
+<!-- author:forvoid end -->
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/mathjax/MathJax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ <script src="/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/elevator.js"></script>
+  </div>
+</body>
+</html>

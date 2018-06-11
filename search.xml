@@ -5,14 +5,7 @@
     <entry>
       <title><![CDATA[my resume]]></title>
       <url>/2018/06/11/my-resume/</url>
-      <content type="html"><![CDATA[<p>###郑敬发</p>
-<p>###软件工程师</p>
-<p>###河南科技大学/本科/自动化 </p>
-<p>###zjfapk@163.com</p>
-<p>###15626495472</p>
-<p>###广东广州</p>
-<p>###项目经历</p>
-<pre><code>一 
+      <content type="html"><![CDATA[<h3 id="郑敬发"><a href="#郑敬发" class="headerlink" title="郑敬发"></a>郑敬发</h3><h3 id="软件工程师"><a href="#软件工程师" class="headerlink" title="软件工程师"></a>软件工程师</h3><h3 id="河南科技大学-本科-自动化"><a href="#河南科技大学-本科-自动化" class="headerlink" title="河南科技大学/本科/自动化"></a>河南科技大学/本科/自动化</h3><h3 id="zjfapk-163-com"><a href="#zjfapk-163-com" class="headerlink" title="zjfapk@163.com"></a>zjfapk@163.com</h3><h3 id="15626495472"><a href="#15626495472" class="headerlink" title="15626495472"></a>15626495472</h3><h3 id="广东广州"><a href="#广东广州" class="headerlink" title="广东广州"></a>广东广州</h3><h3 id="项目经历"><a href="#项目经历" class="headerlink" title="项目经历"></a>项目经历</h3><pre><code>一 
 项目名称：
     航票一体化系统（中国航信广州航旅天空）  PC端
 项目简介：
@@ -77,8 +70,7 @@
     对前端工程化和模块化有了进一步的理解,熟练掌握React。
     熟悉前端调试及排错方法。
 </code></pre><h3 id="自我评价"><a href="#自我评价" class="headerlink" title="自我评价"></a>自我评价</h3><pre><code>喜欢技术带来的成就感，热爱编程。
-</code></pre><p>###爱好特长</p>
-<pre><code>写代码，打篮球。喜欢看书，喜欢看美剧，最近在看《Java编程思想》，重温《JavaScript权威指南》。
+</code></pre><h3 id="爱好特长"><a href="#爱好特长" class="headerlink" title="爱好特长"></a>爱好特长</h3><pre><code>写代码，打篮球。喜欢看书，喜欢看美剧，最近在看《Java编程思想》，重温《JavaScript权威指南》。
 </code></pre>]]></content>
       
         

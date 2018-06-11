@@ -65,6 +65,49 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-微航保技术简介" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/06/11/微航保技术简介/" class="article-date">
+  <time datetime="2018-06-11T12:20:43.000Z" itemprop="datePublished">2018-06-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/11/微航保技术简介/">微航保技术简介</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h1 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h1><p>在项目<a href="https://github.com/Tencent/tmt-workflow" target="_blank" rel="external">tmt-workflow</a>的基础上进行修改开发，但是比其简单的多,项目布局如下：</p>
+<p><pre><br>.wehb(微航保)<br>├── .idea(.vscode)                        // 编辑器配置文件(可忽略)<br>├── bower_components                   // bower依赖下载目录<br>│   ├── angular                         // angular前端框架<br>│   ├── artTemplate                     // 腾讯模板引擎<br>│   ├── hammer                           // 移动手势插件等<br>│   ├── fastClick                           // fastClick<br>│   ├── Swiper                                // 轮播图插件等<br>│   ├── ………                                // ………<br>├── build                               // 本地浏览器运行资源目录<br>│   ├── css                               // css样式<br>│   ├── image                          // 图片目录<br>│   ├── js                                     // js脚本目录<br>│   ├── view                                // 页面组件模板<br>│   ├── vendor                                      //等同于bower_components<br>│   ├── index.html                                // 主界面<br>│   ├── /<strong>.html                                    // 其它主界面<br>├── dist                    // 等同于build（发布上线目录，经各种代码优化）<br>├── node_modules                          // npm 依赖<br>│   ├── gulp                              // gulp<br>│   ├── gulp                              // gulp<br>│   ├── gulp-less                           // gulp-less<br>│   ├── ………                                   // ………<br>│   ├── ………                                   // ………<br>│   ├── ………                                   // ………<br>├── src                                     // 源码目录<br>│   ├── image                                 // 图片<br>│   │   ├── funicom                        // 精灵图<br>│   │   ├── index                            // 对应各主页图片<br>│   │   ├── ………                             // ………<br>│   ├── js                                  // 脚本<br>│   │   ├── env.js                              // 环境切换配置<br>│   │   ├── fetch.js                            // 获取数据<br>│   │   ├── mUtils.js                           // 常用的js方法<br>│   │   └── rem.js                              // px转换rem<br>│   ├── less                                 // less<br>│   │   ├── mixin.less                         // css常用函数<br>│   │   ├── base.less                           // css常用样式<br>│   │   ├── property.less                       // css自定义属性<br>│   │   └── var.less                             // css自定义变量<br>│   │   └── index                             // 对应各主界面样式<br>│   │   └── ………                             // ………<br>│   │   └── ………                             // ………<br>│   ├── view                                          // 可复用页面组件<br>│   │   ├── banner    .html                            // 可复用banner组件<br>│   │   ├── proList.html                            // 子页面<br>│   │   └── ………                             // ………<br>│   │   └── ………                             // ………<br>│   ├── index.html                                    //    主界面<br>│   ├── /</strong>.html                                        //    其他界面<br>├── .babelrc                                 // babel配置文件<br>├── .babelrc                                 // eslint配置文件.gitignore<br>├── . gitignore                                  // 上传到git服务器忽略文件<br>├── bower.json                               // bower配置文件<br>├── gulpfile.js                               // 项目最核心文件<br>├── package.json                            // npm配置文件(次核心)<br>├── postcss.config.js                        // css自动前缀配置文件<br></pre><br>至此，整个项目布局一览无余。运行此项目前提是计算机安装了nvm、node、npm以及gulp。最核心文件gulp和次核心文件package.json其实都是有关于前端开发环境。以gulp.js其中抽取的部分核心代码为例子：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">;(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// 加载gulp等插件</span></div><div class="line">  <span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</div><div class="line">  <span class="comment">// 定义项目路径</span></div><div class="line">  <span class="keyword">var</span> app = &#123;</div><div class="line">    <span class="attr">srcPath</span>: <span class="string">'src/'</span>,</div><div class="line">  &#125;;</div><div class="line">  <span class="comment">//定制gulp任务</span></div><div class="line">  gulp.task(<span class="string">'js'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      .pipe($.plumber())</div><div class="line">      .pipe($.uglify())</div><div class="line">      .pipe($.connect.reload());</div><div class="line">  &#125;);</div><div class="line">  gulp.task(<span class="string">'serve'</span>, [<span class="string">'js'</span>,…rest], <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    $.connect.server(&#123;</div><div class="line">      <span class="attr">root</span>: [app.devPath],</div><div class="line">      <span class="attr">livereload</span>: <span class="literal">true</span>,</div><div class="line">      <span class="attr">port</span>: <span class="number">3000</span></div><div class="line">    &#125;);</div><div class="line">    open(<span class="string">'http://localhost:3000'</span>);</div><div class="line"></div><div class="line">    gulp.watch(app.srcPath + <span class="string">'script/**/*.js'</span>, [<span class="string">'js'</span>]);</div><div class="line">  &#125;);</div><div class="line">  <span class="comment">// 执行gulp默认命令</span></div><div class="line">  gulp.task(<span class="string">'default'</span>, [<span class="string">'serve'</span>]);</div><div class="line">&#125;)();</div></pre></td></tr></table></figure></p>
+<pre><code>简单分析：以node为代理服务器通过gulp工具让前端开发模拟线上环境开发。优点是css自动填充兼容性前缀，本地热更新，提升开发效率等。缺点是不易上手。前端开发环境定制性高，各种环境配置确实是比较折腾。
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.afanail.com/2018/06/11/微航保技术简介/" data-id="cjia886be002fcjypgj857j5v" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
     <article id="post-Perl简介" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/06/11/Perl简介/" class="article-date">
@@ -106,7 +149,7 @@ windows下最好不要安装perl在包含空格路径的目录下
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2018/06/11/Perl简介/" data-id="cjia7kf44000juwypu1ysrjyd" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2018/06/11/Perl简介/" data-id="cjia8869s000tcjyphds7t8mp" class="article-share-link">分享</a>
       
       
       
@@ -147,7 +190,7 @@ windows下最好不要安装perl在包含空格路径的目录下
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2018/02/26/Java/" data-id="cjia7kf43000huwypl5aax4ww" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2018/02/26/Java/" data-id="cjia8869j000ncjyps3ou4pd9" class="article-share-link">分享</a>
       
       
       
@@ -197,7 +240,7 @@ windows下最好不要安装perl在包含空格路径的目录下
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2018/01/25/lookbook/" data-id="cjia7kf5f001ouwypnkykx8mn" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2018/01/25/lookbook/" data-id="cjia886av001rcjypt7g06l58" class="article-share-link">分享</a>
       
       
       
@@ -249,7 +292,7 @@ windows下最好不要安装perl在包含空格路径的目录下
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2018/01/11/React项目总结/" data-id="cjia7kf4a000ouwyp50apddjd" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2018/01/11/React项目总结/" data-id="cjia8869w000wcjypfij9idxr" class="article-share-link">分享</a>
       
       
       
@@ -292,7 +335,7 @@ windows下最好不要安装perl在包含空格路径的目录下
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/12/29/关于Java核心技术/" data-id="cjia7kf67002auwypqosbc8yv" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2017/12/29/关于Java核心技术/" data-id="cjia886bf002icjypcxnd4pob" class="article-share-link">分享</a>
       
       
       
@@ -337,7 +380,7 @@ windows下最好不要安装perl在包含空格路径的目录下
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/12/18/webpack/" data-id="cjia7kf5t0023uwypyt41iupy" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2017/12/18/webpack/" data-id="cjia886b70025cjyp3mhrkyxx" class="article-share-link">分享</a>
       
       
       
@@ -383,7 +426,7 @@ windows下最好不要安装perl在包含空格路径的目录下
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/12/05/ES6/" data-id="cjia7kf3t0008uwyp8it2254k" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2017/12/05/ES6/" data-id="cjia8868u0007cjyp25lropz8" class="article-share-link">分享</a>
       
       
       
@@ -428,7 +471,7 @@ windows下最好不要安装perl在包含空格路径的目录下
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/11/09/dataStructor/" data-id="cjia7kf4g000tuwyptw3w57fi" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2017/11/09/dataStructor/" data-id="cjia8869y000xcjyppgrsufnu" class="article-share-link">分享</a>
       
       
       
@@ -475,56 +518,11 @@ windows下最好不要安装perl在包含空格路径的目录下
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/10/21/sql/" data-id="cjia7kf5r0020uwyp0pxpcepw" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2017/10/21/sql/" data-id="cjia886b1001ycjypb1lh16tv" class="article-share-link">分享</a>
       
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql-sybase/">sql sybase</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
- 
-
-
-  
-    <article id="post-Perl相关" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/10/01/Perl相关/" class="article-date">
-  <time datetime="2017-10-01T03:25:22.000Z" itemprop="datePublished">2017-10-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/01/Perl相关/">perl-learning</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>因为工作大部分时间从前端转到Perl后台，这里记录的是工作中遇到的问题及本人的一些想法。<br>Perl在做机票报表方面确实有得天独厚的优势，本文一切基于Perl 5.18。<br>Perl连接数据库<br><figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">use</span> Sybase::CTlib; <span class="comment"># 使用 Sybase::CTlib包</span></div><div class="line">$db = &amp;connect_database(); <span class="comment">#连接数据库</span></div><div class="line">$sql =<span class="string">" select rtrim(name) from ctninfo..sysobjects where type='U' "</span>; <span class="comment">#编写SQL语句</span></div><div class="line">$db-&gt;ct_execute($sql);	   <span class="comment"># 执行      		</span></div><div class="line"><span class="keyword">while</span>($db-&gt;ct_results($restype) == CS_SUCCEED) &#123;</div><div class="line">	<span class="keyword">if</span>($restype==CS_ROW_RESULT) &#123;</div><div class="line">		<span class="keyword">while</span>(@row = $db-&gt;ct_fetch) &#123;</div><div class="line">			$table_name&#123;$row[<span class="number">0</span>]&#125;=<span class="number">1</span>; <span class="comment">#取出数据</span></div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-        
-          <p class="article-more-link">
-            <a href="/2017/10/01/Perl相关/#more">继续阅读全文 »</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/10/01/Perl相关/" data-id="cjia7kf48000nuwyp6jyxjyiq" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/perl-CGI-编程/">perl CGI 编程</a></li></ul>
 
     </footer>
   </div>
@@ -594,6 +592,10 @@ windows下最好不要安装perl在包含空格路径的目录下
       <ul>
         
           <li>
+            <a href="/2018/06/11/微航保技术简介/">微航保技术简介</a>
+          </li>
+        
+          <li>
             <a href="/2018/06/11/Perl简介/">Perl简介</a>
           </li>
         
@@ -609,10 +611,6 @@ windows下最好不要安装perl在包含空格路径的目录下
             <a href="/2018/01/11/React项目总结/">React项目总结</a>
           </li>
         
-          <li>
-            <a href="/2017/12/29/关于Java核心技术/">Java核心技术摘要</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -622,7 +620,7 @@ windows下最好不要安装perl在包含空格路径的目录下
   <div class="widget-wrap">
     <h3 class="widget-title archive">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">4</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 

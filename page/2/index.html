@@ -65,6 +65,51 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Perl相关" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/01/Perl相关/" class="article-date">
+  <time datetime="2017-10-01T03:25:22.000Z" itemprop="datePublished">2017-10-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/01/Perl相关/">perl-learning</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>因为工作大部分时间从前端转到Perl后台，这里记录的是工作中遇到的问题及本人的一些想法。<br>Perl在做机票报表方面确实有得天独厚的优势，本文一切基于Perl 5.18。<br>Perl连接数据库<br><figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">use</span> Sybase::CTlib; <span class="comment"># 使用 Sybase::CTlib包</span></div><div class="line">$db = &amp;connect_database(); <span class="comment">#连接数据库</span></div><div class="line">$sql =<span class="string">" select rtrim(name) from ctninfo..sysobjects where type='U' "</span>; <span class="comment">#编写SQL语句</span></div><div class="line">$db-&gt;ct_execute($sql);	   <span class="comment"># 执行      		</span></div><div class="line"><span class="keyword">while</span>($db-&gt;ct_results($restype) == CS_SUCCEED) &#123;</div><div class="line">	<span class="keyword">if</span>($restype==CS_ROW_RESULT) &#123;</div><div class="line">		<span class="keyword">while</span>(@row = $db-&gt;ct_fetch) &#123;</div><div class="line">			$table_name&#123;$row[<span class="number">0</span>]&#125;=<span class="number">1</span>; <span class="comment">#取出数据</span></div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+        
+          <p class="article-more-link">
+            <a href="/2017/10/01/Perl相关/#more">继续阅读全文 »</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.afanail.com/2017/10/01/Perl相关/" data-id="cjia8869o000rcjyp0gdf1g5i" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/perl-CGI-编程/">perl CGI 编程</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
     <article id="post-0到1实现简单的jQuery城市选择控件" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/09/30/0到1实现简单的jQuery城市选择控件/" class="article-date">
@@ -96,7 +141,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/09/30/0到1实现简单的jQuery城市选择控件/" data-id="cjia7kf330001uwypwm2933k1" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2017/09/30/0到1实现简单的jQuery城市选择控件/" data-id="cjia8868l0004cjyp3xmz8hwh" class="article-share-link">分享</a>
       
       
       
@@ -141,7 +186,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/08/15/Perl项目前后端分离？/" data-id="cjia7kf46000muwypj5dc95qb" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2017/08/15/Perl项目前后端分离？/" data-id="cjia8869u000ucjypr41pn7s8" class="article-share-link">分享</a>
       
       
       
@@ -186,7 +231,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/07/30/前端工程自动化/" data-id="cjia7kf5u0025uwypi49p7vud" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2017/07/30/前端工程自动化/" data-id="cjia886bc002dcjypeb7f0lx0" class="article-share-link">分享</a>
       
       
       
@@ -231,7 +276,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/07/22/IE7-hack-respond/" data-id="cjia7kf40000euwypj0uar0y3" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2017/07/22/IE7-hack-respond/" data-id="cjia8869f000icjypkeynejmb" class="article-share-link">分享</a>
       
       
       
@@ -276,7 +321,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/07/15/perl-learning/" data-id="cjia7kf5j001ruwypymyvg1h9" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2017/07/15/perl-learning/" data-id="cjia886az001wcjypyy1htpkx" class="article-share-link">分享</a>
       
       
       
@@ -322,7 +367,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/06/28/教你如何巧妙解决网页乱码/" data-id="cjia7kf6d002iuwypo4hq2ods" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2017/06/28/教你如何巧妙解决网页乱码/" data-id="cjia886bo002pcjypkqgn6xzb" class="article-share-link">分享</a>
       
       
       
@@ -367,7 +412,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/06/17/抓住17年的尾巴/" data-id="cjia7kf6g002muwypbkxtyiky" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2017/06/17/抓住17年的尾巴/" data-id="cjia886bj002ncjypkrqmdirj" class="article-share-link">分享</a>
       
       
       
@@ -413,7 +458,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/06/16/less小技巧/" data-id="cjia7kf5b001juwyp9k7a6ezz" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2017/06/16/less小技巧/" data-id="cjia886as001ocjypx96ublo0" class="article-share-link">分享</a>
       
       
       
@@ -458,56 +503,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/06/08/NBA总决赛G3/" data-id="cjia7kf4c000ruwypvda7fe4s" class="article-share-link">分享</a>
+      <a data-url="http://www.afanail.com/2017/06/08/NBA总决赛G3/" data-id="cjia8869n000pcjyp94uiq4uk" class="article-share-link">分享</a>
       
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
- 
-
-
-  
-    <article id="post-愿世间没有..." class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/05/29/愿世间没有.../" class="article-date">
-  <time datetime="2017-05-28T16:00:00.000Z" itemprop="datePublished">2017-05-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/29/愿世间没有.../">愿世间没有。。。</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>活了大概五分之一的人生以上，从来没有一天像今天这样的心情。如果可以，愿世间没有。。。
-        
-          <p class="article-more-link">
-            <a href="/2017/05/29/愿世间没有.../#more">继续阅读全文 »</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/05/29/愿世间没有.../" data-id="cjia7kf650028uwypv6bgimla" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">-随笔</a></li></ul>
 
     </footer>
   </div>
@@ -543,6 +543,10 @@
       <ul>
         
           <li>
+            <a href="/2018/06/11/微航保技术简介/">微航保技术简介</a>
+          </li>
+        
+          <li>
             <a href="/2018/06/11/Perl简介/">Perl简介</a>
           </li>
         
@@ -556,10 +560,6 @@
         
           <li>
             <a href="/2018/01/11/React项目总结/">React项目总结</a>
-          </li>
-        
-          <li>
-            <a href="/2017/12/29/关于Java核心技术/">Java核心技术摘要</a>
           </li>
         
       </ul>

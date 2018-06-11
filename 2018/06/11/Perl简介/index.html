@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Perl简介 | Afanail</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="##零、好习惯 use diagnostics;输出详细的警告信息，不常用   可这样交换两个变量($a, $b) = ($b, $a)   使用 use bignum 保证数值运算不会丢失精度，此声明可在局部使用，不常用   Orcish Maneuver 标记 ||= 在判断数字0时有问题，多用unless defined... 例如$opt{i} ||= 1 这行命令，会在设置$opt{i}">
+<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Perl简介">
+<meta property="og:url" content="http://www.afanail.com/2018/06/11/Perl简介/index.html">
+<meta property="og:site_name" content="Afanail">
+<meta property="og:description" content="##零、好习惯 use diagnostics;输出详细的警告信息，不常用   可这样交换两个变量($a, $b) = ($b, $a)   使用 use bignum 保证数值运算不会丢失精度，此声明可在局部使用，不常用   Orcish Maneuver 标记 ||= 在判断数字0时有问题，多用unless defined... 例如$opt{i} ||= 1 这行命令，会在设置$opt{i}">
+<meta property="og:updated_time" content="2018-06-11T12:00:34.710Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Perl简介">
+<meta name="twitter:description" content="##零、好习惯 use diagnostics;输出详细的警告信息，不常用   可这样交换两个变量($a, $b) = ($b, $a)   使用 use bignum 保证数值运算不会丢失精度，此声明可在局部使用，不常用   Orcish Maneuver 标记 ||= 在判断数字0时有问题，多用unless defined... 例如$opt{i} ||= 1 这行命令，会在设置$opt{i}">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.afanail.com"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Afanail</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Perl简介" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/06/11/Perl简介/" class="article-date">
+  <time datetime="2018-06-11T12:00:00.000Z" itemprop="datePublished">2018-06-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Perl简介
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p>##零、好习惯</p>
+<pre><code>use diagnostics;输出详细的警告信息，不常用  
+可这样交换两个变量($a, $b) = ($b, $a)  
+使用 use bignum 保证数值运算不会丢失精度，此声明可在局部使用，不常用  
+Orcish Maneuver 标记 ||= 在判断数字0时有问题，多用unless defined...
+例如$opt{i} ||= 1 这行命令，会在设置$opt{i}为0时，仍然设置$opt{i}为1，因为||操作符的原因
+使用qq来标记字符串，用qw来标记字符串列表，避免将双引号转义
+使用三个参数的open文件打开操作，更安全且允许文件名中出现空格
+在同时有输入和输出的程序中，可在完成输入文件的操作后，进行unlink输出文件，再对输出文件进行操作，这样便能支持输入和输出为同一个文件的情况
+$CR $LF $CRLF三个常量表示各个操作系统内的文件行分隔符
+windows下最好不要安装perl在包含空格路径的目录下
+</code></pre><a id="more"></a>
+<p>##一、备注</p>
+<pre><code>\\b为退格键，在字符串中&quot;abc\\b&quot;会输出abc，实际上光标位置定位在b后面，但是&quot;abc\\bd&quot;会输出abd，因为退格了一次，用d替代了c。
+index rindex 前向、后向搜索，提取字符串中指定的字符位置，也可以指定在字符串中查找的起始位置，基本可以代替循环匹配
+substr放在赋值操作符左侧，可以将右侧的字符与substr所找到的字符进行替换，将右侧全部的字符串放入左侧指定的位置，替代选中的字符串
+数字中插入下划线_表示分割
+0b开头表示二进制
+乘幂操作符**
+单引号内\\n表示换行
+字符串&apos;0&apos;是会被当成“假”值的唯一非空字符串
+chomp 删除的是 $/,  可以使用 chomp @lines 删除多行中换行符
+die 输出字符串结尾加上\n即可不输出报错的文件名以及行号
+使用select改变print 默认的文件句柄，可以控制错误输出地方
+使用$^I = &quot;.bak&quot;来进行统一备份，使用不带参数的 &lt;&gt;
+unlink glob &quot;*.out&quot;; glob操作符展开具有通配符的文件名
+可以使用sprintf将格式化的字符串输入到某个变量中去
+&lt;=&gt; cmp 比较操作符，返回-1 0 1 $a&lt;=&gt;$b 按照增序排序
+perl 安装模块，使用PREFIX=/*/参数来安装到自己指定的目录下
+eval 设置$@为返回的错误信息，若eval代码块内有执行错误，则返回undefine或者空列表
+perldoc -f ... 查看帮助
+__DATA__结构内的数据，可由&lt;DATA&gt;句柄读入
+BEGIN{} END{} 两个块内的内容无论在程序中出现的次序，总是最先，最后执行。而且若定义了函数，END里可以调用代码段里的函数，BEGIN不行，其是在编译文件其他部分之前就执行。
+变量在双引号之间时，可以使用花括号将其包含，以区别变量名和一般字符串
+使用&lt;&lt;来快速输入大量文本的方法叫做 here doc
+do语句块，返回的值为最后一个表达式的值，do-while也是do语句的一种特殊形式，可用do简化程序结构
+模块的卸载，简单的删除所有的模块文件即可，可用perl -V 查看模块可能的位置
+locate 可以用于查找 linux perl pm 位置， 即使该包不在 $PERL5LIB 中
+while ($line=&lt;&gt;)隐含的使用了defined，实际上是在执行while(defined $line=&lt;&gt;)
+no strict &apos;refs&apos;
+perl 不会释放内存 即使 delete undef，perl 保留undef delete 的内存，用于减少后续可能的内存申请
+crypt(key, init) 采用DES的加密算法，没有对应的解密算法，算法不安全，只能用来对用户密码进行基本的验证。
+print &quot;FILE: &quot;, __FILE__, &quot; Line: &quot;, __LINE__, &quot;\n&quot;; 输出文件名和行号
+双触发开关..和...，会对符号两边的表达式求值.  在一个由条件式或者循环所构成的上下文中，一个flip-flop由两个通过..操作符相连的布尔表达式构成。除非其左侧表达式为true，否则一个flip-flop表达式就位false，而且在左侧表达式为true之前，它的值都会是false。一旦该表达式为true那么它就会“flips”到一个持久的true状态。它会保持该状态，而且对其后续的求值也返回true，直到其右侧的表达式为true为止。如果右侧表达式为 true了那么该flip-flop就会“flops”回一个持久的false状态，对其后续的求值也返回false，直到其左侧表达式再次成为true为止。
+select(undef, undef, undef, 0.25) 可实现暂停0.25秒
+split的第三个参数为正整数，可以限制切割的个数，为0或者没有指定时忽略最后的空字段，为负数时相当于不限制切割个数
+行定向： # line 1000 将会把行定向为1000行
+?:操作符可为左值
+</code></pre><p>##二、加速</p>
+<pre><code>keys (%hash) = 100; 预先为哈希分配个数，相比动态更改哈希大小，可以提高效率约15%，这是谬论!
+避免在正则中使用 | 来判断多选，替代的可多次使用匹配
+在量词后添加+避免使用回朔增加效率
+用my而不用local，对特殊变量则只能使用local
+循环中使用foreach，而不是for跟踪下标变化
+删除哈希表，使用直接赋空值，而不是一个一个delete，虽然二者运行时间差距不大
+?:三元操作符的速度比if...else...要快一些
+循环中重复用my声明变量不会对速度造成太大的影响
+切分字符串，substr比split有绝对的速度优势
+给子函数传递参数时，传引用速度快
+使用子函数时，加不加&amp;符号对速度没什么太大影响
+正则匹配中懒惰比贪婪省时间
+正则匹配中，多余的定位符号，比如$^之类，会降低速度
+正则中，使用o编译正则表达式，适用于匹配量不变的情况，预编译会拖慢速度，但是仅编译一次会及其微量地加速
+</code></pre><p>##三、列表、数组、哈希</p>
+<pre><code>[]是操作符，会将里面的东西转成列表；()不是操作符，不能将里面的东西转成数组。
+控制标量上下文 scale，prnit scale @a;
+区分数组和列表，列表是若干个标量的集合，数组是陈放列表的容器。
+将一个数组放在标量上下文中，获得的数组的元素个数；将列表放在标量上下文中赋值，赋的是最右边的元素。
+标量上下文环境中的列表&quot;赋值&quot;操作，会返回赋值操作符右边元素的个数，注意这种用法：$a = () = split &quot;&quot;, $_; $a = $_ =~ {\}g;
+针对数组还有一种特殊的操作：切片slice
+若@a是数组，则$#a表示数组最后一个元素的下标，其值加一是数组长度
+合并两个哈希：%h3 = (%h1, %h2)效率最高
+使用while(($key,$value) = each %HASH)替代原始的foreach循环，但是不能排序
+while循环提供的是标量上下文，foreach循环里提供的是列表上下文
+匿名数组：$a = [1..3] 返回的是数组的引用
+匿名哈希：$a = {a=&gt;1} 返回的是哈希的引用
+可以使用@HASH{a,b}同时访问一个哈希里的多个键值
+指向匿名子程序的引用：$a = sub{...}
+splice 提取数组成分
+$#a *= 0.9 快速修改数组大小
+push，unshift 可以接收多于1个的参数
+perl的哈希和python的字典，读入500M的文本时，占用的内容差不多也为500M
+</code></pre><p>##四、中文处理</p>
+<pre><code>将中文转换成16进制字符：unpack(&quot;H*&quot;,$key)，转换回来：pack(&quot;H*&quot;,$key)
+用以下方法使正则可以匹配中文，也就是PERL内部处理用UTF-8
+use encoding &apos;utf8&apos;;
+用以下方法避免输出时报wide character警
+binmode OUT, &quot;:encoding(utf-8)&quot;;
+用以下方法读取其他编码格式的输入
+open HD,&quot;&lt;:encoding(GBK)&quot;,&quot;abc.txt&quot; or die $!;
+use encoding &quot;utf8&quot;, STDOUT =&gt; &apos;utf-8&apos;;
+decode encode函数
+创建中文文件夹
+my $name = &quot;你去吧&quot;;
+$name = encode(&quot;gbk&quot;, $name);
+mkdir $name or die;
+匹配所有非汉字：\p{Han}
+匹配所有汉字： \P{Han}
+</code></pre><p>##五、正则表达式</p>
+<pre><code>正则匹配IP地址：\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]
+\Q \E 把其中的非文字字符加上反斜线，正则匹配时可对变量进行扩展
+正则匹配时，使用m{}符号，不用//，特别是在多行匹配中
+x可添加注释，但是需要匹配的空白就要另行处理，比如用\转义空格或者用\s
+断言:
+?=expr     ?&lt;=expr
+?!expr     ?&lt;!expr
+&lt;?&lt;=re&gt;.*&lt;?=ing&gt; 匹配reading时匹配到ad
+?&lt;LABEL&gt;给匹配的括号添加标签，这样就可使用$+{LABEL}访问匹配的括号内的内容，不用去记忆匹配的标号顺序
+?:不记录括号的序数
+(?#comment) 注释
+断言的括号不占用$1 $2 $3的符号
+匹配变量 /($var)/ 括号可要可不要
+默认的.符号不匹配换行符，使用/s来使其匹配
+\Z 和 $ 类似，匹配串尾
+\L...\E 小写化中间字符
+\U...\E 大写化中间字符
+\G 断言离开之处，多在while(//g)中，继续匹配/g中匹配到的位置后面的信息
+=~ m## 改变匹配符号
+=~ m?? 在循环中，这种改变匹配符号的方式，只匹配第一次有效的结果，忽略后续的有效结果
+@a = $b =~ //g 匹配后赋值给列表
+s//.../e 可嵌入计算表达式在替换的内容中
+/i /m /s /x 修饰词可以放在正则表达式的中间，像这样：/...(?i:s)
+(?&gt;)是非回溯子模式，其会加快某些模式的匹配失败，加快程序速度
+(?:)是回溯子模式
+/(??{})/ 匹配时的模式内插，可在{}内写入代码实现根据不同的情况进行匹配
+/?(COND)IFture | IFfalse/ 条件内插，COND为一个整数时，其为反向引用的编号
+像这样的匹配 if (/^(?:this|(you)).*(?(1)(special.)|(fun.))/)
+反向引用的顺序是：
+1     you
+2     specila
+3     fun
+由于第一对括号内部有?:，故其不计入
+且虽然用到了条件内插，其引用还是按照出现顺序来
+my ($p1, $p2) = $tmp =~ /(\S+)\s*(\S+)/;
+</code></pre><p>##六、守护进程(daemon)</p>
+<pre><code>其一般为其他程序提供服务，运行时进入后台，直到被杀死或系统关闭，其应当做如下事情：
+1、改变其工作目录为根目录
+2、修改创建文件的掩码为一个已知值
+3、规范PATH环境变量
+可以使用POSIX模块提供的setsid()来创建。
+</code></pre><p>##七、信号</p>
+<pre><code>Perl 提供了%SIG 这个特殊的默认HASH。调用需要使用到系统保留全局HASH数组%SIG，即使用&apos;$SIG{信号名}&apos;截取信号,相当于，在perl程序中出现这个信号时，执行我们自己定义某段代码(子函数)的地址值(定义信号响应函数)，这代码就是截取这个信息后要执行的结果了。
+可直接使用如下方式处理由Ctrl+C产生的终端信号：
+$SIG{INT} = sub{...};
+信号名     值     标注     解释
+HUP     1     A     检测到挂起
+INT     2     A     来自键盘的中断
+QUIT     3     A     来自键盘的停止
+ILL     4     A     非法指令
+ABRT     6     C     失败
+FPE     8     C     浮点异常
+KILL     9     AF     终端信号
+USR1     10     A     用户定义的信号1
+SEGV     11     C     非法内存访问
+USR2     12     A     用户定义的信号2
+PIPE     13     A     写往没有读取者的管道
+ALRM     14     A     来自闹钟的定时器信号
+TERM     15     A     终端信号
+CHLD     17     B     子进程终止
+CONT     18     E     如果被停止则继续
+STOP     19     DF     停止进程
+TSTP     20     D     tty键入的停止命令
+TTIN     21     D     对后台进程的tty输入
+TTOU     22     D     对后台进程的tty输出
+</code></pre><p>##八、聊天工具</p>
+<pre><code>RiveScript-1.20包可创建基于简单检索数据库的机器人对话程序，需要自己输入聊天内容作为数据，目前仅确定支持英文。
+Chatbot-Eliza-1.04包是经典的心理医生程序，其巧妙的转换用户的输入获得输出，和用户进行交互性扯皮。
+</code></pre><p>##九、多进程</p>
+<pre><code>使用fork函数产生子进程，其返回值大于0的为父进程，等于0的为子进程。
+system函数也可产生新的进程，并等待其完成，并返回调用的地方。
+exec函数用指定的命令进程替换当前进程，命令执行结束后，当前进程就结束。
+子进程若没有恰当的收割，会产生僵尸进程。
+一般配合CHLD信号执行收割子进程。
+子进程的退出信号SIG-CHLD会唤醒休眠的父进程。
+当Perl执行系统调用时，信号可能产生。大多数情况下，Perl自动重启并严密监控调用。
+少数系统调用不适用此规则。 sleep() 就是其中之一，它根据指示数暂停脚本执行对应秒数。
+如果一个信号中断 sleep()，比如ALARM，它将过早地结束，返回它完成休眠前的秒数。
+sleep() 的这个属性很有用，因为它可以让脚本一直暂停，直到有预期的事件发生。
+
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">POSIX = Portable Operating System Interface</div><div class="line"></div><div class="line"><span class="keyword">use</span> POSIX <span class="string">'WNOHANG'</span>;</div><div class="line">$SIG<span class="string">&#123;CHLD&#125;</span> = <span class="function"><span class="keyword">sub</span></span>&#123;</div><div class="line">    <span class="keyword">while</span>((<span class="keyword">my</span> $kid = <span class="keyword">waitpid</span>(-<span class="number">1</span>, WNOHANG)) &gt; <span class="number">0</span>)</div><div class="line">    &#123;</div><div class="line">          <span class="keyword">print</span> <span class="string">"reaped child...\n"</span>;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+
+子进程退出时可以使用`exit 0`;
+使用`pipe(READER, WRITER) or die;`创建双工管道实现父进程和子进程之间的通信。
+</code></pre><p>##十、多线程</p>
+<pre><code>不建议在Perl5中使用多线程，但试一试后发现还行，能方便地进行数据共享，主要函数罗列如下：
+`asyn Thread-&gt;new();`
+线程可进行join等待结束
+或者进行detach放置不管
+变量要share之后才能在线程间共享使用
+匿名散列必须进行 `$hash{test} = &amp;share({});`才能共享使用，或者使用shared_clone的方法，如下：
+
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">my</span> $hash_ref = shared_clone( &#123;</div><div class="line">    <span class="string">'100班'</span>  =&gt; &#123;</div><div class="line">        <span class="string">'男'</span> =&gt; [<span class="string">"张三"</span>,<span class="string">"李四"</span>, <span class="string">"王五"</span>],</div><div class="line">        <span class="string">'女'</span> =&gt; [<span class="string">'A'</span>,<span class="string">'B'</span>]</div><div class="line">    &#125;,</div><div class="line">    <span class="string">'101班'</span> =&gt; &#123;</div><div class="line">        <span class="string">'男'</span> =&gt; [<span class="string">"张三"</span>,<span class="string">"李四"</span>, <span class="string">"王五"</span>],</div><div class="line">    &#125;,</div><div class="line">    <span class="string">' 103班'</span> =&gt; &#123;</div><div class="line">        <span class="string">'男'</span> =&gt; [<span class="string">"张三"</span>,<span class="string">"李四"</span>, <span class="string">"王五"</span>],</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</code></pre><p>##十一、套接字编程</p>
+<pre><code>Perl内的套接字和C中的用法类似。
+使用UNIX域的套接字，服务器程序使用举例：
+</code></pre><figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">use</span> IO::Handle;</div><div class="line"><span class="keyword">use</span> Socket;</div><div class="line"><span class="keyword">socket</span>(SOCK,AF_INET,SOCK_STREAM,<span class="keyword">getprotobyname</span>(<span class="string">"tcp"</span>));</div><div class="line"><span class="keyword">my</span> $addr=sockaddr_in(<span class="number">3000</span>,INADDR_ANY);</div><div class="line"><span class="keyword">bind</span>(SOCK,$addr);</div><div class="line"><span class="keyword">listen</span>(SOCK,SOMAXCONN);</div><div class="line"><span class="keyword">while</span>(<span class="number">1</span>)&#123;</div><div class="line">    <span class="keyword">next</span> <span class="keyword">unless</span> <span class="keyword">my</span> $addr1=<span class="keyword">accept</span>(S,SOCK);</div><div class="line">    S-&gt;autoflush(<span class="number">1</span>);</div><div class="line">    <span class="comment"># do something</span></div><div class="line">    <span class="keyword">close</span> S;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<pre><code>客户端程序举例：
+</code></pre><figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">use</span> Socket;</div><div class="line"><span class="keyword">use</span> Encode;</div><div class="line"><span class="keyword">use</span> IO::Handle;</div><div class="line"><span class="keyword">use</span> strict;</div><div class="line"></div><div class="line"><span class="keyword">my</span> $addr = <span class="string">""</span>;</div><div class="line"><span class="keyword">my</span> $buff = <span class="string">""</span>;</div><div class="line"><span class="keyword">my</span> $cont = <span class="number">0</span>;</div><div class="line"></div><div class="line">$addr = sockaddr_in(<span class="number">3000</span>, inet_aton(<span class="string">"127.0.0.1"</span>));</div><div class="line"></div><div class="line"><span class="keyword">while</span>($buff <span class="keyword">ne</span> <span class="string">"welcome"</span>)</div><div class="line">&#123;</div><div class="line">    <span class="keyword">socket</span>(SOCK, AF_INET, SOCK_STREAM, <span class="keyword">getprotobyname</span>(<span class="string">"tcp"</span>));</div><div class="line">    <span class="keyword">connect</span>(SOCK, $addr);</div><div class="line">    SOCK-&gt;autoflush(<span class="number">1</span>);</div><div class="line">    <span class="keyword">sysread</span>(SOCK, $buff, <span class="number">40</span>);</div><div class="line">    <span class="keyword">chomp</span> $buff;</div><div class="line">    STDOUT-&gt;autoflush(<span class="number">1</span>);</div><div class="line">    <span class="keyword">if</span>($buff <span class="keyword">ne</span> <span class="string">"welcome"</span>)</div><div class="line">    &#123;</div><div class="line">          $cont++;</div><div class="line">          <span class="keyword">sleep</span>(<span class="number">1</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span>($cont == <span class="number">3</span>)</div><div class="line">    &#123;</div><div class="line">          <span class="keyword">die</span> <span class="string">"try 3 times and still cannot connect\n"</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">print</span> <span class="string">"$buff\n"</span>;</div><div class="line"><span class="comment"># do something</span></div><div class="line"><span class="keyword">send</span>(SOCK, $in, <span class="number">0</span>);</div><div class="line"><span class="keyword">my</span> $l = <span class="keyword">sysread</span>(SOCK, $buff, <span class="number">1000</span>);</div><div class="line"><span class="keyword">close</span> SOCK;</div></pre></td></tr></table></figure>
+<p>##十二、默认变量</p>
+<pre><code>`$0` 程序名称
+`$$` 当前程序的pid
+`$&quot;` 表格输出时的默认分隔符
+`$|` 布尔量，输出缓存标识
+`$.` &lt;&gt;读入一个文本时读入的行号
+`$/` 以&quot;一行&quot;为单位读入文本时判断&quot;一行&quot;的标记
+`$\` 输出时的后缀
+`$]` 当前perl的版本号
+</code></pre><p>##十三、管道</p>
+<pre><code>当程序尝试写入到一个管道并且没有程序来读取这些数据，将返回一个PIPE异常。
+可通过设置$SIG{PIPE} = sub { ... }; 来捕获和处理异常
+读管道  `open OUT,&quot;ls -hl|&quot;or die;`
+写管道  `open OUT,&quot;|cat&quot;or die;`
+</code></pre><p>##十四、变量类型</p>
+<pre><code>my：申明词法变量，在作用域内使用有意义，脱离了作用域就不存在了。
+our：这个是一个全局的声明。可以在任何作用域中进行访问和修改，当然修改之后其值也就相应的变化了。
+local：改变软件包变量，这个声明比较有意思，他是一个动态作用域变量，在全局和局部都是可见的，当他在一个子块中被修改时 他便会被临时的修改 当他离开这个子块（作用域） 他的值便又恢复成原来的值了。这种变量类型属于Perl 4的历史遗留，尽量少用。
+
+其实对于my和local，主要还是和typeglob有关系
+对于一个perl中的变量，都有一个符号表与之对应
+比如有   $perl = &apos;a&apos;; @perl = ...; %perl = ...; sub perl {}; open(perl,...);
+看起来其为同名，不同类型的各种符号
+但在perl中，他们都是存放在一个的符号表中的同一个表项中的,都是在名为perl的表项。
+对于local操作，其实是在这个代码段前，先把此typeglob中的各个项的值保存，然后在进行对这些变量的操作和运算，这样的话在该代码段结束前，这些变量“看起来”好象没什么变化，等到该代码段结束了，local 的变量就会取出原来备份的值，在替换了现有的值。
+my并没有用到typeglob和符号表，my是在每个代码段都建立一个特殊的地方来专门存储这些变量，而且my的变量中没有了typeglob的概念，也就是说my中的$a, @a都是按一定的顺序存放到一个内存区中的，不会出现 *b=*a 的情况了。而在代码段结束的时候，只要这些变量的引用记数为0，就释放这些变量。
+加之my特有的某些技术，所以速度一般要比较快，所以在代码段中，除非特殊的情况，一般常用my来定义变量.
+传递句柄不能用my。
+</code></pre><p>##十六、POD</p>
+<pre><code>在pod中，用段类型可分为三种，普通段落，字面段落（Verbatim Paragraph）和命令段落。
+使用POD注意，在两个主体之间要多空一行。
+</code></pre><figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">=head* 标题</span></div><div class="line"></div><div class="line">=over 缩进数目</div><div class="line">=item</div><div class="line">=back 项目列表，里面至少有一个item，且item只能在这里面</div><div class="line"></div><div class="line"></div><div class="line">=begin html</div><div class="line">&lt;hr&gt; &lt;img src="example.png"&gt;</div><div class="line">&lt;p&gt; This is a raw HTML paragraph &lt;/p&gt;</div><div class="line">=end html</div><div class="line">begin和end之间的代码在pod2html时会直接放成html的形式，而在转换成其他非html文档是会被忽略</div><div class="line"></div><div class="line">L&lt;...&gt; 添加链接</div><div class="line">I&lt;...&gt; 斜体</div><div class="line">B&lt;...&gt; 粗体</div></pre></td></tr></table></figure>
+<p>##十七、format报表</p>
+<pre><code>在有特殊对齐要求的方面有用
+
+格式变量
+`$~ `中 ($FORMAT_NAME)          格式名字
+`$^ `($FORMAT_TOP_NAME)         当前的表头格式名字存储在
+`$% `($FORMAT_PAGE_NUMBER)      当前输出的页号
+`$= `($FORMAT_LINES_PER_PAGE)   每页中的行数
+`$| `($FORMAT_AUTOFLUSH)      是否自动刷新输出缓冲区存储
+`$^L `($FORMAT_FORMFEED)       在每一页(除了第一页)表头之前需要输出的字符串存储在
+
+注:这些变量以文件句柄为基础设定，因此你需要 select 与特定格式关联的文件句柄来影响这些格式变量
+
+调用输出
+write
+最后直接用write函数来显示格式化的文本内容.
+
+多页报表
+`$%`  当前输出的页面编号
+`$=`  页中的行数
+`$-`  还有多少剩下的行数
+
+在使用输出时,最好建一个表的顶部输出.这样看起来会好看很多.
+
+实例
+</code></pre>  <figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/perl</span></div><div class="line"><span class="keyword">use</span> strict;</div><div class="line"><span class="keyword">use</span> warnings;</div><div class="line"></div><div class="line"><span class="keyword">my</span> ($name,$login,$office,$uid,$gid, $home);</div><div class="line"><span class="keyword">open</span> FD,<span class="string">"&lt;/etc/passwd"</span> <span class="keyword">or</span> <span class="keyword">die</span> <span class="string">"$?"</span>;</div><div class="line"><span class="keyword">while</span>(&lt;FD&gt;)&#123;</div><div class="line">  ($name,$login,$office,$uid,$gid, $home) = <span class="keyword">split</span> (<span class="string">":"</span>,$_);</div><div class="line">    $^ = <span class="string">'STDOUT_TOP'</span>;</div><div class="line">    $~ = <span class="string">'STDOUT'</span>;</div><div class="line">    $= = <span class="number">39</span>;</div><div class="line">    <span class="keyword">write</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">format</span> STDOUT_TOP =</div><div class="line">@&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</div><div class="line"><span class="string">"Page $%"</span></div><div class="line">                          Passwd File</div><div class="line">  Name                Login    Office   Uid   Gid Home</div><div class="line">  ------------------------------------------------------------------</div><div class="line">.</div><div class="line"></div><div class="line"><span class="keyword">format</span> STDOUT =</div><div class="line">@&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; @||||||| @&lt;&lt;&lt;&lt;&lt;&lt;@&gt;&gt;&gt;&gt; @&gt;&gt;&gt;&gt; @&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</div><div class="line">$name,               $login,  $office,$uid,$gid, $home</div><div class="line"></div><div class="line"><span class="number">1</span>;</div></pre></td></tr></table></figure>
+<p>##十八、perl 5.10 新特性</p>
+<pre><code>`use 5.010` 后可在旧版的perl中运行新版本的特性
+`use autodie;` 可在一般需要检查函数成功与否，比如open这样的函数中省去die的程序部分。
+`given-when` 对应switch语句:
+</code></pre><figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">given</span>($a)&#123;</div><div class="line">    <span class="keyword">when</span>(<span class="string">"ab"</span>) &#123;<span class="keyword">print</span> <span class="string">"here ab"</span>;&#125;</div><div class="line">    <span class="keyword">when</span>(<span class="string">"cd"</span>) &#123;<span class="keyword">print</span> <span class="string">"here cd"</span>;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<pre><code>~~ 智能匹配，可用数组，哈希进行匹配，用数组时使用的是数组的值，用哈希使用的是哈希的键。
+自带的模块List::Util可对列表进行不同的处理，查找最大值，查找最长字符串，求和，查找第一次出现的值
+正则匹配中，使用 `\h` 表示水平空白字符，也即除了换行符以外的水平空白
+`\v` 表示垂直空白符
+`\R` 表示各个操作系统的行终止符
+`\N `匹配非换行符，注意，其匹配的是不是\n的所有字符哦
+使用/p修饰符，是每次匹配的变量不再影响下一次使用时的速度，其匹配的结果保存在`${^MATCH}`中
+可以串联文件测试符操作，如 `-r -w `串联后为`-rw`
+</code></pre><p>##十九、子程序</p>
+<pre><code>在子程序中，使用wantarray 操作符，其会判断当前子程序运行在标量还是列表上下文，若是列表上下文，则返回1。通过这个操作符，可以实现动态返回值。
+
+使用local * 对引用参量本地化，可避免大量使用$$或者@$符号
+
+子程序中，直接修改@_变量会修改所传的参数值，当然，传递进常量时，就会报错。
+
+一般的子程序没有像c那样的原型申明，但是可以自行添加原型申明以达到特殊效果。
+比如pop函数实际使用的是数组的引用，但是在调用时可以不用传入类似\@tmp 这样的参量。
+
+匿名子程序，$name = sub {} 变量有7种类型，其中一种CODE即为保存子程序所用，用这种形式，可以实现动态子程序选择的功能
+访问匿名子程序时，$name-&gt;(传递的参数)
+
+给子函数传递哈希，显试表达参数，且与参数顺序无关，还可使用无参数的方式。
+</code></pre><figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">power(<span class="string">base=&gt;</span><span class="number">12</span>, <span class="string">power=&gt;</span><span class="number">2</span>);</div><div class="line"><span class="function"><span class="keyword">sub</span> <span class="title">power</span> </span>&#123;</div><div class="line"><span class="keyword">my</span> %args = @_;</div><div class="line"><span class="keyword">my</span> $base = $args<span class="string">&#123;base&#125;</span> || <span class="number">2</span>;</div><div class="line">...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>##二十、文件操作</p>
+<pre><code>-s 获得文件的大小
+</code></pre><p>##二十一、引用</p>
+<pre><code>ref 操作符可获得引用的类别，常见的有：`SCALAR ARRAY HASH CODE GLOB Regexp`
+常见的复合数据结构都是通过引用实现的
+子程序的引用 `$code_ref = \&amp;code_name`
+typeglobs的引用 `$a = \*STDOUT`
+</code></pre><p>##二十二、实用模块</p>
+<pre><code>`Inline `库在perl中嵌入c函数，可加快算数运算速度，效果明显
+`LWP::Simple`用来抓取网页，其稳定性好于wget，但是安装较为麻烦
+`XML::Parser`解析XML格式
+`Math::Round`包含各种对小数的近似处理
+`Log4Perl`很方便的日志模块
+`benchmark`测试程序速度，`use Benchmark`
+`Regexp::Common`利用现成的正则表达式解决实际问题，不用重复发明车轮
+`Expect Linux`下命令交互，方便自动处理
+`Date::Manip` 方便的时间处理，计算将来时间
+`Time::HiRes` 处理毫秒级别的时间
+`XML::Rss` 产生或解析RSS
+`IO::Socket` 创建TCP服务器或客户端
+`Text::Abbrev` 创建散列，并添加快捷的检索标志，用户交互时有用
+`GD` 绘制点阵图
+`SVG` 绘制矢量图
+`Tk` GUI编程
+`Lingua::Han::PinYin` 汉字转换成拼音的有意思的模块
+`Win32::GUI` windows下创建GUI
+`Win32::Clipboard` 操作剪贴板
+`Thread` 线程
+`Thread::Queue` 现成可用的队列
+`use Regexp::Common::net` 匹配IP地址的正则表达式，/$RE{net}{IPv4}/
+`Carp` 报错时添加调用的函数名称
+`PDL` perl的科学计算模块，类似MATLAB，也可以画图，自称比MATLAB快
+`Text::CSV_XS` 强大的逐行分割文件的模块
+`Getopt::Std` 处理程序输入参数
+</code></pre><p>##二十三、数据库</p>
+<pre><code>数据库占位符不能使用在数据表名上
+与MySQL连接：安装MySQL的客户端和服务器端(client&amp;server)，安装其工具套件(devel)和共享库(shared)，然后安装DBD和DBI的perl包
+</code></pre><p>##二十四、typeglob</p>
+<pre><code>`*bar{PACKAGE}`
+`%name:: `为包含name包的所有变量的哈希表
+`*a = *b `类似别名的赋值
+绑定变量tie
+以OO的形式绑定一个变量，使用户可以自定义添加任何行为。被绑定的变量可以使标量，数组，哈希和文件句柄
+</code></pre><p>##二十五、require use do</p>
+<pre><code>require：加引号用于代码块，不加引号用于模块
+use：只用于模块
+do：必须加引号，可用于代码块和模块
+1 use引入的名称不需要后缀名,而require需要
+2 use语句是编译时引入的，require是运行时引入的
+3 use引入模块的同时，也引入了模块的子模块。而require则不能引入，要在重新声明
+</code></pre><p>##二十六、CPAN</p>
+<pre><code>以下地址是在windows下[CPAN在教育网的升级地址](ftp://openware.byr.edu.cn/pub/mirror/CPAN/)
+以下方法移除默认的CPAN镜像
+`o conf urllist unshift http://www.perl.com/CPAN/`
+`o conf commit`
+或者修改` /etc/perl/CPAN/Config.pm `也行
+以下方法重新配置CPAN
+`o conf init`
+</code></pre><p>##二十七、map，grep</p>
+<pre><code>map{}里面，用逗号间隔的数据将被当作列表传递，比如
+`@a = (1,2,3);`
+`@b = (4,5,6);`
+`@c = map {$a[$_], $b[$_]} 0..2;`
+将会生成142536这样间隔的数组。
+如果将逗号变成分号，则会产生456这个数组
+
+施瓦兹排序：结合map，sort，map和匿名数组，将需要比较的数值记录在数组中，减少计算，加速排序。
+    `@sorted_name = map {$_-&gt;[0] };# 取出原本的filename`
+    `sort { $a-&gt;[1] &lt;=&gt; $b-&gt;[1]  };#--依照modified_time去比大小`
+    `map { [$_, -M] }; #--[filename, modified_time]`
+    `@files;      #----輸入的所有filename`
+以a中元素为key，1为值生成哈希表
+   ` %h = map {$_, 1} @a;`
+解析CGI传入参数
+    `use CGI qw(param);`
+   ` %params = map { $_, ( param($_) )[0] } grep { lc($_) ne &apos;submit&apos; } param();`
+产生随机密码
+   ` @a = (0 .. 9, &apos;a&apos; .. &apos;z&apos;);`
+    `$password = join &apos;&apos;, map { $a[int rand @a] } 0 .. 7;`
+转置矩阵
+</code></pre><figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">@matrix = ( [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>], [<span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>] );</div><div class="line"><span class="keyword">foreach</span> $xyz (@matrix) &#123;</div><div class="line">      <span class="keyword">print</span> <span class="string">"$xyz-&gt;;[0]  $xyz-&gt;;[1]  $xyz-&gt;;[2]\n"</span>;</div><div class="line">&#125;</div><div class="line">@transposed =</div><div class="line">      <span class="keyword">map</span> &#123; $x = $_;</div><div class="line">          [ <span class="keyword">map</span> &#123; $matrix[$_][$x] &#125; <span class="number">0</span> .. $#matrix ];</div><div class="line">          &#125; <span class="number">0</span> .. $#&#123;$matrix[<span class="number">0</span>]&#125;;</div><div class="line"><span class="keyword">print</span> <span class="string">"\n"</span>;</div><div class="line"><span class="keyword">foreach</span> $xyz (@transposed) &#123;</div><div class="line">      <span class="keyword">print</span> <span class="string">"$xyz-&gt;;[0]  $xyz-&gt;;[1]  $xyz-&gt;;[2]\n"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>##二十八、pack unpack</p>
+<pre><code>使用unpack分割制定列宽的数据
+</code></pre><p>##二十九、嵌入其他语言</p>
+<p>##三十、单行perl</p>
+<pre><code>`-n` 自动以单行的形式读取文件
+`-p` 自动在最后打印$_内容
+`-e` 执行单行perl
+`-a` 自动切分到数组@F中
+</code></pre><p>##三十一、测试性能</p>
+<pre><code>使用 `perl -d:DProf a.pl `运行程序的同时产生分析文件`tmon.out`
+再使用`DProfpp tmon.out` 分析程序内函数的调用次数和占有时间
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.afanail.com/2018/06/11/Perl简介/" data-id="cjia7kf44000juwypu1ysrjyd" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+ <script src="/jquery/jquery.min.js"></script>
+  <div id="random_posts">
+    <h2>推荐文章</h2>
+    <div class="random_posts_ul">
+      <script>
+          var random_count =4
+          var site = {BASE_URI:'/'};
+          function load_random_posts(obj) {
+              var arr=site.posts;
+              if (!obj) return;
+              // var count = $(obj).attr('data-count') || 6;
+              for (var i, tmp, n = arr.length; n; i = Math.floor(Math.random() * n), tmp = arr[--n], arr[n] = arr[i], arr[i] = tmp);
+              arr = arr.slice(0, random_count);
+              var html = '<ul>';
+            
+              for(var j=0;j<arr.length;j++){
+                var item=arr[j];
+                html += '<li><strong>' + 
+                item.date + ':&nbsp;&nbsp;<a href="' + (site.BASE_URI+item.uri) + '">' + 
+                (item.title || item.uri) + '</a></strong>';
+                if(item.excerpt){
+                  html +='<div class="post-excerpt">'+item.excerpt+'</div>';
+                }
+                html +='</li>';
+                
+              }
+              $(obj).html(html + '</ul>');
+          }
+          $('.random_posts_ul').each(function () {
+              var c = this;
+              if (!site.posts || !site.posts.length){
+                  $.getJSON(site.BASE_URI + 'js/posts.js',function(json){site.posts = json;load_random_posts(c)});
+              } 
+               else{
+                load_random_posts(c);
+              }
+          });
+      </script>
+    </div>
+  </div>
+
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/02/26/Java/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">Java</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+       
+      
+      
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title recent-posts">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/06/11/Perl简介/">Perl简介</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/26/Java/">Java</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/25/lookbook/">书单</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/11/React项目总结/">React项目总结</a>
+          </li>
+        
+          <li>
+            <a href="/2017/12/29/关于Java核心技术/">Java核心技术摘要</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+
+  
+    
+  
+    <!--微信公众号二维码-->
+
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2016 - 2018 Afanail&nbsp;
+    </div>
+     <div id="footer-right">
+      联系方式&nbsp;|&nbsp;zjfapk@163.com
+    </div>
+  </div>
+</footer>
+ <script src="/jquery/jquery.min.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+  
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "e2fb4051c49842688ce669e634bc983f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+    
+
+  
+
+
+
+
+
+
+
+<!-- author:forvoid begin -->
+<!-- author:forvoid begin -->
+
+<!-- author:forvoid end -->
+
+<!-- author:forvoid end -->
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/mathjax/MathJax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ <script src="/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/elevator.js"></script>
+  </div>
+</body>
+</html>

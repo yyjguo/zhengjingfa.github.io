@@ -37,7 +37,7 @@
     <div id="header-inner" class="inner">
       <nav id="sub-nav">
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.afanail.com"></form>
@@ -64,6 +64,60 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-Perl简介" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/06/11/Perl简介/" class="article-date">
+  <time datetime="2018-06-11T12:00:00.000Z" itemprop="datePublished">2018-06-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/11/Perl简介/">Perl简介</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##零、好习惯</p>
+<pre><code>use diagnostics;输出详细的警告信息，不常用  
+可这样交换两个变量($a, $b) = ($b, $a)  
+使用 use bignum 保证数值运算不会丢失精度，此声明可在局部使用，不常用  
+Orcish Maneuver 标记 ||= 在判断数字0时有问题，多用unless defined...
+例如$opt{i} ||= 1 这行命令，会在设置$opt{i}为0时，仍然设置$opt{i}为1，因为||操作符的原因
+使用qq来标记字符串，用qw来标记字符串列表，避免将双引号转义
+使用三个参数的open文件打开操作，更安全且允许文件名中出现空格
+在同时有输入和输出的程序中，可在完成输入文件的操作后，进行unlink输出文件，再对输出文件进行操作，这样便能支持输入和输出为同一个文件的情况
+$CR $LF $CRLF三个常量表示各个操作系统内的文件行分隔符
+windows下最好不要安装perl在包含空格路径的目录下
+</code></pre>
+        
+          <p class="article-more-link">
+            <a href="/2018/06/11/Perl简介/#more">继续阅读全文 »</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.afanail.com/2018/06/11/Perl简介/" data-id="cjia7kf44000juwypu1ysrjyd" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
   
     <article id="thinking-Java" class="article article-type-thinking" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -94,7 +148,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2018/02/26/Java/" data-id="cji91a7ti000fnlypf34bq23j" class="article-share-link">Share</a>
+      <a data-url="http://www.afanail.com/2018/02/26/Java/" data-id="cjia7kf43000huwypl5aax4ww" class="article-share-link">分享</a>
       
       
       
@@ -144,7 +198,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2018/01/25/lookbook/" data-id="cji91a7uu001jnlyp6q96uwfk" class="article-share-link">Share</a>
+      <a data-url="http://www.afanail.com/2018/01/25/lookbook/" data-id="cjia7kf5f001ouwypnkykx8mn" class="article-share-link">分享</a>
       
       
       
@@ -196,7 +250,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2018/01/11/React项目总结/" data-id="cji91a7to000mnlypb60f93eg" class="article-share-link">Share</a>
+      <a data-url="http://www.afanail.com/2018/01/11/React项目总结/" data-id="cjia7kf4a000ouwyp50apddjd" class="article-share-link">分享</a>
       
       
       
@@ -239,7 +293,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/12/29/关于Java核心技术/" data-id="cji91a7vb0022nlypn9ou2xm9" class="article-share-link">Share</a>
+      <a data-url="http://www.afanail.com/2017/12/29/关于Java核心技术/" data-id="cjia7kf67002auwypqosbc8yv" class="article-share-link">分享</a>
       
       
       
@@ -284,7 +338,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/12/18/webpack/" data-id="cji91a7va0020nlyputv0g6r2" class="article-share-link">Share</a>
+      <a data-url="http://www.afanail.com/2017/12/18/webpack/" data-id="cjia7kf5t0023uwypyt41iupy" class="article-share-link">分享</a>
       
       
       
@@ -330,7 +384,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/12/05/ES6/" data-id="cji91a7tb0008nlyp4ikhocl3" class="article-share-link">Share</a>
+      <a data-url="http://www.afanail.com/2017/12/05/ES6/" data-id="cjia7kf3t0008uwyp8it2254k" class="article-share-link">分享</a>
       
       
       
@@ -375,7 +429,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/11/09/dataStructor/" data-id="cji91a7ty000tnlypcwcaofh5" class="article-share-link">Share</a>
+      <a data-url="http://www.afanail.com/2017/11/09/dataStructor/" data-id="cjia7kf4g000tuwyptw3w57fi" class="article-share-link">分享</a>
       
       
       
@@ -422,7 +476,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/10/21/sql/" data-id="cji91a7ve0025nlypr88vn49v" class="article-share-link">Share</a>
+      <a data-url="http://www.afanail.com/2017/10/21/sql/" data-id="cjia7kf5r0020uwyp0pxpcepw" class="article-share-link">分享</a>
       
       
       
@@ -467,7 +521,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/10/01/Perl相关/" data-id="cji91a7tk000inlyprxpqhmjs" class="article-share-link">Share</a>
+      <a data-url="http://www.afanail.com/2017/10/01/Perl相关/" data-id="cjia7kf48000nuwyp6jyxjyiq" class="article-share-link">分享</a>
       
       
       
@@ -481,55 +535,10 @@
 
 
   
-    <article id="post-0到1实现简单的jQuery城市选择控件" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/30/0到1实现简单的jQuery城市选择控件/" class="article-date">
-  <time datetime="2017-09-30T11:19:47.000Z" itemprop="datePublished">2017-09-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/30/0到1实现简单的jQuery城市选择控件/">0到1实现简单的jQuery城市选择控件</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>好久没有写博客了，最近忙着学习后端的相关知识。感觉数据库相关知识还给了大学老师。SQL虽然简单，但是越到后面越难，特别是你要考虑性能之类的。要写好SQL语句也是有一定的难度的。上一次说分享一下如何封装jQuery插件，因为最近在写后台的代码。所以抽时间来总结一下，巩固一下基础知识。所以，这是非常简单的jQuery插件。
-        
-          <p class="article-more-link">
-            <a href="/2017/09/30/0到1实现简单的jQuery城市选择控件/#more">继续阅读全文 »</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.afanail.com/2017/09/30/0到1实现简单的jQuery城市选择控件/" data-id="cji91a7sv0003nlypc9zzaeav" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery插件/">jQuery插件</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
- 
-
-
-  
 
 
   <nav id="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next&raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">下一页&raquo;</a>
   </nav>
 </section>
            
@@ -562,7 +571,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title categories">Categories</h3>
+    <h3 class="widget-title categories">分类</h3>
     <div class="widget" id="categories">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Css简明教程/">Css简明教程</a><span class="category-list-count">1</span></li></ul>
     </div>
@@ -572,7 +581,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title tagcloud">Tag Cloud</h3>
+    <h3 class="widget-title tagcloud">标签云</h3>
     <div class="widget tagcloud">
       <a href="/tags/Java/" style="font-size: 14px;">-- Java</a> <a href="/tags/Thinking-in-Java/" style="font-size: 14px;">-- Thinking in Java</a> <a href="/tags/书单/" style="font-size: 14px;">-- 书单</a> <a href="/tags/随笔/" style="font-size: 14px;">-随笔</a> <a href="/tags/Chrome-DevTools/" style="font-size: 14px;">Chrome DevTools</a> <a href="/tags/ES6/" style="font-size: 14px;">ES6</a> <a href="/tags/ES7/" style="font-size: 14px;">ES7</a> <a href="/tags/Google-I-O-2017/" style="font-size: 14px;">Google I/O 2017</a> <a href="/tags/HTML/" style="font-size: 14px;">HTML</a> <a href="/tags/IE-兼容性/" style="font-size: 14px;">IE 兼容性</a> <a href="/tags/JSONP跨域/" style="font-size: 14px;">JSONP跨域</a> <a href="/tags/JavaScript/" style="font-size: 22.25px;">JavaScript</a> <a href="/tags/Perl/" style="font-size: 14px;">Perl</a> <a href="/tags/Webpack/" style="font-size: 14px;">Webpack</a> <a href="/tags/angular/" style="font-size: 14px;">angular</a> <a href="/tags/auto/" style="font-size: 14px;">auto</a> <a href="/tags/css/" style="font-size: 19.5px;">css</a> <a href="/tags/front-end/" style="font-size: 14px;">front-end</a> <a href="/tags/git/" style="font-size: 14px;">git</a> <a href="/tags/gulp/" style="font-size: 14px;">gulp</a> <a href="/tags/jQuery/" style="font-size: 14px;">jQuery</a> <a href="/tags/jQuery插件/" style="font-size: 14px;">jQuery插件</a> <a href="/tags/javascript/" style="font-size: 16.75px;">javascript</a> <a href="/tags/js/" style="font-size: 16.75px;">js</a> <a href="/tags/js实现响应式/" style="font-size: 14px;">js实现响应式</a> <a href="/tags/less/" style="font-size: 14px;">less</a> <a href="/tags/node/" style="font-size: 14px;">node</a> <a href="/tags/nvm/" style="font-size: 14px;">nvm</a> <a href="/tags/perl/" style="font-size: 14px;">perl</a> <a href="/tags/perl-CGI-编程/" style="font-size: 14px;">perl CGI 编程</a> <a href="/tags/sad-story/" style="font-size: 14px;">sad story</a> <a href="/tags/sql-sybase/" style="font-size: 14px;">sql sybase</a> <a href="/tags/updating/" style="font-size: 14px;">updating</a> <a href="/tags/webpack/" style="font-size: 14px;">webpack</a> <a href="/tags/原型继承机制/" style="font-size: 14px;">原型继承机制</a> <a href="/tags/娱乐/" style="font-size: 14px;">娱乐</a> <a href="/tags/工作计划/" style="font-size: 14px;">工作计划</a> <a href="/tags/开发技巧/" style="font-size: 14px;">开发技巧</a> <a href="/tags/怀旧/" style="font-size: 14px;">怀旧</a> <a href="/tags/数据结构与算法-C-C/" style="font-size: 14px;">数据结构与算法 C++/C</a> <a href="/tags/模块打包/" style="font-size: 14px;">模块打包</a> <a href="/tags/源码分析/" style="font-size: 14px;">源码分析</a> <a href="/tags/版本控制/" style="font-size: 14px;">版本控制</a> <a href="/tags/版本管理工具/" style="font-size: 14px;">版本管理工具</a> <a href="/tags/移动端/" style="font-size: 14px;">移动端</a> <a href="/tags/简明教程/" style="font-size: 25px;">简明教程</a> <a href="/tags/编码格式/" style="font-size: 14px;">编码格式</a> <a href="/tags/随笔/" style="font-size: 16.75px;">随笔</a>
     </div>
@@ -581,9 +590,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title recent-posts">Recent Posts</h3>
+    <h3 class="widget-title recent-posts">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/06/11/Perl简介/">Perl简介</a>
+          </li>
         
           <li>
             <a href="/2018/02/26/Java/">Java</a>
@@ -601,10 +614,6 @@
             <a href="/2017/12/29/关于Java核心技术/">Java核心技术摘要</a>
           </li>
         
-          <li>
-            <a href="/2017/12/18/webpack/">webpack</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -612,9 +621,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title archive">Archives</h3>
+    <h3 class="widget-title archive">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">4</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 
@@ -653,7 +662,7 @@
       &copy; 2016 - 2018 Afanail&nbsp;
     </div>
      <div id="footer-right">
-      Contact&nbsp;|&nbsp;zjfapk@163.com
+      联系方式&nbsp;|&nbsp;zjfapk@163.com
     </div>
   </div>
 </footer>

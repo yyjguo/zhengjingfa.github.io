@@ -5,17 +5,17 @@
   
   <title>Perl简介 | Afanail</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##零、好习惯 use diagnostics;输出详细的警告信息，不常用   可这样交换两个变量($a, $b) = ($b, $a)   使用 use bignum 保证数值运算不会丢失精度，此声明可在局部使用，不常用   Orcish Maneuver 标记 ||= 在判断数字0时有问题，多用unless defined... 例如$opt{i} ||= 1 这行命令，会在设置$opt{i}">
+  <meta name="description" content="零、好习惯use diagnostics;输出详细的警告信息，不常用   可这样交换两个变量($a, $b) = ($b, $a)   使用 use bignum 保证数值运算不会丢失精度，此声明可在局部使用，不常用   Orcish Maneuver 标记 ||= 在判断数字0时有问题，多用unless defined... 例如$opt{i} ||= 1 这行命令，会在设置$opt{i}为0时">
 <meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Perl简介">
 <meta property="og:url" content="http://www.afanail.com/2018/06/11/Perl简介/index.html">
 <meta property="og:site_name" content="Afanail">
-<meta property="og:description" content="##零、好习惯 use diagnostics;输出详细的警告信息，不常用   可这样交换两个变量($a, $b) = ($b, $a)   使用 use bignum 保证数值运算不会丢失精度，此声明可在局部使用，不常用   Orcish Maneuver 标记 ||= 在判断数字0时有问题，多用unless defined... 例如$opt{i} ||= 1 这行命令，会在设置$opt{i}">
-<meta property="og:updated_time" content="2018-06-11T12:00:34.710Z">
+<meta property="og:description" content="零、好习惯use diagnostics;输出详细的警告信息，不常用   可这样交换两个变量($a, $b) = ($b, $a)   使用 use bignum 保证数值运算不会丢失精度，此声明可在局部使用，不常用   Orcish Maneuver 标记 ||= 在判断数字0时有问题，多用unless defined... 例如$opt{i} ||= 1 这行命令，会在设置$opt{i}为0时">
+<meta property="og:updated_time" content="2018-06-11T12:05:45.020Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Perl简介">
-<meta name="twitter:description" content="##零、好习惯 use diagnostics;输出详细的警告信息，不常用   可这样交换两个变量($a, $b) = ($b, $a)   使用 use bignum 保证数值运算不会丢失精度，此声明可在局部使用，不常用   Orcish Maneuver 标记 ||= 在判断数字0时有问题，多用unless defined... 例如$opt{i} ||= 1 这行命令，会在设置$opt{i}">
+<meta name="twitter:description" content="零、好习惯use diagnostics;输出详细的警告信息，不常用   可这样交换两个变量($a, $b) = ($b, $a)   使用 use bignum 保证数值运算不会丢失精度，此声明可在局部使用，不常用   Orcish Maneuver 标记 ||= 在判断数字0时有问题，多用unless defined... 例如$opt{i} ||= 1 这行命令，会在设置$opt{i}为0时">
   
   
     <link rel="icon" href="/favicon.png">
@@ -88,8 +88,7 @@
       
         <!-- Table of Contents -->
         
-        <p>##零、好习惯</p>
-<pre><code>use diagnostics;输出详细的警告信息，不常用  
+        <h2 id="零、好习惯"><a href="#零、好习惯" class="headerlink" title="零、好习惯"></a>零、好习惯</h2><pre><code>use diagnostics;输出详细的警告信息，不常用  
 可这样交换两个变量($a, $b) = ($b, $a)  
 使用 use bignum 保证数值运算不会丢失精度，此声明可在局部使用，不常用  
 Orcish Maneuver 标记 ||= 在判断数字0时有问题，多用unless defined...
@@ -100,8 +99,7 @@ Orcish Maneuver 标记 ||= 在判断数字0时有问题，多用unless defined..
 $CR $LF $CRLF三个常量表示各个操作系统内的文件行分隔符
 windows下最好不要安装perl在包含空格路径的目录下
 </code></pre><a id="more"></a>
-<p>##一、备注</p>
-<pre><code>\\b为退格键，在字符串中&quot;abc\\b&quot;会输出abc，实际上光标位置定位在b后面，但是&quot;abc\\bd&quot;会输出abd，因为退格了一次，用d替代了c。
+<h2 id="一、备注"><a href="#一、备注" class="headerlink" title="一、备注"></a>一、备注</h2><pre><code>\\b为退格键，在字符串中&quot;abc\\b&quot;会输出abc，实际上光标位置定位在b后面，但是&quot;abc\\bd&quot;会输出abd，因为退格了一次，用d替代了c。
 index rindex 前向、后向搜索，提取字符串中指定的字符位置，也可以指定在字符串中查找的起始位置，基本可以代替循环匹配
 substr放在赋值操作符左侧，可以将右侧的字符与substr所找到的字符进行替换，将右侧全部的字符串放入左侧指定的位置，替代选中的字符串
 数字中插入下划线_表示分割
@@ -553,42 +551,24 @@ do：必须加引号，可用于代码块和模块
 
   
     
-  
+    <div class="widget-wrap">
     
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title recent-posts">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2018/06/11/Perl简介/">Perl简介</a>
-          </li>
-        
-          <li>
-            <a href="/2018/02/26/Java/">Java</a>
-          </li>
-        
-          <li>
-            <a href="/2018/01/25/lookbook/">书单</a>
-          </li>
-        
-          <li>
-            <a href="/2018/01/11/React项目总结/">React项目总结</a>
-          </li>
-        
-          <li>
-            <a href="/2017/12/29/关于Java核心技术/">Java核心技术摘要</a>
-          </li>
-        
-      </ul>
+      <div class="widget" id="toc-widget-fixed">
+      
+        <strong class="toc-title">文章目录</strong>
+        <div class="toc-widget-list">
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#零、好习惯"><span class="toc-number">1.</span> <span class="toc-text">零、好习惯</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一、备注"><span class="toc-number">2.</span> <span class="toc-text">一、备注</span></a></li></ol>
+          </div>
+      </div>
     </div>
-  </div>
 
+  
+    
+
+  
+    
+  
+    
   
     
 

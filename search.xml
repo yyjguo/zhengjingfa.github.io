@@ -5,8 +5,7 @@
     <entry>
       <title><![CDATA[Perl简介]]></title>
       <url>/2018/06/11/Perl%E7%AE%80%E4%BB%8B/</url>
-      <content type="html"><![CDATA[<p>##零、好习惯</p>
-<pre><code>use diagnostics;输出详细的警告信息，不常用  
+      <content type="html"><![CDATA[<h2 id="零、好习惯"><a href="#零、好习惯" class="headerlink" title="零、好习惯"></a>零、好习惯</h2><pre><code>use diagnostics;输出详细的警告信息，不常用  
 可这样交换两个变量($a, $b) = ($b, $a)  
 使用 use bignum 保证数值运算不会丢失精度，此声明可在局部使用，不常用  
 Orcish Maneuver 标记 ||= 在判断数字0时有问题，多用unless defined...
@@ -17,8 +16,7 @@ Orcish Maneuver 标记 ||= 在判断数字0时有问题，多用unless defined..
 $CR $LF $CRLF三个常量表示各个操作系统内的文件行分隔符
 windows下最好不要安装perl在包含空格路径的目录下
 </code></pre><a id="more"></a>
-<p>##一、备注</p>
-<pre><code>\\b为退格键，在字符串中&quot;abc\\b&quot;会输出abc，实际上光标位置定位在b后面，但是&quot;abc\\bd&quot;会输出abd，因为退格了一次，用d替代了c。
+<h2 id="一、备注"><a href="#一、备注" class="headerlink" title="一、备注"></a>一、备注</h2><pre><code>\\b为退格键，在字符串中&quot;abc\\b&quot;会输出abc，实际上光标位置定位在b后面，但是&quot;abc\\bd&quot;会输出abd，因为退格了一次，用d替代了c。
 index rindex 前向、后向搜索，提取字符串中指定的字符位置，也可以指定在字符串中查找的起始位置，基本可以代替循环匹配
 substr放在赋值操作符左侧，可以将右侧的字符与substr所找到的字符进行替换，将右侧全部的字符串放入左侧指定的位置，替代选中的字符串
 数字中插入下划线_表示分割
